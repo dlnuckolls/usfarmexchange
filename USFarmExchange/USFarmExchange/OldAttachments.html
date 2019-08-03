@@ -1,0 +1,164 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js">
+    </script>
+    <style>
+        p {
+            font-size: 125%;
+            text-align: justify
+        }
+
+        .button {
+            background-color: #4CAF50; /* Green */
+            border: none;
+            color: white;
+            padding: 15px 45px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 14px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+
+        table, th, td {
+            border: 1px solid black;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        /* Create two equal columns that floats next to each other */
+        .column {
+            float: left;
+            width: 50%;
+            padding: 10px;
+        }
+
+        /* Clear floats after the columns */
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+
+    <p>Check all attachments below that you are submitting with this application.  In addition to those listed, attachments may include extended answers to any question in the application, a business plan, or other supporting documents. If the attachment is supplementary information to a question in this form, be sure to 1) include the question number on the document; and 2) start each new question attachment on a new page.<p>
+        <div class="container">
+            <form>
+                <label class="checkbox-inline">
+                    <input type="checkbox" value="" required>REQUIRED:  Application Fee: Check or Money Order for $100 made payable to Kentucky State Treasurer.
+                </label>
+            </form>
+        </div>
+
+        <div class="container">
+            <form>
+                <label class="checkbox-inline">
+                    <input type="checkbox" value="" required>REQUIRED:  Copy of Driver's License for the applicant.
+                </label>
+            </form>
+        </div>
+
+        <div class="container">
+            <form>
+                <label class="checkbox-inline">
+                    <input type="checkbox" value="" required>REQUIRED:  Background Check from KSP for the applicant.<br />
+                    <div class="container">
+                        <form>
+                            If not attached, your background check must be received by KDA before 4:30 PM ET, November 30, 2018.<br />
+                            Indicate date requested: <input type="backgroundRequestDate" id="backgroundRequestDate" placeholder="Background Request Date" size="25" required>
+                    </div>
+                </label>
+            </form>
+        </div>
+        </form>
+        </div>
+        <div class="container">
+            <form>
+                <label class="checkbox-inline">
+                    <input type="checkbox" value="" required>REQUIRED:  Maps, one per address - Farm, greenhouse/indoor growing structures, and hauling/storage location maps (including applicant name, site address, location IDs, and GPS coordinates).
+                </label>
+            </form>
+        </div>
+        <div class="container">
+            <form>
+                <label class="checkbox-inline">
+                    <input type="checkbox" value="" required>REQUIRED (ONLY for Business Entities): <i>Signing Authority for Business Entities</i>.
+                </label>
+            </form>
+        </div>
+</body>
+</html>
+<div class="container">
+    <form>
+        <label class="checkbox-inline">
+            <input type="checkbox" value="" required>Other Attachment (describe): <input type="other1" id="other1" placeholder="Other" size="50">
+        </label>
+    </form>
+</div>
+<div class="container">
+    <form>
+        <label class="checkbox-inline">
+            <input type="checkbox" value="" required>Other Attachment (describe): <input type="other2" id="other2" placeholder="Other" size="50">
+        </label>
+    </form>
+</div>
+<br>
+<p><b>I hereby verify and affirm that all of the information contained in this application is true and accurate.  I understand that if KDA later determines any of this information to be inaccurate, the Grower Licensing Agreement may be withheld or terminated.</b></p>
+<br>
+<br>
+
+<div class="container">
+    <div class="row">
+        <div class="column">
+            <input type="applicantSignature" id="applicantSigature" placeholder="" size="40" required><br>Signature of Applicant<br><br><br>
+            <input type="printedName" id="printedName" placeholder="" size="40" required><br>Printed Name
+        </div>
+
+        <div class="column">
+            <input type="applicantSignatureDate" id="applicantSigatureDate" placeholder="" size="30" required><br>&nbsp;
+            Date<br><br><br>
+            <input type="Title" id="Title" placeholder="" size="30"><br>&nbsp;Title, if applicable
+        </div>
+    </div>
+</div>
+<br>
+<br>
+<br>
+</div>
+<p><center><b>Deadline:  Application must be postmarked no later than November 30, 2018,  or hand delivered no later than 4:30 PM ET on November 30, 2018.</b></center></p>
+<p><center><b>Email submissions will not be accepted because payment for the application fee must be attached to the application.</b></center></p>
+<p><center><b>KDA is not responsible for missing information due to formatting or printing errors on the user end.</b></center></p>
+<p><center><b>KDA is not responsible for applications lost in the mail or not received.</b></center></p>
+<p><center><b>KDA is not required to request additional information for clarity of the application.</b></center></p>
+<br>
+<br>
+<br>
+<p><center><b>Mail completed application, the nonrefundable application fee, and all attachments to:</b></center></p>
+<p><center><b>Kentucky Department of Agriculture</b></center></p>
+<p><center><b>Industrial Hemp Program</b></center></p>
+<p><center><b>111 Corporate Drive, Frankfort, KY 40601</b></center></p>
+<br>
+<br>
+<br>
+
+
+<center>
+    For more information on the KDA Industrial Hemp Research Pilot Program, please visit <a href="http://www.kyagr.com/hemp/" target="_blank">www.kyagr.com/hemp</a>
+    <br>
+    <br>
+    <br>
+
+    <p>
+        <button type="submit" formaction="https://sites.google.com/view/projectgreen/options/selectapp/ky-growers-app/acknowledgements" target="_self" button class="button">Previous Page</button>
+        <button type="submit" formaction="https://sites.google.com/view/projectgreen/options/selectapp/check-out" target="_self" button class="button">Pay Now</button>
+    </p>

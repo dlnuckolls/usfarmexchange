@@ -143,6 +143,11 @@
     <Content Include="App_Data\RadCaptcha\X.wav" />
     <Content Include="App_Data\RadCaptcha\Y.wav" />
     <Content Include="App_Data\RadCaptcha\Z.wav" />
+    <Content Include="images\Farmers.jpg" />
+    <Content Include="images\Hemp.jpg" />
+    <Content Include="images\KY_Hemp_Field.jpg" />
+    <Content Include="images\Sample_app.jpg" />
+    <Content Include="images\Tractors.jpg" />
     <Content Include="MasterPage.Master" />
     <Content Include="MasterPageSingleMenu.Master" />
   </ItemGroup>
@@ -167,6 +172,14 @@
     <Content Include="images\Thumbnails\Tulips.jpg" />
     <Content Include="images\Tulips.jpg" />
     <Content Include="ListView.aspx" />
+    <Content Include="OldAcknowledgments.html" />
+    <Content Include="OldAppInfoCont.html" />
+    <Content Include="OldApplicantInfo.html" />
+    <Content Include="OldAttachments.html" />
+    <Content Include="OldHomePage.html" />
+    <Content Include="OldPartA.html" />
+    <Content Include="OldPartB.html" />
+    <Content Include="OldResearchPlan.html" />
     <Content Include="scripts\scripts.js" />
     <Content Include="styles\base.css" />
     <Content Include="styles\default.css" />
@@ -255,7 +268,7 @@
           <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
         </WebProjectProperties>
       </FlavorProperties>
-      <UserProperties UseAjaxifiedTemplates="True" UseJQuerySupport="True" />
+      <UserProperties UseJQuerySupport="True" UseAjaxifiedTemplates="True" />
     </VisualStudio>
   </ProjectExtensions>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
