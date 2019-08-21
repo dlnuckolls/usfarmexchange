@@ -172,14 +172,6 @@
     <Content Include="images\Thumbnails\Tulips.jpg" />
     <Content Include="images\Tulips.jpg" />
     <Content Include="ListView.aspx" />
-    <Content Include="OldAcknowledgments.html" />
-    <Content Include="OldAppInfoCont.html" />
-    <Content Include="OldApplicantInfo.html" />
-    <Content Include="OldAttachments.html" />
-    <Content Include="OldHomePage.html" />
-    <Content Include="OldPartA.html" />
-    <Content Include="OldPartB.html" />
-    <Content Include="OldResearchPlan.html" />
     <Content Include="scripts\scripts.js" />
     <Content Include="styles\base.css" />
     <Content Include="styles\default.css" />
@@ -268,7 +260,7 @@
           <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
         </WebProjectProperties>
       </FlavorProperties>
-      <UserProperties UseJQuerySupport="True" UseAjaxifiedTemplates="True" />
+      <UserProperties UseAjaxifiedTemplates="True" UseJQuerySupport="True" />
     </VisualStudio>
   </ProjectExtensions>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
