@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+    <style>
+        p {
+            font-size: 125%;
+        }
+
+        .button {
+            background-color: #4CAF50; /* Green */
+            border: none;
+            color: white;
+            padding: 15px 45px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 14px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+
+        <form>
+            <div class="form-group">
+                <p><label for="primaryIndvidualAddress">A1. Mailing Address of Individual Applicant: </label></p>
+                <input type="primaryIndividualAddress" class="form-control" id="primaryIndividualAddress" placeholder="Enter mailing address" required>
+            </div>
+
+            <div class="form-group">
+                <p><label for="primaryKYGrowingAddress">A2.  Primary Kentucky Address Where Applicant Lives During Growing Season (if different from 2): </label></p>
+                <input type="primaryKYGrowingAddress" class="form-control" id="primaryKYGrowingAddress" placeholder="Enter address">
+            </div>
+
+            <div class="form-group">
+                <p><label for="applicantEmail">A3.  Email for Applicant:  </label></p>
+                <input type="applicantEmail" class="form-control" id="applicantEmail" placeholder="Enter email address" required>
+            </div>
+
+            <div class="form-group">
+                <p><label for="applicantMobile">A4.  Cell Phone of Applicant:   </label></p>
+                <input type="applicantMobile" class="form-control" id="applicantEmail" placeholder="Enter cell phone number" required>
+            </div>
+
+            <div class="form-group">
+                <p><label for="applicantHomePhone">A5.  Home Phone of Applicant:   </label></p>
+                <input type="applicantHomePhone" class="form-control" id="applicantHomePhone" placeholder="Enter home phone number" required>
+            </div>
+
+            <form>
+                <button type="submit" formaction="https://sites.google.com/view/projectgreen/options/selectapp/ky-growers-app" target="self" button class="button">Start Over</button>
+                <button type="submit" formaction="https://sites.google.com/view/projectgreen/options/selectapp/ky-growers-app/appinfocont" target="_self" button class="button">Continue</button>
+
+            </form>
+    </div>
+</body>
+</html>

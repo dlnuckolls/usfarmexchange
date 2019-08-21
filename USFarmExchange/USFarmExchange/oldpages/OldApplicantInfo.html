@@ -1,0 +1,92 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script type="text/javascript">
+function disable(id){
+document.getElementById(id).disabled = 'disabled';
+}
+function enable(id){
+document.getElementById(id).disabled = '';
+}
+
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+$(document).ready(function(){
+  $(".btn1").click(function(){
+    $("r").hide();
+    $("s").show();
+  });
+  $(".btn2").click(function(){
+    $("r").show();
+    $("s").hide();
+  });
+});
+
+
+    </script>
+
+    <style>
+        p {
+            font-size: 125%;
+        }
+
+        .button {
+            background-color: #4CAF50; /* Green */
+            border: none;
+            color: white;
+            padding: 15px 45px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 14px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+
+        <form>
+            <div class="form-group">
+                <p><label for="applicantName">1) Applicant Name: <small> (Individual or signing authority for business entity - NOT a company name.  List name as it appears on the background check.)</small></label></p>
+                <input type="applicantName" class="form-control" id="applicantName" placeholder="Enter applicant name" required>
+            </div>
+            <div class="form-group">
+                <p><label for="primaryResidentalAddress">2) Primary Residential Address of Applicant:</label></p>
+                <input type="primaryResidentialAddress" class="form-control" id="primaryResidentialAddress" placeholder="Enter primary residential address" required>
+            </div>
+            <div class="form-group">
+                <p>
+                    <label for="applicantType">3) Are you applying as an individual or as a business?</label><br>
+                    <div id="ApplicantType">
+                <p>
+                    <input class="btn1" input type="radio" name="ApplicantType" value="Individual" onclick='enable ("PartA")' required> Individual (Complete Part A; skip Part B)</br>
+                    <input class="btn2" input type="radio" name="ApplicantType" value="Business Entity" onclick='enable ("PartB")' unchecked> Business Entity (Skip Part A; Complete Part B)</br>
+                </p>
+
+                </br>
+                </br>
+
+
+                <s><button type="submit" formaction="https://sites.google.com/view/projectgreen/options/selectapp/ky-growers-app/part-a" target="_self" DISABLED name="PartA" id="PartA" button class="button">Continue to Part A</button></s>
+
+                <r>
+                    <button type="submit"
+                            formaction="https://sites.google.com/view/projectgreen/options/selectapp/ky-growers-app/part-b" target="_self" DISABLED name="PartB" id="PartB" button class="button">
+                        Continue to Part B
+                    </button>
+                </r>
+        </form>
+
+
+    </div>
+</body>
+</html>
