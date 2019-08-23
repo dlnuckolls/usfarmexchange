@@ -22,14 +22,15 @@
             <telerik:LayoutRow CssClass="header">
               <Columns>
                 <%--Logo--%>
-                <%--                <telerik:LayoutColumn Span="2" SpanMd="3" SpanSm="12" SpanXs="12">
+                <%--<telerik:LayoutColumn Span="2" SpanMd="3" SpanSm="12">
                   <a href="#" class="logo">
                     <img src="images/logo.png" alt="site logo" />
                   </a>
                 </telerik:LayoutColumn>--%>
 
                 <%--Main Nav--%>
-                <telerik:LayoutColumn Span="12" SpanMd="12" SpanSm="12" SpanXs="12">
+                <%--<telerik:LayoutColumn Span="10" SpanMd="9" SpanSm="12">--%>
+                <telerik:LayoutColumn Span="12">
                   <telerik:RadMenu ID="MainNavMenu" runat="server" RenderMode="Auto">
                     <Items>
                       <telerik:RadMenuItem Text="Home" NavigateUrl="~/" />
@@ -46,9 +47,9 @@
             </telerik:LayoutRow>
           </Rows>
         </telerik:RadPageLayout>
-                  <div class="headerContentFade">
-                    <h1>US Farm Exchange</h1>
-                  </div>
+        <div class="headerContentFade">
+          <h1>US Farm Exchange</h1>
+        </div>
       </div>
       <telerik:RadPageLayout runat="server" ID="MasterLayout" GridType="Fluid">
         <Rows>
