@@ -18,7 +18,7 @@ namespace USFarmExchange {
   [CustomEnum(true)]
   public enum PageNames {
     [TextValue("Login Page")] Login,
-    [TextValue("Home")] Home,
+    [TextValue("US Farm Exchange")] Home,
     [TextValue("About")] About,
     [TextValue("Our Team")] OurTeam,
     [TextValue("Find Events")] Search,

@@ -11,6 +11,10 @@ using Telerik.Web.UI;
 namespace USFarmExchange {
   public partial class Default :BasePage {
     protected void Page_Load(object sender, EventArgs e) {
+      // Set page name in the title section
+      SessionInfo.CurrentPage = PageNames.Home;
+      TitleTag.Text = SessionInfo.DisplayCurrentPage;
+
 
     }
 

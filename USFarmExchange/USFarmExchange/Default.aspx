@@ -3,6 +3,7 @@
 <%@ Register TagPrefix="telerik" Namespace="Telerik.Web.UI" Assembly="Telerik.Web.UI" %>
 
 <asp:Content ID="Content0" ContentPlaceHolderID="head" runat="Server">
+  <asp:Literal ID="TitleTag" runat="server"></asp:Literal>
   <link href="styles/default.css" rel="stylesheet" />
 </asp:Content>
 
