@@ -15,16 +15,16 @@ namespace USFarmExchange {
     private TextValueAttribute() : base(true) => Value = string.Empty;
   }
 
-  //[CustomEnum(true)]
-  //public enum PageNames {
-  //  [TextValue("Login Page")] Login,
-  //  [TextValue("Home")] Home,
-  //  [TextValue("About")] About,
-  //  [TextValue("Our Team")] OurTeam,
-  //  [TextValue("Find Events")] Search,
-  //  [TextValue("Questions")] FAQ,
-  //  [TextValue("Contact")] Contact,
-  //  [TextValue("Blog")] Blog,
-  //  [TextValue("Resources")] Resources
-  //}
+  [CustomEnum(true)]
+  public enum PageNames {
+    [TextValue("Login Page")] Login,
+    [TextValue("Home")] Home,
+    [TextValue("About")] About,
+    [TextValue("Our Team")] OurTeam,
+    [TextValue("Find Events")] Search,
+    [TextValue("Questions")] FAQ,
+    [TextValue("Contact")] Contact,
+    [TextValue("Blog")] Blog,
+    [TextValue("Resources")] Resources
+  }
 }

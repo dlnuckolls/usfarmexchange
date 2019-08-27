@@ -5,8 +5,8 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace USFarmExchange {
-  public partial class MasterPageSingleMenu :System.Web.UI.MasterPage {
+namespace USFarmExchange.areas {
+  public partial class products_services :BasePage {
     protected void Page_Load(object sender, EventArgs e) {
 
     }
