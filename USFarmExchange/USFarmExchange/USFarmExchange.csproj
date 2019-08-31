@@ -149,24 +149,27 @@
     <Content Include="areas\crop-insurance.aspx" />
     <Content Include="areas\products-services.aspx" />
     <Content Include="controls\mainnavigation.ascx" />
+    <Content Include="controls\SocialSharing.ascx" />
     <Content Include="images\Crop-Insurance-Cycle.png" />
     <Content Include="images\Farmers.jpg" />
     <Content Include="images\Hemp.jpg" />
     <Content Include="images\KY_Hemp_Field.jpg" />
     <Content Include="images\Sample_app.jpg" />
+    <Content Include="images\social\icons8-delicious.png" />
+    <Content Include="images\social\icons8-digg.png" />
+    <Content Include="images\social\icons8-facebook.png" />
+    <Content Include="images\social\icons8-gmail_login.png" />
+    <Content Include="images\social\icons8-linkedin.png" />
+    <Content Include="images\social\icons8-pinterest.png" />
+    <Content Include="images\social\icons8-stumbleupon.png" />
+    <Content Include="images\social\icons8-tumblr.png" />
+    <Content Include="images\social\icons8-twitter.png" />
     <Content Include="images\Tractors.jpg" />
     <Content Include="MasterPage.Master" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Default.aspx" />
-    <Content Include="images\Chrysanthemum.jpg" />
-    <Content Include="images\Desert.jpg" />
-    <Content Include="images\Hydrangeas.jpg" />
-    <Content Include="images\Jellyfish.jpg" />
-    <Content Include="images\Koala.jpg" />
-    <Content Include="images\Lighthouse.jpg" />
     <Content Include="images\logo.png" />
-    <Content Include="images\Penguins.jpg" />
     <Content Include="images\Thumbnails\Chrysanthemum.jpg" />
     <Content Include="images\Thumbnails\Desert.jpg" />
     <Content Include="images\Thumbnails\Hydrangeas.jpg" />
@@ -175,7 +178,6 @@
     <Content Include="images\Thumbnails\Lighthouse.jpg" />
     <Content Include="images\Thumbnails\Penguins.jpg" />
     <Content Include="images\Thumbnails\Tulips.jpg" />
-    <Content Include="images\Tulips.jpg" />
     <Content Include="scripts\scripts.js" />
     <Content Include="styles\base.css" />
     <Content Include="styles\default.css" />
@@ -224,6 +226,13 @@
     </Compile>
     <Compile Include="controls\mainnavigation.ascx.designer.cs">
       <DependentUpon>mainnavigation.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="controls\SocialSharing.ascx.cs">
+      <DependentUpon>SocialSharing.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="controls\SocialSharing.ascx.designer.cs">
+      <DependentUpon>SocialSharing.ascx</DependentUpon>
     </Compile>
     <Compile Include="helpers\BaseControl.cs">
       <SubType>ASPXCodeBehind</SubType>
@@ -312,7 +321,7 @@
           <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
         </WebProjectProperties>
       </FlavorProperties>
-      <UserProperties UseJQuerySupport="True" UseAjaxifiedTemplates="True" />
+      <UserProperties UseAjaxifiedTemplates="True" UseJQuerySupport="True" />
     </VisualStudio>
   </ProjectExtensions>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
