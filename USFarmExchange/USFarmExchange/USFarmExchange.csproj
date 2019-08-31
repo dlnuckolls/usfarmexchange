@@ -148,6 +148,7 @@
     <Content Include="areas\aboutus.aspx" />
     <Content Include="areas\crop-insurance.aspx" />
     <Content Include="areas\products-services.aspx" />
+    <Content Include="controls\mainnavigation.ascx" />
     <Content Include="images\Crop-Insurance-Cycle.png" />
     <Content Include="images\Farmers.jpg" />
     <Content Include="images\Hemp.jpg" />
@@ -217,6 +218,13 @@
     <Compile Include="areas\products-services.aspx.designer.cs">
       <DependentUpon>products-services.aspx</DependentUpon>
     </Compile>
+    <Compile Include="controls\mainnavigation.ascx.cs">
+      <DependentUpon>mainnavigation.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="controls\mainnavigation.ascx.designer.cs">
+      <DependentUpon>mainnavigation.ascx</DependentUpon>
+    </Compile>
     <Compile Include="helpers\BaseControl.cs">
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
@@ -227,6 +235,13 @@
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="helpers\PortalSession.cs" />
+    <Compile Include="MasterContentPage.Master.cs">
+      <DependentUpon>MasterContentPage.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MasterContentPage.Master.designer.cs">
+      <DependentUpon>MasterContentPage.Master</DependentUpon>
+    </Compile>
     <Compile Include="MasterSubPage.Master.cs">
       <DependentUpon>MasterSubPage.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -266,6 +281,7 @@
   <ItemGroup>
     <Content Include="web.config" />
     <Content Include="MasterSubPage.Master" />
+    <Content Include="MasterContentPage.Master" />
     <None Include="web.Debug.config">
       <DependentUpon>web.config</DependentUpon>
     </None>
@@ -296,7 +312,7 @@
           <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
         </WebProjectProperties>
       </FlavorProperties>
-      <UserProperties UseAjaxifiedTemplates="True" UseJQuerySupport="True" />
+      <UserProperties UseJQuerySupport="True" UseAjaxifiedTemplates="True" />
     </VisualStudio>
   </ProjectExtensions>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

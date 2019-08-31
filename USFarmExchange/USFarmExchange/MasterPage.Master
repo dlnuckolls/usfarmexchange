@@ -1,6 +1,7 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MasterPage.master.cs" Inherits="USFarmExchange.MasterPage" %>
 
 <%@ Register TagPrefix="telerik" Namespace="Telerik.Web.UI" Assembly="Telerik.Web.UI" %>
+<%@ Register Src="~/controls/mainnavigation.ascx" TagPrefix="uc1" TagName="MainNavigation" %>
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -30,17 +31,7 @@
                 <%--Main Nav--%>
                 <%--<telerik:LayoutColumn Span="10" SpanMd="9" SpanSm="12">--%>
                 <telerik:LayoutColumn Span="12">
-                  <telerik:RadMenu ID="MainNavMenu" runat="server" RenderMode="Auto">
-                    <Items>
-                      <telerik:RadMenuItem Text="Home" NavigateUrl="~/" />
-                      <telerik:RadMenuItem IsSeparator="true" />
-                      <telerik:RadMenuItem Text="Products & Services" NavigateUrl="~/areas/products-services.aspx" />
-                      <telerik:RadMenuItem IsSeparator="true" />
-                      <telerik:RadMenuItem Text="About Us" NavigateUrl="~/areas/aboutus.aspx" />
-                      <telerik:RadMenuItem IsSeparator="true" />
-                      <telerik:RadMenuItem Text="Login" NavigateUrl="~/admin/login.aspx" />
-                    </Items>
-                  </telerik:RadMenu>
+                  <uc1:MainNavigation runat="server" ID="mainnavigation" />
                 </telerik:LayoutColumn>
               </Columns>
             </telerik:LayoutRow>
