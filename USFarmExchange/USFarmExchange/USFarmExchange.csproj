@@ -180,6 +180,7 @@
     <Content Include="images\Thumbnails\Tulips.jpg" />
     <Content Include="scripts\scripts.js" />
     <Content Include="styles\base.css" />
+    <Content Include="styles\CropInsurance.css" />
     <Content Include="styles\default.css" />
     <Content Include="styles\grid.css" />
     <Content Include="styles\listView.css" />
@@ -321,7 +322,7 @@
           <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
         </WebProjectProperties>
       </FlavorProperties>
-      <UserProperties UseAjaxifiedTemplates="True" UseJQuerySupport="True" />
+      <UserProperties UseJQuerySupport="True" UseAjaxifiedTemplates="True" />
     </VisualStudio>
   </ProjectExtensions>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
