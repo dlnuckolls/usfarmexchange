@@ -19,39 +19,77 @@ namespace USFarmExchange.areas
 
         protected void btnPrevious_Click(object sender, EventArgs e)
         {
-
-        }
-
-        protected void btnNext_Click(object sender, EventArgs e)
-        {
-            if (UnderstandingCropInsurance.Visible)
+            if (Glossary.Visible)
             {
                 Hide_Panels();
-                Display_Panel(CropInsuranceCycle);
-                btnPrevious.Enabled = true;
+                Display_Panel(History);
+                btnNext.Enabled = true;
                 return;
             }
-            if (CropInsuranceCycle.Visible)
+            if (History.Visible)
             {
                 Hide_Panels();
                 Display_Panel(Competition);
                 return;
             }
-
+            if (Competition.Visible)
+            {
+                Hide_Panels();
+                Display_Panel(CropInsuranceCycle);
+                return;
+            }
+            if (CropInsuranceCycle.Visible)
+            {
+                Hide_Panels();
+                Display_Panel(UnderstandingCropInsurance);
+                btnPrevious.Enabled = false;
+                return;
+            }
         }
-        private void Hide_Panels() {
-            UnderstandingCropInsurance.Visible = false;
-            CropInsuranceCycle.Visible = false;
-            Competition.Visible = false;
-            History.Visible = false;
-            Glossary.Visible = false;
-         }
 
-        private void Display_Panel(Panel panel )
-        {
-            panel.Visible = true;
+            protected void btnNext_Click(object sender, EventArgs e)
+            {
+                if (UnderstandingCropInsurance.Visible)
+                {
+                    Hide_Panels();
+                    Display_Panel(CropInsuranceCycle);
+                    btnPrevious.Enabled = true;
+                    return;
+                }
+                if (CropInsuranceCycle.Visible)
+                {
+                    Hide_Panels();
+                    Display_Panel(Competition);
+                    return;
+                }
+                if (Competition.Visible)
+                {
+                    Hide_Panels();
+                    Display_Panel(History);
+                    return;
+                }
+                if (History.Visible)
+                {
+                    Hide_Panels();
+                    Display_Panel(Glossary);
+                    btnNext.Enabled = false;
+                    return;
+                }
+            }
+            private void Hide_Panels()
+            {
+                UnderstandingCropInsurance.Visible = false;
+                CropInsuranceCycle.Visible = false;
+                Competition.Visible = false;
+                History.Visible = false;
+                Glossary.Visible = false;
+            }
+
+            private void Display_Panel(Panel panel)
+            {
+                panel.Visible = true;
+            }
+
         }
 
     }
-
-}
