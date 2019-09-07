@@ -4,7 +4,11 @@
   <Items>
     <telerik:RadMenuItem Text="Home" NavigateUrl="~/" />
     <telerik:RadMenuItem IsSeparator="true" />
-    <telerik:RadMenuItem Text="Products & Services" NavigateUrl="~/areas/products-services.aspx" />
+    <telerik:RadMenuItem Text="Products & Services" NavigateUrl="~/areas/products-services.aspx">
+    <Items>
+      <telerik:RadMenuItem Text="Crop Insurance" NavigateUrl="~/areas/crop-insurance.aspx" />
+    </Items>  
+    </telerik:RadMenuItem>
     <telerik:RadMenuItem IsSeparator="true" />
     <telerik:RadMenuItem Text="About Us" NavigateUrl="~/areas/aboutus.aspx" />
     <telerik:RadMenuItem IsSeparator="true" />

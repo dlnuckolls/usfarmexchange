@@ -3,6 +3,9 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <link href="../styles/CropInsurance.css" rel="stylesheet" />
 </asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="TableOfContents1" runat="server">
+</asp:Content>
+
 <asp:Content ID="Column1" ContentPlaceHolderID="MainContent1" runat="server">
     <telerik:RadAjaxPanel runat="server">
         <div id="CropInsurance">
@@ -178,4 +181,6 @@ Upon receipt of a properly completed and timely submitted insurance application,
         </telerik:RadAjaxPanel>
 </asp:Content>
 
+<asp:Content ID="Content3" ContentPlaceHolderID="RightColumn1" runat="server">
+</asp:Content>
 

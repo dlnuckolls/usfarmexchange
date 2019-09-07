@@ -132,6 +132,33 @@ div.RadMenuPopup,
       background-color: transparent !important;
     }
 
+      #wrapper .header .RadMenu .rmRootGroup :hover {
+        background-color: cadetblue !important;
+        border-radius: 10px;
+      }
+
+#wrapper .smallHeader {
+  background-color: mediumseagreen !important;
+  padding: 20px 0;
+  margin-bottom: 40px;
+}
+
+  #wrapper .smallHeader .RadMenu {
+    margin: 10px 0;
+    float: right !important;
+  }
+
+    #wrapper .smallHeader .RadMenu .rmRootGroup {
+      border-width: 0 !important;
+      border-color: transparent !important;
+      background-color: transparent !important;
+    }
+
+      #wrapper .smallHeader .RadMenu .rmRootGroup :hover {
+        background-color: darkseagreen !important;
+        border-radius: 10px;
+      }
+
 .headerContentFade {
   position: absolute;
   bottom: 0px;

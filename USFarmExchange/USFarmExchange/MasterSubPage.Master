@@ -23,9 +23,9 @@
             <Columns>
               <%--Logo--%>
               <telerik:LayoutColumn Span="2" SpanMd="3" SpanSm="12" SpanXs="12">
-                <a href="#" class="logo">
+               <%-- <a href="#" class="logo">
                   <img src="images/logo.png" alt="site logo" />
-                </a>
+                </a>--%>
               </telerik:LayoutColumn>
 
               <%--Main Nav--%>
