@@ -6,7 +6,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 
 namespace USFarmExchange {
-  public partial class MasterPageSingleMenu :System.Web.UI.MasterPage {
+  public partial class MasterContentPage :BaseMasterPage {
     protected void Page_Load(object sender, EventArgs e) {
 
     }

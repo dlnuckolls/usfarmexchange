@@ -27,3 +27,72 @@
     padding: 30px 15px;
     line-height: 30px;
 }
+
+table.rssTable {
+  margin: 4px 15px;
+  color: #87888A;
+}
+
+.rssTable td {
+  vertical-align: top;
+}
+
+.rssContent {
+  float: left;
+}
+
+.layoutWrapper {
+  margin: 0 auto;
+  font-family: "Segoe UI", helvetica,arial,sans-serif;
+  color: #eee;
+  padding: 10px;
+  background: url('images/tabletFrame.png');
+  width: 780px;
+  height: 513px;
+}
+
+.rssDate {
+  color: #389E3B;
+  font-size: 12pt;
+}
+
+.rssTitle {
+  width: 560px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 16pt;
+  color: #eee;
+  position: relative;
+  left: 160px;
+  top: -90px;
+  margin-bottom: -50px;
+}
+
+  .rssTitle a {
+    font-size: 16pt;
+    color: #eee;
+    text-decoration: none;
+  }
+
+.rssSubHeader {
+  font-size: 10pt;
+  padding-left: 3px;
+  color: #999;
+}
+
+.rssTable table a > img {
+  height: 125px;
+  width: 140px;
+}
+
+.rssButtons {
+  width: 24px;
+  height: 24px;
+  padding: 0 10px;
+}
+
+.imageWrapper {
+  width: 100%;
+  text-align: center;
+}

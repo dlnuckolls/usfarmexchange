@@ -1,11 +1,11 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MasterPage.master.cs" Inherits="USFarmExchange.MasterPage" %>
 
 <%@ Register TagPrefix="telerik" Namespace="Telerik.Web.UI" Assembly="Telerik.Web.UI" %>
+<%@ Register Src="~/controls/mainnavigation.ascx" TagPrefix="uc1" TagName="MainNavigation" %>
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-  <title></title>
   <meta name="viewport" content="initial-scale=1.0, minimum-scale=1, maximum-scale=1.0, user-scalable=no" />
   <link href="styles/base.css" rel="stylesheet" />
   <asp:ContentPlaceHolder ID="head" runat="server">
@@ -22,33 +22,24 @@
             <telerik:LayoutRow CssClass="header">
               <Columns>
                 <%--Logo--%>
-                <%--                <telerik:LayoutColumn Span="2" SpanMd="3" SpanSm="12" SpanXs="12">
+                <%--<telerik:LayoutColumn Span="2" SpanMd="3" SpanSm="12">
                   <a href="#" class="logo">
                     <img src="images/logo.png" alt="site logo" />
                   </a>
                 </telerik:LayoutColumn>--%>
 
                 <%--Main Nav--%>
-                <telerik:LayoutColumn Span="12" SpanMd="12" SpanSm="12" SpanXs="12">
-                  <telerik:RadMenu ID="MainNavMenu" runat="server" RenderMode="Auto">
-                    <Items>
-                      <telerik:RadMenuItem Text="Home" NavigateUrl="~/" />
-                      <telerik:RadMenuItem IsSeparator="true" />
-                      <telerik:RadMenuItem Text="Products & Services" />
-                      <telerik:RadMenuItem IsSeparator="true" />
-                      <telerik:RadMenuItem Text="About Us" />
-                      <telerik:RadMenuItem IsSeparator="true" />
-                      <telerik:RadMenuItem Text="Login" />
-                    </Items>
-                  </telerik:RadMenu>
+                <%--<telerik:LayoutColumn Span="10" SpanMd="9" SpanSm="12">--%>
+                <telerik:LayoutColumn Span="12">
+                  <uc1:MainNavigation runat="server" ID="mainnavigation" />
                 </telerik:LayoutColumn>
               </Columns>
             </telerik:LayoutRow>
           </Rows>
         </telerik:RadPageLayout>
-                  <div class="headerContentFade">
-                    <h1>US Farm Exchange</h1>
-                  </div>
+        <div class="headerContentFade">
+          <h1>US Farm Exchange</h1>
+        </div>
       </div>
       <telerik:RadPageLayout runat="server" ID="MasterLayout" GridType="Fluid">
         <Rows>

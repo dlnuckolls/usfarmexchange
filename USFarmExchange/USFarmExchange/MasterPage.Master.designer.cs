@@ -40,13 +40,13 @@ namespace USFarmExchange {
         protected global::Telerik.Web.UI.RadPageLayout RadPageLayout1;
         
         /// <summary>
-        /// MainNavMenu control.
+        /// mainnavigation control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::Telerik.Web.UI.RadMenu MainNavMenu;
+        protected global::USFarmExchange.MainNavigation mainnavigation;
         
         /// <summary>
         /// MasterLayout control.

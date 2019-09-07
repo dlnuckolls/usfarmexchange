@@ -7,72 +7,72 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace USFarmExchange {
+namespace USFarmExchange.areas {
     
     
-    public partial class MasterSubPage {
+    public partial class crop_insurance {
         
         /// <summary>
-        /// head control.
+        /// UnderstandingCropInsurance control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder head;
+        protected global::System.Web.UI.WebControls.Panel UnderstandingCropInsurance;
         
         /// <summary>
-        /// form1 control.
+        /// CropInsuranceCycle control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
+        protected global::System.Web.UI.WebControls.Panel CropInsuranceCycle;
         
         /// <summary>
-        /// MasterLayout control.
+        /// Competition control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::Telerik.Web.UI.RadPageLayout MasterLayout;
+        protected global::System.Web.UI.WebControls.Panel Competition;
         
         /// <summary>
-        /// mainnavigation control.
+        /// History control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::USFarmExchange.MainNavigation mainnavigation;
+        protected global::System.Web.UI.WebControls.Panel History;
         
         /// <summary>
-        /// ContentPlaceHolder1 control.
+        /// Glossary control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder ContentPlaceHolder1;
+        protected global::System.Web.UI.WebControls.Panel Glossary;
         
         /// <summary>
-        /// ContentPlaceHolder2 control.
+        /// btnPrevious control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder ContentPlaceHolder2;
+        protected global::Telerik.Web.UI.RadButton btnPrevious;
         
         /// <summary>
-        /// ContentPlaceHolder3 control.
+        /// btnNext control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder ContentPlaceHolder3;
+        protected global::Telerik.Web.UI.RadButton btnNext;
     }
 }
