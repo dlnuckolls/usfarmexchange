@@ -146,8 +146,11 @@
     <Content Include="App_Data\RadCaptcha\Y.wav" />
     <Content Include="App_Data\RadCaptcha\Z.wav" />
     <Content Include="areas\aboutus.aspx" />
+    <Content Include="areas\communication.aspx" />
+    <Content Include="areas\compliance.aspx" />
     <Content Include="areas\crop-insurance.aspx" />
-    <Content Include="areas\products-services.aspx" />
+    <Content Include="areas\education.aspx" />
+    <Content Include="areas\products_services.aspx" />
     <Content Include="controls\mainnavigation.ascx" />
     <Content Include="controls\SocialSharing.ascx" />
     <Content Include="images\Crop-Insurance-Cycle.png" />
@@ -207,6 +210,20 @@
     <Compile Include="areas\aboutus.aspx.designer.cs">
       <DependentUpon>aboutus.aspx</DependentUpon>
     </Compile>
+    <Compile Include="areas\communication.aspx.cs">
+      <DependentUpon>communication.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="areas\communication.aspx.designer.cs">
+      <DependentUpon>communication.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="areas\compliance.aspx.cs">
+      <DependentUpon>compliance.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="areas\compliance.aspx.designer.cs">
+      <DependentUpon>compliance.aspx</DependentUpon>
+    </Compile>
     <Compile Include="areas\crop-insurance.aspx.cs">
       <DependentUpon>crop-insurance.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -214,12 +231,19 @@
     <Compile Include="areas\crop-insurance.aspx.designer.cs">
       <DependentUpon>crop-insurance.aspx</DependentUpon>
     </Compile>
-    <Compile Include="areas\products-services.aspx.cs">
-      <DependentUpon>products-services.aspx</DependentUpon>
+    <Compile Include="areas\education.aspx.cs">
+      <DependentUpon>education.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="areas\products-services.aspx.designer.cs">
-      <DependentUpon>products-services.aspx</DependentUpon>
+    <Compile Include="areas\education.aspx.designer.cs">
+      <DependentUpon>education.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="areas\products_services.aspx.cs">
+      <DependentUpon>products_services.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="areas\products_services.aspx.designer.cs">
+      <DependentUpon>products_services.aspx</DependentUpon>
     </Compile>
     <Compile Include="controls\mainnavigation.ascx.cs">
       <DependentUpon>mainnavigation.ascx</DependentUpon>
@@ -322,7 +346,7 @@
           <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
         </WebProjectProperties>
       </FlavorProperties>
-      <UserProperties UseJQuerySupport="True" UseAjaxifiedTemplates="True" />
+      <UserProperties UseAjaxifiedTemplates="True" UseJQuerySupport="True" />
     </VisualStudio>
   </ProjectExtensions>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
