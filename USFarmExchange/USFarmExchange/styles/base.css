@@ -137,6 +137,12 @@ div.RadMenuPopup,
         border-radius: 10px;
       }
 
+#wrapper .logo {
+  margin: 0px 0;
+  height: 150px;
+  display: inline-block;
+}
+
 #wrapper .smallHeader {
   background-color: mediumseagreen !important;
   padding: 20px 0;

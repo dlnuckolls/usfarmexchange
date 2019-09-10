@@ -4,6 +4,7 @@
 <%@ Register Src="~/controls/mainnavigation.ascx" TagPrefix="uc1" TagName="MainNavigation" %>
 <%@ Register Src="~/controls/UserInteraction.ascx" TagPrefix="uc1" TagName="UserInteraction" %>
 <%@ Register Src="~/controls/SocialLinks.ascx" TagPrefix="uc1" TagName="SocialLinks" %>
+<%@ Register Src="~/controls/FooterLayout.ascx" TagPrefix="uc1" TagName="FooterLayout" %>
 
 <!DOCTYPE html>
 
@@ -82,8 +83,7 @@
           <telerik:LayoutRow>
             <Columns>
               <telerik:LayoutColumn CssClass="footer">
-                <hr />
-                Footer: © 2019 US Farm Exchange
+                <uc1:FooterLayout runat="server" id="FooterLayout" />
               </telerik:LayoutColumn>
             </Columns>
           </telerik:LayoutRow>
