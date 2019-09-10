@@ -25,7 +25,7 @@
                   </telerik:RadTextBox>
                 </div>
                 <div style="width: 100%; padding: 5px; margin-left: 150px;">
-                  <telerik:RadButton ID="SubmitLogin" runat="server" Skin="Silk" RenderMode="Auto" Text="Login" OnClick="SubmitLogin_OnClick" CssClass="css3Simple2" />
+                  <telerik:RadButton ID="SubmitLogin" runat="server" Skin="Silk" RenderMode="Auto" Text="Login" OnClick="SubmitLogin_OnClick" CssClass="css3Simple2"  />
                   &nbsp;&nbsp;&nbsp;<telerik:RadLabel ID="lErrorMessage" runat="server" CssClass="appErrorMessage" /></div>
                 <div style="width: 100%; padding: 5px; margin-left: 153px;">
                   <asp:LinkButton ID="ForgotPassword" runat="server" CssClass="forgotText" Text="Forgot&nbsp;Password" OnClick="ForgotPassword_OnClick" /></div>
