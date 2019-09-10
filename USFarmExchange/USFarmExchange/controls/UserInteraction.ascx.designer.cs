@@ -7,90 +7,72 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace USFarmExchange {
+namespace USFarmExchange.controls {
     
     
-    public partial class MasterSubPage {
+    public partial class UserInteraction {
         
         /// <summary>
-        /// head control.
+        /// lUserDisplayName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder head;
+        protected global::System.Web.UI.WebControls.Label lUserDisplayName;
         
         /// <summary>
-        /// form1 control.
+        /// lbAccount control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
+        protected global::System.Web.UI.WebControls.LinkButton lbAccount;
         
         /// <summary>
-        /// MasterLayout control.
+        /// lbDashboard control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::Telerik.Web.UI.RadPageLayout MasterLayout;
+        protected global::System.Web.UI.WebControls.LinkButton lbDashboard;
         
         /// <summary>
-        /// SocialLinks control.
+        /// adminSpacer control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::USFarmExchange.controls.SocialLinks SocialLinks;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl adminSpacer;
         
         /// <summary>
-        /// UserInteraction control.
+        /// lbAdminDashboard control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::USFarmExchange.controls.UserInteraction UserInteraction;
+        protected global::System.Web.UI.WebControls.LinkButton lbAdminDashboard;
         
         /// <summary>
-        /// mainnavigation control.
+        /// logoutSpacer control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::USFarmExchange.MainNavigation mainnavigation;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl logoutSpacer;
         
         /// <summary>
-        /// ContentPlaceHolder1 control.
+        /// lbLogout control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder ContentPlaceHolder1;
-        
-        /// <summary>
-        /// ContentPlaceHolder2 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder ContentPlaceHolder2;
-        
-        /// <summary>
-        /// ContentPlaceHolder3 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder ContentPlaceHolder3;
+        protected global::System.Web.UI.WebControls.LinkButton lbLogout;
     }
 }

@@ -107,6 +107,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="admin\AdminHome.aspx" />
     <Content Include="admin\dashboard.aspx" />
     <Content Include="admin\ForgotPassword.aspx" />
     <Content Include="admin\login.aspx" />
@@ -152,8 +153,11 @@
     <Content Include="areas\products-services.aspx" />
     <Content Include="controls\FooterLayout.ascx" />
     <Content Include="controls\mainnavigation.ascx" />
+    <Content Include="controls\SocialLinks.ascx" />
     <Content Include="controls\SocialSharing.ascx" />
+    <Content Include="controls\UserInteraction.ascx" />
     <Content Include="images\Crop-Insurance-Cycle.png" />
+    <Content Include="images\facebook.png" />
     <Content Include="images\Farmers.jpg" />
     <Content Include="images\Hemp.jpg" />
     <Content Include="images\KY_Hemp_Field.jpg" />
@@ -168,6 +172,7 @@
     <Content Include="images\social\icons8-tumblr.png" />
     <Content Include="images\social\icons8-twitter.png" />
     <Content Include="images\Tractors.jpg" />
+    <Content Include="images\twitter.png" />
     <Content Include="MasterPage.Master" />
   </ItemGroup>
   <ItemGroup>
@@ -189,6 +194,13 @@
     <Content Include="styles\listView.css" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="admin\AdminHome.aspx.cs">
+      <DependentUpon>AdminHome.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\AdminHome.aspx.designer.cs">
+      <DependentUpon>AdminHome.aspx</DependentUpon>
+    </Compile>
     <Compile Include="admin\AdminMaster.Master.cs">
       <DependentUpon>AdminMaster.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -259,12 +271,26 @@
     <Compile Include="controls\mainnavigation.ascx.designer.cs">
       <DependentUpon>mainnavigation.ascx</DependentUpon>
     </Compile>
+    <Compile Include="controls\SocialLinks.ascx.cs">
+      <DependentUpon>SocialLinks.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="controls\SocialLinks.ascx.designer.cs">
+      <DependentUpon>SocialLinks.ascx</DependentUpon>
+    </Compile>
     <Compile Include="controls\SocialSharing.ascx.cs">
       <DependentUpon>SocialSharing.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="controls\SocialSharing.ascx.designer.cs">
       <DependentUpon>SocialSharing.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="controls\UserInteraction.ascx.cs">
+      <DependentUpon>UserInteraction.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="controls\UserInteraction.ascx.designer.cs">
+      <DependentUpon>UserInteraction.ascx</DependentUpon>
     </Compile>
     <Compile Include="helpers\BaseControl.cs">
       <SubType>ASPXCodeBehind</SubType>
@@ -357,7 +383,7 @@
           <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
         </WebProjectProperties>
       </FlavorProperties>
-      <UserProperties UseAjaxifiedTemplates="True" UseJQuerySupport="True" />
+      <UserProperties UseJQuerySupport="True" UseAjaxifiedTemplates="True" />
     </VisualStudio>
   </ProjectExtensions>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

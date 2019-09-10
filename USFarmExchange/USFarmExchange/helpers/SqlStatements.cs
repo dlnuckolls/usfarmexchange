@@ -30,7 +30,7 @@ namespace USFarmExchange {
     #endregion
     #region User/Admin Management
     public const string SQL_GET_REGISTRATION_LIST = "SELECT au.Id, au.DisplayName, au.UserName, au.Notes FROM dbo.SystemUsers au WHERE au.RoleId = '" + REGISTRATION + "' AND Deleted = 0 GROUP BY au.Id, au.DisplayName, au.UserName, au.Notes;";
-    public const string SQL_GET_ADMIN_LIST = "SELECT au.Id, au.DisplayName, au.UserName, au.Notes, au.SuperAdmin FROM dbo.SystemUsers au WHERE au.RoleId = '" + REGISTRATION + "' AND Deleted = 0 AND au.Id != '85475973-A48B-4D51-B9DE-312431B88E86';";
+    public const string SQL_GET_ADMIN_LIST = "SELECT au.Id, au.DisplayName, au.UserName, au.Notes, au.SuperAdmin FROM dbo.SystemUsers au WHERE au.RoleId = '" + REGISTRATION + "' AND Deleted = 0;";
     #endregion
     #region Exceptions
     public const string SQL_LOG_EXCEPTION = "INSERT INTO dbo.SystemExceptions (ExceptionTimeStamp, Module, Exception, StackTrace) VALUES ({0}, '{1}', '{2}', '{3}');";

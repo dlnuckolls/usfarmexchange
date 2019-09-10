@@ -9,7 +9,7 @@ namespace USFarmExchange {
     public SystemSettings Settings => SystemSettings.StaticInstance;
 
     // Authentication indicator and user record
-    public SystemUser CurrentUser { get; set; }
+    public SystemUser CurrentUser => SystemUser.StaticInstance;
     public bool IsAuthenticated => CurrentUser.IsAuthenticated;
     public bool IsAdmin => CurrentUser.IsAdmin;
 

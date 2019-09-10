@@ -1,0 +1,2 @@
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="SocialLinks.ascx.cs" Inherits="USFarmExchange.controls.SocialLinks" %>
+&nbsp;&nbsp;&nbsp;<a href="http://www.twitter.com/USFarmExchange" target="_blank"><img src="/images/twitter.png" style="width: 20px;" /></a>&nbsp;&nbsp;&nbsp;<a href="https://www.facebook.com/USFarmExchange/" target="_blank"><img src="/images/facebook.png" style="width: 20px;" /></a>
