@@ -10,7 +10,7 @@
 namespace USFarmExchange {
     
     
-    public partial class Login {
+    public partial class ForgotPassword {
         
         /// <summary>
         /// TitleTag control.
@@ -31,6 +31,15 @@ namespace USFarmExchange {
         protected global::Telerik.Web.UI.RadPageLayout loginPage;
         
         /// <summary>
+        /// lMessage control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Telerik.Web.UI.RadLabel lMessage;
+        
+        /// <summary>
         /// userName control.
         /// </summary>
         /// <remarks>
@@ -38,15 +47,6 @@ namespace USFarmExchange {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::Telerik.Web.UI.RadTextBox userName;
-        
-        /// <summary>
-        /// password control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::Telerik.Web.UI.RadTextBox password;
         
         /// <summary>
         /// SubmitLogin control.
@@ -67,12 +67,12 @@ namespace USFarmExchange {
         protected global::Telerik.Web.UI.RadLabel lErrorMessage;
         
         /// <summary>
-        /// ForgotPassword control.
+        /// ReturnToLogin control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton ForgotPassword;
+        protected global::Telerik.Web.UI.RadButton ReturnToLogin;
     }
 }

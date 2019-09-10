@@ -108,7 +108,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="admin\dashboard.aspx" />
+    <Content Include="admin\ForgotPassword.aspx" />
     <Content Include="admin\login.aspx" />
+    <Content Include="admin\ResetPassword.aspx" />
     <Content Include="App_Data\RadCaptcha\0.wav" />
     <Content Include="App_Data\RadCaptcha\1.wav" />
     <Content Include="App_Data\RadCaptcha\2.wav" />
@@ -148,6 +150,7 @@
     <Content Include="areas\aboutus.aspx" />
     <Content Include="areas\crop-insurance.aspx" />
     <Content Include="areas\products-services.aspx" />
+    <Content Include="controls\FooterLayout.ascx" />
     <Content Include="controls\mainnavigation.ascx" />
     <Content Include="controls\SocialSharing.ascx" />
     <Content Include="images\Crop-Insurance-Cycle.png" />
@@ -186,6 +189,13 @@
     <Content Include="styles\listView.css" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="admin\AdminMaster.Master.cs">
+      <DependentUpon>AdminMaster.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\AdminMaster.Master.designer.cs">
+      <DependentUpon>AdminMaster.Master</DependentUpon>
+    </Compile>
     <Compile Include="admin\dashboard.aspx.cs">
       <DependentUpon>dashboard.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -193,12 +203,26 @@
     <Compile Include="admin\dashboard.aspx.designer.cs">
       <DependentUpon>dashboard.aspx</DependentUpon>
     </Compile>
+    <Compile Include="admin\ForgotPassword.aspx.cs">
+      <DependentUpon>ForgotPassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\ForgotPassword.aspx.designer.cs">
+      <DependentUpon>ForgotPassword.aspx</DependentUpon>
+    </Compile>
     <Compile Include="admin\login.aspx.cs">
       <DependentUpon>login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="admin\login.aspx.designer.cs">
       <DependentUpon>login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\ResetPassword.aspx.cs">
+      <DependentUpon>ResetPassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\ResetPassword.aspx.designer.cs">
+      <DependentUpon>ResetPassword.aspx</DependentUpon>
     </Compile>
     <Compile Include="areas\aboutus.aspx.cs">
       <DependentUpon>aboutus.aspx</DependentUpon>
@@ -220,6 +244,13 @@
     </Compile>
     <Compile Include="areas\products-services.aspx.designer.cs">
       <DependentUpon>products-services.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="controls\FooterLayout.ascx.cs">
+      <DependentUpon>FooterLayout.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="controls\FooterLayout.ascx.designer.cs">
+      <DependentUpon>FooterLayout.ascx</DependentUpon>
     </Compile>
     <Compile Include="controls\mainnavigation.ascx.cs">
       <DependentUpon>mainnavigation.ascx</DependentUpon>
@@ -245,6 +276,9 @@
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="helpers\PortalSession.cs" />
+    <Compile Include="helpers\SqlStatements.cs" />
+    <Compile Include="helpers\SystemSettings.cs" />
+    <Compile Include="helpers\SystemUser.cs" />
     <Compile Include="MasterContentPage.Master.cs">
       <DependentUpon>MasterContentPage.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -292,6 +326,7 @@
     <Content Include="web.config" />
     <Content Include="MasterSubPage.Master" />
     <Content Include="MasterContentPage.Master" />
+    <Content Include="admin\AdminMaster.Master" />
     <None Include="web.Debug.config">
       <DependentUpon>web.config</DependentUpon>
     </None>
@@ -322,7 +357,7 @@
           <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
         </WebProjectProperties>
       </FlavorProperties>
-      <UserProperties UseJQuerySupport="True" UseAjaxifiedTemplates="True" />
+      <UserProperties UseAjaxifiedTemplates="True" UseJQuerySupport="True" />
     </VisualStudio>
   </ProjectExtensions>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
