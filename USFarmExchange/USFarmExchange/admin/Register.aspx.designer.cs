@@ -10,7 +10,7 @@
 namespace USFarmExchange {
     
     
-    public partial class Login {
+    public partial class Register {
         
         /// <summary>
         /// TitleTag control.
@@ -22,13 +22,22 @@ namespace USFarmExchange {
         protected global::System.Web.UI.WebControls.Literal TitleTag;
         
         /// <summary>
-        /// loginPage control.
+        /// RegistrationPage control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::Telerik.Web.UI.RadPageLayout loginPage;
+        protected global::Telerik.Web.UI.RadPageLayout RegistrationPage;
+        
+        /// <summary>
+        /// displayName control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Telerik.Web.UI.RadTextBox displayName;
         
         /// <summary>
         /// userName control.
@@ -67,21 +76,12 @@ namespace USFarmExchange {
         protected global::Telerik.Web.UI.RadLabel lErrorMessage;
         
         /// <summary>
-        /// ForgotPassword control.
+        /// RegistrationThankYou control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton ForgotPassword;
-        
-        /// <summary>
-        /// RegisterNewUser control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton RegisterNewUser;
+        protected global::Telerik.Web.UI.RadPageLayout RegistrationThankYou;
     }
 }

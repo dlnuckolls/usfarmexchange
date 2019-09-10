@@ -96,3 +96,314 @@ table.rssTable {
   width: 100%;
   text-align: center;
 }
+
+#wrapper .footer {
+  width: 100%;
+  padding: 30px 15px !important;
+  line-height: 30px;
+  background-color: #999999;
+  border-top-color: #333333;
+  padding: 15px 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  height: auto;
+  overflow: hidden;
+  font-size: 12px;
+  border-top: 0 solid transparent;
+}
+
+  #wrapper .footer .copyright-divider {
+    border-top-width: 1px;
+  }
+
+    #wrapper .footer .copyright-divider p {
+      padding-left: 50px !important;
+      color: white;
+    }
+
+.teamcards {
+  width: 100%;
+  margin: 5px;
+  border: solid 1px darkgray;
+  border-radius: 10px;
+  padding: 5px;
+  height: 100%;
+  text-align: justify;
+}
+
+  .teamcards h2 {
+    font-size: 1.5em;
+    margin: 0;
+  }
+
+  .teamcards h5 {
+    margin: 0;
+  }
+
+  .teamcards img {
+    width: 140px;
+    float: left;
+    margin-right: 15px;
+    border-radius: 10px;
+  }
+
+.MyLabel {
+  display: block;
+  width: 150px;
+  margin-top: 4px;
+  margin-bottom: 4px;
+  text-align: right;
+  font-weight: bold;
+}
+
+.MyLabel2 {
+  display: block;
+  width: 170px;
+  margin-top: 4px;
+  margin-bottom: 4px;
+  text-align: right;
+  font-weight: bold;
+}
+
+.MyLabel3 {
+  display: block;
+  width: 200px;
+  margin-top: 4px;
+  margin-bottom: 4px;
+  text-align: right;
+  font-weight: bold;
+}
+
+.MyLabel4 {
+  display: block;
+  width: 210px;
+  margin-top: 4px;
+  margin-bottom: 4px;
+  text-align: right;
+  font-weight: bold;
+}
+
+.RadButton.rbRounded.css3Simple {
+  height: 40px;
+  width: 200px;
+  border-radius: 5px;
+  font-size: 1em;
+}
+
+.RadButton.rbRounded.css3SimpleAction {
+  height: 37px;
+  width: 200px;
+  border-radius: 5px;
+  font-size: .75em;
+  padding: 5px;
+}
+
+.RadButton.rbRounded.css3Simple2 {
+  height: 40px;
+  width: 150px;
+  border-radius: 5px;
+  font-size: 1em;
+}
+
+  .RadButton.rbRounded.css3Simple2 .rbText {
+    margin-top: 0 !important;
+  }
+
+html body form .RadInput .MyEmptyTextBox,
+html body form .RadInput .MyEnabledTextBox,
+html body form .RadInput .MyFocusedTextBox {
+  height: 38px;
+  border-width: 1px;
+  border-color: #a9c9a9;
+  background: beige;
+  font: 14px/18px arial,sans-serif;
+}
+
+html body form .RadInput .MyHoveredTextBox {
+  background: #bceff8 !important;
+}
+
+html body form .RadInput .MyFocusedTextBox {
+  background: white !important;
+}
+
+.RadInput textarea.riTextBox {
+  height: auto !important;
+}
+
+.RadComboBox .MyEnabledTextBox {
+  height: 38px;
+  border-width: 1px;
+  border-color: #a9c9a9;
+  background: beige !important;
+  font: 14px/18px arial,sans-serif;
+}
+
+html body form .RadInput .MyEmptyTextBox2,
+html body form .RadInput .MyEnabledTextBox2,
+html body form .RadInput .MyHoveredTextBox2,
+html body form .RadInput .MyFocusedTextBox2 {
+  border-width: 1px;
+  border-color: #a9c9a9;
+  background: beige;
+  font: 14px/18px arial,sans-serif;
+}
+
+html body form .RadInput .MyDisabledTextBox {
+  height: 38px;
+  border-width: 0;
+  border-color: #fff;
+  font: 1em arial,sans-serif;
+}
+
+html body .RadInput .MyEmptyTextBox {
+  color: #999;
+}
+
+html body form .RadInput .MyEnabledTextBox {
+}
+
+html body form .RadInput .MyHoveredTextBox {
+  border-color: #6c6;
+  background: #c9fdc9;
+}
+
+html body form .RadInput .MyFocusedTextBox {
+  border-color: #3a3;
+  background: #c9fdc9;
+}
+
+#messageDisplayArea {
+  width: 100%;
+  text-align: center;
+}
+
+.errorMessageDisplay {
+  padding-left: 10px;
+  padding-right: 10px !important;
+  line-height: 1em;
+  background-color: darkred;
+  font-weight: bold;
+  color: white !important;
+}
+
+.successMessageDisplay {
+  padding-left: 10px;
+  padding-right: 10px !important;
+  line-height: 1em;
+  min-width: 186px;
+  background-color: greenyellow;
+  font-weight: bold;
+  color: black;
+}
+
+.RadGrid_Silk .rgEditRow > td > [type="text"] {
+  width: 100% !important;
+}
+
+.appErrorMessage {
+  text-align: justify;
+  color: darkred;
+  font-weight: bold;
+}
+
+.adminTiles {
+  width: 100%;
+  margin: auto !important;
+  padding: 5px;
+  min-height: 500px;
+}
+
+.gridDescriptionLabel {
+  display: block;
+  width: 150px !important;
+  margin-top: 4px;
+  margin-bottom: 4px;
+  text-align: left;
+  font-weight: bold;
+}
+
+.careerPosting {
+  padding-top: 20px !important;
+  padding-bottom: 20px !important;
+  width: 95% !important;
+  margin: 10px !important;
+  padding-left: 10px !important;
+  padding-right: 30px !important;
+}
+
+.contactcard {
+  width: 100%;
+  margin: auto !important;
+  padding: 5px;
+  border: solid 1px darkgray;
+  border-radius: 10px;
+}
+
+  .contactcard h2 {
+    font-size: 1.5em;
+    color: #1c73bf !important;
+  }
+
+  .contactcard img {
+    font-size: 1.5em;
+    color: #1c73bf !important;
+    max-width: 100%;
+    border-radius: 10px;
+  }
+
+.MyContactLabel {
+  display: block;
+  width: 90px;
+  margin-top: 4px;
+  margin-bottom: 4px;
+  text-align: right;
+}
+
+.imageClass {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.rcRefreshImage {
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+.MyCaptchaTextBox {
+  height: 38px;
+  border-width: 1px;
+  border-color: #a9c9a9;
+  background: beige;
+  font: 14px/18px arial,sans-serif;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.article {
+  width: 100%;
+  margin: 5px;
+  border: solid 1px lightgray;
+  border-radius: 10px;
+  padding: 5px;
+  height: 100%;
+  text-align: justify;
+}
+
+  .article h2 {
+    font-size: 1.15em;
+    margin: 0;
+  }
+
+  .article h5 {
+    margin: 0;
+  }
+
+  .article img {
+    width: 140px;
+    float: left;
+    margin-right: 15px;
+    border-radius: 10px;
+  }

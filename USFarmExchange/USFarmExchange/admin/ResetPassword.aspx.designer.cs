@@ -10,7 +10,7 @@
 namespace USFarmExchange {
     
     
-    public partial class Login {
+    public partial class ResetPassword {
         
         /// <summary>
         /// TitleTag control.
@@ -31,57 +31,48 @@ namespace USFarmExchange {
         protected global::Telerik.Web.UI.RadPageLayout loginPage;
         
         /// <summary>
-        /// userName control.
+        /// LoginId control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::Telerik.Web.UI.RadTextBox userName;
+        protected global::Telerik.Web.UI.RadTextBox LoginId;
         
         /// <summary>
-        /// password control.
+        /// DisplayName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::Telerik.Web.UI.RadTextBox password;
+        protected global::Telerik.Web.UI.RadTextBox DisplayName;
         
         /// <summary>
-        /// SubmitLogin control.
+        /// NewPassword control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::Telerik.Web.UI.RadButton SubmitLogin;
+        protected global::Telerik.Web.UI.RadTextBox NewPassword;
         
         /// <summary>
-        /// lErrorMessage control.
+        /// ConfirmPassword control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::Telerik.Web.UI.RadLabel lErrorMessage;
+        protected global::Telerik.Web.UI.RadTextBox ConfirmPassword;
         
         /// <summary>
-        /// ForgotPassword control.
+        /// RadButton4 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton ForgotPassword;
-        
-        /// <summary>
-        /// RegisterNewUser control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton RegisterNewUser;
+        protected global::Telerik.Web.UI.RadButton RadButton4;
     }
 }

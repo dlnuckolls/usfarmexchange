@@ -132,6 +132,39 @@ div.RadMenuPopup,
       background-color: transparent !important;
     }
 
+      #wrapper .header .RadMenu .rmRootGroup :hover {
+        background-color: cadetblue !important;
+        border-radius: 10px;
+      }
+
+#wrapper .logo {
+  margin: 0px 0;
+  height: 150px;
+  display: inline-block;
+}
+
+#wrapper .smallHeader {
+  background-color: mediumseagreen !important;
+  padding: 20px 0;
+  margin-bottom: 40px;
+}
+
+  #wrapper .smallHeader .RadMenu {
+    margin: 10px 0;
+    float: right !important;
+  }
+
+    #wrapper .smallHeader .RadMenu .rmRootGroup {
+      border-width: 0 !important;
+      border-color: transparent !important;
+      background-color: transparent !important;
+    }
+
+      #wrapper .smallHeader .RadMenu .rmRootGroup :hover {
+        background-color: darkseagreen !important;
+        border-radius: 10px;
+      }
+
 .headerContentFade {
   position: absolute;
   bottom: 0px;
@@ -152,3 +185,42 @@ div.RadMenuPopup,
   .headerContentFade h1 {
     font-size: 3em;
   }
+
+#top-bar-social {
+  float: left;
+  font-size: 11px;
+  line-height: 30px;
+  text-align: right;
+}
+
+  #top-bar-social > ul {
+    float: right;
+    margin-top: 3px;
+    margin-bottom: 0;
+    -moz-opacity: 0.5;
+    filter: alpha(opacity= 50);
+    opacity: 0.5;
+  }
+
+  #top-bar-social ul li {
+    margin-bottom: 0;
+  }
+
+.dashboardLink {
+  font-size: .8em;
+  color: #1c73bf !important;
+  text-decoration: none;
+}
+
+  .dashboardLink a:hover {
+    font-size: .8em;
+    background-color: #2a2d33 !important;
+    text-decoration: none;
+  }
+
+.top-bar {
+  background: #f7f7f7;
+  border-bottom-color: #e4e4e4;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}

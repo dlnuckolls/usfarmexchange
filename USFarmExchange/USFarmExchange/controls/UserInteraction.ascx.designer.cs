@@ -7,81 +7,72 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace USFarmExchange {
+namespace USFarmExchange.controls {
     
     
-    public partial class Login {
+    public partial class UserInteraction {
         
         /// <summary>
-        /// TitleTag control.
+        /// lUserDisplayName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal TitleTag;
+        protected global::System.Web.UI.WebControls.Label lUserDisplayName;
         
         /// <summary>
-        /// loginPage control.
+        /// lbAccount control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::Telerik.Web.UI.RadPageLayout loginPage;
+        protected global::System.Web.UI.WebControls.LinkButton lbAccount;
         
         /// <summary>
-        /// userName control.
+        /// lbDashboard control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::Telerik.Web.UI.RadTextBox userName;
+        protected global::System.Web.UI.WebControls.LinkButton lbDashboard;
         
         /// <summary>
-        /// password control.
+        /// adminSpacer control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::Telerik.Web.UI.RadTextBox password;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl adminSpacer;
         
         /// <summary>
-        /// SubmitLogin control.
+        /// lbAdminDashboard control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::Telerik.Web.UI.RadButton SubmitLogin;
+        protected global::System.Web.UI.WebControls.LinkButton lbAdminDashboard;
         
         /// <summary>
-        /// lErrorMessage control.
+        /// logoutSpacer control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::Telerik.Web.UI.RadLabel lErrorMessage;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl logoutSpacer;
         
         /// <summary>
-        /// ForgotPassword control.
+        /// lbLogout control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton ForgotPassword;
-        
-        /// <summary>
-        /// RegisterNewUser control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton RegisterNewUser;
+        protected global::System.Web.UI.WebControls.LinkButton lbLogout;
     }
 }

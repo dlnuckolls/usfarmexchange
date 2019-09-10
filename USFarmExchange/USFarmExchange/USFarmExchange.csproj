@@ -107,8 +107,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="admin\AdminHome.aspx" />
     <Content Include="admin\dashboard.aspx" />
+    <Content Include="admin\ForgotPassword.aspx" />
     <Content Include="admin\login.aspx" />
+    <Content Include="admin\Register.aspx" />
+    <Content Include="admin\ResetPassword.aspx" />
     <Content Include="App_Data\RadCaptcha\0.wav" />
     <Content Include="App_Data\RadCaptcha\1.wav" />
     <Content Include="App_Data\RadCaptcha\2.wav" />
@@ -149,13 +153,18 @@
     <Content Include="areas\communication.aspx" />
     <Content Include="areas\compliance.aspx" />
     <Content Include="areas\crop-insurance.aspx" />
-    <Content Include="areas\education.aspx" />
-    <Content Include="areas\products_services.aspx" />
+    <Content Include="areas\News.aspx" />
+    <Content Include="areas\products-services.aspx" />
+    <Content Include="controls\FooterLayout.ascx" />
     <Content Include="controls\mainnavigation.ascx" />
+    <Content Include="controls\SocialLinks.ascx" />
     <Content Include="controls\SocialSharing.ascx" />
+    <Content Include="controls\UserInteraction.ascx" />
     <Content Include="images\Crop-Insurance-Cycle.png" />
+    <Content Include="images\facebook.png" />
     <Content Include="images\Farmers.jpg" />
     <Content Include="images\Hemp.jpg" />
+    <Content Include="images\iStock-1029777638.jpg" />
     <Content Include="images\KY_Hemp_Field.jpg" />
     <Content Include="images\Sample_app.jpg" />
     <Content Include="images\social\icons8-delicious.png" />
@@ -168,6 +177,7 @@
     <Content Include="images\social\icons8-tumblr.png" />
     <Content Include="images\social\icons8-twitter.png" />
     <Content Include="images\Tractors.jpg" />
+    <Content Include="images\twitter.png" />
     <Content Include="MasterPage.Master" />
   </ItemGroup>
   <ItemGroup>
@@ -189,6 +199,20 @@
     <Content Include="styles\listView.css" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="admin\AdminHome.aspx.cs">
+      <DependentUpon>AdminHome.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\AdminHome.aspx.designer.cs">
+      <DependentUpon>AdminHome.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\AdminMaster.Master.cs">
+      <DependentUpon>AdminMaster.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\AdminMaster.Master.designer.cs">
+      <DependentUpon>AdminMaster.Master</DependentUpon>
+    </Compile>
     <Compile Include="admin\dashboard.aspx.cs">
       <DependentUpon>dashboard.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -196,12 +220,33 @@
     <Compile Include="admin\dashboard.aspx.designer.cs">
       <DependentUpon>dashboard.aspx</DependentUpon>
     </Compile>
+    <Compile Include="admin\ForgotPassword.aspx.cs">
+      <DependentUpon>ForgotPassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\ForgotPassword.aspx.designer.cs">
+      <DependentUpon>ForgotPassword.aspx</DependentUpon>
+    </Compile>
     <Compile Include="admin\login.aspx.cs">
       <DependentUpon>login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="admin\login.aspx.designer.cs">
       <DependentUpon>login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\Register.aspx.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\Register.aspx.designer.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\ResetPassword.aspx.cs">
+      <DependentUpon>ResetPassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\ResetPassword.aspx.designer.cs">
+      <DependentUpon>ResetPassword.aspx</DependentUpon>
     </Compile>
     <Compile Include="areas\aboutus.aspx.cs">
       <DependentUpon>aboutus.aspx</DependentUpon>
@@ -231,6 +276,15 @@
     <Compile Include="areas\crop-insurance.aspx.designer.cs">
       <DependentUpon>crop-insurance.aspx</DependentUpon>
     </Compile>
+    <Compile Include="areas\News.aspx.cs">
+      <DependentUpon>News.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="areas\News.aspx.designer.cs">
+      <DependentUpon>News.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="areas\products-services.aspx.cs">
+      <DependentUpon>products-services.aspx</DependentUpon>
     <Compile Include="areas\education.aspx.cs">
       <DependentUpon>education.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -245,6 +299,13 @@
     <Compile Include="areas\products_services.aspx.designer.cs">
       <DependentUpon>products_services.aspx</DependentUpon>
     </Compile>
+    <Compile Include="controls\FooterLayout.ascx.cs">
+      <DependentUpon>FooterLayout.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="controls\FooterLayout.ascx.designer.cs">
+      <DependentUpon>FooterLayout.ascx</DependentUpon>
+    </Compile>
     <Compile Include="controls\mainnavigation.ascx.cs">
       <DependentUpon>mainnavigation.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -252,12 +313,26 @@
     <Compile Include="controls\mainnavigation.ascx.designer.cs">
       <DependentUpon>mainnavigation.ascx</DependentUpon>
     </Compile>
+    <Compile Include="controls\SocialLinks.ascx.cs">
+      <DependentUpon>SocialLinks.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="controls\SocialLinks.ascx.designer.cs">
+      <DependentUpon>SocialLinks.ascx</DependentUpon>
+    </Compile>
     <Compile Include="controls\SocialSharing.ascx.cs">
       <DependentUpon>SocialSharing.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="controls\SocialSharing.ascx.designer.cs">
       <DependentUpon>SocialSharing.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="controls\UserInteraction.ascx.cs">
+      <DependentUpon>UserInteraction.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="controls\UserInteraction.ascx.designer.cs">
+      <DependentUpon>UserInteraction.ascx</DependentUpon>
     </Compile>
     <Compile Include="helpers\BaseControl.cs">
       <SubType>ASPXCodeBehind</SubType>
@@ -269,6 +344,9 @@
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="helpers\PortalSession.cs" />
+    <Compile Include="helpers\SqlStatements.cs" />
+    <Compile Include="helpers\SystemSettings.cs" />
+    <Compile Include="helpers\SystemUser.cs" />
     <Compile Include="MasterContentPage.Master.cs">
       <DependentUpon>MasterContentPage.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -316,6 +394,7 @@
     <Content Include="web.config" />
     <Content Include="MasterSubPage.Master" />
     <Content Include="MasterContentPage.Master" />
+    <Content Include="admin\AdminMaster.Master" />
     <None Include="web.Debug.config">
       <DependentUpon>web.config</DependentUpon>
     </None>
