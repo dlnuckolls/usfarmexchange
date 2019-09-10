@@ -18,7 +18,7 @@ namespace USFarmExchange.controls {
     }
 
     protected void lbAccount_Click(object sender, EventArgs e) {
-
+      Response.Redirect("~/admin/Login.aspx");
     }
 
     protected void LbDashboard_Click(object sender, EventArgs e) {

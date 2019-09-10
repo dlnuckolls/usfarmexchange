@@ -29,5 +29,9 @@ namespace USFarmExchange {
     protected void ForgotPassword_OnClick(object sender, EventArgs e) {
       Response.Redirect("ForgotPassword.aspx");
     }
+
+    protected void RegisterNewUser_Click(object sender, EventArgs e) {
+      Response.Redirect("Register.aspx");
+    }
   }
 }
