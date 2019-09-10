@@ -9,6 +9,8 @@ using Telerik.Web.UI;
 namespace USFarmExchange {
   public partial class Register :BasePage {
     protected void Page_Load(object sender, EventArgs e) {
+      SessionInfo.CurrentPage = PageNames.Registration;
+      TitleTag.Text = SessionInfo.DisplayCurrentPage;
       lErrorMessage.Text = string.Empty;
     }
 
