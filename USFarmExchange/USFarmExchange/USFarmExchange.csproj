@@ -151,6 +151,7 @@
     <Content Include="App_Data\RadCaptcha\Z.wav" />
     <Content Include="areas\aboutus.aspx" />
     <Content Include="areas\crop-insurance.aspx" />
+    <Content Include="areas\News.aspx" />
     <Content Include="areas\products-services.aspx" />
     <Content Include="controls\FooterLayout.ascx" />
     <Content Include="controls\mainnavigation.ascx" />
@@ -161,6 +162,7 @@
     <Content Include="images\facebook.png" />
     <Content Include="images\Farmers.jpg" />
     <Content Include="images\Hemp.jpg" />
+    <Content Include="images\iStock-1029777638.jpg" />
     <Content Include="images\KY_Hemp_Field.jpg" />
     <Content Include="images\Sample_app.jpg" />
     <Content Include="images\social\icons8-delicious.png" />
@@ -257,6 +259,13 @@
     </Compile>
     <Compile Include="areas\crop-insurance.aspx.designer.cs">
       <DependentUpon>crop-insurance.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="areas\News.aspx.cs">
+      <DependentUpon>News.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="areas\News.aspx.designer.cs">
+      <DependentUpon>News.aspx</DependentUpon>
     </Compile>
     <Compile Include="areas\products-services.aspx.cs">
       <DependentUpon>products-services.aspx</DependentUpon>
@@ -391,7 +400,7 @@
           <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
         </WebProjectProperties>
       </FlavorProperties>
-      <UserProperties UseAjaxifiedTemplates="True" UseJQuerySupport="True" />
+      <UserProperties UseJQuerySupport="True" UseAjaxifiedTemplates="True" />
     </VisualStudio>
   </ProjectExtensions>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

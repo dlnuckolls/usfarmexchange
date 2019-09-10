@@ -381,3 +381,29 @@ html body form .RadInput .MyFocusedTextBox {
   border-radius: 5px;
   margin-right: 10px;
 }
+
+.article {
+  width: 100%;
+  margin: 5px;
+  border: solid 1px lightgray;
+  border-radius: 10px;
+  padding: 5px;
+  height: 100%;
+  text-align: justify;
+}
+
+  .article h2 {
+    font-size: 1.15em;
+    margin: 0;
+  }
+
+  .article h5 {
+    margin: 0;
+  }
+
+  .article img {
+    width: 140px;
+    float: left;
+    margin-right: 15px;
+    border-radius: 10px;
+  }
