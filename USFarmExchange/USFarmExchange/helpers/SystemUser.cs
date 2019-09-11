@@ -122,6 +122,6 @@ namespace USFarmExchange {
     }
 
     public void DeleteUser(string id) { SqlHelpers.Update(SqlStatements.SQL_DELETE_USER.FormatWith(id)); }
-
+    public void ApproveUser(string id) { SqlHelpers.Update(SqlStatements.SQL_APPROVE_USER.FormatWith(id)); }
   }
 }

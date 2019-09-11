@@ -25,6 +25,10 @@ namespace USFarmExchange {
         // Insert Base Record
         var newRegistration = SqlHelpers.InsertScalar(SqlStatements.SQL_CREATE_USER_REGISTRATION.FormatWith(
           displayName.Text.Trim().FixSqlString(), userName.Text.Trim().FixSqlString(), password.Text.Trim().EncryptString()));
+        var usrRec = new SystemUser();
+        usrRec.LoadUserDetails(newRegistration);
+        SessionInfo.SendRegistrationEmail(usrRec);
+        SessionInfo.SendResetEmail(usrRec, password.Text.Trim().EncryptString());
         RegistrationPage.Visible = false;
         RegistrationThankYou.Visible = true;
       } catch(Exception ex) {

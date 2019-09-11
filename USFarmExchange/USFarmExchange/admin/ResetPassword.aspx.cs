@@ -29,6 +29,7 @@ namespace USFarmExchange {
         }
         SessionInfo.CurrentUser.Notes = "Password updated {0}".FormatWith(DateTime.Now.ToShortDateString());
         SessionInfo.CurrentUser.SaveUserDetails();
+        if(SessionInfo.CurrentUser.Role == "Registration") SessionInfo.CurrentUser.ApproveUser(SessionInfo.CurrentUser.Id);
         if (!NewPassword.Text.Trim().IsNullOrEmpty()) {
           SessionInfo.CurrentUser.SetUserPassword(SessionInfo.CurrentUser.Id, NewPassword.Text.Trim());
         }

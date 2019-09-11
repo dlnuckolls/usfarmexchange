@@ -15,7 +15,7 @@ namespace USFarmExchange {
     public const string SQL_UPDATE_MAIL_SETTINGS = "UPDATE dbo.SystemConfigs SET MailServer = '{0}', ServerPort = {1}, SmtpUser = '{2}', SmtpPassword = '{3}', FromEmail = '{4}', FromUsername = '{5}', RequireAuth = {6}, RequireSsl = {7} WHERE Id = '{8}';";
     #endregion
     #region User and authentication
-    public const string SQL_AUTHENTICATE_USER = "SELECT * FROM dbo.SystemUsers WHERE UserName = '{0}' AND UserPass = '{1}' AND Deleted = 0 AND RoleId != '" + REGISTRATION + "';";
+    public const string SQL_AUTHENTICATE_USER = "SELECT * FROM dbo.SystemUsers WHERE UserName = '{0}' AND UserPass = '{1}' AND Deleted = 0;";
     public const string SQL_GET_USER_ROLE = "SELECT RoleName FROM dbo.AdminRoles WHERE Id = '{0}';";
     public const string SQL_GET_USER_DETAILS = "SELECT * FROM dbo.SystemUsers WHERE Id = '{0}';";
     public const string SQL_RESET_USER_PASSWORD = "UPDATE dbo.SystemUsers SET UserPass = '{0}', PasswordReset = 1 WHERE Id = '{1}';";
