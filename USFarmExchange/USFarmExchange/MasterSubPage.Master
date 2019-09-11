@@ -10,7 +10,6 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-  <title></title>
   <meta name="viewport" content="initial-scale=1.0, minimum-scale=1, maximum-scale=1.0, user-scalable=no" />
   <link href="styles/base.css" rel="stylesheet" />
   <asp:ContentPlaceHolder ID="head" runat="server">
@@ -39,11 +38,11 @@
               </telerik:LayoutColumn>
             </Columns>
           </telerik:LayoutRow>
-          <telerik:LayoutRow CssClass="header">
+          <telerik:LayoutRow CssClass="smallHeader">
             <Columns>
               <%--Logo--%>
               <telerik:LayoutColumn Span="2" SpanMd="3" SpanSm="12" SpanXs="12">
-                <a href="/Default.aspx" class="logo"><img src="/images/logo.png" /></a>
+                <%--<a href="/Default.aspx" class="logo"><img src="/images/logo.png" /></a>--%>
               </telerik:LayoutColumn>
 
               <%--Main Nav--%>
@@ -57,19 +56,15 @@
           <telerik:LayoutRow>
             <Columns>
               <%--Content--%>
-              <telerik:LayoutColumn Span="4" SpanMd="3" SpanSm="12">
+              <telerik:LayoutColumn Span="6" SpanSm="12">
                   <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
                   </asp:ContentPlaceHolder>
               </telerik:LayoutColumn>
-              <telerik:LayoutColumn Span="4" SpanMd="6" SpanSm="12">
+              <telerik:LayoutColumn Span="6" SpanSm="12">
                   <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
                   </asp:ContentPlaceHolder>
               </telerik:LayoutColumn>
-              <telerik:LayoutColumn Span="4" SpanMd="3" SpanSm="12">
-                  <asp:ContentPlaceHolder ID="ContentPlaceHolder3" runat="server">
-                  </asp:ContentPlaceHolder>
-              </telerik:LayoutColumn>
-            </Columns>
+             </Columns>
           </telerik:LayoutRow>
 
           <%--Footer--%>

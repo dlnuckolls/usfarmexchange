@@ -153,8 +153,10 @@
     <Content Include="areas\communication.aspx" />
     <Content Include="areas\compliance.aspx" />
     <Content Include="areas\crop-insurance.aspx" />
+    <Content Include="areas\education.aspx" />
     <Content Include="areas\News.aspx" />
     <Content Include="areas\products-services.aspx" />
+    <Content Include="areas\Technology.aspx" />
     <Content Include="controls\FooterLayout.ascx" />
     <Content Include="controls\mainnavigation.ascx" />
     <Content Include="controls\SocialLinks.ascx" />
@@ -166,6 +168,10 @@
     <Content Include="images\Hemp.jpg" />
     <Content Include="images\iStock-1029777638.jpg" />
     <Content Include="images\KY_Hemp_Field.jpg" />
+    <Content Include="images\MMS-PCI-Continued.png" />
+    <Content Include="images\MMS-PCI.png" />
+    <Content Include="images\PCIMS-PCI-Continued.png" />
+    <Content Include="images\PCIMS-PCI.png" />
     <Content Include="images\Sample_app.jpg" />
     <Content Include="images\social\icons8-delicious.png" />
     <Content Include="images\social\icons8-digg.png" />
@@ -276,6 +282,10 @@
     <Compile Include="areas\crop-insurance.aspx.designer.cs">
       <DependentUpon>crop-insurance.aspx</DependentUpon>
     </Compile>
+    <Compile Include="areas\education.aspx.cs">
+      <DependentUpon>education.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Compile Include="areas\News.aspx.cs">
       <DependentUpon>News.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -287,12 +297,15 @@
       <DependentUpon>products-services.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="areas\education.aspx.cs">
-      <DependentUpon>education.aspx</DependentUpon>
+    <Compile Include="areas\products-services.aspx.designer.cs">
+      <DependentUpon>products-services.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="areas\Technology.aspx.cs">
+      <DependentUpon>Technology.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="areas\education.aspx.designer.cs">
-      <DependentUpon>education.aspx</DependentUpon>
+    <Compile Include="areas\Technology.aspx.designer.cs">
+      <DependentUpon>Technology.aspx</DependentUpon>
     </Compile>
     <Compile Include="controls\FooterLayout.ascx.cs">
       <DependentUpon>FooterLayout.ascx</DependentUpon>

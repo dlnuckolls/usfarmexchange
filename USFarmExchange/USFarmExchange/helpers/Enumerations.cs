@@ -28,6 +28,9 @@ namespace USFarmExchange {
     [TextValue("Questions")] FAQ,
     [TextValue("Contact")] Contact,
     [TextValue("Blog")] Blog,
-    [TextValue("Resources")] Resources
-  }
+    [TextValue("Resources")] Resources,
+    [TextValue("Communication")] Communications,
+    [TextValue("Crop Insurance")] CropInsurance
+    
+    }
 }

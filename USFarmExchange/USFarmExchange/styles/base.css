@@ -94,7 +94,7 @@ h6 {
 #wrapper .RadMenu,
 div.RadMenuPopup,
 #wrapper .RadMenu_Default, #wrapper .RadMenu_Default a.rmLink {
-  font-size: 1em;
+  font-size: .85em;
   float: right;
 }
 
@@ -139,13 +139,13 @@ div.RadMenuPopup,
 
 #wrapper .logo {
   margin: 0px 0;
-  height: 150px;
+  height: 75px;
   display: inline-block;
 }
 
 #wrapper .smallHeader {
   background-color: mediumseagreen !important;
-  padding: 20px 0;
+  padding: 5px 0;
   margin-bottom: 40px;
 }
 
