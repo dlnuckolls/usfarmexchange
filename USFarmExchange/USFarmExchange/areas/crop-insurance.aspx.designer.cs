@@ -13,6 +13,15 @@ namespace USFarmExchange.areas {
     public partial class crop_insurance {
         
         /// <summary>
+        /// TitleTag control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Literal TitleTag;
+        
+        /// <summary>
         /// UnderstandingCropInsurance control.
         /// </summary>
         /// <remarks>
@@ -38,6 +47,24 @@ namespace USFarmExchange.areas {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Panel Competition;
+        
+        /// <summary>
+        /// MPCI control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel MPCI;
+        
+        /// <summary>
+        /// PCMS control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel PCMS;
         
         /// <summary>
         /// History control.

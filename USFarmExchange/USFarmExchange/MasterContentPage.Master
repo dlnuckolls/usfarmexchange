@@ -9,7 +9,6 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-  <title></title>
   <meta name="viewport" content="initial-scale=1.0, minimum-scale=1, maximum-scale=1.0, user-scalable=no" />
   <link href="styles/base.css" rel="stylesheet" />
   <asp:ContentPlaceHolder ID="head" runat="server">
@@ -42,7 +41,7 @@
             <Columns>
               <%--Logo--%>
               <telerik:LayoutColumn Span="2" SpanMd="3" SpanSm="12" SpanXs="12">
-                <a href="/Default.aspx" class="logo"><img src="/images/logo.png" /></a>
+                <%--<a href="/Default.aspx" class="logo"><img src="/images/logo.png" /></a>--%>
               </telerik:LayoutColumn>
 
               <%--Main Nav--%>

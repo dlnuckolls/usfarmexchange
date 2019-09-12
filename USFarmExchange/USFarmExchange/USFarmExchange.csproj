@@ -153,8 +153,13 @@
     <Content Include="areas\communication.aspx" />
     <Content Include="areas\compliance.aspx" />
     <Content Include="areas\crop-insurance.aspx" />
+    <Content Include="areas\Education.aspx" />
+    <Content Include="areas\Financial-Services.aspx" />
+    <Content Include="areas\Insurance.aspx" />
     <Content Include="areas\News.aspx" />
+    <Content Include="areas\Partners.aspx" />
     <Content Include="areas\products-services.aspx" />
+    <Content Include="areas\Technology.aspx" />
     <Content Include="controls\FooterLayout.ascx" />
     <Content Include="controls\mainnavigation.ascx" />
     <Content Include="controls\SocialLinks.ascx" />
@@ -166,6 +171,10 @@
     <Content Include="images\Hemp.jpg" />
     <Content Include="images\iStock-1029777638.jpg" />
     <Content Include="images\KY_Hemp_Field.jpg" />
+    <Content Include="images\MMS-PCI-Continued.png" />
+    <Content Include="images\MMS-PCI.png" />
+    <Content Include="images\PCIMS-PCI-Continued.png" />
+    <Content Include="images\PCIMS-PCI.png" />
     <Content Include="images\Sample_app.jpg" />
     <Content Include="images\social\icons8-delicious.png" />
     <Content Include="images\social\icons8-digg.png" />
@@ -276,6 +285,27 @@
     <Compile Include="areas\crop-insurance.aspx.designer.cs">
       <DependentUpon>crop-insurance.aspx</DependentUpon>
     </Compile>
+    <Compile Include="areas\Education.aspx.cs">
+      <DependentUpon>Education.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="areas\Education.aspx.designer.cs">
+      <DependentUpon>Education.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="areas\Financial-Services.aspx.cs">
+      <DependentUpon>Financial-Services.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="areas\Financial-Services.aspx.designer.cs">
+      <DependentUpon>Financial-Services.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="areas\Insurance.aspx.cs">
+      <DependentUpon>Insurance.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="areas\Insurance.aspx.designer.cs">
+      <DependentUpon>Insurance.aspx</DependentUpon>
+    </Compile>
     <Compile Include="areas\News.aspx.cs">
       <DependentUpon>News.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -283,16 +313,26 @@
     <Compile Include="areas\News.aspx.designer.cs">
       <DependentUpon>News.aspx</DependentUpon>
     </Compile>
+    <Compile Include="areas\Partners.aspx.cs">
+      <DependentUpon>Partners.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="areas\Partners.aspx.designer.cs">
+      <DependentUpon>Partners.aspx</DependentUpon>
+    </Compile>
     <Compile Include="areas\products-services.aspx.cs">
       <DependentUpon>products-services.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="areas\education.aspx.cs">
-      <DependentUpon>education.aspx</DependentUpon>
+    <Compile Include="areas\products-services.aspx.designer.cs">
+      <DependentUpon>products-services.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="areas\Technology.aspx.cs">
+      <DependentUpon>Technology.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="areas\education.aspx.designer.cs">
-      <DependentUpon>education.aspx</DependentUpon>
+    <Compile Include="areas\Technology.aspx.designer.cs">
+      <DependentUpon>Technology.aspx</DependentUpon>
     </Compile>
     <Compile Include="controls\FooterLayout.ascx.cs">
       <DependentUpon>FooterLayout.ascx</DependentUpon>
@@ -390,6 +430,7 @@
     <Content Include="MasterSubPage.Master" />
     <Content Include="MasterContentPage.Master" />
     <Content Include="admin\AdminMaster.Master" />
+    <None Include="web.connectionstrings.config" />
     <None Include="web.Debug.config">
       <DependentUpon>web.config</DependentUpon>
     </None>

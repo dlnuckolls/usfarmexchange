@@ -11,14 +11,13 @@ namespace USFarmExchange.areas {
     
     
     public partial class News {
-        
         /// <summary>
-        /// MasterLayout control.
+        /// TitleTag control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::Telerik.Web.UI.RadPageLayout MasterLayout;
+        protected global::System.Web.UI.WebControls.Literal TitleTag;
     }
 }

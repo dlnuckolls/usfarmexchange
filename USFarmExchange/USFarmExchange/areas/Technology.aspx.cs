@@ -7,12 +7,12 @@ using System.Web.UI.WebControls;
 
 namespace USFarmExchange.areas
 {
-    public partial class Compliance : BasePage
+    public partial class Technology : BasePage
     {
         protected void Page_Load(object sender, EventArgs e)
         {
             // Set page name in the title section
-            SessionInfo.CurrentPage = PageNames.Compliance;
+            SessionInfo.CurrentPage = PageNames.Technology;
             TitleTag.Text = SessionInfo.DisplayCurrentPage;
         }
     }
