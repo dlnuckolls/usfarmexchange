@@ -10,7 +10,7 @@
 namespace USFarmExchange.areas {
     
     
-    public partial class aboutus {
+    public partial class Education {
         
         /// <summary>
         /// TitleTag control.

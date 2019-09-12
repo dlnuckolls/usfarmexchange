@@ -10,7 +10,7 @@
             </Items>
         </telerik:RadMenuItem>
         <telerik:RadMenuItem IsSeparator="true" />
-        <telerik:RadMenuItem Text="Compliance" NavigateUrl="~/areas/Compliance.aspx" />
+        <telerik:RadMenuItem Text="Technology" NavigateUrl="~/areas/Technology.aspx" />
         <telerik:RadMenuItem IsSeparator="true" />
         <telerik:RadMenuItem Text="Education" NavigateUrl="~/areas/education.aspx">
             <Items>
@@ -18,7 +18,14 @@
             </Items>
         </telerik:RadMenuItem>
         <telerik:RadMenuItem IsSeparator="true" />
+        <telerik:RadMenuItem Text="Insurance" NavigateUrl="~/areas/Insurance.aspx" />
+        <telerik:RadMenuItem IsSeparator="true" />
+        <telerik:RadMenuItem Text="Financial Services" NavigateUrl="~/areas/Financial-Services.aspx" />
+        <telerik:RadMenuItem IsSeparator="true" />
+        <telerik:RadMenuItem Text="Compliance" NavigateUrl="~/areas/Compliance.aspx" />
+        <telerik:RadMenuItem IsSeparator="true" />
+        <telerik:RadMenuItem Text="Partners" NavigateUrl="~/areas/Partners.aspx" />
+        <telerik:RadMenuItem IsSeparator="true" />
         <telerik:RadMenuItem Text="About Us" NavigateUrl="~/areas/aboutus.aspx" />
-  
     </Items>
 </telerik:RadMenu>
