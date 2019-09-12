@@ -94,7 +94,7 @@ h6 {
 #wrapper .RadMenu,
 div.RadMenuPopup,
 #wrapper .RadMenu_Default, #wrapper .RadMenu_Default a.rmLink {
-  font-size: 1em;
+  font-size: .85em;
   float: right;
 }
 
@@ -106,7 +106,7 @@ div.RadMenuPopup,
   background-size: cover;
   background-position: center;
   background-image: url(/images/tractors.jpg);
-  min-height: 650px;
+  min-height: 450px;
 }
 
   #wrapper .largeheader .RadButton {
@@ -137,9 +137,15 @@ div.RadMenuPopup,
         border-radius: 10px;
       }
 
+#wrapper .logo {
+  margin: 0px 0;
+  height: 75px;
+  display: inline-block;
+}
+
 #wrapper .smallHeader {
   background-color: mediumseagreen !important;
-  padding: 20px 0;
+  padding: 5px 0;
   margin-bottom: 40px;
 }
 
@@ -177,5 +183,44 @@ div.RadMenuPopup,
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0089fff1', endColorstr='#FFFFFF',GradientType=0 ); /* IE6-9 */
 }
   .headerContentFade h1 {
-    font-size: 3em;
+    font-size: 2.8em;
   }
+
+#top-bar-social {
+  float: left;
+  font-size: 11px;
+  line-height: 30px;
+  text-align: right;
+}
+
+  #top-bar-social > ul {
+    float: right;
+    margin-top: 3px;
+    margin-bottom: 0;
+    -moz-opacity: 0.5;
+    filter: alpha(opacity= 50);
+    opacity: 0.5;
+  }
+
+  #top-bar-social ul li {
+    margin-bottom: 0;
+  }
+
+.dashboardLink {
+  font-size: .8em;
+  color: #1c73bf !important;
+  text-decoration: none;
+}
+
+  .dashboardLink a:hover {
+    font-size: .8em;
+    background-color: #2a2d33 !important;
+    text-decoration: none;
+  }
+
+.top-bar {
+  background: #f7f7f7;
+  border-bottom-color: #e4e4e4;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}

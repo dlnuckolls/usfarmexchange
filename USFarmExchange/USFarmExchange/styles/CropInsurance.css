@@ -1,21 +1,37 @@
-﻿#CropInsurance{
-
-
+﻿#CropInsurance {
 }
 
-#CropInsurance hr {
-    border-width: 3px 0 0 0;
-    border-color: #767676;
-    border-style: solid;
-}
-#CropInsurance h1{
-    text-align:center;
-    color:darkcyan;
-    font-weight:700;
-}
-#CropInsurance h3 {
+    #CropInsurance hr {
+        border-width: 3px 0 0 0;
+        border-color: #767676;
+        border-style: solid;
+    }
+
+    #CropInsurance img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 40%;
+    }
+
+    #CropInsurance .container img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+        padding-bottom: 1em;
+    }
+
+    #CropInsurance h1 {
+        text-align: center;
         color: darkcyan;
- }
-#CropInsurance p{
-    text-align:justify;
-}
+        font-weight: 700;
+    }
+
+    #CropInsurance h3 {
+        color: darkcyan;
+    }
+
+    #CropInsurance p {
+        text-align: justify;
+    }

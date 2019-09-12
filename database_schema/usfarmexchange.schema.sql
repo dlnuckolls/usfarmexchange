@@ -208,14 +208,53 @@ BEGIN
   COMMIT TRANSACTION Version1_2
 END
 
-/* 
-  Use this model to create database changes
-
 SELECT @majorVersion = 1, @minorVersion = 3;
 IF NOT EXISTS(SELECT * FROM SchemaVersion WHERE (MajorVersion = @majorVersion) AND (MinorVersion = @minorVersion))
 BEGIN
   BEGIN TRANSACTION Version1_3
 
+    -- Clear and recreate System Roles with specific Id's
+    DELETE [dbo].[AdminRoles];
+
+    INSERT INTO [dbo].[AdminRoles] (Id, RoleName, Notes) 
+    VALUES ('7ec7d607-18b1-452d-8d78-3d065959d358','Registered', 'New Registration'),
+           ('a7107c8f-ff15-4d5a-bba1-6db286fcef0a','User','User level access'),
+           ('b6522703-8844-4cff-8fc1-916ba90f515b','System User','System Administrator');
+    
+    -- Create default users
+    INSERT INTO [dbo].[SystemUsers] ([Id], [RoleId], [DisplayName], [UserName], [UserPass], [Notes], 
+           [Deleted], [SuperAdmin], [PasswordReset])
+    VALUES (newid(),'b6522703-8844-4cff-8fc1-916ba90f515b','David Nuckolls','davidnuckolls@usfarmexchange.com','5zO9V86nJwv4G04yfZ/V++IhIqOytb8ot3XcpsxjfPw=','System Created',0,1,0),
+           (newid(),'b6522703-8844-4cff-8fc1-916ba90f515b','Jennifer Hobbs','jenniferhobbs@usfarmexchange.com','5zO9V86nJwv4G04yfZ/V++IhIqOytb8ot3XcpsxjfPw=','System Created',0,1,0);
+
+    INSERT INTO SchemaVersion values (newid(), @majorVersion, @minorVersion, getutcdate());
   COMMIT TRANSACTION Version1_3
+END
+
+SELECT @majorVersion = 1, @minorVersion = 4;
+IF NOT EXISTS(SELECT * FROM SchemaVersion WHERE (MajorVersion = @majorVersion) AND (MinorVersion = @minorVersion))
+BEGIN
+  BEGIN TRANSACTION Version1_4
+
+    INSERT INTO [dbo].[SystemConfigs] ([Id],[MailServer],[ServerPort],[SmtpUser],[SmtpPassword],[FromEmail],[FromUsername],[RequireSsl],[RequireAuth])
+    VALUES (NEWID(),'usfarmexchange.com',465,'social@usfarmexchange.com','ZC6L0WZ5liUtx/9a8eNzlRApzF/ftLg2h4CyvctmkzM=','postmaster@usfarmexchange.com','US Farm Exchange Postmaster',1,1)
+
+    INSERT INTO SchemaVersion values (newid(), @majorVersion, @minorVersion, getutcdate());
+  COMMIT TRANSACTION Version1_4
+END
+
+
+
+/* 
+  Use this model to create database changes
+  Just change NEWVERSION to the next number in the sequence
+
+SELECT @majorVersion = 1, @minorVersion = NEWVERSION;
+IF NOT EXISTS(SELECT * FROM SchemaVersion WHERE (MajorVersion = @majorVersion) AND (MinorVersion = @minorVersion))
+BEGIN
+  BEGIN TRANSACTION Version1_NEWVERSION
+
+    INSERT INTO SchemaVersion values (newid(), @majorVersion, @minorVersion, getutcdate());
+  COMMIT TRANSACTION Version1_NEWVERSION
 END
 */

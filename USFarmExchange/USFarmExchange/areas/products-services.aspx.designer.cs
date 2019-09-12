@@ -11,14 +11,13 @@ namespace USFarmExchange.areas {
     
     
     public partial class products_services {
-        
         /// <summary>
-        /// Panel1 control.
+        /// TitleTag control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel Panel1;
+        protected global::System.Web.UI.WebControls.Literal TitleTag;
     }
 }
