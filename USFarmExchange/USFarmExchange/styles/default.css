@@ -413,7 +413,7 @@ html body form .RadInput .MyFocusedTextBox {
   width: 90%;
   margin: 5px auto;
   border-radius: 10px;
-  padding: 5px;
+  padding: 10px;
   height: 90%;
 }
 
@@ -421,12 +421,14 @@ html body form .RadInput .MyFocusedTextBox {
     font-weight: bold;
     font-size: 1.875em;
     margin: .5em;
+    padding: 15px 5px 5px 5px;
   }
 
   .rotator p {
     font-weight: bold;
     font-size: 1.25em;
     margin: .5em;
+    padding: 5px;
     text-align: justify;
   }
 

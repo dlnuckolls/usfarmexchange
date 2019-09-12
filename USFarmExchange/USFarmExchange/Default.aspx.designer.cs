@@ -40,6 +40,24 @@ namespace USFarmExchange {
         protected global::System.Web.UI.WebControls.XmlDataSource xmlDataSource2;
         
         /// <summary>
+        /// RadPageLayout1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Telerik.Web.UI.RadPageLayout RadPageLayout1;
+        
+        /// <summary>
+        /// MainRotator1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Telerik.Web.UI.RadRotator MainRotator1;
+        
+        /// <summary>
         /// Rotator1 control.
         /// </summary>
         /// <remarks>
@@ -56,15 +74,6 @@ namespace USFarmExchange {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::Telerik.Web.UI.RadRotator Rotator2;
-        
-        /// <summary>
-        /// MainRotator1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::Telerik.Web.UI.RadRotator MainRotator1;
         
         /// <summary>
         /// Content1 control.
