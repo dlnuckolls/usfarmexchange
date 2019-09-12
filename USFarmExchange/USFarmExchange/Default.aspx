@@ -68,7 +68,7 @@
                       <p>
                         <br />
                         <br />
-                        Some breief intro here
+                        Some brief intro here
                       </p>
                     </ItemTemplate>
                   </telerik:RadRotatorItem>
@@ -79,7 +79,7 @@
                       <p>
                         <br />
                         <br />
-                        Online applicatino details
+                        Online application details
                       </p>
                     </ItemTemplate>
                   </telerik:RadRotatorItem>
@@ -90,7 +90,7 @@
                       <p>
                         <br />
                         <br />
-                        To provide the American farmer a multi-channel platform of resources to help the succeed; offering a central exchange for communication, compliance, education, technology, insurance, banking and financial services.
+                        To provide the American farmer a multi-channel platform of resources to help them succeed; offering a central exchange for communication, compliance, education, technology, insurance, banking and financial services.
                       </p>
                     </ItemTemplate>
                   </telerik:RadRotatorItem>
