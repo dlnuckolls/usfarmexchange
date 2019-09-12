@@ -106,7 +106,7 @@ div.RadMenuPopup,
   background-size: cover;
   background-position: center;
   background-image: url(/images/tractors.jpg);
-  min-height: 650px;
+  min-height: 450px;
 }
 
   #wrapper .largeheader .RadButton {
@@ -183,7 +183,7 @@ div.RadMenuPopup,
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0089fff1', endColorstr='#FFFFFF',GradientType=0 ); /* IE6-9 */
 }
   .headerContentFade h1 {
-    font-size: 3em;
+    font-size: 2.8em;
   }
 
 #top-bar-social {

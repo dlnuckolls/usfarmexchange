@@ -165,6 +165,8 @@
     <Content Include="controls\SocialLinks.ascx" />
     <Content Include="controls\SocialSharing.ascx" />
     <Content Include="controls\UserInteraction.ascx" />
+    <Content Include="data\lowerMarquee.xml" />
+    <Content Include="data\upperMarquee.xml" />
     <Content Include="images\Crop-Insurance-Cycle.png" />
     <Content Include="images\facebook.png" />
     <Content Include="images\Farmers.jpg" />
@@ -175,6 +177,13 @@
     <Content Include="images\MMS-PCI.png" />
     <Content Include="images\PCIMS-PCI-Continued.png" />
     <Content Include="images\PCIMS-PCI.png" />
+    <Content Include="images\rotator\apply.jpg" />
+    <Content Include="images\rotator\bottom.gif" />
+    <Content Include="images\rotator\down.gif" />
+    <Content Include="images\rotator\hemp.jpg" />
+    <Content Include="images\rotator\purpose.jpg" />
+    <Content Include="images\rotator\top.gif" />
+    <Content Include="images\rotator\up.gif" />
     <Content Include="images\Sample_app.jpg" />
     <Content Include="images\social\icons8-delicious.png" />
     <Content Include="images\social\icons8-digg.png" />
@@ -426,6 +435,7 @@
     <Content Include="App_Data\RadSpell\fr-FR.tdf" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="styles\scroller.css" />
     <Content Include="web.config" />
     <Content Include="MasterSubPage.Master" />
     <Content Include="MasterContentPage.Master" />
@@ -461,7 +471,7 @@
           <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
         </WebProjectProperties>
       </FlavorProperties>
-      <UserProperties UseJQuerySupport="True" UseAjaxifiedTemplates="True" />
+      <UserProperties UseAjaxifiedTemplates="True" UseJQuerySupport="True" />
     </VisualStudio>
   </ProjectExtensions>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

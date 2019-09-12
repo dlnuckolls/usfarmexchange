@@ -22,6 +22,42 @@ namespace USFarmExchange {
         protected global::System.Web.UI.WebControls.Literal TitleTag;
         
         /// <summary>
+        /// xmlDataSource1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.XmlDataSource xmlDataSource1;
+        
+        /// <summary>
+        /// xmlDataSource2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.XmlDataSource xmlDataSource2;
+        
+        /// <summary>
+        /// Rotator1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Telerik.Web.UI.RadRotator Rotator1;
+        
+        /// <summary>
+        /// Rotator2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Telerik.Web.UI.RadRotator Rotator2;
+        
+        /// <summary>
         /// MainRotator1 control.
         /// </summary>
         /// <remarks>

@@ -1,13 +1,13 @@
 ﻿#wrapper .logo {
-    margin: 10px 0;
-    width: 100%;
-    display: inline-block;
+  margin: 10px 0;
+  width: 100%;
+  display: inline-block;
 }
 
-#wrapper .logo img {
+  #wrapper .logo img {
     max-width: 150px;
     max-height: 75px !important;
-}
+  }
 
 #wrapper .jumbotron {
   margin-top: 20px;
@@ -17,16 +17,16 @@
   border-radius: 10px;
 }
 
-#wrapper .jumbotron .RadButton {
+  #wrapper .jumbotron .RadButton {
     float: left;
     margin-top: .667em;
     font-size: .5em;
-}
+  }
 
 #wrapper .footer {
-    width:100%;
-    padding: 30px 15px;
-    line-height: 30px;
+  width: 100%;
+  padding: 30px 15px;
+  line-height: 30px;
 }
 
 table.rssTable {
@@ -395,11 +395,11 @@ html body form .RadInput .MyFocusedTextBox {
 
   .article h2 {
     font-size: 1.15em;
-    margin: 0;
+    margin: .5em 0;
   }
 
   .article h5 {
-    margin: 0;
+    margin: .5em 0;
   }
 
   .article img {
@@ -408,3 +408,45 @@ html body form .RadInput .MyFocusedTextBox {
     margin-right: 15px;
     border-radius: 10px;
   }
+
+.rotator {
+  width: 90%;
+  margin: 5px auto;
+  border-radius: 10px;
+  padding: 5px;
+  height: 90%;
+}
+
+  .rotator h2 {
+    font-weight: bold;
+    font-size: 1.875em;
+    margin: .5em;
+  }
+
+  .rotator p {
+    font-weight: bold;
+    font-size: 1.25em;
+    margin: .5em;
+    text-align: justify;
+  }
+
+  .rotator  img {
+    margin: 15px;
+    width: 470px;
+    border: 0;
+    border-radius: 10px !important;
+  }
+
+  .rotator  img {
+    margin: 15px;
+    width: 470px;
+    border: 0;
+    border-radius: 10px !important;
+  }
+
+.left {
+    float: left;
+}
+.right {
+    float: right;
+}

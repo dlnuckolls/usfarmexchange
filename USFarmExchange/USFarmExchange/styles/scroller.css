@@ -1,0 +1,83 @@
+﻿.top {
+  width: 452px;
+  height: 35px;
+}
+/* upper scrolling text  */
+.marqueeTopBg {
+  width: 452px;
+  height: 38px;
+  background-image: url(/images/rotator/top.gif);
+  background-repeat: no-repeat;
+}
+
+.marqueeTop_Text {
+  padding-top: 13px;
+  padding-left: 10px;
+  padding-right: 10px;
+  font: normal 12px Arial, Verdana, Helvetica, Sans-Serif;
+}
+/* lower scrolling text  */
+.marqueeBottomBg {
+  width: 452px;
+  height: 35px;
+  background-image: url(/images/rotator/marqueeBottomBg.gif);
+  background-repeat: no-repeat;
+}
+
+.marqueeBottom_Text {
+  padding-top: 8px;
+  padding-left: 10px;
+  padding-right: 10px;
+  font: normal 12px Arial, Verdana, Helvetica, Sans-Serif;
+}
+
+.bottom {
+  width: 452px;
+  height: 50px;
+}
+
+.top, .marqueeTopBg, .marqueeBottomBg, .bottom {
+  margin: 0 auto;
+}
+
+.Rotator {
+  background-color: black;
+  cursor: default;
+}
+
+.itemTemplate {
+  margin: 5px;
+  width: 140px;
+  height: 24px;
+}
+
+.Symbol {
+  font-family: Verdana, Arial;
+  font-weight: bold;
+  font-size: 9pt;
+  color: #3E7DBC;
+  cursor: default;
+  float: left;
+}
+
+.Quote {
+  font-family: Verdana, Arial;
+  font-size: 11px;
+  color: #64962D;
+  float: left;
+  margin-left: 5px;
+}
+
+.Change {
+  font-family: Verdana, Arial;
+  font-size: 11px;
+  color: gray;
+  float: left;
+  margin-left: 5px;
+}
+
+.Link {
+  font-family: Verdana, Arial;
+  font-size: 10px;
+  color: #3E7DBC;
+}

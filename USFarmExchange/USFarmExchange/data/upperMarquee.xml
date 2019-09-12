@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Stocks>
+  <Stock>
+    <Company>MSFT</Company>
+    <Price>37.47 </Price>
+    <Difference>-1.23</Difference>
+    <Image>/images/rotator/down.gif</Image>
+  </Stock>
+
+  <Stock>
+    <Company>AAA</Company>
+    <Price>19.46</Price>
+    <Difference>0.41 </Difference>
+    <Image>/images/rotator/up.gif</Image>
+  </Stock>
+
+  <Stock>
+    <Company>WMRT</Company>
+    <Price>13.15</Price>
+    <Difference>0.15</Difference>
+    <Image>/images/rotator/up.gif</Image>
+  </Stock>
+
+  <Stock>
+    <Company>BIX</Company>
+    <Price>1.80</Price>
+    <Difference>-0.18</Difference>
+    <Image>/images/rotator/down.gif</Image>
+  </Stock>
+
+  <Stock>
+    <Company>CLB</Company>
+    <Price>31.24</Price>
+    <Difference>-0.16</Difference>
+    <Image>/images/rotator/down.gif</Image>
+  </Stock>
+
+  <Stock>
+    <Company>LLB</Company>
+    <Price>23.13</Price>
+    <Difference>0.34</Difference>
+    <Image>/images/rotator/up.gif</Image>
+  </Stock>
+
+</Stocks>
