@@ -8,12 +8,9 @@ using System.Web.UI.WebControls;
 using System.Xml;
 using Telerik.Web.UI;
 
-namespace USFarmExchange {
-  public partial class Default :BasePage {
+namespace USFarmExchange.areas {
+  public partial class AgFeeds :BasePage {
     protected void Page_Load(object sender, EventArgs e) {
-      // Set page name in the title section
-      SessionInfo.CurrentPage = PageNames.Home;
-      TitleTag.Text = SessionInfo.DisplayCurrentPage;
     }
     protected void RadListView1_NeedDataSource(object sender, RadListViewNeedDataSourceEventArgs e) {
       string rssUrl = "https://www.usda.gov/rss/home.xml";
@@ -34,6 +31,5 @@ namespace USFarmExchange {
       }
       return rtn;
     }
-
   }
 }

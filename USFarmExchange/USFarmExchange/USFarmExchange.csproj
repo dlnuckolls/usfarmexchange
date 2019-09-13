@@ -171,6 +171,10 @@
     <Content Include="images\facebook.png" />
     <Content Include="images\Farmers.jpg" />
     <Content Include="images\Hemp.jpg" />
+    <Content Include="images\icons8-circled_chevron_left.png" />
+    <Content Include="images\icons8-circled_chevron_right.png" />
+    <Content Include="images\icons8-refresh.png" />
+    <Content Include="images\icons8-rss.png" />
     <Content Include="images\iStock-1029777638.jpg" />
     <Content Include="images\KY_Hemp_Field.jpg" />
     <Content Include="images\MMS-PCI-Continued.png" />
@@ -471,7 +475,7 @@
           <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
         </WebProjectProperties>
       </FlavorProperties>
-      <UserProperties UseAjaxifiedTemplates="True" UseJQuerySupport="True" />
+      <UserProperties UseJQuerySupport="True" UseAjaxifiedTemplates="True" />
     </VisualStudio>
   </ProjectExtensions>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
