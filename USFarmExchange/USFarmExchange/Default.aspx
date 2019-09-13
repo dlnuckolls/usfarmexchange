@@ -15,7 +15,7 @@
     <Rows>
       <telerik:LayoutRow>
         <Columns>
-          <telerik:LayoutColumn Span="8" SpanMd="8" SpanSm="12" HiddenXs="true">
+          <telerik:LayoutColumn Span="8" SpanMd="12" HiddenXs="true">
             <script type="text/javascript">
               (function (global, undefined) {
                 var autoInterval;
@@ -45,7 +45,7 @@
               })(window);
             </script>
             <div class="rotator">
-              <telerik:RadRotator RenderMode="Lightweight" Skin="Silk" FrameDuration="6000" ID="MainRotator1" runat="server" ScrollDirection="Left"
+              <telerik:RadRotator RenderMode="Lightweight" Skin="Silk" FrameDuration="12000" ID="MainRotator1" runat="server" ScrollDirection="Left"
                 Width="1000px" Height="500px" ItemWidth="1000px" ItemHeight="500px" PauseOnMouseOver="false">
                 <Items>
                   <telerik:RadRotatorItem>
@@ -68,7 +68,7 @@
                       <p>
                         <br />
                         <br />
-                        Some breief intro here
+                        Some brief intro here
                       </p>
                     </ItemTemplate>
                   </telerik:RadRotatorItem>
@@ -79,7 +79,7 @@
                       <p>
                         <br />
                         <br />
-                        Online applicatino details
+                        Online application details
                       </p>
                     </ItemTemplate>
                   </telerik:RadRotatorItem>
@@ -90,7 +90,7 @@
                       <p>
                         <br />
                         <br />
-                        To provide the American farmer a multi-channel platform of resources to help the succeed; offering a central exchange for communication, compliance, education, technology, insurance, banking and financial services.
+                        To provide the American farmer a multi-channel platform of resources to help them succeed; offering a central exchange for communication, compliance, education, technology, insurance, banking and financial services.
                       </p>
                     </ItemTemplate>
                   </telerik:RadRotatorItem>
@@ -98,7 +98,7 @@
               </telerik:RadRotator>
             </div>
           </telerik:LayoutColumn>
-          <telerik:LayoutColumn Span="4" SpanMd="4" SpanSm="12" HiddenXs="true"><br /><br /><br />
+          <telerik:LayoutColumn Span="4" SpanMd="12" HiddenXs="true"><br />
             <div class="top">
               <img src="/images/rotator/top.gif" width="452" height="35" alt="" />
             </div>
@@ -159,6 +159,49 @@
             <div class="bottom">
               <img src="/images/rotator/bottom.gif" width="452" height="108" alt="" />
             </div>
+            <telerik:RadAjaxPanel ID="RadAjaxPanel1" runat="server" LoadingPanelID="RadAjaxLoadingPanel1">
+    <telerik:RadListView ID="RadListView1" runat="server" RenderMode="Lightweight" OnNeedDataSource="RadListView1_NeedDataSource"
+      AllowPaging="true" ItemPlaceholderID="Panel1" PageSize="3">
+      <LayoutTemplate>
+        <div class="nslayoutWrapper">
+          <div class="nsrssSubHeader">
+            USDA Latest News - <%# "&copy; " + DateTime.Now.Year %>
+          </div>
+          <hr />
+          <table class="nsrssTable">
+            <asp:Panel ID="Panel1" runat="server"></asp:Panel>
+          </table>
+          <div class="nsimageWrapper">
+            <asp:ImageButton ID="PrevBtn" runat="server" CommandName="Page" CommandArgument="Prev"
+              AlternateText="<" CssClass="rssButtons" ImageUrl="/images/icons8-circled_chevron_left.png" />
+            <asp:ImageButton ID="RefreshBtn" runat="server" CommandName="Rebind" AlternateText="Refresh"
+              CssClass="rssButtons" ImageUrl="/images/icons8-refresh.png" />
+            <asp:ImageButton ID="NextBtn" runat="server" CommandName="Page" CommandArgument="Next"
+              AlternateText=">" CssClass="rssButtons" ImageUrl="/images/icons8-circled_chevron_right.png" />
+          </div>
+        </div>
+      </LayoutTemplate>
+      <ItemTemplate>
+        <tr>
+          <td>
+            <div class="nsrssTitle">
+              <a href='<%# GetXmlContent(Container, "link") %>' class="qsfSubtitle">
+                <asp:Literal runat="server" Text='<%# GetXmlContent(Container, "title") %>'></asp:Literal>
+              </a>
+            <div class="nsrssContent">
+              <asp:Literal runat="server" Text='<%# GetXmlContent(Container, "description") %>'></asp:Literal>
+            </div>
+              <div class="nsrssDate">
+                <%# string.Format("{0:d}", Convert.ToDateTime(GetXmlContent(Container, "pubDate"))) %>
+              </div>
+            </div>
+          </td>
+        </tr>
+      </ItemTemplate>
+    </telerik:RadListView>
+  </telerik:RadAjaxPanel>
+  <telerik:RadAjaxLoadingPanel ID="RadAjaxLoadingPanel1" runat="server" Skin="Black">
+  </telerik:RadAjaxLoadingPanel>
           </telerik:LayoutColumn>
         </Columns>
       </telerik:LayoutRow>

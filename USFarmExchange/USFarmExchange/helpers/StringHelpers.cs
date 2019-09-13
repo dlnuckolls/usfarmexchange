@@ -315,6 +315,10 @@ namespace USFarmExchange {
     /// <param name="args">The args to use in the format call.</param>
     /// <returns></returns>
     public static string FormatWith(this string format, params object[] args) { return string.Format(format, args); }
+    public static string Shorten(this string s, int len) {
+      var finalLength = (s.Length > len) ? len : s.Length;
+      return s.Substring(0, finalLength);
+    }
     /// <summary>
     /// Joins the string array called on with the separator passed
     /// in between each item.
