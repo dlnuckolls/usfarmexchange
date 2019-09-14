@@ -168,12 +168,14 @@
     <Content Include="controls\UserInteraction.ascx" />
     <Content Include="data\lowerMarquee.xml" />
     <Content Include="data\upperMarquee.xml" />
+    <Content Include="favicon.ico" />
     <Content Include="images\Crop-Insurance-Cycle.png" />
     <Content Include="images\facebook.png" />
     <Content Include="images\Farmers.jpg" />
     <Content Include="images\Hemp.jpg" />
     <Content Include="images\icons8-circled_chevron_left.png" />
     <Content Include="images\icons8-circled_chevron_right.png" />
+    <Content Include="images\icons8-farm.png" />
     <Content Include="images\icons8-refresh.png" />
     <Content Include="images\icons8-rss.png" />
     <Content Include="images\iStock-1029777638.jpg" />
@@ -493,7 +495,7 @@
           <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
         </WebProjectProperties>
       </FlavorProperties>
-      <UserProperties UseAjaxifiedTemplates="True" UseJQuerySupport="True" />
+      <UserProperties UseJQuerySupport="True" UseAjaxifiedTemplates="True" />
     </VisualStudio>
   </ProjectExtensions>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
