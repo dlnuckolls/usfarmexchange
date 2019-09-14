@@ -10,6 +10,6 @@
 namespace USFarmExchange.admin {
 
 
-  public partial class dashboard {
+  public partial class Dashboard {
   }
 }

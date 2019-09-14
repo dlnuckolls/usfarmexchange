@@ -7,10 +7,10 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace USFarmExchange.admin {
+namespace USFarmExchange {
     
     
-    public partial class AdminHome {
+    public partial class Login {
         
         /// <summary>
         /// TitleTag control.
@@ -22,48 +22,66 @@ namespace USFarmExchange.admin {
         protected global::System.Web.UI.WebControls.Literal TitleTag;
         
         /// <summary>
-        /// RadPageLayout1 control.
+        /// loginPage control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::Telerik.Web.UI.RadPageLayout RadPageLayout1;
+        protected global::Telerik.Web.UI.RadPageLayout loginPage;
         
         /// <summary>
-        /// UserAccounts control.
+        /// userName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::Telerik.Web.UI.RadImageAndTextTile UserAccounts;
+        protected global::Telerik.Web.UI.RadTextBox userName;
         
         /// <summary>
-        /// AdminUsers control.
+        /// password control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::Telerik.Web.UI.RadImageAndTextTile AdminUsers;
+        protected global::Telerik.Web.UI.RadTextBox password;
         
         /// <summary>
-        /// SystemValues control.
+        /// SubmitLogin control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::Telerik.Web.UI.RadImageAndTextTile SystemValues;
+        protected global::Telerik.Web.UI.RadButton SubmitLogin;
         
         /// <summary>
-        /// EditPageAdmin control.
+        /// lErrorMessage control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::Telerik.Web.UI.RadImageAndTextTile EditPageAdmin;
+        protected global::Telerik.Web.UI.RadLabel lErrorMessage;
+        
+        /// <summary>
+        /// ForgotPassword control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton ForgotPassword;
+        
+        /// <summary>
+        /// RegisterNewUser control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton RegisterNewUser;
     }
 }

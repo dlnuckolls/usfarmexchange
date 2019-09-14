@@ -10,7 +10,7 @@
 namespace USFarmExchange.admin {
     
     
-    public partial class AdminHome {
+    public partial class AdminPages {
         
         /// <summary>
         /// TitleTag control.
@@ -22,48 +22,48 @@ namespace USFarmExchange.admin {
         protected global::System.Web.UI.WebControls.Literal TitleTag;
         
         /// <summary>
-        /// RadPageLayout1 control.
+        /// ObjectDataSource1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::Telerik.Web.UI.RadPageLayout RadPageLayout1;
+        protected global::System.Web.UI.WebControls.ObjectDataSource ObjectDataSource1;
         
         /// <summary>
-        /// UserAccounts control.
+        /// MessageDisplay control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::Telerik.Web.UI.RadImageAndTextTile UserAccounts;
+        protected global::Telerik.Web.UI.RadLabel MessageDisplay;
         
         /// <summary>
-        /// AdminUsers control.
+        /// PageLocations control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::Telerik.Web.UI.RadImageAndTextTile AdminUsers;
+        protected global::Telerik.Web.UI.RadComboBox PageLocations;
         
         /// <summary>
-        /// SystemValues control.
+        /// SavePage control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::Telerik.Web.UI.RadImageAndTextTile SystemValues;
+        protected global::Telerik.Web.UI.RadButton SavePage;
         
         /// <summary>
-        /// EditPageAdmin control.
+        /// PageDescription control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::Telerik.Web.UI.RadImageAndTextTile EditPageAdmin;
+        protected global::Telerik.Web.UI.RadEditor PageDescription;
     }
 }

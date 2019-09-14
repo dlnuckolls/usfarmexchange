@@ -243,6 +243,38 @@ BEGIN
   COMMIT TRANSACTION Version1_4
 END
 
+SELECT @majorVersion = 1, @minorVersion = 5;
+IF NOT EXISTS(SELECT * FROM SchemaVersion WHERE (MajorVersion = @majorVersion) AND (MinorVersion = @minorVersion))
+BEGIN
+  BEGIN TRANSACTION Version1_5
+    
+    -- Add tables for dynamic page content
+    CREATE TABLE [dbo].[PageLocations] (
+	    [Id]          UNIQUEIDENTIFIER NOT NULL,
+	    [Description] VARCHAR(255)         NULL,
+      CONSTRAINT [PK_PageLocations] PRIMARY KEY CLUSTERED ( 
+	      [Id] ASC
+      ) WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+    ) ON [PRIMARY];
+
+    ALTER TABLE [dbo].[PageLocations] ADD  CONSTRAINT [DF_PageLocations_Id]  DEFAULT (NEWID()) FOR [Id];
+
+    CREATE TABLE [dbo].[PageContent](
+	    [Id]           UNIQUEIDENTIFIER NOT NULL,
+	    [PageLocation] UNIQUEIDENTIFIER NOT NULL,
+	    [Description]  VARCHAR(max)         NULL,
+      CONSTRAINT [PK_PageContent] PRIMARY KEY CLUSTERED (
+	      [Id] ASC
+      ) WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+    ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY];
+
+    ALTER TABLE [dbo].[PageContent] ADD  CONSTRAINT [DF_PageContent_Id]  DEFAULT (NEWID()) FOR [Id];
+
+    ALTER TABLE [dbo].[PageContent] WITH CHECK ADD FOREIGN KEY([PageLocation]) REFERENCES [dbo].[PageLocations] ([Id]);
+
+    INSERT INTO SchemaVersion values (newid(), @majorVersion, @minorVersion, getutcdate());
+  COMMIT TRANSACTION Version1_5
+END
 
 
 /* 

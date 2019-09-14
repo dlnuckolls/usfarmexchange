@@ -108,9 +108,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="admin\AdminHome.aspx" />
-    <Content Include="admin\dashboard.aspx" />
+    <Content Include="admin\AdminPages.aspx" />
+    <Content Include="admin\Dashboard.aspx" />
     <Content Include="admin\ForgotPassword.aspx" />
-    <Content Include="admin\login.aspx" />
+    <Content Include="admin\Login.aspx" />
     <Content Include="admin\Register.aspx" />
     <Content Include="admin\ResetPassword.aspx" />
     <Content Include="App_Data\RadCaptcha\0.wav" />
@@ -177,6 +178,15 @@
     <Content Include="images\icons8-rss.png" />
     <Content Include="images\iStock-1029777638.jpg" />
     <Content Include="images\KY_Hemp_Field.jpg" />
+    <Content Include="images\menutiles\icons8-accept_database.png" />
+    <Content Include="images\menutiles\icons8-business_contact.png" />
+    <Content Include="images\menutiles\icons8-domain.png" />
+    <Content Include="images\menutiles\icons8-edit_image.png" />
+    <Content Include="images\menutiles\icons8-education_filled.png" />
+    <Content Include="images\menutiles\icons8-find_user.png" />
+    <Content Include="images\menutiles\icons8-group.png" />
+    <Content Include="images\menutiles\icons8-new_job.png" />
+    <Content Include="images\menutiles\icons8-tear_off_calendar.png" />
     <Content Include="images\MMS-PCI-Continued.png" />
     <Content Include="images\MMS-PCI.png" />
     <Content Include="images\PCIMS-PCI-Continued.png" />
@@ -235,12 +245,19 @@
     <Compile Include="admin\AdminMaster.Master.designer.cs">
       <DependentUpon>AdminMaster.Master</DependentUpon>
     </Compile>
-    <Compile Include="admin\dashboard.aspx.cs">
-      <DependentUpon>dashboard.aspx</DependentUpon>
+    <Compile Include="admin\AdminPages.aspx.cs">
+      <DependentUpon>AdminPages.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="admin\dashboard.aspx.designer.cs">
-      <DependentUpon>dashboard.aspx</DependentUpon>
+    <Compile Include="admin\AdminPages.aspx.designer.cs">
+      <DependentUpon>AdminPages.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\Dashboard.aspx.cs">
+      <DependentUpon>Dashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\Dashboard.aspx.designer.cs">
+      <DependentUpon>Dashboard.aspx</DependentUpon>
     </Compile>
     <Compile Include="admin\ForgotPassword.aspx.cs">
       <DependentUpon>ForgotPassword.aspx</DependentUpon>
@@ -249,12 +266,12 @@
     <Compile Include="admin\ForgotPassword.aspx.designer.cs">
       <DependentUpon>ForgotPassword.aspx</DependentUpon>
     </Compile>
-    <Compile Include="admin\login.aspx.cs">
-      <DependentUpon>login.aspx</DependentUpon>
+    <Compile Include="admin\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="admin\login.aspx.designer.cs">
-      <DependentUpon>login.aspx</DependentUpon>
+    <Compile Include="admin\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
     <Compile Include="admin\Register.aspx.cs">
       <DependentUpon>Register.aspx</DependentUpon>
@@ -392,6 +409,7 @@
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="helpers\PortalSession.cs" />
+    <Compile Include="helpers\SqlDatasets.cs" />
     <Compile Include="helpers\SqlStatements.cs" />
     <Compile Include="helpers\SystemSettings.cs" />
     <Compile Include="helpers\SystemUser.cs" />
@@ -475,7 +493,7 @@
           <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
         </WebProjectProperties>
       </FlavorProperties>
-      <UserProperties UseJQuerySupport="True" UseAjaxifiedTemplates="True" />
+      <UserProperties UseAjaxifiedTemplates="True" UseJQuerySupport="True" />
     </VisualStudio>
   </ProjectExtensions>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
