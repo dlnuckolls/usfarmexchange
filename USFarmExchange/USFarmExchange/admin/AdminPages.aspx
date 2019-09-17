@@ -17,9 +17,7 @@
   <telerik:RadAjaxPanel runat="server">
     <div style="min-height: 800px;">
       <asp:ObjectDataSource ID="ObjectDataSource1" runat="server" SelectMethod="GetAllPageLocations" TypeName="USFarmExchange.SqlDatasets" />
-      <h3>Page Content Editor</h3>
-      <br />
-      <br />
+      <asp:Literal ID="PageAdminHeader" runat="server" />
       <div id="messageDisplayArea">
         <telerik:RadLabel runat="server" ID="MessageDisplay"></telerik:RadLabel>
       </div>

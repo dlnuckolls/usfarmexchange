@@ -276,6 +276,35 @@ BEGIN
   COMMIT TRANSACTION Version1_5
 END
 
+SELECT @majorVersion = 1, @minorVersion = 6;
+IF NOT EXISTS(SELECT * FROM SchemaVersion WHERE (MajorVersion = @majorVersion) AND (MinorVersion = @minorVersion))
+BEGIN
+  BEGIN TRANSACTION Version1_6
+    
+    INSERT INTO [dbo].[PageLocations] (Id, [Description])
+    VALUES ('4667B33D-BE48-4B7D-816E-D705F1F732C5', 'Admin Home Top Panel'),
+           ('06688FA2-EBCB-4F42-9F63-091524C9B839', 'Admin Home Tool Header'),
+           ('61175E8D-6131-4789-8989-DC4C4695E711', 'Page Management Header'),
+           ('D42ABA67-51F4-4416-AFA4-A4015551B07C', 'Dashboard Header');
+    
+    INSERT INTO SchemaVersion values (newid(), @majorVersion, @minorVersion, getutcdate());
+  COMMIT TRANSACTION Version1_6
+END
+
+SELECT @majorVersion = 1, @minorVersion = 7;
+IF NOT EXISTS(SELECT * FROM SchemaVersion WHERE (MajorVersion = @majorVersion) AND (MinorVersion = @minorVersion))
+BEGIN
+  BEGIN TRANSACTION Version1_7
+    
+    INSERT INTO [dbo].[PageContent] ([PageLocation], [Description])
+    VALUES ('4667B33D-BE48-4B7D-816E-D705F1F732C5', 'Admin Home Top Panel'),
+           ('06688FA2-EBCB-4F42-9F63-091524C9B839', 'Admin Home Tool Header'),
+           ('61175E8D-6131-4789-8989-DC4C4695E711', 'Page Management Header'),
+           ('D42ABA67-51F4-4416-AFA4-A4015551B07C', 'Dashboard Header');
+    
+    INSERT INTO SchemaVersion values (newid(), @majorVersion, @minorVersion, getutcdate());
+  COMMIT TRANSACTION Version1_7
+END
 
 /* 
   Use this model to create database changes

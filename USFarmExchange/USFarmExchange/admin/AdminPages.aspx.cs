@@ -14,6 +14,7 @@ namespace USFarmExchange.admin {
       TitleTag.Text = SessionInfo.DisplayCurrentPage;
       if(!SessionInfo.IsAuthenticated) Response.Redirect("~/admin/Login.aspx");
       if(!SessionInfo.IsAdmin) Response.Redirect("~/admin/AdminHome.aspx");
+      PageAdminHeader.Text = SessionInfo.PageContent(PageContentBlocks.PageAdminHeader);
     }
 
     protected void PageLocations_SelectedIndexChanged(object sender, RadComboBoxSelectedIndexChangedEventArgs e) {

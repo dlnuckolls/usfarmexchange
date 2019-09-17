@@ -12,6 +12,8 @@ namespace USFarmExchange.admin {
       SessionInfo.CurrentPage = PageNames.Admin;
       TitleTag.Text = SessionInfo.DisplayCurrentPage;
       if(!SessionInfo.IsAuthenticated) Response.Redirect("Login.aspx");
+      AdminHomeTop.Text = SessionInfo.PageContent(PageContentBlocks.AdminHomeTop);
+      AdminHomeToolHeader.Text = SessionInfo.PageContent(PageContentBlocks.AdminHomeToolHeader);
     }
 
     protected void UserAccounts_Click(object sender, EventArgs e) {

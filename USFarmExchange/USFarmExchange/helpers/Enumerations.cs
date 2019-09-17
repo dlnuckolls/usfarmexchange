@@ -41,5 +41,13 @@ namespace USFarmExchange {
     [TextValue("Partners")] Partners,
     [TextValue("Admin Dashboard")] Admin,
     [TextValue("Page Management")] PageAdmin,
+    [TextValue("My Dashboard")] Dashboard,
+  }
+  [CustomEnum(true)]
+  public enum PageContentBlocks {
+    [TextValue("4667B33D-BE48-4B7D-816E-D705F1F732C5")] AdminHomeTop,
+    [TextValue("06688FA2-EBCB-4F42-9F63-091524C9B839")] AdminHomeToolHeader,
+    [TextValue("61175E8D-6131-4789-8989-DC4C4695E711")] PageAdminHeader,
+    [TextValue("D42ABA67-51F4-4416-AFA4-A4015551B07C")] DashboardHeader
   }
 }
