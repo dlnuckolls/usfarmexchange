@@ -3,6 +3,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <link href="../styles/CropInsurance.css" rel="stylesheet" />
     <asp:Literal ID="TitleTag" runat="server"></asp:Literal>
+    <link href="/styles/default.css" rel="stylesheet" />
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="TableOfContents1" runat="server">
 </asp:Content>
@@ -199,6 +200,8 @@
             <telerik:RadButton ID="btnNext" runat="server" Text="Next" OnClick="btnNext_Click"></telerik:RadButton>
         </div>
     </telerik:RadAjaxPanel>
+    <br />
+    <br />
 </asp:Content>
 
 <asp:Content ID="Content3" ContentPlaceHolderID="RightColumn1" runat="server">
