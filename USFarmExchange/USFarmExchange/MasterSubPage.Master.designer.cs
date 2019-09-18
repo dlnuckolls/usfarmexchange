@@ -40,22 +40,31 @@ namespace USFarmExchange {
         protected global::Telerik.Web.UI.RadPageLayout MasterLayout;
         
         /// <summary>
-        /// RadMenu1 control.
+        /// SocialLinks control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::Telerik.Web.UI.RadMenu RadMenu1;
+        protected global::USFarmExchange.controls.SocialLinks SocialLinks;
         
         /// <summary>
-        /// RadMenu2 control.
+        /// UserInteraction control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::Telerik.Web.UI.RadMenu RadMenu2;
+        protected global::USFarmExchange.controls.UserInteraction UserInteraction;
+        
+        /// <summary>
+        /// mainnavigation control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::USFarmExchange.MainNavigation mainnavigation;
         
         /// <summary>
         /// ContentPlaceHolder1 control.
@@ -74,5 +83,14 @@ namespace USFarmExchange {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.ContentPlaceHolder ContentPlaceHolder2;
+        
+        /// <summary>
+        /// FooterLayout control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::USFarmExchange.controls.FooterLayout FooterLayout;
     }
 }

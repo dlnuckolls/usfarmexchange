@@ -1,0 +1,154 @@
+﻿.top {
+  width: 452px;
+  height: 35px;
+}
+/* upper scrolling text  */
+.marqueeTopBg {
+  width: 452px;
+  height: 38px;
+  /*background-image: url(/images/rotator/top.gif);
+  background-repeat: no-repeat;*/
+}
+
+.marqueeTop_Text {
+  /*padding-top: 13px;*/
+  padding-left: 10px;
+  padding-right: 10px;
+  font: normal 12px Arial, Verdana, Helvetica, Sans-Serif;
+}
+/* lower scrolling text  */
+.marqueeBottomBg {
+  width: 452px;
+  height: 35px;
+  /*background-image: url(/images/rotator/marqueeBottomBg.gif);
+  background-repeat: no-repeat;*/
+}
+
+.marqueeBottom_Text {
+  /*padding-top: 8px;*/
+  padding-left: 10px;
+  padding-right: 10px;
+  font: normal 12px Arial, Verdana, Helvetica, Sans-Serif;
+}
+
+.bottom {
+  width: 452px;
+  height: 25px;
+}
+
+.top, .marqueeTopBg, .marqueeBottomBg, .bottom {
+  padding: 0;
+  margin: 0 auto;
+}
+
+.Rotator {
+  background-color: black;
+  cursor: default;
+}
+
+.itemTemplate {
+  margin: 5px;
+  width: 140px;
+  height: 24px;
+}
+
+.Symbol {
+  font-family: Verdana, Arial;
+  font-weight: bold;
+  font-size: 9pt;
+  color: #3E7DBC;
+  cursor: default;
+  float: left;
+}
+
+.Quote {
+  font-family: Verdana, Arial;
+  font-size: 11px;
+  color: #64962D;
+  float: left;
+  margin-left: 5px;
+}
+
+.Change {
+  font-family: Verdana, Arial;
+  font-size: 11px;
+  color: gray;
+  float: left;
+  margin-left: 5px;
+}
+
+.Link {
+  font-family: Verdana, Arial;
+  font-size: 10px;
+  color: #3E7DBC;
+}
+
+table.nsrssTable {
+  /*margin: 4px 15px;*/
+  color: #87888A;
+}
+
+.nsrssTable td {
+  vertical-align: top;
+}
+
+.nsrssContent {
+  font-size: .8em;
+  text-align: justify;
+}
+
+.nslayoutWrapper {
+  margin: 0 auto;
+  font-family: "Segoe UI", helvetica,arial,sans-serif;
+  color: #eee;
+  padding: 5px;
+  height: 500px;
+  position: relative;
+}
+
+.nsrssDate {
+  color: #389E3B;
+  font-size: .8em;
+  float: right;
+}
+
+.nsrssTitle {
+  /*width: 560px;
+  white-space: nowrap;
+  overflow: hidden;*/
+  text-overflow: ellipsis;
+  font-size: 1.15em;
+  /*color: cadetblue;
+  position: relative;
+  left: 160px;
+  top: -90px;
+  margin-bottom: -50px;*/
+}
+
+  .nsrssTitle a {
+    font-size: 1em;
+    color: cadetblue;
+    text-decoration: none;
+  }
+
+.nsrssSubHeader {
+  font-size: 10pt;
+  padding-left: 3px;
+  color: #999;
+}
+
+.nsrssTable table a > img {
+  height: 50px;
+  width: 50px;
+}
+
+.nsrssButtons {
+  width: 24px;
+  height: 24px;
+  padding: 0 10px;
+}
+
+.nsimageWrapper {
+  width: 100%;
+  text-align: center;
+}
