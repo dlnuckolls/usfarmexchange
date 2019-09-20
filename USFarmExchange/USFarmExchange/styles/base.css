@@ -100,8 +100,8 @@ div.RadMenuPopup,
 
 #wrapper .largeheader {
   position: relative;
-  padding: 1.875em;
-  padding-top: 1em;
+  /*padding: 1.875em;
+  padding-top: 1em;*/
   overflow: hidden;
   background-size: cover;
   background-position: center;
