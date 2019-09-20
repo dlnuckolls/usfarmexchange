@@ -5,7 +5,7 @@ body
 {
     /*background: #ccc;*/
     font-size: .80em;
-    font-family: "Helvetica Neue", "Lucida Grande", "Segoe UI", Arial, Helvetica, Verdana, sans-serif;
+    font-family: "Segoe UI", Arial, Helvetica, "Helvetica Neue", "Lucida Grande", Verdana, sans-serif;
     margin: 0px;
     padding: 0px;
     color: #696969;
@@ -260,6 +260,12 @@ div.accountInfo
   color: #1c73bf !important;
 }
 
+  .loginDisplay a {
+    font-size: 1.1em !important;
+    text-decoration: none;
+    padding: 5px;
+  }
+
   .loginDisplay a:link {
     font-size: 1.1em !important;
     text-decoration: none;
@@ -270,11 +276,12 @@ div.accountInfo
     text-decoration: none;
   }
 
-  .loginDisplay a:hover {
-    font-size: 1.1em !important;
-    background-color: #2a2d33 !important;
-    text-decoration: none;
-  }
+    .loginDisplay a:hover {
+      font-size: 1.1em !important;
+      background-color: #a9c9a9 !important;
+      border-radius: 5px;
+      text-decoration: none;
+    }
 
 .failureNotification
 {
