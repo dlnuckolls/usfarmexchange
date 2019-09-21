@@ -1,4 +1,4 @@
-CREATE PROCEDURE [dbo].[yaf_drop_defaultconstraint_oncolumn](@tablename varchar(255), @columnname varchar(255)) as
+CREATE PROCEDURE [{databaseOwner}].[{objectQualifier}drop_defaultconstraint_oncolumn](@tablename varchar(255), @columnname varchar(255)) as
 BEGIN
 DECLARE @DefName sysname
 
@@ -15,57 +15,70 @@ WHERE
   c.name = @columnname
   
 IF @DefName IS NOT NULL
-  EXECUTE ('ALTER TABLE [dbo].[' + @tablename + '] DROP constraint [' + @DefName + ']')
-END;
+  EXECUTE ('ALTER TABLE [{databaseOwner}].[' + @tablename + '] DROP constraint [' + @DefName + ']')
+END
+GO
+
+/*
+** Create missing tables
+*/
 
 /* Create Thanks Table */
-CREATE TABLE [dbo].[yaf_Thanks](
+if not exists (select top 1 1 from sys.objects WHERE object_id = OBJECT_ID(N'[{databaseOwner}].[{objectQualifier}Thanks]') and type in (N'U'))
+CREATE TABLE [{databaseOwner}].[{objectQualifier}Thanks](
 	[ThanksID] [int] IDENTITY(1,1) NOT NULL,
 	[ThanksFromUserID] [int] NOT NULL,
 	[ThanksToUserID] [int] NOT NULL,
 	[MessageID] [int] NOT NULL,
 	[ThanksDate] [smalldatetime] NOT NULL,
-	constraint [PK_yaf_Thanks] primary key(ThanksID)
-	);
+	constraint [PK_{objectQualifier}Thanks] primary key(ThanksID)
+	)
+go
 
 /* YAF Buddy Table */
-CREATE TABLE [dbo].[yaf_Buddy](
+if not exists (select top 1 1 from sys.objects WHERE object_id = OBJECT_ID(N'[{databaseOwner}].[{objectQualifier}Buddy]') and type in (N'U'))
+CREATE TABLE [{databaseOwner}].[{objectQualifier}Buddy](
 	[ID] [int] IDENTITY(1,1) NOT NULL,
 	[FromUserID] [int] NOT NULL,
 	[ToUserID] [int] NOT NULL,
 	[Approved] [bit] NOT NULL,
 	[Requested] [datetime] NOT NULL,
-	constraint [PK_yaf_Buddy] PRIMARY KEY CLUSTERED 
+	constraint [PK_{objectQualifier}Buddy] PRIMARY KEY CLUSTERED 
 (
 	[ID] ASC
 )WITH (STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF),
- constraint [IX_yaf_Buddy] UNIQUE NONCLUSTERED 
+ constraint [IX_{objectQualifier}Buddy] UNIQUE NONCLUSTERED 
 (
 	[FromUserID] ASC,
 	[ToUserID] ASC
 )WITH (STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF)
-	);
+	)
+go
 
 /* YAF FavoriteTopic Table */
-CREATE TABLE [dbo].[yaf_FavoriteTopic](
+if not exists (select top 1 1 from sys.objects WHERE object_id = OBJECT_ID(N'[{databaseOwner}].[{objectQualifier}FavoriteTopic]') and type in (N'U'))
+CREATE TABLE [{databaseOwner}].[{objectQualifier}FavoriteTopic](
 	[ID] [int] IDENTITY(1,1) NOT NULL,
 	[UserID] [int] NOT NULL,
 	[TopicID] [int] NOT NULL,
-	constraint [PK_yaf_FavoriteTopic] primary key(ID)
-	);
+	constraint [PK_{objectQualifier}FavoriteTopic] primary key(ID)
+	)
+GO
 
 /* YAF Album Tables*/
-CREATE TABLE [dbo].[yaf_UserAlbum](
+if not exists (select top 1 1 from sys.objects WHERE object_id = OBJECT_ID(N'[{databaseOwner}].[{objectQualifier}UserAlbum]') and type in (N'U'))
+CREATE TABLE [{databaseOwner}].[{objectQualifier}UserAlbum](
 	[AlbumID] [INT] IDENTITY(1,1) NOT NULL,
 	[UserID] [int] NOT NULL,
 	[Title] [NVARCHAR](255),
 	[CoverImageID] [INT],
 	[Updated] [DATETIME] NOT NULL,
-	constraint [PK_yaf_User_Album] primary key(AlbumID)
-	);
+	constraint [PK_{objectQualifier}User_Album] primary key(AlbumID)
+	)
+GO
 
-if not exists (select top 1 1 from sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[yaf_UserAlbumImage]') and type in (N'U'))
-CREATE TABLE [dbo].[yaf_UserAlbumImage](
+if not exists (select top 1 1 from sys.objects WHERE object_id = OBJECT_ID(N'[{databaseOwner}].[{objectQualifier}UserAlbumImage]') and type in (N'U'))
+CREATE TABLE [{databaseOwner}].[{objectQualifier}UserAlbumImage](
 	[ImageID] [INT] IDENTITY(1,1) NOT NULL,
 	[AlbumID] [int] NOT NULL,
 	[Caption] [NVARCHAR](255),
@@ -74,12 +87,12 @@ CREATE TABLE [dbo].[yaf_UserAlbumImage](
 	[ContentType] [NVARCHAR](50),
 	[Uploaded] [DATETIME] NOT NULL,
 	[Downloads] [INT] NOT NULL,
-	constraint [PK_yaf_User_AlbumImage] primary key(ImageID)
+	constraint [PK_{objectQualifier}User_AlbumImage] primary key(ImageID)
 	)
 GO
 
-if not exists (select top 1 1 from sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[yaf_Active]') and type in (N'U'))
-	create table [dbo].[yaf_Active](
+if not exists (select top 1 1 from sys.objects WHERE object_id = OBJECT_ID(N'[{databaseOwner}].[{objectQualifier}Active]') and type in (N'U'))
+	create table [{databaseOwner}].[{objectQualifier}Active](
 		SessionID		nvarchar (24) NOT NULL,
 		BoardID			int NOT NULL,
 		UserID			int NOT NULL,
@@ -93,7 +106,7 @@ if not exists (select top 1 1 from sys.objects WHERE object_id = OBJECT_ID(N'[db
 		[Platform]		nvarchar (50) NULL,
 		Flags           int NULL,
 		ForumPage       nvarchar(1024) NULL,
-        constraint [PK_yaf_Active] PRIMARY KEY CLUSTERED 
+        constraint [PK_{objectQualifier}Active] PRIMARY KEY CLUSTERED 
 (
 	[SessionID] ASC,
 	[BoardID] ASC
@@ -101,8 +114,8 @@ if not exists (select top 1 1 from sys.objects WHERE object_id = OBJECT_ID(N'[db
 	)
 go
 
-if not exists (select top 1 1 from sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[yaf_ActiveAccess]') and type in (N'U'))
-	create table [dbo].[yaf_ActiveAccess](		
+if not exists (select top 1 1 from sys.objects WHERE object_id = OBJECT_ID(N'[{databaseOwner}].[{objectQualifier}ActiveAccess]') and type in (N'U'))
+	create table [{databaseOwner}].[{objectQualifier}ActiveAccess](		
 		UserID			    int NOT NULL,
 		BoardID			    int NOT NULL,			
 		ForumID			    int NOT NULL,
@@ -122,7 +135,7 @@ if not exists (select top 1 1 from sys.objects WHERE object_id = OBJECT_ID(N'[db
 		DownloadAccess		bit NOT NULL,
 		LastActive			datetime NULL,
 		IsGuestX			bit NOT NULL,
-        constraint [PK_yaf_ActiveAccess] PRIMARY KEY CLUSTERED 
+        constraint [PK_{objectQualifier}ActiveAccess] PRIMARY KEY CLUSTERED 
 (
 	[UserID] ASC,
 	[ForumID] ASC
@@ -130,11 +143,11 @@ if not exists (select top 1 1 from sys.objects WHERE object_id = OBJECT_ID(N'[db
 	)
 go
 
-if not exists (select top 1 1 from sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[yaf_AdminPageUserAccess]') and type in (N'U'))
-	create table [dbo].[yaf_AdminPageUserAccess](
+if not exists (select top 1 1 from sys.objects WHERE object_id = OBJECT_ID(N'[{databaseOwner}].[{objectQualifier}AdminPageUserAccess]') and type in (N'U'))
+	create table [{databaseOwner}].[{objectQualifier}AdminPageUserAccess](
 		UserID		    int NOT NULL,		
 		PageName		nvarchar (128) NOT NULL,
- constraint [PK_yaf_AdminPageUserAccess] PRIMARY KEY CLUSTERED 
+ constraint [PK_{objectQualifier}AdminPageUserAccess] PRIMARY KEY CLUSTERED 
 (
 	[UserID] ASC,
 	[PageName] ASC
@@ -142,13 +155,13 @@ if not exists (select top 1 1 from sys.objects WHERE object_id = OBJECT_ID(N'[db
 	)
 go
 
-if not exists (select top 1 1 from sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[yaf_EventLogGroupAccess]') and type in (N'U'))
-	create table [dbo].[yaf_EventLogGroupAccess](
+if not exists (select top 1 1 from sys.objects WHERE object_id = OBJECT_ID(N'[{databaseOwner}].[{objectQualifier}EventLogGroupAccess]') and type in (N'U'))
+	create table [{databaseOwner}].[{objectQualifier}EventLogGroupAccess](
 		GroupID		    int NOT NULL,	
 		EventTypeID     int NOT NULL,  	
 		EventTypeName	nvarchar (128) NOT NULL,
 		DeleteAccess    bit NOT NULL,
- constraint [PK_yaf_EventLogGroupAccess] PRIMARY KEY CLUSTERED 
+ constraint [PK_{objectQualifier}EventLogGroupAccess] PRIMARY KEY CLUSTERED 
 (
 	[GroupID] ASC,
 	[EventTypeID] ASC
@@ -156,19 +169,19 @@ if not exists (select top 1 1 from sys.objects WHERE object_id = OBJECT_ID(N'[db
 	)
 go
 
-if not exists (select top 1 1 from sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[yaf_BannedIP]') and type in (N'U'))
-	create table [dbo].[yaf_BannedIP](
+if not exists (select top 1 1 from sys.objects WHERE object_id = OBJECT_ID(N'[{databaseOwner}].[{objectQualifier}BannedIP]') and type in (N'U'))
+	create table [{databaseOwner}].[{objectQualifier}BannedIP](
 		ID				int IDENTITY (1,1) NOT NULL,
 		BoardID			int NOT NULL,
 		Mask			nvarchar (15) NOT NULL,
 		Since			datetime NOT NULL,
 		Reason          nvarchar (128) NULL,
 		UserID			int null,
- constraint [PK_yaf_BannedIP] PRIMARY KEY CLUSTERED 
+ constraint [PK_{objectQualifier}BannedIP] PRIMARY KEY CLUSTERED 
 (
 	[ID] ASC
 )WITH (STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF),
- constraint [IX_yaf_BannedIP] UNIQUE NONCLUSTERED 
+ constraint [IX_{objectQualifier}BannedIP] UNIQUE NONCLUSTERED 
 (
 	[BoardID] ASC,
 	[Mask] ASC
@@ -176,18 +189,18 @@ if not exists (select top 1 1 from sys.objects WHERE object_id = OBJECT_ID(N'[db
 	)
 go
 
-if not exists (select top 1 1 from sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[yaf_BannedName]') and type in (N'U'))
-	create table [dbo].[yaf_BannedName](
+if not exists (select top 1 1 from sys.objects WHERE object_id = OBJECT_ID(N'[{databaseOwner}].[{objectQualifier}BannedName]') and type in (N'U'))
+	create table [{databaseOwner}].[{objectQualifier}BannedName](
 		ID				int IDENTITY (1,1) NOT NULL,
 		BoardID			int NOT NULL,
 		Mask			nvarchar (255) NOT NULL,
 		Since			datetime NOT NULL,
 		Reason          nvarchar (128) NULL,
- constraint [PK_yaf_BannedName] PRIMARY KEY CLUSTERED 
+ constraint [PK_{objectQualifier}BannedName] PRIMARY KEY CLUSTERED 
 (
 	[ID] ASC
 )WITH (STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF),
- constraint [IX_yaf_BannedName] UNIQUE NONCLUSTERED 
+ constraint [IX_{objectQualifier}BannedName] UNIQUE NONCLUSTERED 
 (
 	[BoardID] ASC,
 	[Mask] ASC
@@ -195,18 +208,18 @@ if not exists (select top 1 1 from sys.objects WHERE object_id = OBJECT_ID(N'[db
 	)
 go
 
-if not exists (select top 1 1 from sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[yaf_BannedEmail]') and type in (N'U'))
-	create table [dbo].[yaf_BannedEmail](
+if not exists (select top 1 1 from sys.objects WHERE object_id = OBJECT_ID(N'[{databaseOwner}].[{objectQualifier}BannedEmail]') and type in (N'U'))
+	create table [{databaseOwner}].[{objectQualifier}BannedEmail](
 		ID				int IDENTITY (1,1) NOT NULL,
 		BoardID			int NOT NULL,
 		Mask			nvarchar (255) NOT NULL,
 		Since			datetime NOT NULL,
 		Reason          nvarchar (128) NULL,
- constraint [PK_yaf_BannedEmail] PRIMARY KEY CLUSTERED 
+ constraint [PK_{objectQualifier}BannedEmail] PRIMARY KEY CLUSTERED 
 (
 	[ID] ASC
 )WITH (STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF),
- constraint [IX_yaf_BannedEmail] UNIQUE NONCLUSTERED 
+ constraint [IX_{objectQualifier}BannedEmail] UNIQUE NONCLUSTERED 
 (
 	[BoardID] ASC,
 	[Mask] ASC
@@ -214,19 +227,19 @@ if not exists (select top 1 1 from sys.objects WHERE object_id = OBJECT_ID(N'[db
 	)
 go
 
-if not exists (select top 1 1 from sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[yaf_Category]') and type in (N'U'))
-	create table [dbo].[yaf_Category](
+if not exists (select top 1 1 from sys.objects WHERE object_id = OBJECT_ID(N'[{databaseOwner}].[{objectQualifier}Category]') and type in (N'U'))
+	create table [{databaseOwner}].[{objectQualifier}Category](
 		CategoryID		int IDENTITY (1,1) NOT NULL,
 		BoardID			int NOT NULL,
 		[Name]			[nvarchar](128) NOT NULL,
 		[CategoryImage] [nvarchar](255) NULL,		
 		SortOrder		smallint NOT NULL,
 		PollGroupID     int null,
- constraint [PK_yaf_Category] PRIMARY KEY CLUSTERED 
+ constraint [PK_{objectQualifier}Category] PRIMARY KEY CLUSTERED 
 (
 	[CategoryID] ASC
 )WITH (STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF),
- constraint [IX_yaf_Category] UNIQUE NONCLUSTERED 
+ constraint [IX_{objectQualifier}Category] UNIQUE NONCLUSTERED 
 (
 	[BoardID] ASC,
 	[Name] ASC
@@ -234,55 +247,55 @@ if not exists (select top 1 1 from sys.objects WHERE object_id = OBJECT_ID(N'[db
 	)
 GO
 
-if not exists (select top 1 1 from sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[yaf_CheckEmail]') and type in (N'U'))
-	create table [dbo].[yaf_CheckEmail](
+if not exists (select top 1 1 from sys.objects WHERE object_id = OBJECT_ID(N'[{databaseOwner}].[{objectQualifier}CheckEmail]') and type in (N'U'))
+	create table [{databaseOwner}].[{objectQualifier}CheckEmail](
 		CheckEmailID	int IDENTITY (1,1) NOT NULL,
 		UserID			int NOT NULL,
 		Email			nvarchar (255) NOT NULL,
 		Created			datetime NOT NULL,
 		[Hash]			nvarchar (32) NOT NULL,
- constraint [PK_yaf_CheckEmail] PRIMARY KEY CLUSTERED 
+ constraint [PK_{objectQualifier}CheckEmail] PRIMARY KEY CLUSTERED 
 (
 	[CheckEmailID] ASC
 )WITH (STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF),
- constraint [IX_yaf_CheckEmail] UNIQUE NONCLUSTERED 
+ constraint [IX_{objectQualifier}CheckEmail] UNIQUE NONCLUSTERED 
 (
 	[Hash] ASC
 )WITH (STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF)
 	)
 GO
 
-if not exists (select top 1 1 from sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[yaf_Choice]') and type in (N'U'))
-	create table [dbo].[yaf_Choice](
+if not exists (select top 1 1 from sys.objects WHERE object_id = OBJECT_ID(N'[{databaseOwner}].[{objectQualifier}Choice]') and type in (N'U'))
+	create table [{databaseOwner}].[{objectQualifier}Choice](
 		ChoiceID		int IDENTITY (1,1) NOT NULL,
 		PollID			int NOT NULL,
 		Choice			nvarchar (50) NOT NULL,
 		Votes			int NOT NULL,
 		[ObjectPath] nvarchar(255) NULL,
 		[MimeType] varchar(50) NULL,
- constraint [PK_yaf_Choice] PRIMARY KEY CLUSTERED 
+ constraint [PK_{objectQualifier}Choice] PRIMARY KEY CLUSTERED 
 (
 	[ChoiceID] ASC
 )WITH (STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF)
 	)
 GO
 
-if not exists (select top 1 1 from sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[yaf_PollVote]') and type in (N'U'))
-	CREATE TABLE [dbo].[yaf_PollVote] (
+if not exists (select top 1 1 from sys.objects WHERE object_id = OBJECT_ID(N'[{databaseOwner}].[{objectQualifier}PollVote]') and type in (N'U'))
+	CREATE TABLE [{databaseOwner}].[{objectQualifier}PollVote] (
 		[PollVoteID] [int] IDENTITY (1,1) NOT NULL,
 		[PollID] [int] NOT NULL,
 		[UserID] [int] NULL,
 		[RemoteIP] [varchar] (39) NULL,
 		[ChoiceID] [int] NULL,
- constraint [PK_yaf_PollVote] PRIMARY KEY CLUSTERED 
+ constraint [PK_{objectQualifier}PollVote] PRIMARY KEY CLUSTERED 
 (
 	[PollVoteID] ASC
 )WITH (STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF)
 	)
 GO
 
-if not exists (select top 1 1 from sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[yaf_PollVoteRefuse]') and type in (N'U'))
-	CREATE TABLE [dbo].[yaf_PollVoteRefuse] (
+if not exists (select top 1 1 from sys.objects WHERE object_id = OBJECT_ID(N'[{databaseOwner}].[{objectQualifier}PollVoteRefuse]') and type in (N'U'))
+	CREATE TABLE [{databaseOwner}].[{objectQualifier}PollVoteRefuse] (
 		[RefuseID] [int] IDENTITY (1,1) NOT NULL,		
 		[PollID] [int] NOT NULL,
 		[UserID] [int] NULL,
@@ -290,8 +303,8 @@ if not exists (select top 1 1 from sys.objects WHERE object_id = OBJECT_ID(N'[db
 	)
 GO
 
-if not exists (select top 1 1 from sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[yaf_Forum]') and type in (N'U'))
-	create table [dbo].[yaf_Forum](
+if not exists (select top 1 1 from sys.objects WHERE object_id = OBJECT_ID(N'[{databaseOwner}].[{objectQualifier}Forum]') and type in (N'U'))
+	create table [{databaseOwner}].[{objectQualifier}Forum](
 		ForumID			int IDENTITY (1,1) NOT NULL,
 		CategoryID		int NOT NULL,
 		ParentID		int NULL,
@@ -307,7 +320,7 @@ if not exists (select top 1 1 from sys.objects WHERE object_id = OBJECT_ID(N'[db
 		NumTopics		int NOT NULL,
 		NumPosts		int NOT NULL,
 		RemoteURL		nvarchar(100) null,
-		Flags			int not null constraint [DF_yaf_Forum_Flags] default (0),
+		Flags			int not null constraint [DF_{objectQualifier}Forum_Flags] default (0),
 		[IsLocked]		AS (CONVERT([bit],sign([Flags]&(1)),(0))),
 		[IsHidden]		AS (CONVERT([bit],sign([Flags]&(2)),(0))),
 		[IsNoCount]		AS (CONVERT([bit],sign([Flags]&(4)),(0))),
@@ -318,20 +331,20 @@ if not exists (select top 1 1 from sys.objects WHERE object_id = OBJECT_ID(N'[db
 	    Styles          nvarchar(255) NULL,
 		UserID          int null,
 		ModeratedPostCount int null,
-		IsModeratedNewTopicOnly	bit not null constraint [DF_yaf_Forum_IsModeratedNewTopicOnly] default (0),
- constraint [PK_yaf_Forum] PRIMARY KEY CLUSTERED 
+		IsModeratedNewTopicOnly	bit not null constraint [DF_{objectQualifier}Forum_IsModeratedNewTopicOnly] default (0),
+ constraint [PK_{objectQualifier}Forum] PRIMARY KEY CLUSTERED 
 (
 	[ForumID] ASC
 )WITH (STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF)
 	)
 GO
 
-if not exists (select top 1 1 from sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[yaf_ForumAccess]') and type in (N'U'))
-	create table [dbo].[yaf_ForumAccess](
+if not exists (select top 1 1 from sys.objects WHERE object_id = OBJECT_ID(N'[{databaseOwner}].[{objectQualifier}ForumAccess]') and type in (N'U'))
+	create table [{databaseOwner}].[{objectQualifier}ForumAccess](
 		GroupID			int NOT NULL,
 		ForumID			int NOT NULL,
 		AccessMaskID	int NOT NULL,
- constraint [PK_yaf_ForumAccess] PRIMARY KEY CLUSTERED 
+ constraint [PK_{objectQualifier}ForumAccess] PRIMARY KEY CLUSTERED 
 (
 	[GroupID] ASC,
 	[ForumID] ASC
@@ -339,28 +352,28 @@ if not exists (select top 1 1 from sys.objects WHERE object_id = OBJECT_ID(N'[db
 	)
 GO
 
-if not exists (select top 1 1 from sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[yaf_Group]') and type in (N'U'))
-	create table [dbo].[yaf_Group](
+if not exists (select top 1 1 from sys.objects WHERE object_id = OBJECT_ID(N'[{databaseOwner}].[{objectQualifier}Group]') and type in (N'U'))
+	create table [{databaseOwner}].[{objectQualifier}Group](
 		GroupID		   int IDENTITY (1,1) NOT NULL,
 		BoardID		   int NOT NULL,
 		[Name]		   nvarchar (255) NOT NULL,
-		Flags		   int not null constraint [DF_yaf_Group_Flags] default (0),
-		PMLimit        int NOT NULL	constraint [DF_yaf_Group_PMLimit] default (0),
+		Flags		   int not null constraint [DF_{objectQualifier}Group_Flags] default (0),
+		PMLimit        int NOT NULL	constraint [DF_{objectQualifier}Group_PMLimit] default (0),
 	    Style          nvarchar(255) NULL,
-	    SortOrder      smallint NOT NULL constraint [DF_yaf_Group_SortOrder] default (0),
+	    SortOrder      smallint NOT NULL constraint [DF_{objectQualifier}Group_SortOrder] default (0),
 	    [Description]  nvarchar(128) NULL,
-	    UsrSigChars    int NOT NULL constraint [DF_yaf_Group_UsrSigChars] default (0),
+	    UsrSigChars    int NOT NULL constraint [DF_{objectQualifier}Group_UsrSigChars] default (0),
 	    UsrSigBBCodes  nvarchar(255) NULL,
 	    UsrSigHTMLTags nvarchar(255) NULL,
-	    UsrAlbums      int NOT NULL constraint [DF_yaf_Group_UsrAlbums] default (0),
-	    UsrAlbumImages int NOT NULL constraint [DF_yaf_Group_UsrAlbumImages]  default (0),
+	    UsrAlbums      int NOT NULL constraint [DF_{objectQualifier}Group_UsrAlbums] default (0),
+	    UsrAlbumImages int NOT NULL constraint [DF_{objectQualifier}Group_UsrAlbumImages]  default (0),
 	    IsHidden       AS (CONVERT([bit],sign([Flags]&(16)),(0))),
 	    IsUserGroup    AS (CONVERT([bit],sign([Flags]&(32)),(0))),
- constraint [PK_yaf_Group] PRIMARY KEY CLUSTERED 
+ constraint [PK_{objectQualifier}Group] PRIMARY KEY CLUSTERED 
 (
 	[GroupID] ASC
 )WITH (STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF),
- constraint [IX_yaf_Group] UNIQUE NONCLUSTERED 
+ constraint [IX_{objectQualifier}Group] UNIQUE NONCLUSTERED 
 (
 	[BoardID] ASC,
 	[Name] ASC
@@ -368,8 +381,8 @@ if not exists (select top 1 1 from sys.objects WHERE object_id = OBJECT_ID(N'[db
 	)
 GO
 
-if not exists (select top 1 1 from sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[yaf_Mail]') and type in (N'U'))
-	create table [dbo].[yaf_Mail](
+if not exists (select top 1 1 from sys.objects WHERE object_id = OBJECT_ID(N'[{databaseOwner}].[{objectQualifier}Mail]') and type in (N'U'))
+	create table [{databaseOwner}].[{objectQualifier}Mail](
 		[MailID] [int] IDENTITY(1,1) NOT NULL,
 		[FromUser] [nvarchar](255) NOT NULL,
 		[FromUserName] [nvarchar](255) NULL,
@@ -379,18 +392,18 @@ if not exists (select top 1 1 from sys.objects WHERE object_id = OBJECT_ID(N'[db
 		[Subject] [nvarchar](100) NOT NULL,
 		[Body] [nvarchar](max) NOT NULL,
 		[BodyHtml] [nvarchar](max) NULL,
-		[SendTries] [int] NOT NULL constraint [DF_yaf_Mail_SendTries]  default (0),
+		[SendTries] [int] NOT NULL constraint [DF_{objectQualifier}Mail_SendTries]  default (0),
 		[SendAttempt] [datetime] NULL,
 		[ProcessID] [int] NULL,
- constraint [PK_yaf_Mail] PRIMARY KEY CLUSTERED 
+ constraint [PK_{objectQualifier}Mail] PRIMARY KEY CLUSTERED 
 (
 	[MailID] ASC
 )WITH (STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF)
 	)
 GO
 
-if not exists (select top 1 1 from sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[yaf_Message]') and type in (N'U'))
-	create table [dbo].[yaf_Message](
+if not exists (select top 1 1 from sys.objects WHERE object_id = OBJECT_ID(N'[{databaseOwner}].[{objectQualifier}Message]') and type in (N'U'))
+	create table [{databaseOwner}].[{objectQualifier}Message](
 		MessageID		    int IDENTITY (1,1) NOT NULL,
 		TopicID			    int NOT NULL,
 		ReplyTo			    int NULL,
@@ -405,7 +418,7 @@ if not exists (select top 1 1 from sys.objects WHERE object_id = OBJECT_ID(N'[db
 		Edited			    datetime NULL,
 		Flags			    int NOT NULL,
 		EditReason          nvarchar (100) NULL,
-		IsModeratorChanged  bit NOT NULL constraint [DF_yaf_Message_IsModeratorChanged] default (0),
+		IsModeratorChanged  bit NOT NULL constraint [DF_{objectQualifier}Message_IsModeratorChanged] default (0),
 	    DeleteReason        nvarchar (100)  NULL,
 		ExternalMessageId	nvarchar(255) NULL,
 		ReferenceMessageId	nvarchar(255) NULL,
@@ -413,24 +426,24 @@ if not exists (select top 1 1 from sys.objects WHERE object_id = OBJECT_ID(N'[db
 		IsApproved		    AS (CONVERT([bit],sign([Flags]&(16)),(0))),
 		BlogPostID          nvarchar(50) NULL,
 	    EditedBy            int NULL,
- constraint [PK_yaf_Message] PRIMARY KEY CLUSTERED 
+ constraint [PK_{objectQualifier}Message] PRIMARY KEY CLUSTERED 
 (
 	[MessageID] ASC
 )WITH (STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF)
 	)
 GO
 
-if not exists (select top 1 1 from sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[yaf_MessageHistory]') and type in (N'U'))
-	create table [dbo].[yaf_MessageHistory](
+if not exists (select top 1 1 from sys.objects WHERE object_id = OBJECT_ID(N'[{databaseOwner}].[{objectQualifier}MessageHistory]') and type in (N'U'))
+	create table [{databaseOwner}].[{objectQualifier}MessageHistory](
 		MessageID		    int NOT NULL,
 		[Message]		    nvarchar(max) NOT NULL,
 		IP				    varchar (39) NOT NULL,
 		Edited			    datetime NOT NULL,
 		EditedBy		    int NULL,	
 		EditReason          nvarchar (100) NULL,
-		IsModeratorChanged  bit NOT NULL constraint [DF_yaf_MessageHistory_IsModeratorChanged] default (0),
-		Flags               int NOT NULL constraint [DF_yaf_MessageHistory_Flags] default (23),
- constraint [PK_yaf_MessageHistory] PRIMARY KEY CLUSTERED 
+		IsModeratorChanged  bit NOT NULL constraint [DF_{objectQualifier}MessageHistory_IsModeratorChanged] default (0),
+		Flags               int NOT NULL constraint [DF_{objectQualifier}MessageHistory_Flags] default (23),
+ constraint [PK_{objectQualifier}MessageHistory] PRIMARY KEY CLUSTERED 
 (
 	[MessageID] ASC,
 	[Edited] ASC
@@ -438,25 +451,25 @@ if not exists (select top 1 1 from sys.objects WHERE object_id = OBJECT_ID(N'[db
 	)
 GO
 
-exec('[dbo].[yaf_drop_defaultconstraint_oncolumn] yaf_MessageHistory, MessageHistoryID')
+exec('[{databaseOwner}].[{objectQualifier}drop_defaultconstraint_oncolumn] {objectQualifier}MessageHistory, MessageHistoryID')
 GO
 
-IF NOT EXISTS (select top 1 1 from sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[yaf_MessageReported]') and type in (N'U'))
-	CREATE TABLE [dbo].[yaf_MessageReported](
+IF NOT EXISTS (select top 1 1 from sys.objects WHERE object_id = OBJECT_ID(N'[{databaseOwner}].[{objectQualifier}MessageReported]') and type in (N'U'))
+	CREATE TABLE [{databaseOwner}].[{objectQualifier}MessageReported](
 		[MessageID] [int] NOT NULL,
 		[Message] [nvarchar](max) NULL,
 		[Resolved] [bit] NULL,
 		[ResolvedBy] [int] NULL,
 		[ResolvedDate] [datetime] NULL,
- constraint [PK_yaf_MessageReported] PRIMARY KEY CLUSTERED 
+ constraint [PK_{objectQualifier}MessageReported] PRIMARY KEY CLUSTERED 
 (
 	[MessageID] ASC
 )WITH (STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF)
 	)
 GO
 
-IF NOT EXISTS (select top 1 1 from sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[yaf_MessageReportedAudit]') and type in (N'U'))
-	CREATE TABLE [dbo].[yaf_MessageReportedAudit](
+IF NOT EXISTS (select top 1 1 from sys.objects WHERE object_id = OBJECT_ID(N'[{databaseOwner}].[{objectQualifier}MessageReportedAudit]') and type in (N'U'))
+	CREATE TABLE [{databaseOwner}].[{objectQualifier}MessageReportedAudit](
 		[LogID] [int] IDENTITY(1,1) NOT NULL,
 		[UserID] [int] NULL,
 		[MessageID] [int] NOT NULL,
@@ -466,69 +479,69 @@ IF NOT EXISTS (select top 1 1 from sys.objects WHERE object_id = OBJECT_ID(N'[db
 		)
 GO
 
-if not exists (select top 1 1 from sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[yaf_PMessage]') and type in (N'U'))
-	create table [dbo].[yaf_PMessage](
+if not exists (select top 1 1 from sys.objects WHERE object_id = OBJECT_ID(N'[{databaseOwner}].[{objectQualifier}PMessage]') and type in (N'U'))
+	create table [{databaseOwner}].[{objectQualifier}PMessage](
 		PMessageID		int IDENTITY (1,1) NOT NULL,
 		FromUserID      int NOT NULL,
 		ReplyTo			int NULL,
 		Created			datetime NOT NULL,
 		[Subject]		nvarchar (100) NOT NULL,
 		Body			nvarchar(max) NOT NULL,
-		Flags			int NOT NULL constraint [DF_yaf_Message_Flags] default (23),
- constraint [PK_yaf_PMessage] PRIMARY KEY CLUSTERED 
+		Flags			int NOT NULL constraint [DF_{objectQualifier}Message_Flags] default (23),
+ constraint [PK_{objectQualifier}PMessage] PRIMARY KEY CLUSTERED 
 (
 	[PMessageID] ASC
 )WITH (STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF)
 	)
 GO
 
-if not exists (select top 1 1 from sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[yaf_PollGroupCluster]') and type in (N'U'))
-	create table [dbo].[yaf_PollGroupCluster](		
+if not exists (select top 1 1 from sys.objects WHERE object_id = OBJECT_ID(N'[{databaseOwner}].[{objectQualifier}PollGroupCluster]') and type in (N'U'))
+	create table [{databaseOwner}].[{objectQualifier}PollGroupCluster](		
 		PollGroupID int IDENTITY (1,1) NOT NULL,
 		UserID	    int not NULL,
-		[Flags]     int NOT NULL constraint [DF_yaf_PollGroupCluster_Flags] default (0),
+		[Flags]     int NOT NULL constraint [DF_{objectQualifier}PollGroupCluster_Flags] default (0),
 		[IsBound]   AS (CONVERT([bit],sign([Flags]&(2)),(0)))
- constraint [PK_yaf_PollGroupCluster] PRIMARY KEY CLUSTERED 
+ constraint [PK_{objectQualifier}PollGroupCluster] PRIMARY KEY CLUSTERED 
 (
 	[PollGroupID] ASC
 )WITH (STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF)	
 	)
 GO
 
-if not exists (select top 1 1 from sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[yaf_Poll]') and type in (N'U'))
-	create table [dbo].[yaf_Poll](
+if not exists (select top 1 1 from sys.objects WHERE object_id = OBJECT_ID(N'[{databaseOwner}].[{objectQualifier}Poll]') and type in (N'U'))
+	create table [{databaseOwner}].[{objectQualifier}Poll](
 		PollID			       int IDENTITY (1,1) NOT NULL,
 		Question		       nvarchar (50) NOT NULL,
 		Closes                 datetime NULL,		
 		PollGroupID            int NULL,
-		UserID                 int not NULL constraint [DF_yaf_Poll_UserID] default (1),	
+		UserID                 int not NULL constraint [DF_{objectQualifier}Poll_UserID] default (1),	
 		[ObjectPath]           nvarchar(255) NULL,
 		[MimeType]             varchar(50) NULL,
-		[Flags]                int NOT NULL constraint [DF_yaf_Poll_Flags] default (0),		
+		[Flags]                int NOT NULL constraint [DF_{objectQualifier}Poll_Flags] default (0),		
 		[IsClosedBound] 	   AS (CONVERT([bit],sign([Flags]&(4)),(0))),
 		[AllowMultipleChoices] AS (CONVERT([bit],sign([Flags]&(8)),(0))),
 		[ShowVoters]           AS (CONVERT([bit],sign([Flags]&(16)),(0))),
 		[AllowSkipVote]        AS (CONVERT([bit],sign([Flags]&(32)),(0))),
- constraint [PK_yaf_Poll] PRIMARY KEY CLUSTERED 
+ constraint [PK_{objectQualifier}Poll] PRIMARY KEY CLUSTERED 
 (
 	[PollID] ASC
 )WITH (STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF)
 	)
 GO
 
-if not exists (select top 1 1 from sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[yaf_Smiley]') and type in (N'U'))
-	create table [dbo].[yaf_Smiley](
+if not exists (select top 1 1 from sys.objects WHERE object_id = OBJECT_ID(N'[{databaseOwner}].[{objectQualifier}Smiley]') and type in (N'U'))
+	create table [{databaseOwner}].[{objectQualifier}Smiley](
 		SmileyID		int IDENTITY (1,1) NOT NULL,
 		BoardID			int NOT NULL,
 		Code			nvarchar (10) NOT NULL,
 		Icon			nvarchar (50) NOT NULL,
 		Emoticon		nvarchar (50) NULL,
 		SortOrder		tinyint	NOT NULL default 0,
- constraint [PK_yaf_Smiley] PRIMARY KEY CLUSTERED 
+ constraint [PK_{objectQualifier}Smiley] PRIMARY KEY CLUSTERED 
 (
 	[SmileyID] ASC
 )WITH (STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF),
- constraint [IX_yaf_Smiley] UNIQUE NONCLUSTERED 
+ constraint [IX_{objectQualifier}Smiley] UNIQUE NONCLUSTERED 
 (
 	[BoardID] ASC,
 	[Code] ASC
@@ -536,8 +549,8 @@ if not exists (select top 1 1 from sys.objects WHERE object_id = OBJECT_ID(N'[db
 	)
 GO
 
-if not exists (select top 1 1 from sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[yaf_Topic]') and type in (N'U'))
-	create table [dbo].[yaf_Topic](
+if not exists (select top 1 1 from sys.objects WHERE object_id = OBJECT_ID(N'[{databaseOwner}].[{objectQualifier}Topic]') and type in (N'U'))
+	create table [{databaseOwner}].[{objectQualifier}Topic](
 		TopicID			    int IDENTITY (1,1) NOT NULL,
 		ForumID			    int NOT NULL,
 		UserID			    int NOT NULL,
@@ -559,21 +572,21 @@ if not exists (select top 1 1 from sys.objects WHERE object_id = OBJECT_ID(N'[db
 		LastUserName	    nvarchar (255) NULL,
 		LastUserDisplayName	nvarchar (255) NULL,	
 		NumPosts		    int NOT NULL,
-		Flags			    int not null constraint [DF_yaf_Topic_Flags] default (0),
+		Flags			    int not null constraint [DF_{objectQualifier}Topic_Flags] default (0),
 		IsDeleted		    AS (CONVERT([bit],sign([Flags]&(8)),0)),
 		[IsQuestion]        AS (CONVERT([bit],sign([Flags]&(1024)),(0))),
 		[AnswerMessageId]   [int] NULL,
 		[LastMessageFlags]	[int] NULL,
 		[TopicImage]        nvarchar(255) NULL,
- constraint [PK_yaf_Topic] PRIMARY KEY CLUSTERED 
+ constraint [PK_{objectQualifier}Topic] PRIMARY KEY CLUSTERED 
 (
 	[TopicID] ASC
 )WITH (STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF)
 	)
 GO
 
-if not exists (select top 1 1 from sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[yaf_User]') and type in (N'U'))
-	create table [dbo].[yaf_User](
+if not exists (select top 1 1 from sys.objects WHERE object_id = OBJECT_ID(N'[{databaseOwner}].[{objectQualifier}User]') and type in (N'U'))
+	create table [{databaseOwner}].[{objectQualifier}User](
 		UserID			int IDENTITY (1,1) NOT NULL,
 		BoardID			int NOT NULL,
 		ProviderUserKey	nvarchar(64),
@@ -597,13 +610,13 @@ if not exists (select top 1 1 from sys.objects WHERE object_id = OBJECT_ID(N'[db
 		LanguageFile	nvarchar(50) NULL,
 		ThemeFile		nvarchar(50) NULL,
 		TextEditor		nvarchar(50) NULL,
-		OverridedefaultThemes	bit NOT NULL constraint [DF_yaf_User_OverridedefaultThemes] default (1),
-		[PMNotification] [bit] NOT NULL constraint [DF_yaf_User_PMNotification] default (1),
-		[AutoWatchTopics] [bit] NOT NULL constraint [DF_yaf_User_AutoWatchTopics] default (0),
-		[DailyDigest] [bit] NOT NULL constraint [DF_yaf_User_DailyDigest] default (0),
+		OverridedefaultThemes	bit NOT NULL constraint [DF_{objectQualifier}User_OverridedefaultThemes] default (1),
+		[PMNotification] [bit] NOT NULL constraint [DF_{objectQualifier}User_PMNotification] default (1),
+		[AutoWatchTopics] [bit] NOT NULL constraint [DF_{objectQualifier}User_AutoWatchTopics] default (0),
+		[DailyDigest] [bit] NOT NULL constraint [DF_{objectQualifier}User_DailyDigest] default (0),
 		[NotificationType] [int] default (10),
-		[Flags] [int]	NOT NULL  constraint [DF_yaf_User_Flags]  default (0),
-		[Points] [int]	NOT NULL constraint [DF_yaf_User_Points] default (1),		
+		[Flags] [int]	NOT NULL  constraint [DF_{objectQualifier}User_Flags]  default (0),
+		[Points] [int]	NOT NULL constraint [DF_{objectQualifier}User_Points] default (1),		
 		[IsApproved]	AS (CONVERT([bit],sign([Flags]&(2)),(0))),
 		[IsGuest]	AS (CONVERT([bit],sign([Flags]&(4)),(0))),
 		[IsCaptchaExcluded]	AS (CONVERT([bit],sign([Flags]&(8)),(0))),
@@ -611,19 +624,19 @@ if not exists (select top 1 1 from sys.objects WHERE object_id = OBJECT_ID(N'[db
 		[IsDST]	AS (CONVERT([bit],sign([Flags]&(32)),(0))),
 		[IsDirty]	AS (CONVERT([bit],sign([Flags]&(64)),(0))),
 		[Culture] varchar (10) default (10),
-		[IsFacebookUser][bit] NOT NULL constraint [DF_yaf_User_IsFacebookUser] default (0),
-		[IsTwitterUser][bit] NOT NULL constraint [DF_yaf_User_IsTwitterUser] default (0),
+		[IsFacebookUser][bit] NOT NULL constraint [DF_{objectQualifier}User_IsFacebookUser] default (0),
+		[IsTwitterUser][bit] NOT NULL constraint [DF_{objectQualifier}User_IsTwitterUser] default (0),
 		[UserStyle] [varchar](510) NULL,
-	    [StyleFlags] [int] NOT NULL constraint [DF_yaf_User_StyleFlags] default (0),
+	    [StyleFlags] [int] NOT NULL constraint [DF_{objectQualifier}User_StyleFlags] default (0),
 	    [IsUserStyle]  AS (CONVERT([bit],sign([StyleFlags]&(1)),(0))),
 	    [IsGroupStyle]  AS (CONVERT([bit],sign([StyleFlags]&(2)),(0))),
 	    [IsRankStyle]  AS (CONVERT([bit],sign([StyleFlags]&(4)),(0))),
-		[IsGoogleUser][bit] NOT NULL constraint [DF_yaf_User_IsGoogleUser] default (0),
- constraint [PK_yaf_User] PRIMARY KEY CLUSTERED 
+		[IsGoogleUser][bit] NOT NULL constraint [DF_{objectQualifier}User_IsGoogleUser] default (0),
+ constraint [PK_{objectQualifier}User] PRIMARY KEY CLUSTERED 
 (
 	[UserID] ASC
 )WITH (STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF),
- constraint [IX_yaf_User] UNIQUE NONCLUSTERED 
+ constraint [IX_{objectQualifier}User] UNIQUE NONCLUSTERED 
 (
 	[BoardID] ASC,
 	[Name] ASC
@@ -631,8 +644,8 @@ if not exists (select top 1 1 from sys.objects WHERE object_id = OBJECT_ID(N'[db
 )
 GO
 
-IF not exists (select top 1 1 from sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[yaf_UserProfile]') and type in (N'U'))
-	CREATE TABLE [dbo].[yaf_UserProfile]
+IF not exists (select top 1 1 from sys.objects WHERE object_id = OBJECT_ID(N'[{databaseOwner}].[{objectQualifier}UserProfile]') and type in (N'U'))
+	CREATE TABLE [{databaseOwner}].[{objectQualifier}UserProfile]
 	(
 		[UserID] [int] NOT NULL,
 		[LastUpdatedDate] [datetime] NOT NULL,
@@ -641,12 +654,12 @@ IF not exists (select top 1 1 from sys.objects WHERE object_id = OBJECT_ID(N'[db
 		[ApplicationName] [nvarchar](255) NOT NULL,	
 		[IsAnonymous] [bit] NOT NULL,
 		[UserName] [nvarchar](255) NOT NULL,
- constraint [PK_yaf_UserProfile] PRIMARY KEY CLUSTERED 
+ constraint [PK_{objectQualifier}UserProfile] PRIMARY KEY CLUSTERED 
 (
 	[UserID] ASC,
 	[ApplicationName] ASC
 )WITH (STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF),
- constraint [IX_yaf_UserProfile] UNIQUE NONCLUSTERED 
+ constraint [IX_{objectQualifier}UserProfile] UNIQUE NONCLUSTERED 
 (
 	[UserID] ASC,
 	[ApplicationName] ASC
@@ -654,18 +667,18 @@ IF not exists (select top 1 1 from sys.objects WHERE object_id = OBJECT_ID(N'[db
 	)
 GO
 
-if not exists (select top 1 1 from sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[yaf_WatchForum]') and type in (N'U'))
-	create table [dbo].[yaf_WatchForum](
+if not exists (select top 1 1 from sys.objects WHERE object_id = OBJECT_ID(N'[{databaseOwner}].[{objectQualifier}WatchForum]') and type in (N'U'))
+	create table [{databaseOwner}].[{objectQualifier}WatchForum](
 		WatchForumID	int IDENTITY (1,1) NOT NULL,
 		ForumID			int NOT NULL,
 		UserID			int NOT NULL,
 		Created			datetime NOT NULL,
 		LastMail		datetime null,
- constraint [PK_yaf_WatchForum] PRIMARY KEY CLUSTERED 
+ constraint [PK_{objectQualifier}WatchForum] PRIMARY KEY CLUSTERED 
 (
 	[WatchForumID] ASC
 )WITH (STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF),
- constraint [IX_yaf_WatchForum] UNIQUE NONCLUSTERED 
+ constraint [IX_{objectQualifier}WatchForum] UNIQUE NONCLUSTERED 
 (
 	[ForumID] ASC,
 	[UserID] ASC
@@ -673,18 +686,18 @@ if not exists (select top 1 1 from sys.objects WHERE object_id = OBJECT_ID(N'[db
 	)
 GO
 
-if not exists (select top 1 1 from sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[yaf_WatchTopic]') and type in (N'U'))
-	create table [dbo].[yaf_WatchTopic](
+if not exists (select top 1 1 from sys.objects WHERE object_id = OBJECT_ID(N'[{databaseOwner}].[{objectQualifier}WatchTopic]') and type in (N'U'))
+	create table [{databaseOwner}].[{objectQualifier}WatchTopic](
 		WatchTopicID	int IDENTITY (1,1) NOT NULL,
 		TopicID			int NOT NULL,
 		UserID			int NOT NULL,
 		Created			datetime NOT NULL,
 		LastMail		datetime null,
- constraint [PK_yaf_WatchTopic] PRIMARY KEY CLUSTERED 
+ constraint [PK_{objectQualifier}WatchTopic] PRIMARY KEY CLUSTERED 
 (
 	[WatchTopicID] ASC
 )WITH (STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF),
- constraint [IX_yaf_WatchTopic] UNIQUE NONCLUSTERED 
+ constraint [IX_{objectQualifier}WatchTopic] UNIQUE NONCLUSTERED 
 (
 	[TopicID] ASC,
 	[UserID] ASC
@@ -692,8 +705,8 @@ if not exists (select top 1 1 from sys.objects WHERE object_id = OBJECT_ID(N'[db
 	)
 GO
 
-if not exists (select top 1 1 from sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[yaf_Attachment]') and type in (N'U'))
-	create table [dbo].[yaf_Attachment](
+if not exists (select top 1 1 from sys.objects WHERE object_id = OBJECT_ID(N'[{databaseOwner}].[{objectQualifier}Attachment]') and type in (N'U'))
+	create table [{databaseOwner}].[{objectQualifier}Attachment](
 		AttachmentID	int IDENTITY (1,1) not null,
 		MessageID		int not null default (0),
 		UserID          int not null default (0),		
@@ -702,18 +715,18 @@ if not exists (select top 1 1 from sys.objects WHERE object_id = OBJECT_ID(N'[db
 		ContentType		nvarchar(max) null,
 		Downloads		int not null,
 		FileData		image null,
- constraint [PK_yaf_Attachment] PRIMARY KEY CLUSTERED 
+ constraint [PK_{objectQualifier}Attachment] PRIMARY KEY CLUSTERED 
 (
 	[AttachmentID] ASC
 )WITH (STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF)
 	)
 GO
 
-if not exists (select top 1 1 from sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[yaf_UserGroup]') and type in (N'U'))
-	create table [dbo].[yaf_UserGroup](
+if not exists (select top 1 1 from sys.objects WHERE object_id = OBJECT_ID(N'[{databaseOwner}].[{objectQualifier}UserGroup]') and type in (N'U'))
+	create table [{databaseOwner}].[{objectQualifier}UserGroup](
 		UserID			int NOT NULL,
 		GroupID			int NOT NULL,
- constraint [PK_yaf_UserGroup] PRIMARY KEY CLUSTERED 
+ constraint [PK_{objectQualifier}UserGroup] PRIMARY KEY CLUSTERED 
 (
 	[UserID] ASC,
 	[GroupID] ASC
@@ -721,28 +734,28 @@ if not exists (select top 1 1 from sys.objects WHERE object_id = OBJECT_ID(N'[db
 	)
 GO
 
-if not exists (select top 1 1 from sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[yaf_Rank]') and type in (N'U'))
-	create table [dbo].[yaf_Rank](
+if not exists (select top 1 1 from sys.objects WHERE object_id = OBJECT_ID(N'[{databaseOwner}].[{objectQualifier}Rank]') and type in (N'U'))
+	create table [{databaseOwner}].[{objectQualifier}Rank](
 		RankID			 int IDENTITY (1,1) NOT NULL,
 		BoardID			 int NOT NULL,
 		Name			 nvarchar (50) NOT NULL,
 		MinPosts		 int NULL,
 		RankImage		 nvarchar (50) NULL,
-		Flags			 int not null constraint [DF_yaf_Rank_Flags] default (0),
+		Flags			 int not null constraint [DF_{objectQualifier}Rank_Flags] default (0),
 	    [PMLimit]        [int] NULL,
 	    [Style]          [nvarchar](255) NULL,
-	    [SortOrder]      [smallint] NOT NULL constraint [DF_yaf_Rank_SortOrder] default (0),
+	    [SortOrder]      [smallint] NOT NULL constraint [DF_{objectQualifier}Rank_SortOrder] default (0),
 	    [Description]    [nvarchar](128) NULL,
-	    [UsrSigChars]    [int] NOT NULL constraint [DF_yaf_Rank_UsrSigChars] default (0),
+	    [UsrSigChars]    [int] NOT NULL constraint [DF_{objectQualifier}Rank_UsrSigChars] default (0),
 	    [UsrSigBBCodes]  [nvarchar](255) NULL,
 	    [UsrSigHTMLTags] [nvarchar](255) NULL,
-	    [UsrAlbums]      [int] NOT NULL constraint [DF_yaf_Rank_UsrAlbums] default (0),
-	    [UsrAlbumImages] [int] NOT NULL constraint [DF_yaf_Rank_UsrAlbumImages]  default (0),
- constraint [PK_yaf_Rank] PRIMARY KEY CLUSTERED 
+	    [UsrAlbums]      [int] NOT NULL constraint [DF_{objectQualifier}Rank_UsrAlbums] default (0),
+	    [UsrAlbumImages] [int] NOT NULL constraint [DF_{objectQualifier}Rank_UsrAlbumImages]  default (0),
+ constraint [PK_{objectQualifier}Rank] PRIMARY KEY CLUSTERED 
 (
 	[RankID] ASC
 )WITH (STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF),
- constraint [IX_yaf_Rank] UNIQUE NONCLUSTERED 
+ constraint [IX_{objectQualifier}Rank] UNIQUE NONCLUSTERED 
 (
 	[BoardID] ASC,
 	[Name] ASC
@@ -750,28 +763,28 @@ if not exists (select top 1 1 from sys.objects WHERE object_id = OBJECT_ID(N'[db
 	)
 GO
 
-if not exists (select top 1 1 from sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[yaf_AccessMask]') and type in (N'U'))
-	create table [dbo].[yaf_AccessMask](
+if not exists (select top 1 1 from sys.objects WHERE object_id = OBJECT_ID(N'[{databaseOwner}].[{objectQualifier}AccessMask]') and type in (N'U'))
+	create table [{databaseOwner}].[{objectQualifier}AccessMask](
 		AccessMaskID	int IDENTITY (1,1) NOT NULL,
 		BoardID			int NOT NULL,
 		Name			nvarchar(50) NOT NULL,
-		Flags			int not null constraint [DF_yaf_AccessMask_Flags] default (0),
+		Flags			int not null constraint [DF_{objectQualifier}AccessMask_Flags] default (0),
 	    [SortOrder]     [smallint] NOT NULL default (0),
- constraint [PK_yaf_AccessMask] PRIMARY KEY CLUSTERED 
+ constraint [PK_{objectQualifier}AccessMask] PRIMARY KEY CLUSTERED 
 (
 	[AccessMaskID] ASC
 )WITH (STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF)
 	)
 GO
 
-if not exists (select top 1 1 from sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[yaf_UserForum]') and type in (N'U'))
-	create table [dbo].[yaf_UserForum](
+if not exists (select top 1 1 from sys.objects WHERE object_id = OBJECT_ID(N'[{databaseOwner}].[{objectQualifier}UserForum]') and type in (N'U'))
+	create table [{databaseOwner}].[{objectQualifier}UserForum](
 		UserID			int NOT NULL,
 		ForumID			int NOT NULL,
 		AccessMaskID	int NOT NULL,
 		Invited			datetime NOT NULL,
 		Accepted		bit NOT NULL,
- constraint [PK_yaf_UserForum] PRIMARY KEY CLUSTERED 
+ constraint [PK_{objectQualifier}UserForum] PRIMARY KEY CLUSTERED 
 (
 	[UserID] ASC,
 	[ForumID] ASC
@@ -779,15 +792,15 @@ if not exists (select top 1 1 from sys.objects WHERE object_id = OBJECT_ID(N'[db
 	)
 GO
 
-if not exists (select top 1 1 from sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[yaf_Board]') and type in (N'U'))
+if not exists (select top 1 1 from sys.objects WHERE object_id = OBJECT_ID(N'[{databaseOwner}].[{objectQualifier}Board]') and type in (N'U'))
 begin
-	create table [dbo].[yaf_Board](
+	create table [{databaseOwner}].[{objectQualifier}Board](
 		BoardID			int IDENTITY (1,1) NOT NULL,
 		Name			nvarchar(50) NOT NULL,
 		AllowThreaded	bit NOT NULL,
 		MembershipAppName nvarchar(255) NULL,
 		RolesAppName nvarchar(255) NULL,
- constraint [PK_yaf_Board] PRIMARY KEY CLUSTERED 
+ constraint [PK_{objectQualifier}Board] PRIMARY KEY CLUSTERED 
 (
 	[BoardID] ASC
 )WITH (STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF)
@@ -795,8 +808,8 @@ begin
 end
 GO
 
-if not exists (select top 1 1 from sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[yaf_NntpServer]') and type in (N'U'))
-	create table [dbo].[yaf_NntpServer](
+if not exists (select top 1 1 from sys.objects WHERE object_id = OBJECT_ID(N'[{databaseOwner}].[{objectQualifier}NntpServer]') and type in (N'U'))
+	create table [{databaseOwner}].[{objectQualifier}NntpServer](
 		NntpServerID	int IDENTITY (1,1) not null,
 		BoardID			int NOT NULL,
 		Name			nvarchar(50) not null,
@@ -804,7 +817,7 @@ if not exists (select top 1 1 from sys.objects WHERE object_id = OBJECT_ID(N'[db
 		Port			int null,
 		UserName		nvarchar(255) null,
 		UserPass		nvarchar(50) null,
- constraint [PK_yaf_NntpServer] PRIMARY KEY CLUSTERED 
+ constraint [PK_{objectQualifier}NntpServer] PRIMARY KEY CLUSTERED 
 (
 	[NntpServerID] ASC
 )WITH (STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF)
@@ -812,8 +825,8 @@ if not exists (select top 1 1 from sys.objects WHERE object_id = OBJECT_ID(N'[db
 	)
 GO
 
-if not exists (select top 1 1 from sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[yaf_NntpForum]') and type in (N'U'))
-	create table [dbo].[yaf_NntpForum](
+if not exists (select top 1 1 from sys.objects WHERE object_id = OBJECT_ID(N'[{databaseOwner}].[{objectQualifier}NntpForum]') and type in (N'U'))
+	create table [{databaseOwner}].[{objectQualifier}NntpForum](
 		NntpForumID		int IDENTITY (1,1) not null,
 		NntpServerID	int not null,
 		GroupName		nvarchar(100) not null,
@@ -822,39 +835,39 @@ if not exists (select top 1 1 from sys.objects WHERE object_id = OBJECT_ID(N'[db
 		LastUpdate		datetime not null,
 		Active			bit not null,
 		DateCutOff		datetime null,
- constraint [PK_yaf_NntpForum] PRIMARY KEY CLUSTERED 
+ constraint [PK_{objectQualifier}NntpForum] PRIMARY KEY CLUSTERED 
 (
 	[NntpForumID] ASC
 )WITH (STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF)
 	)
 GO
 
-if not exists (select top 1 1 from sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[yaf_NntpTopic]') and type in (N'U'))
-	create table [dbo].[yaf_NntpTopic](
+if not exists (select top 1 1 from sys.objects WHERE object_id = OBJECT_ID(N'[{databaseOwner}].[{objectQualifier}NntpTopic]') and type in (N'U'))
+	create table [{databaseOwner}].[{objectQualifier}NntpTopic](
 		NntpTopicID		int IDENTITY (1,1) not null,
 		NntpForumID		int not null,
 		Thread			nvarchar(64) not null,
 		TopicID			int not null,
- constraint [PK_yaf_NntpTopic] PRIMARY KEY CLUSTERED 
+ constraint [PK_{objectQualifier}NntpTopic] PRIMARY KEY CLUSTERED 
 (
 	[NntpTopicID] ASC
 )WITH (STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF)
 	)
 GO
 
-if not exists (select top 1 1 from sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[yaf_UserPMessage]') and type in (N'U'))
+if not exists (select top 1 1 from sys.objects WHERE object_id = OBJECT_ID(N'[{databaseOwner}].[{objectQualifier}UserPMessage]') and type in (N'U'))
 begin
-	create table [dbo].[yaf_UserPMessage](
+	create table [{databaseOwner}].[{objectQualifier}UserPMessage](
 		UserPMessageID	int IDENTITY (1,1) not null,
 		UserID			int not null,
 		PMessageID		int not null,
-		[Flags]			int NOT NULL constraint [DF_yaf_UserPMessage_Flags]  default (0),
+		[Flags]			int NOT NULL constraint [DF_{objectQualifier}UserPMessage_Flags]  default (0),
 		[IsRead]		AS (CONVERT([bit],sign([Flags]&(1)),(0))),
 		[IsInOutbox]	AS (CONVERT([bit],sign([Flags]&(2)),(0))),
 		[IsArchived]	AS (CONVERT([bit],sign([Flags]&(4)),(0))),
 		[IsDeleted]		AS (CONVERT([bit],sign([Flags]&(8)),(0))),
 		[IsReply]		[bit] NOT NULL  default (0)		,
- constraint [PK_yaf_UserPMessage] PRIMARY KEY CLUSTERED 
+ constraint [PK_{objectQualifier}UserPMessage] PRIMARY KEY CLUSTERED 
 (
 	[UserPMessageID] ASC
 )WITH (STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF)
@@ -862,14 +875,14 @@ begin
 end
 GO
 
-if not exists (select top 1 1 from sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[yaf_Replace_Words]') and type in (N'U'))
+if not exists (select top 1 1 from sys.objects WHERE object_id = OBJECT_ID(N'[{databaseOwner}].[{objectQualifier}Replace_Words]') and type in (N'U'))
 begin
-	create table [dbo].[yaf_Replace_Words](
+	create table [{databaseOwner}].[{objectQualifier}Replace_Words](
 		ID				int IDENTITY (1,1) NOT NULL,
-		BoardId			int NOT NULL constraint [DF_yaf_Replace_Words_BoardID] default (1),
+		BoardId			int NOT NULL constraint [DF_{objectQualifier}Replace_Words_BoardID] default (1),
 		BadWord			nvarchar (255) NULL,
 		GoodWord		nvarchar (255) NULL,
- constraint [PK_yaf_Replace_Words] PRIMARY KEY CLUSTERED 
+ constraint [PK_{objectQualifier}Replace_Words] PRIMARY KEY CLUSTERED 
 (
 	[ID] ASC
 )WITH (STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF)
@@ -877,58 +890,58 @@ begin
 end
 GO
 
-if not exists (select top 1 1 from sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[yaf_Spam_Words]') and type in (N'U'))
+if not exists (select top 1 1 from sys.objects WHERE object_id = OBJECT_ID(N'[{databaseOwner}].[{objectQualifier}Spam_Words]') and type in (N'U'))
 begin
-	create table [dbo].[yaf_Spam_Words](
+	create table [{databaseOwner}].[{objectQualifier}Spam_Words](
 		ID				int IDENTITY (1,1) NOT NULL,
 		BoardId			int NOT NULL,
 		SpamWord			nvarchar (255) NULL,
-		constraint [PK_yaf_Spam_Words] primary key(ID)
+		constraint [PK_{objectQualifier}Spam_Words] primary key(ID)
 	)
 end
 GO
 
-if not exists (select top 1 1 from sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[yaf_Registry]') and type in (N'U'))
+if not exists (select top 1 1 from sys.objects WHERE object_id = OBJECT_ID(N'[{databaseOwner}].[{objectQualifier}Registry]') and type in (N'U'))
 begin
-	create table [dbo].[yaf_Registry](
+	create table [{databaseOwner}].[{objectQualifier}Registry](
 		RegistryID		int IDENTITY(1,1) NOT NULL,
 		Name			nvarchar(50) NOT NULL,
 		Value			nvarchar(max),
 		BoardID			int,
-		constraint [PK_yaf_Registry] PRIMARY KEY (RegistryID)
+		constraint [PK_{objectQualifier}Registry] PRIMARY KEY (RegistryID)
 	)
 end
 GO
 
-if not exists (select top 1 1 from sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[yaf_EventLog]') and type in (N'U'))
+if not exists (select top 1 1 from sys.objects WHERE object_id = OBJECT_ID(N'[{databaseOwner}].[{objectQualifier}EventLog]') and type in (N'U'))
 begin
-	create table [dbo].[yaf_EventLog](
+	create table [{databaseOwner}].[{objectQualifier}EventLog](
 		EventLogID	int identity(1,1) not null,
-		EventTime	datetime not null constraint [DF_yaf_EventLog_EventTime] default GETUTCDATE() ,
+		EventTime	datetime not null constraint [DF_{objectQualifier}EventLog_EventTime] default GETUTCDATE() ,
 		UserID		int, -- deprecated
 		UserName	nvarchar(100) null,
 		[Source]	nvarchar(50) not null,
 		Description	nvarchar(max) not null,
-		[Type] [int] NOT NULL constraint [DF_yaf_EventLog_Type] default (0),
-		constraint [PK_yaf_EventLog] primary key(EventLogID)
+		[Type] [int] NOT NULL constraint [DF_{objectQualifier}EventLog_Type] default (0),
+		constraint [PK_{objectQualifier}EventLog] primary key(EventLogID)
 	)
 end
 GO
 
-if not exists (select top 1 1 from sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[yaf_Extension]') and type in (N'U'))
+if not exists (select top 1 1 from sys.objects WHERE object_id = OBJECT_ID(N'[{databaseOwner}].[{objectQualifier}Extension]') and type in (N'U'))
 BEGIN
-	CREATE TABLE [dbo].[yaf_Extension](
+	CREATE TABLE [{databaseOwner}].[{objectQualifier}Extension](
 		ExtensionID int IDENTITY(1,1) NOT NULL,
 		BoardId int NOT NULL,
 		Extension nvarchar(10) NOT NULL,
-		constraint [PK_yaf_Extension] PRIMARY KEY(ExtensionID)
+		constraint [PK_{objectQualifier}Extension] PRIMARY KEY(ExtensionID)
 	)
 END
 GO
 
-if not exists (select top 1 1 from sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[yaf_BBCode]') and type in (N'U'))
+if not exists (select top 1 1 from sys.objects WHERE object_id = OBJECT_ID(N'[{databaseOwner}].[{objectQualifier}BBCode]') and type in (N'U'))
 begin
-	create table [dbo].[yaf_BBCode](
+	create table [{databaseOwner}].[{objectQualifier}BBCode](
 		[BBCodeID] [int] IDENTITY(1,1) NOT NULL,
 		[BoardID] [int] NOT NULL,
 		[Name] [nvarchar](255) NOT NULL,
@@ -943,15 +956,15 @@ begin
 		[UseModule] [bit] NULL,
 		[ModuleClass] [nvarchar](255) NULL,		
 		[ExecOrder] [int] NOT NULL,
-		constraint [PK_yaf_BBCode] PRIMARY KEY (BBCodeID)
+		constraint [PK_{objectQualifier}BBCode] PRIMARY KEY (BBCodeID)
 	)
 end
 GO
 
 
-if not exists (select top 1 1 from sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[yaf_Medal]') and type in (N'U'))
+if not exists (select top 1 1 from sys.objects WHERE object_id = OBJECT_ID(N'[{databaseOwner}].[{objectQualifier}Medal]') and type in (N'U'))
 begin
-	create table [dbo].[yaf_Medal](
+	create table [{databaseOwner}].[{objectQualifier}Medal](
 		[BoardID] [int] NOT NULL,
 		[MedalID] [int] IDENTITY(1,1) NOT NULL,
 		[Name] [nvarchar](100) NOT NULL,
@@ -966,23 +979,23 @@ begin
 		[SmallMedalHeight] [smallint] NOT NULL,
 		[SmallRibbonWidth] [smallint] NULL,
 		[SmallRibbonHeight] [smallint] NULL,
-		[SortOrder] [tinyint] NOT NULL constraint [DF_yaf_Medal_defaultOrder]  default ((255)),
-		[Flags] [int] NOT NULL constraint [DF_yaf_Medal_Flags]  default ((0)),
-		constraint [PK_yaf_Medal] PRIMARY KEY CLUSTERED ([MedalID] ASC)
+		[SortOrder] [tinyint] NOT NULL constraint [DF_{objectQualifier}Medal_defaultOrder]  default ((255)),
+		[Flags] [int] NOT NULL constraint [DF_{objectQualifier}Medal_Flags]  default ((0)),
+		constraint [PK_{objectQualifier}Medal] PRIMARY KEY CLUSTERED ([MedalID] ASC)
 		)
 end
 GO
 
-if not exists (select top 1 1 from sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[yaf_GroupMedal]') and type in (N'U'))
+if not exists (select top 1 1 from sys.objects WHERE object_id = OBJECT_ID(N'[{databaseOwner}].[{objectQualifier}GroupMedal]') and type in (N'U'))
 begin
-	create table [dbo].[yaf_GroupMedal](
+	create table [{databaseOwner}].[{objectQualifier}GroupMedal](
 		[GroupID] [int] NOT NULL,
 		[MedalID] [int] NOT NULL,
 		[Message] [nvarchar](100) NULL,
-		[Hide] [bit] NOT NULL constraint [DF_yaf_GroupMedal_Hide]  default ((0)),
-		[OnlyRibbon] [bit] NOT NULL constraint [DF_yaf_GroupMedal_OnlyRibbon]  default ((0)),
-		[SortOrder] [tinyint] NOT NULL constraint [DF_yaf_GroupMedal_SortOrder]  default ((255)),
- constraint [PK_yaf_GroupMedal] PRIMARY KEY CLUSTERED 
+		[Hide] [bit] NOT NULL constraint [DF_{objectQualifier}GroupMedal_Hide]  default ((0)),
+		[OnlyRibbon] [bit] NOT NULL constraint [DF_{objectQualifier}GroupMedal_OnlyRibbon]  default ((0)),
+		[SortOrder] [tinyint] NOT NULL constraint [DF_{objectQualifier}GroupMedal_SortOrder]  default ((255)),
+ constraint [PK_{objectQualifier}GroupMedal] PRIMARY KEY CLUSTERED 
 (
 	[MedalID] ASC,
 	[GroupID] ASC
@@ -991,17 +1004,17 @@ begin
 end
 GO
 
-if not exists (select top 1 1 from sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[yaf_UserMedal]') and type in (N'U'))
+if not exists (select top 1 1 from sys.objects WHERE object_id = OBJECT_ID(N'[{databaseOwner}].[{objectQualifier}UserMedal]') and type in (N'U'))
 begin
-	create table [dbo].[yaf_UserMedal](
+	create table [{databaseOwner}].[{objectQualifier}UserMedal](
 		[UserID] [int] NOT NULL,
 		[MedalID] [int] NOT NULL,
 		[Message] [nvarchar](100) NULL,
-		[Hide] [bit] NOT NULL constraint [DF_yaf_UserMedal_Hide]  default ((0)),
-		[OnlyRibbon] [bit] NOT NULL constraint [DF_yaf_UserMedal_OnlyRibbon]  default ((0)),
-		[SortOrder] [tinyint] NOT NULL constraint [DF_yaf_UserMedal_SortOrder]  default ((255)),
+		[Hide] [bit] NOT NULL constraint [DF_{objectQualifier}UserMedal_Hide]  default ((0)),
+		[OnlyRibbon] [bit] NOT NULL constraint [DF_{objectQualifier}UserMedal_OnlyRibbon]  default ((0)),
+		[SortOrder] [tinyint] NOT NULL constraint [DF_{objectQualifier}UserMedal_SortOrder]  default ((255)),
 		[DateAwarded] [datetime] NOT NULL,
- constraint [PK_yaf_UserMedal] PRIMARY KEY CLUSTERED 
+ constraint [PK_{objectQualifier}UserMedal] PRIMARY KEY CLUSTERED 
 (
 	[MedalID] ASC,
 	[UserID] ASC
@@ -1010,13 +1023,13 @@ begin
 end
 GO
 
-if not exists (select top 1 1 from sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[yaf_IgnoreUser]') and type in (N'U'))
+if not exists (select top 1 1 from sys.objects WHERE object_id = OBJECT_ID(N'[{databaseOwner}].[{objectQualifier}IgnoreUser]') and type in (N'U'))
 begin
-	CREATE TABLE [dbo].[yaf_IgnoreUser]
+	CREATE TABLE [{databaseOwner}].[{objectQualifier}IgnoreUser]
 	(
 		[UserID] int NOT NULL,
 		[IgnoredUserID] int NOT NULL,
- constraint [PK_yaf_IgnoreUser] PRIMARY KEY CLUSTERED 
+ constraint [PK_{objectQualifier}IgnoreUser] PRIMARY KEY CLUSTERED 
 (
 	[UserID] ASC,
 	[IgnoredUserID] ASC
@@ -1027,12 +1040,12 @@ GO
 
 -- Create Topic Read Tracking Table
 
-if not exists (select top 1 1 from sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[yaf_TopicReadTracking]') and type in (N'U'))
-	create table [dbo].[yaf_TopicReadTracking](
+if not exists (select top 1 1 from sys.objects WHERE object_id = OBJECT_ID(N'[{databaseOwner}].[{objectQualifier}TopicReadTracking]') and type in (N'U'))
+	create table [{databaseOwner}].[{objectQualifier}TopicReadTracking](
 		UserID			int NOT NULL,
 		TopicID			int NOT NULL,
 		LastAccessDate	datetime NOT NULL
- constraint [PK_yaf_TopicReadTracking] PRIMARY KEY CLUSTERED 
+ constraint [PK_{objectQualifier}TopicReadTracking] PRIMARY KEY CLUSTERED 
 (
 	[UserID] ASC,
 	[TopicID] ASC
@@ -1042,12 +1055,12 @@ GO
 
 -- Create Forum Read Tracking Table
 
-if not exists (select top 1 1 from sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[yaf_ForumReadTracking]') and type in (N'U'))
-	create table [dbo].[yaf_ForumReadTracking](
+if not exists (select top 1 1 from sys.objects WHERE object_id = OBJECT_ID(N'[{databaseOwner}].[{objectQualifier}ForumReadTracking]') and type in (N'U'))
+	create table [{databaseOwner}].[{objectQualifier}ForumReadTracking](
 		UserID			int NOT NULL,
 		ForumID			int NOT NULL,
 		LastAccessDate	datetime NOT NULL,
- constraint [PK_yaf_ForumReadTracking] PRIMARY KEY CLUSTERED 
+ constraint [PK_{objectQualifier}ForumReadTracking] PRIMARY KEY CLUSTERED 
 (
 	[UserID] ASC,
 	[ForumID] ASC
@@ -1055,24 +1068,24 @@ if not exists (select top 1 1 from sys.objects WHERE object_id = OBJECT_ID(N'[db
 	)
 GO
 
-if not exists (select top 1 1 from sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[yaf_TopicStatus]') and type in (N'U'))
+if not exists (select top 1 1 from sys.objects WHERE object_id = OBJECT_ID(N'[{databaseOwner}].[{objectQualifier}TopicStatus]') and type in (N'U'))
 BEGIN
-	CREATE TABLE [dbo].[yaf_TopicStatus](
+	CREATE TABLE [{databaseOwner}].[{objectQualifier}TopicStatus](
 	    TopicStatusID int IDENTITY(1,1) NOT NULL,
 		TopicStatusName nvarchar(100) NOT NULL,
 		BoardID int NOT NULL,
 		defaultDescription nvarchar(100) NOT NULL,
-		constraint [PK_yaf_TopicStatus] PRIMARY KEY(TopicStatusID)
+		constraint [PK_{objectQualifier}TopicStatus] PRIMARY KEY(TopicStatusID)
 	)
 END
 GO
 
-if not exists (select top 1 1 from sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[yaf_ReputationVote]') and type in (N'U'))
-	create table [dbo].[yaf_ReputationVote](
+if not exists (select top 1 1 from sys.objects WHERE object_id = OBJECT_ID(N'[{databaseOwner}].[{objectQualifier}ReputationVote]') and type in (N'U'))
+	create table [{databaseOwner}].[{objectQualifier}ReputationVote](
 		ReputationFromUserID  int NOT NULL,
 		ReputationToUserID	  int NOT NULL,
 		VoteDate	datetime NOT NULL,
- constraint [PK_yaf_ReputationVote] PRIMARY KEY CLUSTERED 
+ constraint [PK_{objectQualifier}ReputationVote] PRIMARY KEY CLUSTERED 
 (
 	[ReputationFromUserID] ASC,
 	[ReputationToUserID] ASC
@@ -1080,18 +1093,18 @@ if not exists (select top 1 1 from sys.objects WHERE object_id = OBJECT_ID(N'[db
 	)
 GO
 
-if not exists (select top 1 1 from sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[yaf_ShoutboxMessage]') and type in (N'U'))
+if not exists (select top 1 1 from sys.objects WHERE object_id = OBJECT_ID(N'[{databaseOwner}].[{objectQualifier}ShoutboxMessage]') and type in (N'U'))
 begin
-	CREATE TABLE [dbo].[yaf_ShoutboxMessage](
+	CREATE TABLE [{databaseOwner}].[{objectQualifier}ShoutboxMessage](
 		[ShoutBoxMessageID] [int] IDENTITY(1,1) NOT NULL,		
-		[BoardId] [int] NOT NULL constraint [DF_yaf_ShoutboxMessage_BoardID] default (1),
+		[BoardId] [int] NOT NULL constraint [DF_{objectQualifier}ShoutboxMessage_BoardID] default (1),
 		[UserID] [int] NULL,
 		[UserName] [nvarchar](255) NOT NULL,
 		[UserDisplayName] [nvarchar](255) NOT NULL,
 		[Message] [nvarchar](max) NULL,
 		[Date] [datetime] NOT NULL,
 		[IP] [varchar](50) NOT NULL,
- constraint [PK_yaf_ShoutboxMessage] PRIMARY KEY CLUSTERED 
+ constraint [PK_{objectQualifier}ShoutboxMessage] PRIMARY KEY CLUSTERED 
 (
 	[ShoutBoxMessageID] ASC
 )WITH (STATISTICS_NORECOMPUTE  = OFF, IGNORE_DUP_KEY = OFF)
@@ -1099,5 +1112,5 @@ begin
 end
 GO	
 
-exec('[dbo].[yaf_drop_defaultconstraint_oncolumn] yaf_Board, BoardUID')
+exec('[{databaseOwner}].[{objectQualifier}drop_defaultconstraint_oncolumn] {objectQualifier}Board, BoardUID')
 GO

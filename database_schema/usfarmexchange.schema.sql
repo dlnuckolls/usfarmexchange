@@ -336,6 +336,7 @@ BEGIN
  INSERT INTO SchemaVersion values (newid(), @majorVersion, @minorVersion, getutcdate());
   COMMIT TRANSACTION Version1_8
 END
+
 /* 
   Use this model to create database changes
   Just change NEWVERSION to the next number in the sequence
