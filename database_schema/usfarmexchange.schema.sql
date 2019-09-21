@@ -306,6 +306,36 @@ BEGIN
   COMMIT TRANSACTION Version1_7
 END
 
+SELECT @majorVersion = 1, @minorVersion = 8;
+IF NOT EXISTS(SELECT * FROM SchemaVersion WHERE (MajorVersion = @majorVersion) AND (MinorVersion = @minorVersion))
+BEGIN
+  BEGIN TRANSACTION Version1_8
+  
+    INSERT INTO [dbo].[PageLocations] (Id, [Description])
+    VALUES ('8F9B4D10-6294-45AC-9692-9A29335F1661', 'Home Page Bottom'),
+           ('4BD53B47-C3FB-4290-9A02-A29E099190EC', 'Communication Home Content'),
+           ('12D27D83-3FE3-4777-B1BE-F0A0F4DF764B', 'Technology Home Content'),
+		   ('7F4E7B55-F845-4A7B-B485-CE98474BB732', 'Education Home Content'),
+		   ('EDAD6341-5FEF-48B4-9F07-1F7E6B647E06', 'Insurance Home Content'),
+	       ('DD0AE211-21C9-4E3B-A654-101EABB3F4E4', 'Financial Services Home Content'),
+	       ('25CFE0DF-5DDA-48E8-8C1C-091167A99169', 'Compliance Home Content'),
+	       ('96463B34-FE4B-4760-BD11-5463AA30DBF6', 'Partners Home Content'),
+           ('D9E75614-BEA8-472D-9A42-E37CAEAA7506', 'About Us Home Content');
+					   
+     INSERT INTO [dbo].[PageContent] ([PageLocation], [Description])
+     VALUES ('8F9B4D10-6294-45AC-9692-9A29335F1661', 'Home Page Bottom'),
+            ('4BD53B47-C3FB-4290-9A02-A29E099190EC', 'Communication Home Content'),
+            ('12D27D83-3FE3-4777-B1BE-F0A0F4DF764B', 'Technology Home Content'),
+	        ('7F4E7B55-F845-4A7B-B485-CE98474BB732', 'Education Home Content'),
+	        ('EDAD6341-5FEF-48B4-9F07-1F7E6B647E06', 'Insurance Home Content'),
+	        ('DD0AE211-21C9-4E3B-A654-101EABB3F4E4', 'Financial Services Home Content'),
+	        ('25CFE0DF-5DDA-48E8-8C1C-091167A99169', 'Compliance Home Content'),
+	        ('96463B34-FE4B-4760-BD11-5463AA30DBF6', 'Partners Home Content'),
+            ('D9E75614-BEA8-472D-9A42-E37CAEAA7506', 'About Us Home Content');
+  
+ INSERT INTO SchemaVersion values (newid(), @majorVersion, @minorVersion, getutcdate());
+  COMMIT TRANSACTION Version1_8
+END
 /* 
   Use this model to create database changes
   Just change NEWVERSION to the next number in the sequence

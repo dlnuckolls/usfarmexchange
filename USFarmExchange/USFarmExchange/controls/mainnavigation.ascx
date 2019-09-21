@@ -15,6 +15,7 @@
         <telerik:RadMenuItem Text="Education" NavigateUrl="~/areas/education.aspx">
             <Items>
                 <telerik:RadMenuItem Text="Crop Insurance" NavigateUrl="~/areas/crop-insurance.aspx" />
+                <telerik:RadMenuItem Text="History of Hemp in KY" NavigateUrl="~/areas/HempHistoryKY.aspx" />
             </Items>
         </telerik:RadMenuItem>
         <telerik:RadMenuItem IsSeparator="true" />

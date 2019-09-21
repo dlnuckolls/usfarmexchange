@@ -156,6 +156,7 @@
     <Content Include="areas\crop-insurance.aspx" />
     <Content Include="areas\Education.aspx" />
     <Content Include="areas\Financial-Services.aspx" />
+    <Content Include="areas\HempHistoryKY.aspx" />
     <Content Include="areas\Insurance.aspx" />
     <Content Include="areas\News.aspx" />
     <Content Include="areas\Partners.aspx" />
@@ -169,6 +170,7 @@
     <Content Include="data\lowerMarquee.xml" />
     <Content Include="data\upperMarquee.xml" />
     <Content Include="favicon.ico" />
+    <Content Include="images\Barn.JPG" />
     <Content Include="images\Crop-Insurance-Cycle.png" />
     <Content Include="images\facebook.png" />
     <Content Include="images\Farmers.jpg" />
@@ -330,6 +332,13 @@
     </Compile>
     <Compile Include="areas\Financial-Services.aspx.designer.cs">
       <DependentUpon>Financial-Services.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="areas\HempHistoryKY.aspx.cs">
+      <DependentUpon>HempHistoryKY.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="areas\HempHistoryKY.aspx.designer.cs">
+      <DependentUpon>HempHistoryKY.aspx</DependentUpon>
     </Compile>
     <Compile Include="areas\Insurance.aspx.cs">
       <DependentUpon>Insurance.aspx</DependentUpon>

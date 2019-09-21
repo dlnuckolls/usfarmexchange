@@ -14,6 +14,7 @@ namespace USFarmExchange.areas
             // Set page name in the title section
             SessionInfo.CurrentPage = PageNames.Communications;
             TitleTag.Text = SessionInfo.DisplayCurrentPage;
+            CommunicationHomeContent.Text = SessionInfo.PageContent(PageContentBlocks.CommunicationHomeContent);
 
         }
     }

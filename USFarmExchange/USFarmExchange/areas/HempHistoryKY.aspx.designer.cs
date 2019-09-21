@@ -10,7 +10,7 @@
 namespace USFarmExchange.areas {
     
     
-    public partial class Financial_Services {
+    public partial class HempHistoryKY {
         
         /// <summary>
         /// TitleTag control.
@@ -22,12 +22,12 @@ namespace USFarmExchange.areas {
         protected global::System.Web.UI.WebControls.Literal TitleTag;
         
         /// <summary>
-        /// FinancialServicesHomeContent control.
+        /// KYHempHistory control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal FinancialServicesHomeContent;
+        protected global::System.Web.UI.WebControls.Panel KYHempHistory;
     }
 }
