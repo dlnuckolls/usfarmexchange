@@ -7,6 +7,7 @@
         <telerik:RadMenuItem Text="Communication" NavigateUrl="~/areas/communication.aspx">
             <Items>
                 <telerik:RadMenuItem Text="News" NavigateUrl="~/areas/News.aspx" />
+                <telerik:RadMenuItem Text="Forum" NavigateUrl="~/forum" />
             </Items>
         </telerik:RadMenuItem>
         <telerik:RadMenuItem IsSeparator="true" />
