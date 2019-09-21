@@ -8,6 +8,10 @@
 *.user
 *.userosscache
 *.sln.docstates
+configs\app.config
+configs\db.config
+configs\mail.config
+configs\UrlRewriter.config
 web.connectionstrings.config
 
 # User-specific files (MonoDevelop/Xamarin Studio)
