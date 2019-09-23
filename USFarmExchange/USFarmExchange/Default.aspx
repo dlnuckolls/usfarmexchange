@@ -64,12 +64,16 @@
                   <telerik:RadRotatorItem>
                     <ItemTemplate>
                       <img src="/images/rotator/hemp.jpg" alt="Hemp" class="right" />
-                      <h2><br />History of Hemp</h2>
+                      <h2><br />History of Hemp in Kentucky</h2>
                       <p>
                         <br />
                         <br />
-                        Some brief intro here
-                      </p>
+                        The first hemp crop in Kentucky was raised near Danville in 1775.  
+                        Kentucky was the greatest producer of U.S. hemp in the 19th and 20th centuries...<br />
+                        </p>
+                        <br />
+                        <br />
+                      <telerik:RadLinkButton ID="btnReadMoreHemp" runat="server" Text="Read More"  NavigateURL="~/areas/HempHistoryKY.aspx" > </telerik:RadLinkButton>
                     </ItemTemplate>
                   </telerik:RadRotatorItem>
                   <telerik:RadRotatorItem>
@@ -226,4 +230,7 @@
       </telerik:LayoutRow>
     </Rows>
   </telerik:RadPageLayout>
+    <asp:Literal ID="HomePageBottom" runat="server"></asp:Literal>
+    <br />
+    <br />
 </asp:Content>

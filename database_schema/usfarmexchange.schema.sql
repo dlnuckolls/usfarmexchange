@@ -243,7 +243,99 @@ BEGIN
   COMMIT TRANSACTION Version1_4
 END
 
+SELECT @majorVersion = 1, @minorVersion = 5;
+IF NOT EXISTS(SELECT * FROM SchemaVersion WHERE (MajorVersion = @majorVersion) AND (MinorVersion = @minorVersion))
+BEGIN
+  BEGIN TRANSACTION Version1_5
+    
+    -- Add tables for dynamic page content
+    CREATE TABLE [dbo].[PageLocations] (
+	    [Id]          UNIQUEIDENTIFIER NOT NULL,
+	    [Description] VARCHAR(255)         NULL,
+      CONSTRAINT [PK_PageLocations] PRIMARY KEY CLUSTERED ( 
+	      [Id] ASC
+      ) WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+    ) ON [PRIMARY];
 
+    ALTER TABLE [dbo].[PageLocations] ADD  CONSTRAINT [DF_PageLocations_Id]  DEFAULT (NEWID()) FOR [Id];
+
+    CREATE TABLE [dbo].[PageContent](
+	    [Id]           UNIQUEIDENTIFIER NOT NULL,
+	    [PageLocation] UNIQUEIDENTIFIER NOT NULL,
+	    [Description]  VARCHAR(max)         NULL,
+      CONSTRAINT [PK_PageContent] PRIMARY KEY CLUSTERED (
+	      [Id] ASC
+      ) WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+    ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY];
+
+    ALTER TABLE [dbo].[PageContent] ADD  CONSTRAINT [DF_PageContent_Id]  DEFAULT (NEWID()) FOR [Id];
+
+    ALTER TABLE [dbo].[PageContent] WITH CHECK ADD FOREIGN KEY([PageLocation]) REFERENCES [dbo].[PageLocations] ([Id]);
+
+    INSERT INTO SchemaVersion values (newid(), @majorVersion, @minorVersion, getutcdate());
+  COMMIT TRANSACTION Version1_5
+END
+
+SELECT @majorVersion = 1, @minorVersion = 6;
+IF NOT EXISTS(SELECT * FROM SchemaVersion WHERE (MajorVersion = @majorVersion) AND (MinorVersion = @minorVersion))
+BEGIN
+  BEGIN TRANSACTION Version1_6
+    
+    INSERT INTO [dbo].[PageLocations] (Id, [Description])
+    VALUES ('4667B33D-BE48-4B7D-816E-D705F1F732C5', 'Admin Home Top Panel'),
+           ('06688FA2-EBCB-4F42-9F63-091524C9B839', 'Admin Home Tool Header'),
+           ('61175E8D-6131-4789-8989-DC4C4695E711', 'Page Management Header'),
+           ('D42ABA67-51F4-4416-AFA4-A4015551B07C', 'Dashboard Header');
+    
+    INSERT INTO SchemaVersion values (newid(), @majorVersion, @minorVersion, getutcdate());
+  COMMIT TRANSACTION Version1_6
+END
+
+SELECT @majorVersion = 1, @minorVersion = 7;
+IF NOT EXISTS(SELECT * FROM SchemaVersion WHERE (MajorVersion = @majorVersion) AND (MinorVersion = @minorVersion))
+BEGIN
+  BEGIN TRANSACTION Version1_7
+    
+    INSERT INTO [dbo].[PageContent] ([PageLocation], [Description])
+    VALUES ('4667B33D-BE48-4B7D-816E-D705F1F732C5', 'Admin Home Top Panel'),
+           ('06688FA2-EBCB-4F42-9F63-091524C9B839', 'Admin Home Tool Header'),
+           ('61175E8D-6131-4789-8989-DC4C4695E711', 'Page Management Header'),
+           ('D42ABA67-51F4-4416-AFA4-A4015551B07C', 'Dashboard Header');
+    
+    INSERT INTO SchemaVersion values (newid(), @majorVersion, @minorVersion, getutcdate());
+  COMMIT TRANSACTION Version1_7
+END
+
+SELECT @majorVersion = 1, @minorVersion = 8;
+IF NOT EXISTS(SELECT * FROM SchemaVersion WHERE (MajorVersion = @majorVersion) AND (MinorVersion = @minorVersion))
+BEGIN
+  BEGIN TRANSACTION Version1_8
+  
+    INSERT INTO [dbo].[PageLocations] (Id, [Description])
+    VALUES ('8F9B4D10-6294-45AC-9692-9A29335F1661', 'Home Page Bottom'),
+           ('4BD53B47-C3FB-4290-9A02-A29E099190EC', 'Communication Home Content'),
+           ('12D27D83-3FE3-4777-B1BE-F0A0F4DF764B', 'Technology Home Content'),
+		   ('7F4E7B55-F845-4A7B-B485-CE98474BB732', 'Education Home Content'),
+		   ('EDAD6341-5FEF-48B4-9F07-1F7E6B647E06', 'Insurance Home Content'),
+	       ('DD0AE211-21C9-4E3B-A654-101EABB3F4E4', 'Financial Services Home Content'),
+	       ('25CFE0DF-5DDA-48E8-8C1C-091167A99169', 'Compliance Home Content'),
+	       ('96463B34-FE4B-4760-BD11-5463AA30DBF6', 'Partners Home Content'),
+           ('D9E75614-BEA8-472D-9A42-E37CAEAA7506', 'About Us Home Content');
+					   
+     INSERT INTO [dbo].[PageContent] ([PageLocation], [Description])
+     VALUES ('8F9B4D10-6294-45AC-9692-9A29335F1661', 'Home Page Bottom'),
+            ('4BD53B47-C3FB-4290-9A02-A29E099190EC', 'Communication Home Content'),
+            ('12D27D83-3FE3-4777-B1BE-F0A0F4DF764B', 'Technology Home Content'),
+	        ('7F4E7B55-F845-4A7B-B485-CE98474BB732', 'Education Home Content'),
+	        ('EDAD6341-5FEF-48B4-9F07-1F7E6B647E06', 'Insurance Home Content'),
+	        ('DD0AE211-21C9-4E3B-A654-101EABB3F4E4', 'Financial Services Home Content'),
+	        ('25CFE0DF-5DDA-48E8-8C1C-091167A99169', 'Compliance Home Content'),
+	        ('96463B34-FE4B-4760-BD11-5463AA30DBF6', 'Partners Home Content'),
+            ('D9E75614-BEA8-472D-9A42-E37CAEAA7506', 'About Us Home Content');
+  
+ INSERT INTO SchemaVersion values (newid(), @majorVersion, @minorVersion, getutcdate());
+  COMMIT TRANSACTION Version1_8
+END
 
 /* 
   Use this model to create database changes

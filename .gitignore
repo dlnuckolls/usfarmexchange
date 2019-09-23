@@ -329,3 +329,7 @@ ASALocalRun/
 
 # MFractors (Xamarin productivity tool) working folder 
 .mfractor/
+/USFarmExchange/USFarmExchange/configs/app.config
+/USFarmExchange/USFarmExchange/configs/db.config
+/USFarmExchange/USFarmExchange/configs/mail.config
+/USFarmExchange/USFarmExchange/configs/UrlRewriter.config
