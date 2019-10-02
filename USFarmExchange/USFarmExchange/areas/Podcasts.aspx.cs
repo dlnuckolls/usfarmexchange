@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace USFarmExchange.areas
 {
-    public partial class communication : BasePage
+    public partial class Podcasts : BasePage
     {
         protected void Page_Load(object sender, EventArgs e)
         {

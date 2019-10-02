@@ -33,7 +33,7 @@ namespace USFarmExchange
         [TextValue("Contact")] Contact,
         [TextValue("Blog")] Blog,
         [TextValue("Resources")] Resources,
-        [TextValue("Communication")] Communications,
+        [TextValue("Podcasts")] Communications,
         [TextValue("Crop Insurance")] CropInsurance,
         [TextValue("Compliance")] Compliance,
         [TextValue("Crop Insurance")] crop,

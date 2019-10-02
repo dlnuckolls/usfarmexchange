@@ -179,7 +179,7 @@
     <Content Include="App_Data\RadCaptcha\Y.wav" />
     <Content Include="App_Data\RadCaptcha\Z.wav" />
     <Content Include="areas\aboutus.aspx" />
-    <Content Include="areas\communication.aspx" />
+    <Content Include="areas\Podcasts.aspx" />
     <Content Include="areas\compliance.aspx" />
     <Content Include="areas\crop-insurance.aspx" />
     <Content Include="areas\Education.aspx" />
@@ -3780,12 +3780,12 @@
     <Compile Include="areas\aboutus.aspx.designer.cs">
       <DependentUpon>aboutus.aspx</DependentUpon>
     </Compile>
-    <Compile Include="areas\communication.aspx.cs">
-      <DependentUpon>communication.aspx</DependentUpon>
+    <Compile Include="areas\Podcasts.aspx.cs">
+      <DependentUpon>Podcasts.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="areas\communication.aspx.designer.cs">
-      <DependentUpon>communication.aspx</DependentUpon>
+    <Compile Include="areas\Podcasts.aspx.designer.cs">
+      <DependentUpon>Podcasts.aspx</DependentUpon>
     </Compile>
     <Compile Include="areas\compliance.aspx.cs">
       <DependentUpon>compliance.aspx</DependentUpon>
@@ -4015,7 +4015,7 @@
           <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
         </WebProjectProperties>
       </FlavorProperties>
-      <UserProperties UseAjaxifiedTemplates="True" UseJQuerySupport="True" />
+      <UserProperties UseJQuerySupport="True" UseAjaxifiedTemplates="True" />
     </VisualStudio>
   </ProjectExtensions>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

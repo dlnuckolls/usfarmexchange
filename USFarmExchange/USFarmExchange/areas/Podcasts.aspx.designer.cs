@@ -10,7 +10,7 @@
 namespace USFarmExchange.areas {
     
     
-    public partial class communication {
+    public partial class Podcasts {
         
         /// <summary>
         /// TitleTag control.

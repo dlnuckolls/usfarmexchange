@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterContentPage.Master" AutoEventWireup="true" CodeBehind="communication.aspx.cs" Inherits="USFarmExchange.areas.communication" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterContentPage.Master" AutoEventWireup="true" CodeBehind="Podcasts.aspx.cs" Inherits="USFarmExchange.areas.Podcasts" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 <asp:Literal ID="TitleTag" runat="server"></asp:Literal>
 </asp:Content>
