@@ -179,6 +179,7 @@
     <Content Include="App_Data\RadCaptcha\Y.wav" />
     <Content Include="App_Data\RadCaptcha\Z.wav" />
     <Content Include="areas\aboutus.aspx" />
+    <Content Include="areas\agritourism.aspx" />
     <Content Include="areas\Podcasts.aspx" />
     <Content Include="areas\compliance.aspx" />
     <Content Include="areas\crop-insurance.aspx" />
@@ -3780,6 +3781,13 @@
     <Compile Include="areas\aboutus.aspx.designer.cs">
       <DependentUpon>aboutus.aspx</DependentUpon>
     </Compile>
+    <Compile Include="areas\agritourism.aspx.cs">
+      <DependentUpon>agritourism.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="areas\agritourism.aspx.designer.cs">
+      <DependentUpon>agritourism.aspx</DependentUpon>
+    </Compile>
     <Compile Include="areas\Podcasts.aspx.cs">
       <DependentUpon>Podcasts.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -4015,7 +4023,7 @@
           <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
         </WebProjectProperties>
       </FlavorProperties>
-      <UserProperties UseJQuerySupport="True" UseAjaxifiedTemplates="True" />
+      <UserProperties UseAjaxifiedTemplates="True" UseJQuerySupport="True" />
     </VisualStudio>
   </ProjectExtensions>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

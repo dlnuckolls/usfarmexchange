@@ -23,6 +23,8 @@
             </Items>
         </telerik:RadMenuItem>
         <telerik:RadMenuItem IsSeparator="true" />
+        <telerik:RadMenuItem Text="Agritourism" NavigateUrl="~/areas/agritourism.aspx" />
+        <telerik:RadMenuItem IsSeparator="true" />
         <telerik:RadMenuItem Text="Insurance" NavigateUrl="~/areas/Insurance.aspx" />
         <telerik:RadMenuItem IsSeparator="true" />
         <telerik:RadMenuItem Text="Financial Services" NavigateUrl="~/areas/Financial-Services.aspx" />

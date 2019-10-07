@@ -93,7 +93,7 @@
                       <p>
                         <br />
                         <br />
-                        To provide the American farmer a multi-channel platform of resources to help them succeed; offering a central exchange for conversation, compliance, education, technology, insurance, banking and financial services.
+                        Providing American farmers with a multi-channel platform of resources to help them succeed; offering a central exchange for conversation, compliance, education, technology, insurance, banking and financial services.
                       </p>
                     </ItemTemplate>
                   </telerik:RadRotatorItem>
