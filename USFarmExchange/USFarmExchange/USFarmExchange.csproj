@@ -179,7 +179,8 @@
     <Content Include="App_Data\RadCaptcha\Y.wav" />
     <Content Include="App_Data\RadCaptcha\Z.wav" />
     <Content Include="areas\aboutus.aspx" />
-    <Content Include="areas\communication.aspx" />
+    <Content Include="areas\agritourism.aspx" />
+    <Content Include="areas\Podcasts.aspx" />
     <Content Include="areas\compliance.aspx" />
     <Content Include="areas\crop-insurance.aspx" />
     <Content Include="areas\Education.aspx" />
@@ -3653,9 +3654,14 @@
     <Content Include="forum\YafAjax.asmx" />
     <Content Include="forum\YafWebService.asmx" />
     <Content Include="images\Barn.JPG" />
+    <Content Include="images\cows.png" />
     <Content Include="images\Crop-Insurance-Cycle.png" />
     <Content Include="images\facebook.png" />
     <Content Include="images\Farmers.jpg" />
+    <Content Include="images\farmer_pointing.png" />
+    <Content Include="images\field.png" />
+    <Content Include="images\hands_dirt.png" />
+    <Content Include="images\harvester.png" />
     <Content Include="images\Hemp.jpg" />
     <Content Include="images\icons8-circled_chevron_left.png" />
     <Content Include="images\icons8-circled_chevron_right.png" />
@@ -3664,6 +3670,7 @@
     <Content Include="images\icons8-rss.png" />
     <Content Include="images\iStock-1029777638.jpg" />
     <Content Include="images\KY_Hemp_Field.jpg" />
+    <Content Include="images\lane_trees.png" />
     <Content Include="images\menutiles\icons8-accept_database.png" />
     <Content Include="images\menutiles\icons8-business_contact.png" />
     <Content Include="images\menutiles\icons8-domain.png" />
@@ -3675,6 +3682,7 @@
     <Content Include="images\menutiles\icons8-tear_off_calendar.png" />
     <Content Include="images\MMS-PCI-Continued.png" />
     <Content Include="images\MMS-PCI.png" />
+    <Content Include="images\oldtime_baler.png" />
     <Content Include="images\PCIMS-PCI-Continued.png" />
     <Content Include="images\PCIMS-PCI.png" />
     <Content Include="images\rotator\apply.jpg" />
@@ -3685,6 +3693,8 @@
     <Content Include="images\rotator\top.gif" />
     <Content Include="images\rotator\up.gif" />
     <Content Include="images\Sample_app.jpg" />
+    <Content Include="images\singlecow.png" />
+    <Content Include="images\smallpotatoes.png" />
     <Content Include="images\social\icons8-delicious.png" />
     <Content Include="images\social\icons8-digg.png" />
     <Content Include="images\social\icons8-facebook.png" />
@@ -3694,8 +3704,11 @@
     <Content Include="images\social\icons8-stumbleupon.png" />
     <Content Include="images\social\icons8-tumblr.png" />
     <Content Include="images\social\icons8-twitter.png" />
+    <Content Include="images\threefarmers.png" />
     <Content Include="images\Tractors.jpg" />
+    <Content Include="images\tractor_back.png" />
     <Content Include="images\twitter.png" />
+    <Content Include="images\wheatfield.png" />
     <Content Include="MasterPage.Master" />
   </ItemGroup>
   <ItemGroup>
@@ -3780,12 +3793,19 @@
     <Compile Include="areas\aboutus.aspx.designer.cs">
       <DependentUpon>aboutus.aspx</DependentUpon>
     </Compile>
-    <Compile Include="areas\communication.aspx.cs">
-      <DependentUpon>communication.aspx</DependentUpon>
+    <Compile Include="areas\agritourism.aspx.cs">
+      <DependentUpon>agritourism.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="areas\communication.aspx.designer.cs">
-      <DependentUpon>communication.aspx</DependentUpon>
+    <Compile Include="areas\agritourism.aspx.designer.cs">
+      <DependentUpon>agritourism.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="areas\Podcasts.aspx.cs">
+      <DependentUpon>Podcasts.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="areas\Podcasts.aspx.designer.cs">
+      <DependentUpon>Podcasts.aspx</DependentUpon>
     </Compile>
     <Compile Include="areas\compliance.aspx.cs">
       <DependentUpon>compliance.aspx</DependentUpon>
@@ -4015,7 +4035,7 @@
           <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
         </WebProjectProperties>
       </FlavorProperties>
-      <UserProperties UseAjaxifiedTemplates="True" UseJQuerySupport="True" />
+      <UserProperties UseJQuerySupport="True" UseAjaxifiedTemplates="True" />
     </VisualStudio>
   </ProjectExtensions>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

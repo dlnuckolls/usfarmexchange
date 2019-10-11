@@ -384,11 +384,11 @@ html body form .RadInput .MyFocusedTextBox {
 }
 
 .article {
-  width: 100%;
+  width: 95%;
   margin: 5px;
   border: solid 1px lightgray;
   border-radius: 10px;
-  padding: 5px;
+  padding: 5px 15px 5px 15px;
   height: 100%;
   text-align: justify;
 }
