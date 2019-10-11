@@ -188,7 +188,7 @@
         <tr>
           <td>
             <div class="nsrssTitle">
-              <a href='<%# GetXmlContent(Container, "link") %>' class="qsfSubtitle">
+              <a href='<%# GetXmlContent(Container, "link") %>' class="qsfSubtitle" target="_blank">
                 <asp:Literal runat="server" Text='<%# GetXmlContent(Container, "title") %>'></asp:Literal>
               </a>
             <div class="nsrssContent">
