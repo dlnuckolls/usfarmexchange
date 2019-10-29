@@ -10,7 +10,7 @@
 namespace USFarmExchange.areas {
     
     
-    public partial class communication {
+    public partial class agritourism {
         
         /// <summary>
         /// TitleTag control.
@@ -22,12 +22,12 @@ namespace USFarmExchange.areas {
         protected global::System.Web.UI.WebControls.Literal TitleTag;
         
         /// <summary>
-        /// CommunicationHomeContent control.
+        /// AgritourismHomeContent control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal CommunicationHomeContent;
+        protected global::System.Web.UI.WebControls.Literal AgritourismHomeContent;
     }
 }

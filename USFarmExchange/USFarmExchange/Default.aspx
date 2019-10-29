@@ -53,8 +53,7 @@
                       <img src="/images/rotator/purpose.jpg" alt="Farmers" class="left" />
                       <h2><br />What is a farmer?</h2>
                       <p>
-                        <br />
-                        <br />
+                               <br />
                         Daniel Webster defines farmer as “a person who manages or operates a farm.”  He also defines a farm as “a piece of land on which crops or animals are raised.”  
                     A farmer is so much more than that.  He or she is a hardworking, forward thinking individual with both feet on the ground – literally!  Our intent is to help the farmer navigate 
                     the 21st century.  Our application will help do just that.  Our purpose is to fill the gap with information farmers need and can understand.
@@ -76,7 +75,7 @@
                       <telerik:RadLinkButton ID="btnReadMoreHemp" runat="server" Text="Read More"  NavigateURL="~/areas/HempHistoryKY.aspx" > </telerik:RadLinkButton>
                     </ItemTemplate>
                   </telerik:RadRotatorItem>
-                  <telerik:RadRotatorItem>
+                 <%-- <telerik:RadRotatorItem>
                     <ItemTemplate>
                       <img src="/images/rotator/apply.jpg" alt="Apply" class="left" />
                       <h2><br />Apply Online</h2>
@@ -86,7 +85,7 @@
                         Online application details
                       </p>
                     </ItemTemplate>
-                  </telerik:RadRotatorItem>
+                  </telerik:RadRotatorItem>--%>
                   <telerik:RadRotatorItem>
                     <ItemTemplate>
                       <img src="/images/rotator/purpose.jpg" alt="Farmers" class="right" />
@@ -94,7 +93,7 @@
                       <p>
                         <br />
                         <br />
-                        To provide the American farmer a multi-channel platform of resources to help them succeed; offering a central exchange for communication, compliance, education, technology, insurance, banking and financial services.
+                        Providing American farmers with a multi-channel platform of resources to help them succeed; offering a central exchange for conversation, compliance, education, technology, insurance, banking and financial services.
                       </p>
                     </ItemTemplate>
                   </telerik:RadRotatorItem>
@@ -189,7 +188,7 @@
         <tr>
           <td>
             <div class="nsrssTitle">
-              <a href='<%# GetXmlContent(Container, "link") %>' class="qsfSubtitle">
+              <a href='<%# GetXmlContent(Container, "link") %>' class="qsfSubtitle" target="_blank">
                 <asp:Literal runat="server" Text='<%# GetXmlContent(Container, "title") %>'></asp:Literal>
               </a>
             <div class="nsrssContent">

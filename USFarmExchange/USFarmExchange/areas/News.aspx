@@ -57,6 +57,7 @@
             If there was a key takeaway from the event, it was that whatever a company’s core offering, adoption depends on user experience and enabling users to recognize value. Without that, retention, or stickiness, will suffer, as will growth.
         </p>
         <p>
+            <a href="/forum/postmessage?f=2">Start a discussion...</a>
         </p>
     </div>
 </asp:Content>
@@ -130,6 +131,7 @@
         <p>
             What do you think? Does farming need a re-brand? How can we improve the optics? Email us media@agfunder.com
         </p>
+        <p><a href="/forum/postmessage?f=2">Start a discussion...</a></p>
     </div>
 
 </asp:Content>
