@@ -16,6 +16,7 @@ namespace USFarmExchange {
     // Tracking for current page within the application
     public PageNames CurrentPage { get; set; }
     public string DisplayCurrentPage => "<title>{0}</title>".FormatWith(CurrentPage.TextValue());
+    public string PageContent(PageContentBlocks pageLocation) => SqlHelpers.SelectScalar(SqlStatements.SQL_GET_PAGE_CONTENT_FOR_DISPLAY.FormatWith(pageLocation.TextValue())).ToString();
 
     private SmtpClient SetMailServerSettings() {
       var smtp = new SmtpClient {

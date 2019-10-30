@@ -10,8 +10,7 @@
 namespace USFarmExchange.areas {
     
     
-    public partial class Compliance
-    {
+    public partial class Compliance {
         
         /// <summary>
         /// TitleTag control.
@@ -21,5 +20,14 @@ namespace USFarmExchange.areas {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Literal TitleTag;
+        
+        /// <summary>
+        /// ComplianceHomeContent control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Literal ComplianceHomeContent;
     }
 }

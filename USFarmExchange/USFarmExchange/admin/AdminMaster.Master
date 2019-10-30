@@ -52,7 +52,6 @@
               </telerik:LayoutColumn>
               <%--Logo--%>
               <telerik:LayoutColumn Span="3" SpanMd="3" SpanSm="12" SpanXs="12">
-                <a href="/Default.aspx" class="logo"><img src="/images/logo.png" /></a>
               </telerik:LayoutColumn>
 
               <%--Main Nav--%>
