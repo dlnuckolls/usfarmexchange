@@ -3671,6 +3671,7 @@
     <Content Include="images\iStock-1029777638.jpg" />
     <Content Include="images\KY_Hemp_Field.jpg" />
     <Content Include="images\lane_trees.png" />
+    <Content Include="images\lane_treesrev.jpg" />
     <Content Include="images\menutiles\icons8-accept_database.png" />
     <Content Include="images\menutiles\icons8-business_contact.png" />
     <Content Include="images\menutiles\icons8-domain.png" />
@@ -3688,8 +3689,11 @@
     <Content Include="images\rotator\apply.jpg" />
     <Content Include="images\rotator\bottom.gif" />
     <Content Include="images\rotator\down.gif" />
+    <Content Include="images\rotator\FarmBoys.jpg" />
     <Content Include="images\rotator\hemp.jpg" />
     <Content Include="images\rotator\purpose.jpg" />
+    <Content Include="images\rotator\talking-farmers.jpg" />
+    <Content Include="images\rotator\threefarmers.png" />
     <Content Include="images\rotator\top.gif" />
     <Content Include="images\rotator\up.gif" />
     <Content Include="images\Sample_app.jpg" />
@@ -3704,7 +3708,6 @@
     <Content Include="images\social\icons8-stumbleupon.png" />
     <Content Include="images\social\icons8-tumblr.png" />
     <Content Include="images\social\icons8-twitter.png" />
-    <Content Include="images\threefarmers.png" />
     <Content Include="images\Tractors.jpg" />
     <Content Include="images\tractor_back.png" />
     <Content Include="images\twitter.png" />

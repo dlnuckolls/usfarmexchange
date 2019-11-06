@@ -61,10 +61,10 @@
         </telerik:RadPageLayout>
         <div class="headerContentFade">
           <h1>US Farm Exchange <br /></h1>
-            <h2><i>Providing American farmers with a multi-channel platform of resources to help them succeed.</i></h2> 
+            <h2><i>Providing American farmers with a platform of resources to help them succeed.</i></h2> 
                     </div>
       </div>
-      <telerik:RadPageLayout runat="server" ID="MasterLayout" GridType="Fluid">
+        <telerik:RadPageLayout runat="server" ID="MasterLayout" GridType="Fluid">
         <Rows>
           <%--Main--%>
           <telerik:LayoutRow>

@@ -96,7 +96,7 @@ div.RadMenuPopup,
 #wrapper .RadMenu_Default, #wrapper .RadMenu_Default a.rmLink {
   /*font-size: .85em;*/
   float: right;
-}
+ }
 
 #wrapper .largeheader {
   position: relative;
@@ -105,8 +105,8 @@ div.RadMenuPopup,
   overflow: hidden;
   background-size: cover;
   background-position: center;
-  background-image: url(/images/tractors.jpg);
-  min-height: 450px;
+  background-image: url(/images/lane_trees.png);
+  min-height: 600px;
 }
 
   #wrapper .largeheader .RadButton {
@@ -121,16 +121,17 @@ div.RadMenuPopup,
   margin-bottom: 40px;
 }
 
-  #wrapper .header .RadMenu {
-    margin: 10px 0;
-    float: right !important;
-  }
-
-    #wrapper .header .RadMenu .rmRootGroup {
-      border-width: 0 !important;
-      border-color: transparent !important;
-      background-color: transparent !important;
+    #wrapper .header .RadMenu {
+        margin: 10px 0;
+        float: right !important;
+        
     }
+
+        #wrapper .header .RadMenu .rmRootGroup {
+            border-width: 0 !important;
+            border-color: transparent !important;
+            background-color: #f7f7f7 !important;
+        }
 
       #wrapper .header .RadMenu .rmRootGroup :hover {
         background-color: cadetblue !important;
@@ -157,7 +158,8 @@ div.RadMenuPopup,
     #wrapper .smallHeader .RadMenu .rmRootGroup {
       border-width: 0 !important;
       border-color: transparent !important;
-      background-color: transparent !important;
+      background-color: #ffffff !important;
+
     }
 
       #wrapper .smallHeader .RadMenu .rmRootGroup :hover {
