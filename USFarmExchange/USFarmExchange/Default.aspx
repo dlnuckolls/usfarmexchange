@@ -11,6 +11,9 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
   <asp:XmlDataSource ID="xmlDataSource1" runat="Server" DataFile="/data/upperMarquee.xml"></asp:XmlDataSource>
   <asp:XmlDataSource ID="xmlDataSource2" runat="Server" DataFile="/data/lowerMarquee.xml"></asp:XmlDataSource>
+   <asp:Literal ID="HomePageBottom" runat="server"></asp:Literal>
+    <br />
+    <br />
   <telerik:RadPageLayout runat="server" ID="RadPageLayout1">
     <Rows>
       <telerik:LayoutRow>
@@ -60,6 +63,7 @@
                       </p>
                     </ItemTemplate>
                   </telerik:RadRotatorItem>
+
                   <telerik:RadRotatorItem>
                     <ItemTemplate>
                       <img src="/images/rotator/hemp.jpg" alt="Hemp" class="right" />
@@ -88,13 +92,21 @@
                   </telerik:RadRotatorItem>--%>
                   <telerik:RadRotatorItem>
                     <ItemTemplate>
-                      <img src="/images/rotator/purpose.jpg" alt="Farmers" class="right" />
+                      <img src="/images/rotator/ThreeFarmers.png" alt="ThreeFarmers" class="right" />
                       <h2><br />Our Purpose</h2>
                       <p>
-                        <br />
-                        <br />
-                        Providing American farmers with a multi-channel platform of resources to help them succeed; offering a central exchange for conversation, compliance, education, technology, insurance, banking and financial services.
+                        Providing American farmers with a platform of resources to help them succeed; offering a central exchange for conversation, compliance, education, technology, insurance, banking and financial services.
                       </p>
+                    </ItemTemplate>
+                  </telerik:RadRotatorItem>
+                    <telerik:RadRotatorItem>
+                    <ItemTemplate>
+                      <img src="/images/rotator/talking-farmers.jpg" alt="talking-farmers" class="left" />
+                      <h2><br />What's on your mind?</h2>
+                      <p>
+                        Join the U.S. Farm Exchange forum to discuss what is important to you!
+                      </p>
+                          <telerik:RadLinkButton ID="btnJoin" runat="server" Text="Join!"  NavigateURL="~/forum/login.aspx" > </telerik:RadLinkButton>
                     </ItemTemplate>
                   </telerik:RadRotatorItem>
                 </Items>
@@ -229,7 +241,7 @@
       </telerik:LayoutRow>
     </Rows>
   </telerik:RadPageLayout>
-    <asp:Literal ID="HomePageBottom" runat="server"></asp:Literal>
+<%--    <asp:Literal ID="HomePageBottom" runat="server"></asp:Literal>
     <br />
-    <br />
+    <br />--%>
 </asp:Content>
