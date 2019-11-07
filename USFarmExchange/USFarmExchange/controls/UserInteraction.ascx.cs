@@ -14,7 +14,7 @@ namespace USFarmExchange.controls {
     protected void Page_Load(object sender, EventArgs e) {
       var loginLink = this.HeadLoginView.FindControlAs<LinkButton>("LoginLink");
       if(loginLink != null) { loginLink.PostBackUrl = "~/forum/forum.aspx?g=login&ReturnUrl={0}".FormatWith(this.GetReturnUrl()); }
-      if(!HttpContext.Current.User.Identity.IsNullOrEmpty()) {
+      if(!HttpContext.Current.User.Identity.IsNullOrEmpty() || !HttpContext.Current.User.Identity.Name.IsNullOrEmpty()) {
         SessionInfo.CurrentUser.UserName = HttpContext.Current.User.Identity.Name;
         SessionInfo.CurrentUser.IsAuthenticated = HttpContext.Current.User.Identity.IsAuthenticated;
         SessionInfo.CurrentUser.IsAdmin = YAF.Core.RoleMembershipHelper.IsUserInRole(SessionInfo.CurrentUser.UserName, "Administrators");
@@ -23,7 +23,7 @@ namespace USFarmExchange.controls {
         if(!spacer.IsNullOrEmpty()) spacer.Visible = SessionInfo.IsAdmin;
         var adminMenu = HeadLoginView.FindControlAs<LinkButton>("lbAdminDashboard");
         if(!adminMenu.IsNullOrEmpty()) adminMenu.Visible = (SessionInfo.IsAdmin && SessionInfo.IsAuthenticated);
-      }
+      } else if(HttpContext.Current.User.Identity.Name.IsNullOrEmpty()) { SessionInfo.CurrentUser.LogoutUser(); }
     }
 
     protected string GetReturnUrl() {

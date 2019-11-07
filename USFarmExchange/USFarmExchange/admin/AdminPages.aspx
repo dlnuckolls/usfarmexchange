@@ -67,7 +67,7 @@
           <ImageManager ViewPaths="~/images/useruploads/pages"
             UploadPaths="~/images/useruploads/pages"
             DeletePaths="~/images/useruploads/pages"
-            EnableAsyncUpload="true" />
+            EnableAsyncUpload="true" MaxUploadFileSize="2000" />
           <Modules>
             <telerik:EditorModule Name="RadEditorStatistics" Visible="true" Enabled="true" />
             <telerik:EditorModule Name="RadEditorDomInspector" Visible="false" Enabled="true" />
