@@ -40,6 +40,15 @@ namespace USFarmExchange {
         protected global::System.Web.UI.WebControls.XmlDataSource xmlDataSource2;
         
         /// <summary>
+        /// HomePageBottom control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Literal HomePageBottom;
+        
+        /// <summary>
         /// RadPageLayout1 control.
         /// </summary>
         /// <remarks>
@@ -119,14 +128,5 @@ namespace USFarmExchange {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::Telerik.Web.UI.RadPageLayout Content1;
-        
-        /// <summary>
-        /// HomePageBottom control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal HomePageBottom;
     }
 }

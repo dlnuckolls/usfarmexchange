@@ -27,17 +27,23 @@
         <telerik:RadMenuItem IsSeparator="true" />
         <telerik:RadMenuItem Text="Insurance" NavigateUrl="~/areas/Insurance.aspx" />
         <telerik:RadMenuItem IsSeparator="true" />
-        <telerik:RadMenuItem Text="Financial Services" NavigateUrl="~/areas/Financial-Services.aspx" />
-        <telerik:RadMenuItem IsSeparator="true" />
+        <telerik:RadMenuItem Text="Financial Services" NavigateUrl="~/areas/Financial-Services.aspx" >
+            <Items>
+                <telerik:RadMenuItem Text="Magnolia Bank" />
+                <telerik:RadMenuItem IsSeparator="true" /> 
+            </Items>
+            </telerik:RadMenuItem>
+       <%-- <telerik:RadMenuItem IsSeparator="true" />
         <telerik:RadMenuItem Text="Resources">
           <Items>
         <telerik:RadMenuItem IsSeparator="true" />
         <telerik:RadMenuItem Text="Technology" NavigateUrl="~/areas/Technology.aspx" />
+        
+            </Items>
+          </telerik:RadMenuItem>--%>
         <telerik:RadMenuItem IsSeparator="true" />
         <telerik:RadMenuItem Text="Compliance" NavigateUrl="~/areas/Compliance.aspx" />
-            </Items>
-          </telerik:RadMenuItem>
-        <telerik:RadMenuItem IsSeparator="true" />
+         <telerik:RadMenuItem IsSeparator="true" />
         <telerik:RadMenuItem Text="Partners" NavigateUrl="~/areas/Partners.aspx" />
         <telerik:RadMenuItem IsSeparator="true" />
         <telerik:RadMenuItem Text="About Us" NavigateUrl="~/areas/aboutus.aspx" />
