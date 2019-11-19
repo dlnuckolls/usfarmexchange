@@ -123,7 +123,7 @@
           <telerik:LayoutColumn Span="8" SpanMd="12" HiddenXs="true">
             <br />
             <div style="width: 100%; margin: 5px auto;">
-              <telerik:RadMediaPlayer ID="RadMediaPlayer1" runat="server" Height="500px" Width="90%" Source="https://www.youtube.com/watch?v=7UBj4Rbq3ZI"></telerik:RadMediaPlayer>
+              <telerik:RadMediaPlayer ID="RadMediaPlayer1" runat="server" Height="400px" Source="https://www.youtube.com/watch?v=7UBj4Rbq3ZI"></telerik:RadMediaPlayer>
             </div>
             <div style="width: 100%; margin: 5px auto;">
               <div class="top">

@@ -156,8 +156,12 @@ table.nsrssTable {
 .RadMediaPlayer {
   width: auto !important;
   height: auto !important;
+  min-height: 400px !important;
+  min-width: 400px !important;
 }
 
 .sfPublicWrapper {
-  width: auto !important
+  width: auto !important; 
+  height: auto !important;
+  min-height: 400px !important;
 }
