@@ -7,10 +7,10 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace USFarmExchange {
+namespace USFarmExchange.areas {
     
     
-    public partial class Forum {
+    public partial class ResourceLinks {
         
         /// <summary>
         /// TitleTag control.
@@ -22,30 +22,12 @@ namespace USFarmExchange {
         protected global::System.Web.UI.WebControls.Literal TitleTag;
         
         /// <summary>
-        /// ForumDescription control.
+        /// ResourceLinksDescription control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal ForumDescription;
-        
-        /// <summary>
-        /// ForumTopDescription control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal ForumTopDescription;
-        
-        /// <summary>
-        /// forum control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::YAF.Forum forum;
+        protected global::System.Web.UI.WebControls.Literal ResourceLinksDescription;
     }
 }

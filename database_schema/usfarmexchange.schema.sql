@@ -332,6 +332,7 @@ BEGIN
 	        ('25CFE0DF-5DDA-48E8-8C1C-091167A99169', 'Compliance Home Content'),
 	        ('96463B34-FE4B-4760-BD11-5463AA30DBF6', 'Partners Home Content'),
             ('D9E75614-BEA8-472D-9A42-E37CAEAA7506', 'About Us Home Content');
+
   
  INSERT INTO SchemaVersion values (newid(), @majorVersion, @minorVersion, getutcdate());
   COMMIT TRANSACTION Version1_8
@@ -344,7 +345,7 @@ BEGIN
   
     INSERT INTO [dbo].[PageLocations] (Id, [Description])
     VALUES ('84CF66D9-A864-4029-8976-71AB25FD430C', 'Agritourism Home Content');
-        
+	        
 					   
      INSERT INTO [dbo].[PageContent] ([PageLocation], [Description])
      VALUES ('84CF66D9-A864-4029-8976-71AB25FD430C', 'Agritourism Home Content');
@@ -353,6 +354,42 @@ BEGIN
  INSERT INTO SchemaVersion values (newid(), @majorVersion, @minorVersion, getutcdate());
   COMMIT TRANSACTION Version1_9
 END
+
+SELECT @majorVersion = 1, @minorVersion = 10;
+IF NOT EXISTS(SELECT * FROM SchemaVersion WHERE (MajorVersion = @majorVersion) AND (MinorVersion = @minorVersion))
+BEGIN
+  BEGIN TRANSACTION Version1_10
+  
+    INSERT INTO [dbo].[PageLocations] (Id, [Description])
+    VALUES 	('D9744A18-D526-45D5-B0F6-B347A4581DBD', 'Forum Left'),
+			('75A0CE6A-A837-4261-B480-240EEABF4D55', 'Forum Top'),
+			('329D0E46-3C1E-4B53-9C6C-4CA7BAAE6536', 'Resource Links');
+        
+					   
+     INSERT INTO [dbo].[PageContent] ([PageLocation], [Description])
+     VALUES ('D9744A18-D526-45D5-B0F6-B347A4581DBD', 'Forum Left'),
+			('75A0CE6A-A837-4261-B480-240EEABF4D55', 'Forum Top'),   
+			('329D0E46-3C1E-4B53-9C6C-4CA7BAAE6536', 'Resource Links');
+  
+	-- ResourceLinks table
+	CREATE TABLE [dbo].[ResourceLinks] (
+      [Id] INT NOT NULL IDENTITY(1,1),
+	  [Title] VARCHAR(150),
+	  [URL] VARCHAR(300),
+	  [Count] INT,
+	  [LastClicked] SMALLDATETIME,
+	  [Active] BIT
+
+	  CONSTRAINT [PK_ResourceLinks] PRIMARY KEY CLUSTERED (
+	      [Id] ASC
+      ) WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+    ) ON [PRIMARY]
+	
+ INSERT INTO SchemaVersion values (newid(), @majorVersion, @minorVersion, getutcdate());
+  COMMIT TRANSACTION Version1_10
+END
+
+
 
 
 /* 
