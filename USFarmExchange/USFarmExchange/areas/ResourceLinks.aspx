@@ -9,7 +9,7 @@
   <asp:Literal ID="ResourceLinksDescription" runat="server" />
   <br />
   <br />
-  <telerik:RadPanelBar RenderMode="Auto" Skin="Silk" ID="RadPanelBar1" runat="server" Width="100%" ExpandMode="FullExpandedItem" AllowCollapseAllItems="true"
+  <telerik:RadPanelBar RenderMode="Auto" Skin="Silk" ID="RadPanelBar1" runat="server" Width="100%" ExpandMode="MultipleExpandedItems" AllowCollapseAllItems="true"
     DataSourceID="ObjectDataSource1" DataFieldID="Id" DataFieldParentID="GroupId" DataNavigateUrlField="DestinationURL" DataTextField="DisplayName">
   </telerik:RadPanelBar>
   <asp:ObjectDataSource ID="ObjectDataSource1" runat="server" SelectMethod="GetAllResourceLinks" TypeName="USFarmExchange.SqlDatasets"></asp:ObjectDataSource>

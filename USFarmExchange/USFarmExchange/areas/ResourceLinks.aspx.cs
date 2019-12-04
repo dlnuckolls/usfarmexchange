@@ -14,9 +14,5 @@ namespace USFarmExchange.areas {
       TitleTag.Text = SessionInfo.DisplayCurrentPage;
       ResourceLinksDescription.Text = SessionInfo.PageContent(PageContentBlocks.ResourceLinksContent);
     }
-
-    protected void RadPanelBar1_ItemClick(object sender, Telerik.Web.UI.RadPanelBarEventArgs e) {
-      var x = string.Empty;
-    }
   }
 }
