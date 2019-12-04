@@ -9,6 +9,24 @@ namespace USFarmExchange {
     private const string REGISTRATION = "7ec7d607-18b1-452d-8d78-3d065959d358";
     private const string USER = "a7107c8f-ff15-4d5a-bba1-6db286fcef0a";
     private const string ADMIN = "b6522703-8844-4cff-8fc1-916ba90f515b";
+    public const string SQL_GET_RESOURCE_LINKS = @"
+SELECT 0 Id, 'Resource Links' DisplayName, '' DestinationURL, NULL GroupId
+UNION ALL
+SELECT Id, DisplayName, DestinationURL, 0 GroupId FROM 
+(SELECT TOP 3 Id, Title DisplayName, URL DestinationURL, 'Most Popular' GroupId 
+   FROM dbo.ResourceLinks
+  WHERE Active = 1
+  ORDER BY [Count], LastClicked DESC) a
+ UNION ALL
+SELECT Id, DisplayName, DestinationURL, 0 GroupId FROM
+ (SELECT TOP 10 Id, Title DisplayName, URL DestinationURL, 'Useful Links' GroupId 
+   FROM dbo.ResourceLinks
+  WHERE Active = 1 AND Id NOT IN 
+       (SELECT TOP 3 Id 
+          FROM dbo.ResourceLinks
+         WHERE Active = 1
+         ORDER BY [Count], LastClicked DESC)
+  ORDER BY [Count], LastClicked DESC) b;";
 
     #region System Settings
     public const string SQL_GET_MAIL_SETTINGS = "SELECT Id, MailServer, ServerPort, SmtpUser, SmtpPassword, FromEmail, FromUsername, RequireAuth, RequireSsl FROM dbo.SystemConfigs;";
