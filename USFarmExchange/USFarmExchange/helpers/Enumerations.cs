@@ -32,7 +32,7 @@ namespace USFarmExchange
         [TextValue("Questions")] FAQ,
         [TextValue("Contact")] Contact,
         [TextValue("Blog")] Blog,
-        [TextValue("Hepful Links")] Resources,
+        [TextValue("Helpful Links")] Resources,
         [TextValue("Podcasts")] Communications,
         [TextValue("Crop Insurance")] CropInsurance,
         [TextValue("Compliance")] Compliance,
@@ -48,6 +48,7 @@ namespace USFarmExchange
         [TextValue("My Dashboard")] Dashboard,
         [TextValue("Hemp History of KY")] HempHistoryKY,
         [TextValue("Agritourism")] Agritourism,
+        [TextValue("Forum")] Forum
     }
     [CustomEnum(true)]
     public enum PageContentBlocks
@@ -68,6 +69,6 @@ namespace USFarmExchange
         [TextValue("84CF66D9-A864-4029-8976-71AB25FD430C")] AgritourismHomeContent,
         [TextValue("D9744A18-D526-45D5-B0F6-B347A4581DBD")] ForumLeft,
         [TextValue("75A0CE6A-A837-4261-B480-240EEABF4D55")] ForumTop,
-        [TextValue("329D0E46-3C1E-4B53-9C6C-4CA7BAAE6536")] ResourceLinks,
+        [TextValue("329D0E46-3C1E-4B53-9C6C-4CA7BAAE6536")] ResourceLinksContent,
      }
 }
