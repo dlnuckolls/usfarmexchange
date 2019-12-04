@@ -5,7 +5,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="TableOfContents1" runat="server">
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="MainContent1" runat="server">
-      <asp:Literal ID="ResourceLinks" runat="server" />
+      <asp:Literal ID="ResourceLinksDescription" runat="server" />
     <br />
     <br />
 
