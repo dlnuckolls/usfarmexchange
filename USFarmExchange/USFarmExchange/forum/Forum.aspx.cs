@@ -15,6 +15,7 @@ namespace USFarmExchange {
       SessionInfo.CurrentPage = PageNames.Forum;
       TitleTag.Text = SessionInfo.DisplayCurrentPage;
       ForumDescription.Text = SessionInfo.PageContent(PageContentBlocks.ForumLeft);
+      ForumTopDescription.Text = SessionInfo.PageContent(PageContentBlocks.ForumTop);
 
     }
   }
