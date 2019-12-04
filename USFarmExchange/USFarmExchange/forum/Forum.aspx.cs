@@ -12,7 +12,10 @@ namespace USFarmExchange {
     /// <param name="sender">The source of the event.</param>
     /// <param name="e">The <see cref="System.EventArgs"/> instance containing the event data.</param>
     protected void Page_Load(object sender, EventArgs e) {
-      
+      SessionInfo.CurrentPage = PageNames.Home;
+      TitleTag.Text = SessionInfo.DisplayCurrentPage;
+      ForumDescription.Text = SessionInfo.PageContent(PageContentBlocks.ForumLeft);
+
     }
   }
 }
