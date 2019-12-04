@@ -58,11 +58,11 @@
             <telerik:LayoutRow>
               <Columns>
                 <%--Content--%>
-                <telerik:LayoutColumn Span="1" HiddenMd="true">
+                <telerik:LayoutColumn Span="3" HiddenMd="true">
                   <asp:ContentPlaceHolder ID="LeftCol1" runat="server">
                   </asp:ContentPlaceHolder>
                 </telerik:LayoutColumn>
-                <telerik:LayoutColumn Span="10" SpanMd="12">
+                <telerik:LayoutColumn Span="8" SpanMd="12">
                   <div class="main">
                     <asp:ContentPlaceHolder ID="MainContent" runat="server" />
                   </div>
