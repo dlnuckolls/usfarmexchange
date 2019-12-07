@@ -38,7 +38,7 @@ namespace USFarmExchange
         [TextValue("Compliance")] Compliance,
         [TextValue("Crop Insurance")] crop,
         [TextValue("Technology")] Technology,
-        [TextValue("Education")] Education,
+        [TextValue("History")] Education,
         [TextValue("Insurance")] Insurance,
         [TextValue("Financial Services")] Financial,
         [TextValue("News")] News,

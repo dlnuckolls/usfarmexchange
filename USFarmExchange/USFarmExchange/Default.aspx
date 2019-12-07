@@ -75,8 +75,8 @@
                       </p>
                     </ItemTemplate>
                   </telerik:RadRotatorItem>
-
-                  <telerik:RadRotatorItem>
+<%--Removed rotator item per 12/7/2019 USFE meeting.--%>
+             <%--     <telerik:RadRotatorItem>
                     <ItemTemplate>
                       <img src="/images/rotator/hemp.jpg" alt="Hemp" class="right" />
                       <h2>
@@ -92,7 +92,7 @@
                       <br />
                       <telerik:RadLinkButton ID="btnReadMoreHemp" runat="server" Text="Read More" NavigateUrl="~/areas/HempHistoryKY.aspx"></telerik:RadLinkButton>
                     </ItemTemplate>
-                  </telerik:RadRotatorItem>
+                  </telerik:RadRotatorItem>--%>
                   <telerik:RadRotatorItem>
                     <ItemTemplate>
                       <img src="/images/rotator/ThreeFarmers.png" alt="ThreeFarmers" class="right" />
