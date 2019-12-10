@@ -15,7 +15,7 @@
             </Items>
         </telerik:RadMenuItem>
         <telerik:RadMenuItem IsSeparator="true" />
-        <telerik:RadMenuItem Text="Education" NavigateUrl="~/areas/education.aspx">
+        <telerik:RadMenuItem Text="History" NavigateUrl="~/areas/education.aspx">
             <Items>
                 <telerik:RadMenuItem IsSeparator="true" />
                 <telerik:RadMenuItem Text="History of Hemp in KY" NavigateUrl="~/areas/HempHistoryKY.aspx" />
@@ -30,25 +30,27 @@
         </Items>
             </telerik:RadMenuItem>
         <telerik:RadMenuItem IsSeparator="true" />
-        <telerik:RadMenuItem Text="Financial Services" NavigateUrl="~/areas/Financial-Services.aspx" >
-            <Items>
-                <telerik:RadMenuItem Text="Magnolia Bank" />
-                <telerik:RadMenuItem IsSeparator="true" /> 
-            </Items>
-            </telerik:RadMenuItem>
+        <telerik:RadMenuItem Text="Financial Services" NavigateUrl="~/areas/Financial-Services.aspx"  />
+                        
         <telerik:RadMenuItem IsSeparator="true" />
-        <telerik:RadMenuItem Text="Helpful Links" NavigateUrl="~/areas/ResourceLinks.aspx">
+        <telerik:RadMenuItem Text="Helpful Links" NavigateUrl="~/areas/ResourceLinks.aspx"/>
        <%--   <Items>
         <telerik:RadMenuItem IsSeparator="true" />
         <telerik:RadMenuItem Text="Technology" NavigateUrl="~/areas/Technology.aspx" />
         --%>
             <%--</Items>--%>
-          </telerik:RadMenuItem>
+<%--   Hiding menu item per 12/7/2019 meeting.     --%>
+       <%-- <telerik:RadMenuItem IsSeparator="true" />
+        <telerik:RadMenuItem Text="Compliance" NavigateUrl="~/areas/Compliance.aspx" />--%>
+          <telerik:RadMenuItem IsSeparator="true" />
+        <telerik:RadMenuItem Text="Partners" NavigateUrl="~/areas/Partners.aspx" >  
+        <Items>
+            <telerik:RadMenuItem IsSeparator="true" />
+                <telerik:RadMenuItem Text="Magnolia Bank" />
+              </Items>
+           </telerik:RadMenuItem>
         <telerik:RadMenuItem IsSeparator="true" />
-        <telerik:RadMenuItem Text="Compliance" NavigateUrl="~/areas/Compliance.aspx" />
-         <telerik:RadMenuItem IsSeparator="true" />
-        <telerik:RadMenuItem Text="Partners" NavigateUrl="~/areas/Partners.aspx" />
-        <telerik:RadMenuItem IsSeparator="true" />
-        <telerik:RadMenuItem Text="About Us" NavigateUrl="~/areas/aboutus.aspx" />
+                <telerik:RadMenuItem Text="About Us" NavigateUrl="~/areas/aboutus.aspx" />
+
     </Items>
 </telerik:RadMenu>
