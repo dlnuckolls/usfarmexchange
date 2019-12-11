@@ -14,5 +14,9 @@ namespace USFarmExchange.areas {
       TitleTag.Text = SessionInfo.DisplayCurrentPage;
       ResourceLinksDescription.Text = SessionInfo.PageContent(PageContentBlocks.ResourceLinksContent);
     }
+
+    protected void Unnamed_SelectedIndexChanged(object sender, EventArgs e) {
+
+    }
   }
 }

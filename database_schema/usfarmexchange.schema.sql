@@ -389,6 +389,18 @@ BEGIN
   COMMIT TRANSACTION Version1_10
 END
 
+SELECT @majorVersion = 1, @minorVersion = 11;
+IF NOT EXISTS(SELECT * FROM SchemaVersion WHERE (MajorVersion = @majorVersion) AND (MinorVersion = @minorVersion))
+BEGIN
+  BEGIN TRANSACTION Version1_11
+    
+    ALTER TABLE [dbo].[ResourceLinks]
+      ADD [ThumbNail]   VARCHAR(255)  NULL,
+          [Description] VARCHAR(2000) NULL;
+    
+    INSERT INTO SchemaVersion values (newid(), @majorVersion, @minorVersion, getutcdate());
+  COMMIT TRANSACTION Version1_11
+END
 
 
 
