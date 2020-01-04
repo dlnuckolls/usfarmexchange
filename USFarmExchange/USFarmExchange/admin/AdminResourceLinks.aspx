@@ -42,7 +42,7 @@
                       <div style="display: block; width: 150px !important; margin-top: 4px; margin-bottom: 4px; text-align: left; font-weight: bold;">Thumbnail</div>
                       <telerik:RadLabel ID="RadLabel3" runat="server" Text='<%# Bind("ThumbNail") %>' Width="100%" />
                       <div style="display: block; width: 150px !important; margin-top: 4px; margin-bottom: 4px; text-align: left; font-weight: bold;">Active</div>
-                      <telerik:RadLabel ID="RadLabel4" runat="server" Text='<%# (Eval("Active").ToString() == "1") ? "Active" : "Inactive") %>' Width="100%" />
+                      <telerik:RadLabel ID="RadLabel4" runat="server" Text='<%# (Eval("Active").ToString() == "1") ? "Active" : "Inactive" %>' Width="100%" />
                     </telerik:LayoutColumn>
                     <telerik:LayoutColumn Span="8" SpanMd="8" SpanSm="12">
                       <div class="adminTiles">
