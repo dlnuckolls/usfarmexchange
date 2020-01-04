@@ -7,10 +7,10 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace USFarmExchange.areas {
+namespace USFarmExchange.admin {
     
     
-    public partial class ResourceLinks {
+    public partial class AdminResourceLinks {
         
         /// <summary>
         /// TitleTag control.
@@ -22,21 +22,30 @@ namespace USFarmExchange.areas {
         protected global::System.Web.UI.WebControls.Literal TitleTag;
         
         /// <summary>
-        /// ResourceLinksDescription control.
+        /// PageAdminHeader control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal ResourceLinksDescription;
+        protected global::System.Web.UI.WebControls.Literal PageAdminHeader;
         
         /// <summary>
-        /// ObjectDataSource1 control.
+        /// MessageDisplay control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ObjectDataSource ObjectDataSource1;
+        protected global::Telerik.Web.UI.RadLabel MessageDisplay;
+        
+        /// <summary>
+        /// gResourceLinks control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Telerik.Web.UI.RadGrid gResourceLinks;
     }
 }

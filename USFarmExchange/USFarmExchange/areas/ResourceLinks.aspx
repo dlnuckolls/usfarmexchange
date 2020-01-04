@@ -16,24 +16,21 @@
       </div>
     </LayoutTemplate>
     <ItemTemplate>
-      <div class="rlvI" style="min-height:150px;">
-          <img style="float:left; padding-right:15px;" src='<%# Eval("ThumbNail") %>' />
-          <asp:Label ID="Label1" runat="server" Text='<%# Eval("DisplayName") %>'></asp:Label><br />
-          <asp:Label ID="Label2" runat="server" Text='<%# Eval("DestinationURL") %>'></asp:Label>
+      <div class="rlvI" style="min-height: 150px;">
+        <img style="float: left; padding-right: 15px;" src='<%# Eval("ThumbNail") %>' />
+        <asp:LinkButton ID="LinkButton1" runat="server" OnClick="LinkButton1_Click" CommandName="Navigate" CommandArgument='<%# Eval("Id") %>'><%# Eval("DisplayName") %></asp:LinkButton><br />
+        <asp:Label ID="Label2" runat="server" Text='<%# Eval("Description") %>'></asp:Label>
       </div>
     </ItemTemplate>
     <AlternatingItemTemplate>
-      <div class="rlvA" style="min-height:150px;">
-          <img style="float:left; padding-right:15px;"  src='<%# Eval("ThumbNail") %>' />
-          <asp:Label ID="Label1" runat="server" Text='<%# Eval("DisplayName") %>'></asp:Label><br />
-          <asp:Label ID="Label2" runat="server" Text='<%# Eval("DestinationURL") %>'></asp:Label>
+      <div class="rlvA" style="min-height: 150px;">
+        <img style="float: left; padding-right: 15px;" src='<%# Eval("ThumbNail") %>' />
+        <asp:LinkButton ID="LinkButton1" runat="server" OnClick="LinkButton1_Click" CommandName="Navigate" CommandArgument='<%# Eval("Id") %>'><%# Eval("DisplayName") %></asp:LinkButton><br />
+        <asp:Label ID="Label2" runat="server" Text='<%# Eval("Description") %>'></asp:Label>
       </div>
     </AlternatingItemTemplate>
     <ValidationSettings EnableValidation="False" EnableModelValidation="False"></ValidationSettings>
   </telerik:RadListView>
-  <telerik:RadPanelBar RenderMode="Auto" Skin="Silk" ID="RadPanelBar1" runat="server" Width="100%" ExpandMode="MultipleExpandedItems" AllowCollapseAllItems="true"
-    DataSourceID="ObjectDataSource1" DataFieldID="Id" DataFieldParentID="GroupId" DataNavigateUrlField="DestinationURL" DataTextField="DisplayName">
-  </telerik:RadPanelBar>
   <asp:ObjectDataSource ID="ObjectDataSource1" runat="server" SelectMethod="GetAllResourceLinks" TypeName="USFarmExchange.SqlDatasets"></asp:ObjectDataSource>
   <br />
   <br />

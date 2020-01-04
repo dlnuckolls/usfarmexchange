@@ -18,5 +18,10 @@ namespace USFarmExchange.areas {
     protected void Unnamed_SelectedIndexChanged(object sender, EventArgs e) {
 
     }
+
+    protected void LinkButton1_Click(object sender, EventArgs e) {
+
+      Page.ClientScript.RegisterClientScriptBlock(this.GetType(), "myscript", "window.open('','_blank','location=0,menubar=0,status=1,titlebar=1,toolbar=1');", true);
+    }
   }
 }

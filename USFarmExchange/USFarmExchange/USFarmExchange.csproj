@@ -172,6 +172,7 @@
   <ItemGroup>
     <Content Include="admin\AdminHome.aspx" />
     <Content Include="admin\AdminPages.aspx" />
+    <Content Include="admin\AdminResourceLinks.aspx" />
     <Content Include="admin\Dashboard.aspx" />
     <Content Include="admin\ForgotPassword.aspx" />
     <Content Include="admin\Login.aspx" />
@@ -3790,6 +3791,13 @@
     <Compile Include="admin\AdminPages.aspx.designer.cs">
       <DependentUpon>AdminPages.aspx</DependentUpon>
     </Compile>
+    <Compile Include="admin\AdminResourceLinks.aspx.cs">
+      <DependentUpon>AdminResourceLinks.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\AdminResourceLinks.aspx.designer.cs">
+      <DependentUpon>AdminResourceLinks.aspx</DependentUpon>
+    </Compile>
     <Compile Include="admin\Dashboard.aspx.cs">
       <DependentUpon>Dashboard.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -4081,7 +4089,7 @@
           <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
         </WebProjectProperties>
       </FlavorProperties>
-      <UserProperties UseJQuerySupport="True" UseAjaxifiedTemplates="True" />
+      <UserProperties UseAjaxifiedTemplates="True" UseJQuerySupport="True" />
     </VisualStudio>
   </ProjectExtensions>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
