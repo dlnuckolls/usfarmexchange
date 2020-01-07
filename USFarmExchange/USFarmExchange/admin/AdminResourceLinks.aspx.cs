@@ -18,7 +18,7 @@ namespace USFarmExchange.admin {
     }
 
     protected void gResourceLinks_CancelCommand(object sender, Telerik.Web.UI.GridCommandEventArgs e) { ((RadGrid)sender).Rebind(); }
-    protected void gResourceLinks_NeedDataSource(object sender, Telerik.Web.UI.GridNeedDataSourceEventArgs e) { ((RadGrid)sender).DataSource = SqlDatasets.GetAllResourceLinks(); }
+    protected void gResourceLinks_NeedDataSource(object sender, Telerik.Web.UI.GridNeedDataSourceEventArgs e) { ((RadGrid)sender).DataSource = SqlDatasets.GetAdminResourceLinks(); }
 
     protected void gResourceLinks_EditCommand(object sender, Telerik.Web.UI.GridCommandEventArgs e) {
 

@@ -37,12 +37,12 @@
                     <telerik:LayoutColumn Span="4" SpanMd="4" SpanSm="12">
                       <div style="display: block; width: 150px !important; margin-top: 4px; margin-bottom: 4px; text-align: left; font-weight: bold;">Title</div>
                       <telerik:RadLabel ID="RadLabel1" runat="server" Text='<%# Bind("Title") %>' Width="100%" />
-                      <div style="display: block; width: 150px !important; margin-top: 4px; margin-bottom: 4px; text-align: left; font-weight: bold;">Display Name</div>
-                      <telerik:RadLabel ID="RadLabel2" runat="server" Text='<%# Bind("DisplayName") %>' Width="100%" />
+                      <div style="display: block; width: 150px !important; margin-top: 4px; margin-bottom: 4px; text-align: left; font-weight: bold;">URL</div>
+                      <telerik:RadLabel ID="RadLabel2" runat="server" Text='<%# Bind("URL") %>' Width="100%" />
                       <div style="display: block; width: 150px !important; margin-top: 4px; margin-bottom: 4px; text-align: left; font-weight: bold;">Thumbnail</div>
                       <telerik:RadLabel ID="RadLabel3" runat="server" Text='<%# Bind("ThumbNail") %>' Width="100%" />
-                      <div style="display: block; width: 150px !important; margin-top: 4px; margin-bottom: 4px; text-align: left; font-weight: bold;">Active</div>
-                      <telerik:RadLabel ID="RadLabel4" runat="server" Text='<%# (Eval("Active").ToString() == "1") ? "Active" : "Inactive" %>' Width="100%" />
+                      <div style="display: block; width: 150px !important; margin-top: 4px; margin-bottom: 4px; text-align: left; font-weight: bold;">Is Active</div>
+                      <telerik:RadLabel ID="RadLabel4" runat="server" Text='<%# (Eval("Active").ToString() == " True") ? "Active" : "Inactive" %>' Width="100%" />
                     </telerik:LayoutColumn>
                     <telerik:LayoutColumn Span="8" SpanMd="8" SpanSm="12">
                       <div class="adminTiles">
@@ -60,15 +60,15 @@
                 <telerik:LayoutRow>
                   <Columns>
                     <telerik:LayoutColumn Span="4" SpanMd="4" SpanSm="12">
-                      <div style="display: block; width: 150px !important; margin-top: 4px; margin-bottom: 4px; text-align: left; font-weight: bold;">Position Title</div>
-                      <telerik:RadTextBox ID="CareerTitle" runat="server" RenderMode="Auto" Width="100%" EmptyMessage="Enter a Title" Skin="Silk" Text='<%# Bind("Title") %>' />
-                      <div style="display: block; width: 150px !important; margin-top: 4px; margin-bottom: 4px; text-align: left; font-weight: bold;">Display Name</div>
-                      <telerik:RadTextBox ID="RadTextBox1" runat="server" RenderMode="Auto" Width="100%" EmptyMessage="Enter a Title" Skin="Silk" Text='<%# Bind("DisplayName") %>' />
+                      <div style="display: block; width: 150px !important; margin-top: 4px; margin-bottom: 4px; text-align: left; font-weight: bold;">Display</div>
+                      <telerik:RadTextBox ID="ResourceTitle" runat="server" RenderMode="Auto" Width="100%" EmptyMessage="Enter a Title" Skin="Silk" Text='<%# Bind("Title") %>' />
+                      <div style="display: block; width: 150px !important; margin-top: 4px; margin-bottom: 4px; text-align: left; font-weight: bold;">URL</div>
+                      <telerik:RadTextBox ID="ResourceURL" runat="server" RenderMode="Auto" Width="100%" EmptyMessage="Enter a Title" Skin="Silk" Text='<%# Bind("URL") %>' />
                       <div style="display: block; width: 150px !important; margin-top: 4px; margin-bottom: 4px; text-align: left; font-weight: bold;">Thumbnail</div>
                     </telerik:LayoutColumn>
                     <telerik:LayoutColumn Span="8" SpanMd="8" SpanSm="12">
                       <div class="adminTiles">
-                        <telerik:RadEditor RenderMode="Lightweight" runat="server" ID="CareerDescription" SkinID="DefaultSetOfTools"
+                        <telerik:RadEditor RenderMode="Lightweight" runat="server" ID="ResourceDescription" SkinID="DefaultSetOfTools"
                           Height="675px" Skin="Silk" Width="100%" EditModes="Design" Content='<%# Bind("Description") %>'>
                           <Tools>
                             <telerik:EditorToolGroup Tag="MainToolbar">

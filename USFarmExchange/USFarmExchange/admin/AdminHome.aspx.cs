@@ -16,20 +16,12 @@ namespace USFarmExchange.admin {
       AdminHomeToolHeader.Text = SessionInfo.PageContent(PageContentBlocks.AdminHomeToolHeader);
     }
 
-    protected void UserAccounts_Click(object sender, EventArgs e) {
-
-    }
-
-    protected void AdminUsers_Click(object sender, EventArgs e) {
-
-    }
-
-    protected void SystemValues_Click(object sender, EventArgs e) {
-
-    }
-
     protected void EditPageAdmin_Click(object sender, EventArgs e) {
       Response.Redirect("~/admin/AdminPages.aspx");
+    }
+
+    protected void ResourceLinks_Click(object sender, EventArgs e) {
+      Response.Redirect("~/admin/AdminResourceLinks.aspx");
     }
   }
 }

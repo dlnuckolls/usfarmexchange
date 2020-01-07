@@ -26,6 +26,15 @@ SELECT Id, DisplayName, DestinationURL, GroupId, ThumbNail, Description FROM
          ORDER BY [Count], LastClicked DESC)
   ORDER BY [Count], LastClicked DESC) b;";
 
+    public const string SQL_GET_ALL_RESOURCE_LINKS = @"
+SELECT [Id],[Title],[URL],[Count],[LastClicked],[Active],[ThumbNail],[Description] 
+  FROM dbo.ResourceLinks
+ ORDER BY [Count], LastClicked DESC;";
+
+    public const string SQL_UPDATE_RESOURCE_LINK = "UPDATE dbo.ResourceLinks SET Count = Count + 1, LastClicked = GETDATE() WHERE Id = {0};";
+
+    public const string SQL_FETCH_RESOURCE_LINK_URL = "SELECT URL FROM dbo.ResourceLinks WHERE Id = {0};";
+
     #region System Settings
     public const string SQL_GET_MAIL_SETTINGS = "SELECT Id, MailServer, ServerPort, SmtpUser, SmtpPassword, FromEmail, FromUsername, RequireAuth, RequireSsl FROM dbo.SystemConfigs;";
     public const string SQL_UPDATE_MAIL_SETTINGS = "UPDATE dbo.SystemConfigs SET MailServer = '{0}', ServerPort = {1}, SmtpUser = '{2}', SmtpPassword = '{3}', FromEmail = '{4}', FromUsername = '{5}', RequireAuth = {6}, RequireSsl = {7} WHERE Id = '{8}';";

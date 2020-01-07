@@ -49,31 +49,13 @@ namespace USFarmExchange.admin {
         protected global::System.Web.UI.WebControls.Literal AdminHomeToolHeader;
         
         /// <summary>
-        /// UserAccounts control.
+        /// ResourceLinks control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::Telerik.Web.UI.RadImageAndTextTile UserAccounts;
-        
-        /// <summary>
-        /// AdminUsers control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::Telerik.Web.UI.RadImageAndTextTile AdminUsers;
-        
-        /// <summary>
-        /// SystemValues control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::Telerik.Web.UI.RadImageAndTextTile SystemValues;
+        protected global::Telerik.Web.UI.RadImageAndTextTile ResourceLinks;
         
         /// <summary>
         /// EditPageAdmin control.
