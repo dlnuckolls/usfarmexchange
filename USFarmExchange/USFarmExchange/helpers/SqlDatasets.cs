@@ -13,5 +13,6 @@ namespace USFarmExchange {
     //Pages
     public static DataTable GetAllPageLocations() => SqlHelpers.Select(SqlStatements.SQL_GET_PAGE_LOCATIONS);
     public static DataTable GetAllResourceLinks() => SqlHelpers.Select(SqlStatements.SQL_GET_RESOURCE_LINKS);
+    public static DataTable GetAdminResourceLinks() => SqlHelpers.Select(SqlStatements.SQL_GET_ALL_RESOURCE_LINKS);
   }
 }

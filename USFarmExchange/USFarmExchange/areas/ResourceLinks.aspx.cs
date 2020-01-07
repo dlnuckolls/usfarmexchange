@@ -15,8 +15,14 @@ namespace USFarmExchange.areas {
       ResourceLinksDescription.Text = SessionInfo.PageContent(PageContentBlocks.ResourceLinksContent);
     }
 
-    protected void RadPanelBar1_ItemClick(object sender, Telerik.Web.UI.RadPanelBarEventArgs e) {
-      var x = string.Empty;
+    protected void Unnamed_SelectedIndexChanged(object sender, EventArgs e) {
+
+    }
+
+    protected void LinkButton1_Click(object sender, EventArgs e) {
+      SqlHelpers.Update(SqlStatements.SQL_UPDATE_RESOURCE_LINK.FormatWith(((LinkButton)sender).CommandArgument));
+      Page.ClientScript.RegisterClientScriptBlock(this.GetType(), "myscript", "window.open('{0}','_blank','location=0,menubar=0,status=1,titlebar=1,toolbar=1,resizable=yes,width=1024,height=768');".FormatWith(
+        SqlHelpers.SelectScalar(SqlStatements.SQL_FETCH_RESOURCE_LINK_URL.FormatWith(((LinkButton)sender).CommandArgument)).ToString()), true);
     }
   }
 }

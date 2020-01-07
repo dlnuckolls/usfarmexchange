@@ -389,7 +389,33 @@ BEGIN
   COMMIT TRANSACTION Version1_10
 END
 
+SELECT @majorVersion = 1, @minorVersion = 11;
+IF NOT EXISTS(SELECT * FROM SchemaVersion WHERE (MajorVersion = @majorVersion) AND (MinorVersion = @minorVersion))
+BEGIN
+  BEGIN TRANSACTION Version1_11
+    
+    ALTER TABLE [dbo].[ResourceLinks]
+      ADD [ThumbNail]   VARCHAR(255)  NULL,
+          [Description] VARCHAR(2000) NULL;
+    
+    INSERT INTO SchemaVersion values (newid(), @majorVersion, @minorVersion, getutcdate());
+  COMMIT TRANSACTION Version1_11
+END
 
+
+SELECT @majorVersion = 1, @minorVersion = 12;
+IF NOT EXISTS(SELECT * FROM SchemaVersion WHERE (MajorVersion = @majorVersion) AND (MinorVersion = @minorVersion))
+BEGIN
+  BEGIN TRANSACTION Version1_12
+    INSERT INTO [dbo].[PageLocations] (Id, [Description])
+    VALUES 	('BB0F852F-2C0E-4C2E-8CE0-59319318BC38', 'Resource Link Management');
+        
+					   
+     INSERT INTO [dbo].[PageContent] ([PageLocation], [Description])
+     VALUES ('BB0F852F-2C0E-4C2E-8CE0-59319318BC38', 'Resource Link Management');
+    INSERT INTO SchemaVersion values (newid(), @majorVersion, @minorVersion, getutcdate());
+  COMMIT TRANSACTION Version1_12
+END
 
 
 /* 

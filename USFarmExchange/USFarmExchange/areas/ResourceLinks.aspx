@@ -9,9 +9,28 @@
   <asp:Literal ID="ResourceLinksDescription" runat="server" />
   <br />
   <br />
-  <telerik:RadPanelBar RenderMode="Auto" Skin="Silk" ID="RadPanelBar1" runat="server" Width="100%" ExpandMode="FullExpandedItem" AllowCollapseAllItems="true"
-    DataSourceID="ObjectDataSource1" DataFieldID="Id" DataFieldParentID="GroupId" DataNavigateUrlField="DestinationURL" DataTextField="DisplayName">
-  </telerik:RadPanelBar>
+  <telerik:RadListView runat="server" DataSourceID="ObjectDataSource1" AllowNaturalSort="True" Skin="WebBlue" OnSelectedIndexChanged="Unnamed_SelectedIndexChanged">
+    <LayoutTemplate>
+      <div class="RadListView RadListView_WebBlue">
+        <div runat="server" id="itemPlaceholder"></div>
+      </div>
+    </LayoutTemplate>
+    <ItemTemplate>
+      <div class="rlvI" style="min-height: 150px;">
+        <img style="float: left; padding-right: 15px;" src='<%# Eval("ThumbNail") %>' />
+        <asp:LinkButton ID="LinkButton1" runat="server" OnClick="LinkButton1_Click" CommandName="Navigate" CommandArgument='<%# Eval("Id") %>'><%# Eval("DisplayName") %></asp:LinkButton><br />
+        <asp:Label ID="Label2" runat="server" Text='<%# Eval("Description") %>'></asp:Label>
+      </div>
+    </ItemTemplate>
+    <AlternatingItemTemplate>
+      <div class="rlvA" style="min-height: 150px;">
+        <img style="float: left; padding-right: 15px;" src='<%# Eval("ThumbNail") %>' />
+        <asp:LinkButton ID="LinkButton1" runat="server" OnClick="LinkButton1_Click" CommandName="Navigate" CommandArgument='<%# Eval("Id") %>'><%# Eval("DisplayName") %></asp:LinkButton><br />
+        <asp:Label ID="Label2" runat="server" Text='<%# Eval("Description") %>'></asp:Label>
+      </div>
+    </AlternatingItemTemplate>
+    <ValidationSettings EnableValidation="False" EnableModelValidation="False"></ValidationSettings>
+  </telerik:RadListView>
   <asp:ObjectDataSource ID="ObjectDataSource1" runat="server" SelectMethod="GetAllResourceLinks" TypeName="USFarmExchange.SqlDatasets"></asp:ObjectDataSource>
   <br />
   <br />

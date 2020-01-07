@@ -11,25 +11,17 @@ namespace USFarmExchange.admin {
       // Set page name in the title section
       SessionInfo.CurrentPage = PageNames.Admin;
       TitleTag.Text = SessionInfo.DisplayCurrentPage;
-      if(!SessionInfo.IsAuthenticated) Response.Redirect("Login.aspx");
+      if(!SessionInfo.IsAuthenticated) Response.Redirect("/");
       AdminHomeTop.Text = SessionInfo.PageContent(PageContentBlocks.AdminHomeTop);
       AdminHomeToolHeader.Text = SessionInfo.PageContent(PageContentBlocks.AdminHomeToolHeader);
     }
 
-    protected void UserAccounts_Click(object sender, EventArgs e) {
-
-    }
-
-    protected void AdminUsers_Click(object sender, EventArgs e) {
-
-    }
-
-    protected void SystemValues_Click(object sender, EventArgs e) {
-
-    }
-
     protected void EditPageAdmin_Click(object sender, EventArgs e) {
       Response.Redirect("~/admin/AdminPages.aspx");
+    }
+
+    protected void ResourceLinks_Click(object sender, EventArgs e) {
+      Response.Redirect("~/admin/AdminResourceLinks.aspx");
     }
   }
 }
