@@ -10,16 +10,14 @@ namespace USFarmExchange {
     private const string USER = "a7107c8f-ff15-4d5a-bba1-6db286fcef0a";
     private const string ADMIN = "b6522703-8844-4cff-8fc1-916ba90f515b";
     public const string SQL_GET_RESOURCE_LINKS = @"
-SELECT 0 Id, 'Resource Links' DisplayName, '' DestinationURL, NULL GroupId, 'https://via.placeholder.com/150' ThumbNail
-UNION ALL
-SELECT Id, DisplayName, DestinationURL, 0 GroupId, 'https://via.placeholder.com/150' ThumbNail FROM 
-(SELECT TOP 3 Id, Title DisplayName, URL DestinationURL, 'Most Popular' GroupId, 'https://via.placeholder.com/150' ThumbNail 
+SELECT Id, DisplayName, DestinationURL, GroupId, ThumbNail, Description FROM 
+(SELECT TOP 3 Id, Title DisplayName, URL DestinationURL, 'Most Popular' GroupId, ISNULL('https://via.placeholder.com/150',ThumbNail) ThumbNail, Description 
    FROM dbo.ResourceLinks
   WHERE Active = 1
   ORDER BY [Count], LastClicked DESC) a
  UNION ALL
-SELECT Id, DisplayName, DestinationURL, 0 GroupId, 'https://via.placeholder.com/150' ThumbNail FROM
- (SELECT TOP 10 Id, Title DisplayName, URL DestinationURL, 'Useful Links' GroupId, 'https://via.placeholder.com/150' ThumbNail 
+SELECT Id, DisplayName, DestinationURL, GroupId, ThumbNail, Description FROM
+ (SELECT TOP 10 Id, Title DisplayName, URL DestinationURL, 'Useful Links' GroupId, ISNULL('https://via.placeholder.com/150',ThumbNail) ThumbNail, Description 
    FROM dbo.ResourceLinks
   WHERE Active = 1 AND Id NOT IN 
        (SELECT TOP 3 Id 
@@ -27,6 +25,15 @@ SELECT Id, DisplayName, DestinationURL, 0 GroupId, 'https://via.placeholder.com/
          WHERE Active = 1
          ORDER BY [Count], LastClicked DESC)
   ORDER BY [Count], LastClicked DESC) b;";
+
+    public const string SQL_GET_ALL_RESOURCE_LINKS = @"
+SELECT [Id],[Title],[URL],[Count],[LastClicked],[Active],[ThumbNail],[Description] 
+  FROM dbo.ResourceLinks
+ ORDER BY [Count], LastClicked DESC;";
+
+    public const string SQL_UPDATE_RESOURCE_LINK = "UPDATE dbo.ResourceLinks SET Count = Count + 1, LastClicked = GETDATE() WHERE Id = {0};";
+
+    public const string SQL_FETCH_RESOURCE_LINK_URL = "SELECT URL FROM dbo.ResourceLinks WHERE Id = {0};";
 
     #region System Settings
     public const string SQL_GET_MAIL_SETTINGS = "SELECT Id, MailServer, ServerPort, SmtpUser, SmtpPassword, FromEmail, FromUsername, RequireAuth, RequireSsl FROM dbo.SystemConfigs;";

@@ -16,12 +16,8 @@
               <h2><span style="color: #3366ff;">US Farm Exchange Administrative Tools</span></h2>
             </div>
             <div class="adminTiles">
-              <telerik:RadImageAndTextTile ID="UserAccounts" runat="server" BackColor="Transparent"
-                ImageUrl="~/images/menutiles/icons8-group.png" OnClick="UserAccounts_Click" AutoPostBack="True" />
-              <telerik:RadImageAndTextTile ID="AdminUsers" runat="server" BackColor="Transparent"
-                ImageUrl="~/images/menutiles/icons8-find_user.png" OnClick="AdminUsers_Click" AutoPostBack="True" />
-              <telerik:RadImageAndTextTile ID="SystemValues" runat="server" BackColor="Transparent"
-                ImageUrl="~/images/menutiles/icons8-accept_database.png" OnClick="SystemValues_Click" AutoPostBack="True" />
+              <telerik:RadImageAndTextTile ID="ResourceLinks" runat="server" BackColor="Transparent" 
+                ImageUrl="~/images/menutiles/icons8-domain.png" OnClick="ResourceLinks_Click" AutoPostBack="True" />
               <telerik:RadImageAndTextTile ID="EditPageAdmin" runat="server" BackColor="Transparent"
                 ImageUrl="~/images/menutiles/icons8-edit_image.png" OnClick="EditPageAdmin_Click" AutoPostBack="True" />
             </div>
