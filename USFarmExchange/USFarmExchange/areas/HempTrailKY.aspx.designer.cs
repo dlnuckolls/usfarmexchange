@@ -10,7 +10,7 @@
 namespace USFarmExchange.areas {
     
     
-    public partial class HempHistoryKY {
+    public partial class HempTrailKY {
         
         /// <summary>
         /// TitleTag control.
@@ -20,33 +20,6 @@ namespace USFarmExchange.areas {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Literal TitleTag;
-        
-        /// <summary>
-        /// form1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
-        
-        /// <summary>
-        /// RadScriptManager1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::Telerik.Web.UI.RadScriptManager RadScriptManager1;
-        
-        /// <summary>
-        /// RadSkinManager1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::Telerik.Web.UI.RadSkinManager RadSkinManager1;
         
         /// <summary>
         /// ImageMap1 control.

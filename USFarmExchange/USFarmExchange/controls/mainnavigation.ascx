@@ -6,51 +6,50 @@
         <telerik:RadMenuItem IsSeparator="true" />
         <telerik:RadMenuItem Text="Conversation">
             <Items>
-        <telerik:RadMenuItem IsSeparator="true" />
+
                 <telerik:RadMenuItem Text="News" NavigateUrl="~/areas/News.aspx" />
-        <telerik:RadMenuItem IsSeparator="true" />
+                <telerik:RadMenuItem IsSeparator="true" />
                 <telerik:RadMenuItem Text="Podcasts" NavigateUrl="~/areas/Podcasts.aspx" />
-        <telerik:RadMenuItem IsSeparator="true" />
+                <telerik:RadMenuItem IsSeparator="true" />
                 <telerik:RadMenuItem Text="Forum" NavigateUrl="~/forum" />
             </Items>
         </telerik:RadMenuItem>
         <telerik:RadMenuItem IsSeparator="true" />
         <telerik:RadMenuItem Text="History" NavigateUrl="~/areas/education.aspx">
             <Items>
-                <telerik:RadMenuItem IsSeparator="true" />
+
                 <telerik:RadMenuItem Text="History of Hemp in KY" NavigateUrl="~/areas/HempHistoryKY.aspx" />
             </Items>
         </telerik:RadMenuItem>
         <telerik:RadMenuItem IsSeparator="true" />
-        <telerik:RadMenuItem Text="Agritourism" NavigateUrl="~/areas/agritourism.aspx" />
+        <telerik:RadMenuItem Text="Agritourism" NavigateUrl="~/areas/agritourism.aspx">
+            <Items>
+
+                <telerik:RadMenuItem Text="Kentucky Hemp Trail" NavigateUrl="~/areas/HempTrailKY.aspx" />
+            </Items>
+        </telerik:RadMenuItem>
+
         <telerik:RadMenuItem IsSeparator="true" />
-        <telerik:RadMenuItem Text="Insurance" NavigateUrl="~/areas/Insurance.aspx" >
-        <Items>
+        <telerik:RadMenuItem Text="Insurance" NavigateUrl="~/areas/Insurance.aspx">
+            <Items>
                 <telerik:RadMenuItem Text="Crop Insurance" NavigateUrl="~/areas/crop-insurance.aspx" />
-        </Items>
-            </telerik:RadMenuItem>
+            </Items>
+        </telerik:RadMenuItem>
         <telerik:RadMenuItem IsSeparator="true" />
-        <telerik:RadMenuItem Text="Financial Services" NavigateUrl="~/areas/Financial-Services.aspx"  />
-                        
+        <telerik:RadMenuItem Text="Financial Services" NavigateUrl="~/areas/Financial-Services.aspx" />
+
         <telerik:RadMenuItem IsSeparator="true" />
-        <telerik:RadMenuItem Text="Helpful Links" NavigateUrl="~/areas/ResourceLinks.aspx"/>
-       <%--   <Items>
+        <telerik:RadMenuItem Text="Helpful Links" NavigateUrl="~/areas/ResourceLinks.aspx" />
+
         <telerik:RadMenuItem IsSeparator="true" />
-        <telerik:RadMenuItem Text="Technology" NavigateUrl="~/areas/Technology.aspx" />
-        --%>
-            <%--</Items>--%>
-<%--   Hiding menu item per 12/7/2019 meeting.     --%>
-       <%-- <telerik:RadMenuItem IsSeparator="true" />
-        <telerik:RadMenuItem Text="Compliance" NavigateUrl="~/areas/Compliance.aspx" />--%>
-          <telerik:RadMenuItem IsSeparator="true" />
-        <telerik:RadMenuItem Text="Partners" NavigateUrl="~/areas/Partners.aspx" >  
-        <Items>
-            <telerik:RadMenuItem IsSeparator="true" />
+        <telerik:RadMenuItem Text="Partners" NavigateUrl="~/areas/Partners.aspx">
+            <Items>
+
                 <telerik:RadMenuItem Text="Magnolia Bank" />
-              </Items>
-           </telerik:RadMenuItem>
+            </Items>
+        </telerik:RadMenuItem>
         <telerik:RadMenuItem IsSeparator="true" />
-                <telerik:RadMenuItem Text="About Us" NavigateUrl="~/areas/aboutus.aspx" />
+        <telerik:RadMenuItem Text="About Us" NavigateUrl="~/areas/aboutus.aspx" />
 
     </Items>
 </telerik:RadMenu>
