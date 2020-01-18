@@ -9,7 +9,6 @@
 
                 <telerik:RadMenuItem Text="News" NavigateUrl="~/areas/News.aspx" />
                 <telerik:RadMenuItem IsSeparator="true" />
-                <telerik:RadMenuItem Text="Podcasts" NavigateUrl="~/areas/Podcasts.aspx" />
                 <telerik:RadMenuItem IsSeparator="true" />
                 <telerik:RadMenuItem Text="Forum" NavigateUrl="~/forum" />
             </Items>
@@ -25,7 +24,7 @@
         <telerik:RadMenuItem Text="Agritourism" NavigateUrl="~/areas/agritourism.aspx">
             <Items>
 
-                <telerik:RadMenuItem Text="Kentucky Hemp Trail" NavigateUrl="~/areas/HempTrailKY.aspx" />
+                <telerik:RadMenuItem Text="Heritage Hemp Trail" NavigateUrl="~/areas/HempTrailKY.aspx" />
             </Items>
         </telerik:RadMenuItem>
 

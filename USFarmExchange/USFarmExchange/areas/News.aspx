@@ -6,57 +6,41 @@
  </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceholder1" runat="server">
     <div class="article">
-        <img src="/images/iStock-1029777638.jpg" />
-        <h2>What’s the secret to getting farmers hooked on agtech apps?</h2>
-        <h5>August 18, 2019</h5>
-        <h5><i>Joe Gan</i></h5>
-        <p>Keeping an app’s user interface sticky means making sure users come back regularly. For app-based startups, it’s an important factor in seizing opportunities to monetize and innovate. There’s no “one size fits all” approach, of course; strategies must be customized for a target audience.</p>
+        <img src="/images/JohnDeereArticle.jpg" />
+        <h2>Deere Shows Its Tech Side at Consumer Electronics Show</h2>
+        <h5>January 9, 2020</h5>
+        <h5><i>John Herath</i></h5>
+        <p>Amid the acres of drones, gadgets, games, appliances and self-driving cars at the Consumer Electronics Show (CES), a John Deere sprayer fully spreads its boom across one of the largest displays in the sprawling Las Vegas Convention Center. It’s the second year Deere has joined the largest tech show in the world as the company looks to build its cachet among the tech elite and tell the tech story of ag to a consumer audience.</p>
         <p>
-            So what app features keep farmers in rural areas whipping out their phones daily and buying into startups’ products and services? AFN spoke to agtech app designers building products for Asia’s developing markets at the World Economic Forum-established Grow Asia panel on August 15, hosted as part of a digital learning series. 
+            <b>The company’s inaugural display in 2019 featured a combine, which drew a striking contrast to the rest of the gadgetry at the show.</b> Deere’s director of precision agriculture. “We really got to tell the story of farming, and we got to tell the story of how farmers adopt technology, how farmers use technology, and how farmers want to farm productively efficiently and sustainably. So we're back to continue to tell that story.”
         </p>
         <p>
-            For Myanmar-based Impact Terra, the key is building digital services that farmers “can do something with and extract value,” says founder and CEO Erwin Sikma. “We need to provide higher value, to give something more valuable than what’s available.”  
+            This year, Deere lets the sprayer do the talking of how much of the tech shown off elsewhere at CES comes together in a single piece of ag equipment. Self-driving, remote sensing, GPS, precision imaging, machine learning – it’s all there in a single piece of equipment. 
         </p>
         <p>
-            Impact Terra is an agtech startup with a social mission to boost Myanmar’s smallholder farmers’ productivity, and therefore livelihoods. It raised nearly $3 million in grant funding in March for its mobile and web-based app called Golden Paddy that offers farmers crop and weather information, advice, access to market services and financing.
-        </p>
+            But why does John Deere choose to invest heavily in a trade show devoted to consumer equipment? </p>
         <p>
             One trend working in Impact Terra’s favor is Myanmar’s meteoric rise to mobile connectivity. When the country emerged from decades of isolation imposed by military dictatorship in 2011, only North Korea had fewer mobile phones. Today, 80% of Myanmar’s 53-million-strong population owns a smartphone, including 70% of farmers. 
         </p>
         <p>
-            But despite Myanmar’s high mobile penetration rate, encouraging users to download and use its app has been challenging for Impact Terra, whose Golden Paddy app reaches three million monthly unique people. “There needs to be a low barrier to usage and in Myanmar. The GooglePlay store is not being used, and farmers are not updating their apps regularly,” says Sikma. 
+            “I always say farmers are consumers too, we just happen to have the biggest gadget of the show,” Sanchez explains. “But, in a broader sense, I think it's important to educate the mainstream community on technology, and just the mainstream overall, about what agriculture really is, how important it is to the world and to food production, and how technology can play a key role in helping farmers achieve those levels of productivity.”
         </p>
         <p>
-            One thing that remains important to Impact Terra’s users: human interaction. The company strives to be responsive to that, says Sikma. “This doesn’t mean we have our people meeting farmers face-to-face all the time,” he explains, but the company recognizes that it is key to building trust with users. 
+            <b>The John Deere booth also shows off new sprayer nozzle technology designed to respond instantly to changes in wind to reduce drift by modulating droplet size.</b> Participants can sit in the latest Deere tractor cab and can see how machine learning is helping Blue River Technology develop a sprayer that could reduce herbicide use up to 90% by targeting sprays at individual weeds.
         </p>
         <p>
-            Tapping untapped youth potential
+            Farmer Jeremy Jack of Mississippi was on-site to answer questions about ag tech in the Deere booth at CES. He says the ag display is generating interest from other tech companies about the needs and pain points for farmers.
         </p>
         <p>
-            Indonesian e-commerce platform TaniHub, which connects rural farmers to customers, takes a different approach to enhancing its product’s stickiness: it taps into Millennials’ tech habits–specifically, how inseparable they are from their phones and how quickly they pick up new tech. 
+            <b>“[The questions have] been around sensors and also data flow,” Jack says.</b> “Who owns the data? How does the data move around? How do you use the data? How easily does it move back and forth? And then all the different sensors. So, I think some of that comes from people that are tied into data servers or people that are working on sensors. So that's one thing that's really interesting here is a lot of the people at the show have some part of working in some type of the technology field, and they want to know how they can fit in agriculture today.”
         </p>
         <p>
-            Like Myanmar, Indonesia has a substantial number of active internet users–nearly 65% by one study’s estimates. That figure is set to rise.
+            The CES display is also designed to draw the attention of investors and engineers. “Maybe it engages some younger tech talent, and helping solve tech agricultural problems, or it engages other companies that are interested in helping world problems in agriculture,” Sanchez explains.
         </p>
         <p>
-            “The low-hanging fruit is the youngsters,” says Sariyo, TaniHub’s head of business development, who goes by one name. “Youngsters are more curious, and they want to have a quick win, as well as easy and fast access.”
+            More than 175,000 tech leaders from around the world will attend the 2020 CES which runs through Friday.
         </p>
-        <p>
-            TaniHub is among a crop of startups benefitting from a mini agtech funding frenzy in Asia. Its parent company, agribusiness marketplace and fintech platform TaniGroup closed $10 million Series A funding round led by Singapore-based Openspace Ventures in May. Since then, TaniHub has recruited roughly 30,000 to its platform and is eyeing broader expansion across Indonesia with the new injection of capital.
-        </p>
-        <p>
-            “We sort of forced [young people] to spread the word to friends by giving them incentives,” Sariyo jokes. 
-        </p>
-        <p>
-            But its incentives are highly targeted because to build its user base, TaniHub relies largely on word-of-mouth.
-        </p>
-        <p>
-            “Mass influence is very difficult art, and we aren’t going there. We aren’t going to gather all farmers in one village and then force them to work with us,” says Sariyo. “We are using the champion approach, where we work with one or two top farmers. And when it works, they spread the word about us by telling their friends.” 
-        </p>
-        <p>
-            If there was a key takeaway from the event, it was that whatever a company’s core offering, adoption depends on user experience and enabling users to recognize value. Without that, retention, or stickiness, will suffer, as will growth.
-        </p>
-        <p>
+         <p>
             <a href="/forum/postmessage?f=2">Start a discussion...</a>
         </p>
     </div>

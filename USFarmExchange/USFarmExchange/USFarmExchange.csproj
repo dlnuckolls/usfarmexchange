@@ -3709,6 +3709,7 @@
     <Content Include="images\icons8-refresh.png" />
     <Content Include="images\icons8-rss.png" />
     <Content Include="images\iStock-1029777638.jpg" />
+    <Content Include="images\JohnDeereArticle.jpg" />
     <Content Include="images\KY_Hemp_Field.jpg" />
     <Content Include="images\lane_trees.png" />
     <Content Include="images\lane_treesrev.jpg" />
@@ -4108,7 +4109,7 @@
           <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
         </WebProjectProperties>
       </FlavorProperties>
-      <UserProperties UseAjaxifiedTemplates="True" UseJQuerySupport="True" />
+      <UserProperties UseJQuerySupport="True" UseAjaxifiedTemplates="True" />
     </VisualStudio>
   </ProjectExtensions>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
