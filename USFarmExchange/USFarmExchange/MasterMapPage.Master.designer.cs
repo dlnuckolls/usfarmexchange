@@ -7,19 +7,19 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace USFarmExchange.areas {
+namespace USFarmExchange {
     
     
-    public partial class HempHistoryKY {
+    public partial class MasterMapPage {
         
         /// <summary>
-        /// TitleTag control.
+        /// head control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal TitleTag;
+        protected global::System.Web.UI.WebControls.ContentPlaceHolder head;
         
         /// <summary>
         /// form1 control.
@@ -31,66 +31,57 @@ namespace USFarmExchange.areas {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
-        /// RadScriptManager1 control.
+        /// MasterLayout control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::Telerik.Web.UI.RadScriptManager RadScriptManager1;
+        protected global::Telerik.Web.UI.RadPageLayout MasterLayout;
         
         /// <summary>
-        /// RadSkinManager1 control.
+        /// SocialLinks control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::Telerik.Web.UI.RadSkinManager RadSkinManager1;
+        protected global::USFarmExchange.controls.SocialLinks SocialLinks;
         
         /// <summary>
-        /// ImageMap1 control.
+        /// UserInteraction control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ImageMap ImageMap1;
+        protected global::USFarmExchange.controls.UserInteraction UserInteraction;
         
         /// <summary>
-        /// tooltip control.
+        /// mainnavigation control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::Telerik.Web.UI.RadToolTip tooltip;
+        protected global::USFarmExchange.MainNavigation mainnavigation;
         
         /// <summary>
-        /// RadToolTip1 control.
+        /// MainContent1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::Telerik.Web.UI.RadToolTip RadToolTip1;
+        protected global::System.Web.UI.WebControls.ContentPlaceHolder MainContent1;
         
         /// <summary>
-        /// RadToolTip2 control.
+        /// FooterLayout control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::Telerik.Web.UI.RadToolTip RadToolTip2;
-        
-        /// <summary>
-        /// RadToolTip3 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::Telerik.Web.UI.RadToolTip RadToolTip3;
+        protected global::USFarmExchange.controls.FooterLayout FooterLayout;
     }
 }

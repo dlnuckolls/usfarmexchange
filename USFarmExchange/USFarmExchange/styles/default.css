@@ -452,3 +452,13 @@ html body form .RadInput .MyFocusedTextBox {
 .right {
     float: right;
 }
+#HempTrailKY .container img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    padding-bottom: 1em;
+}
+.RadToolTip {
+    z-index: 99999 !important;
+}
