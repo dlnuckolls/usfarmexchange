@@ -30,7 +30,7 @@ namespace USFarmExchange {
     }
 
     public void SaveResourceLink() {
-      if(Id.IsNullOrEmpty()) {
+      if(Id == 0) {
         SqlHelpers.Insert(SqlStatements.SQL_CREATE_RESOURCE_LINK.FormatWith(
           Title.FixSqlString(), URL.FixSqlString(), (Active) ? "1" : "0", ThumbNail.FixSqlString(), Description.FixSqlString()));
       } else {
