@@ -17,19 +17,33 @@ namespace USFarmExchange.admin {
       PageAdminHeader.Text = SessionInfo.PageContent(PageContentBlocks.ResourceLinksManagement);
     }
 
-    protected void gResourceLinks_CancelCommand(object sender, Telerik.Web.UI.GridCommandEventArgs e) { ((RadGrid)sender).Rebind(); }
+    protected void gResourceLinks_CancelCommand(object sender, Telerik.Web.UI.GridCommandEventArgs e) { SessionInfo.CurrentResourceLink = null; ((RadGrid)sender).Rebind(); }
     protected void gResourceLinks_NeedDataSource(object sender, Telerik.Web.UI.GridNeedDataSourceEventArgs e) { ((RadGrid)sender).DataSource = SqlDatasets.GetAdminResourceLinks(); }
 
     protected void gResourceLinks_EditCommand(object sender, Telerik.Web.UI.GridCommandEventArgs e) {
-
+      var resourceId = (int)((GridDataItem)e.Item).GetDataKeyValue("Id");
+      SessionInfo.CurrentResourceLink = new ResourceLink(resourceId);
     }
 
     protected void gResourceLinks_InsertCommand(object sender, Telerik.Web.UI.GridCommandEventArgs e) {
-
+      SessionInfo.CurrentResourceLink = new ResourceLink();
+      SessionInfo.CurrentResourceLink.Active = ((RadCheckBox)e.Item.FindControl("ResourceActive")).Checked.Value;
+      SessionInfo.CurrentResourceLink.Title = ((RadTextBox)e.Item.FindControl("ResourceTitle")).Text;
+      SessionInfo.CurrentResourceLink.URL = ((RadTextBox)e.Item.FindControl("ResourceURL")).Text;
+      SessionInfo.CurrentResourceLink.ThumbNail = string.Empty;
+      SessionInfo.CurrentResourceLink.Description = ((RadEditor)e.Item.FindControl("ResourceDescription")).Content;
+      SessionInfo.CurrentResourceLink.SaveResourceLink();
+      ((RadGrid)sender).Rebind();
     }
 
     protected void gResourceLinks_UpdateCommand(object sender, Telerik.Web.UI.GridCommandEventArgs e) {
-
+      SessionInfo.CurrentResourceLink.Active = ((RadCheckBox)e.Item.FindControl("ResourceActive")).Checked.Value;
+      SessionInfo.CurrentResourceLink.Title = ((RadTextBox)e.Item.FindControl("ResourceTitle")).Text;
+      SessionInfo.CurrentResourceLink.URL = ((RadTextBox)e.Item.FindControl("ResourceURL")).Text;
+      SessionInfo.CurrentResourceLink.ThumbNail = string.Empty;
+      SessionInfo.CurrentResourceLink.Description = ((RadEditor)e.Item.FindControl("ResourceDescription")).Content;
+      SessionInfo.CurrentResourceLink.SaveResourceLink();
+      ((RadGrid)sender).Rebind();
     }
   }
 }
