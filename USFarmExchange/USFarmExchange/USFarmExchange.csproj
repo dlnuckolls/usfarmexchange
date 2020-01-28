@@ -3995,6 +3995,7 @@
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="helpers\PortalSession.cs" />
+    <Compile Include="helpers\ResourceLink.cs" />
     <Compile Include="helpers\SqlDatasets.cs" />
     <Compile Include="helpers\SqlStatements.cs" />
     <Compile Include="helpers\SystemSettings.cs" />
