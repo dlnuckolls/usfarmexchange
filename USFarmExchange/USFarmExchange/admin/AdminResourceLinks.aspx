@@ -35,7 +35,9 @@
                 <telerik:LayoutRow>
                   <Columns>
                     <telerik:LayoutColumn Span="4" SpanMd="4" SpanSm="12">
-                      <div style="display: block; width: 100% !important; margin-top: 4px; margin-bottom: 4px; text-align: left; font-weight: bold;">Is Active?: <telerik:RadLabel ID="RadLabel4" runat="server" Text='<%# (Convert.ToBoolean(Eval("Active").ToString())) ? "Active" : "Inactive" %>' /></div>
+                      <div style="display: block; width: 100% !important; margin-top: 4px; margin-bottom: 4px; text-align: left; font-weight: bold;">Is Active?:
+                        <telerik:RadLabel ID="RadLabel4" runat="server" Text='<%# (Convert.ToBoolean(Eval("Active").ToString())) ? "Active" : "Inactive" %>' />
+                      </div>
                       <div style="display: block; width: 150px !important; margin-top: 4px; margin-bottom: 4px; text-align: left; font-weight: bold;">Title</div>
                       <telerik:RadLabel ID="RadLabel1" runat="server" Text='<%# Bind("Title") %>' Width="100%" />
                       <div style="display: block; width: 150px !important; margin-top: 4px; margin-bottom: 4px; text-align: left; font-weight: bold;">URL</div>
@@ -59,7 +61,9 @@
                 <telerik:LayoutRow>
                   <Columns>
                     <telerik:LayoutColumn Span="4" SpanMd="4" SpanSm="12">
-                      <div style="display: block; width: 100% !important; margin-top: 4px; margin-bottom: 4px; text-align: left; font-weight: bold;">Active: <telerik:RadCheckBox ID="ResourceActive" runat="server" RenderMode="Auto" Width="100%" Skin="Silk" Checked='<%# Bind("Active") %>' /></div>
+                      <div style="display: block; width: 100% !important; margin-top: 4px; margin-bottom: 4px; text-align: left; font-weight: bold;">Active:
+                        <telerik:RadCheckBox ID="ResourceActive" runat="server" RenderMode="Auto" Width="100%" Skin="Silk" Checked='<%# Bind("Active") %>' />
+                      </div>
                       <div style="display: block; width: 150px !important; margin-top: 4px; margin-bottom: 4px; text-align: left; font-weight: bold;">Display</div>
                       <telerik:RadTextBox ID="ResourceTitle" runat="server" RenderMode="Auto" Width="100%" EmptyMessage="Enter a Title" Skin="Silk" Text='<%# Bind("Title") %>' />
                       <div style="display: block; width: 150px !important; margin-top: 4px; margin-bottom: 4px; text-align: left; font-weight: bold;">URL</div>
@@ -81,6 +85,9 @@
                               <telerik:EditorTool Name="Copy"></telerik:EditorTool>
                               <telerik:EditorTool Name="Paste" ShortCut="CTRL+V / CMD+V"></telerik:EditorTool>
                               <telerik:EditorTool Name="AjaxSpellCheck" Text="Spell Check"></telerik:EditorTool>
+                              <telerik:EditorTool Name="StripAll" />
+                              <telerik:EditorTool Name="StripSpan" />
+                              <telerik:EditorTool Name="StripWord" />
                             </telerik:EditorToolGroup>
                             <telerik:EditorToolGroup Tag="Formatting">
                               <telerik:EditorTool Name="Bold"></telerik:EditorTool>
