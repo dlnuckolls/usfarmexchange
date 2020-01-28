@@ -216,6 +216,7 @@
     <Content Include="App_Data\RadCaptcha\Z.wav" />
     <Content Include="areas\aboutus.aspx" />
     <Content Include="areas\agritourism.aspx" />
+    <Content Include="areas\HempTrailKY.aspx" />
     <Content Include="areas\Podcasts.aspx" />
     <Content Include="areas\compliance.aspx" />
     <Content Include="areas\crop-insurance.aspx" />
@@ -3700,12 +3701,15 @@
     <Content Include="images\hands_dirt.png" />
     <Content Include="images\harvester.png" />
     <Content Include="images\Hemp.jpg" />
+    <Content Include="images\HempTrailPage1.JPG" />
+    <Content Include="images\HempTrailPage2.JPG" />
     <Content Include="images\icons8-circled_chevron_left.png" />
     <Content Include="images\icons8-circled_chevron_right.png" />
     <Content Include="images\icons8-farm.png" />
     <Content Include="images\icons8-refresh.png" />
     <Content Include="images\icons8-rss.png" />
     <Content Include="images\iStock-1029777638.jpg" />
+    <Content Include="images\JohnDeereArticle.jpg" />
     <Content Include="images\KY_Hemp_Field.jpg" />
     <Content Include="images\lane_trees.png" />
     <Content Include="images\lane_treesrev.jpg" />
@@ -3762,6 +3766,7 @@
     <Content Include="images\Thumbnails\Lighthouse.jpg" />
     <Content Include="images\Thumbnails\Penguins.jpg" />
     <Content Include="images\Thumbnails\Tulips.jpg" />
+    <Content Include="scripts\mapscripts.js" />
     <Content Include="scripts\scripts.js" />
     <Content Include="styles\base.css" />
     <Content Include="styles\CropInsurance.css" />
@@ -3846,6 +3851,13 @@
     </Compile>
     <Compile Include="areas\agritourism.aspx.designer.cs">
       <DependentUpon>agritourism.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="areas\HempTrailKY.aspx.cs">
+      <DependentUpon>HempTrailKY.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="areas\HempTrailKY.aspx.designer.cs">
+      <DependentUpon>HempTrailKY.aspx</DependentUpon>
     </Compile>
     <Compile Include="areas\Podcasts.aspx.cs">
       <DependentUpon>Podcasts.aspx</DependentUpon>
@@ -3988,6 +4000,13 @@
     <Compile Include="helpers\SqlStatements.cs" />
     <Compile Include="helpers\SystemSettings.cs" />
     <Compile Include="helpers\SystemUser.cs" />
+    <Compile Include="MasterMapPage.Master.cs">
+      <DependentUpon>MasterMapPage.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MasterMapPage.Master.designer.cs">
+      <DependentUpon>MasterMapPage.Master</DependentUpon>
+    </Compile>
     <Compile Include="MasterContentPage.Master.cs">
       <DependentUpon>MasterContentPage.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -4060,6 +4079,7 @@
     <Content Include="forum\themes\Fancy\fonts\Lobster-webfont.woff" />
     <Content Include="forum\YafUploader.ashx" />
     <Content Include="MasterForum.Master" />
+    <Content Include="MasterMapPage.Master" />
     <None Include="web.Debug.config">
       <DependentUpon>web.config</DependentUpon>
     </None>
