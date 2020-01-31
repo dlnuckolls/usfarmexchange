@@ -71,28 +71,11 @@
                       <p>
                         Daniel Webster defines farmer as “a person who manages or operates a farm.”  He also defines a farm as “a piece of land on which crops or animals are raised.”  
                     A farmer is so much more than that.  He or she is a hardworking, forward thinking individual with both feet on the ground – literally!  Our intent is to help the farmer navigate 
-                    the 21st century.  Our application will help do just that.  Our purpose is to fill the gap with information farmers need and can understand.
+                    the 21st century.  Our purpose is to fill the gap with information farmers need and can understand.
                       </p>
                     </ItemTemplate>
                   </telerik:RadRotatorItem>
-<%--Removed rotator item per 12/7/2019 USFE meeting.--%>
-             <%--     <telerik:RadRotatorItem>
-                    <ItemTemplate>
-                      <img src="/images/rotator/hemp.jpg" alt="Hemp" class="right" />
-                      <h2>
-                        <br />
-                        History of Hemp in Kentucky</h2>
-                      <p>
-                        <br />
-                        <br />
-                        The first hemp crop in Kentucky was raised near Danville in 1775.  
-                        Kentucky was the greatest producer of U.S. hemp in the 19th and 20th centuries...<br />
-                      </p>
-                      <br />
-                      <br />
-                      <telerik:RadLinkButton ID="btnReadMoreHemp" runat="server" Text="Read More" NavigateUrl="~/areas/HempHistoryKY.aspx"></telerik:RadLinkButton>
-                    </ItemTemplate>
-                  </telerik:RadRotatorItem>--%>
+
                   <telerik:RadRotatorItem>
                     <ItemTemplate>
                       <img src="/images/rotator/ThreeFarmers.png" alt="ThreeFarmers" class="right" />

@@ -217,6 +217,7 @@
     <Content Include="areas\aboutus.aspx" />
     <Content Include="areas\agritourism.aspx" />
     <Content Include="areas\HempTrailKY.aspx" />
+    <Content Include="areas\HistoryAgriculture.aspx" />
     <Content Include="areas\Podcasts.aspx" />
     <Content Include="areas\compliance.aspx" />
     <Content Include="areas\crop-insurance.aspx" />
@@ -229,6 +230,7 @@
     <Content Include="areas\products-services.aspx" />
     <Content Include="areas\ResourceLinks.aspx" />
     <Content Include="areas\Technology.aspx" />
+    <Content Include="areas\USDANewsFeed.aspx" />
     <Content Include="controls\FooterLayout.ascx" />
     <Content Include="controls\mainnavigation.ascx" />
     <Content Include="controls\SocialLinks.ascx" />
@@ -3859,6 +3861,13 @@
     <Compile Include="areas\HempTrailKY.aspx.designer.cs">
       <DependentUpon>HempTrailKY.aspx</DependentUpon>
     </Compile>
+    <Compile Include="areas\HistoryAgriculture.aspx.cs">
+      <DependentUpon>HistoryAgriculture.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="areas\HistoryAgriculture.aspx.designer.cs">
+      <DependentUpon>HistoryAgriculture.aspx</DependentUpon>
+    </Compile>
     <Compile Include="areas\Podcasts.aspx.cs">
       <DependentUpon>Podcasts.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -3942,6 +3951,13 @@
     </Compile>
     <Compile Include="areas\Technology.aspx.designer.cs">
       <DependentUpon>Technology.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="areas\USDANewsFeed.aspx.cs">
+      <DependentUpon>USDANewsFeed.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="areas\USDANewsFeed.aspx.designer.cs">
+      <DependentUpon>USDANewsFeed.aspx</DependentUpon>
     </Compile>
     <Compile Include="controls\FooterLayout.ascx.cs">
       <DependentUpon>FooterLayout.ascx</DependentUpon>

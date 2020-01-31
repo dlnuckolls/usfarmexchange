@@ -45,7 +45,8 @@ namespace USFarmExchange {
     [TextValue("Hemp History of KY")] HempHistoryKY,
     [TextValue("Agritourism")] Agritourism,
     [TextValue("Link Management")] ResourceLinks,
-    [TextValue("Forum")] Forum
+    [TextValue("Forum")] Forum,
+    [TextValue("History of Agriculture")]HistoryAgriculture
   }
   [CustomEnum(true)]
   public enum PageContentBlocks {
