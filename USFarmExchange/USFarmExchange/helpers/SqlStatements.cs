@@ -31,6 +31,20 @@ SELECT [Id],[Title],[URL],[Count],[LastClicked],[Active],[ThumbNail],[Descriptio
   FROM dbo.ResourceLinks
  ORDER BY [Count], LastClicked DESC;";
 
+    public const string SQL_GET_RESOURCE_LINK_BY_ID = @"
+SELECT [Id],[Title],[URL],[Count],[LastClicked],[Active],[ThumbNail],[Description] 
+  FROM dbo.ResourceLinks
+ WHERE Id = {0};";
+
+    public const string SQL_UPDATE_RESOURCE_LINK_BY_ID = @"
+UPDATE dbo.ResourceLinks
+   SET [Title] = '{0}',[URL] = '{1}',[Active] = {2},[ThumbNail] = '{3}',[Description] = '{4}' 
+ WHERE Id = {5};";
+
+    public const string SQL_CREATE_RESOURCE_LINK = @"
+INSERT INTO dbo.ResourceLinks ([Title],[URL],[Count],[LastClicked],[Active],[ThumbNail],[Description])
+VALUES ('{0}','{1}',0,NULL,{2},'{3}','{4}');";
+
     public const string SQL_UPDATE_RESOURCE_LINK = "UPDATE dbo.ResourceLinks SET Count = Count + 1, LastClicked = GETDATE() WHERE Id = {0};";
 
     public const string SQL_FETCH_RESOURCE_LINK_URL = "SELECT URL FROM dbo.ResourceLinks WHERE Id = {0};";
