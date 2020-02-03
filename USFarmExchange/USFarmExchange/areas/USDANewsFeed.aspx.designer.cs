@@ -10,24 +10,33 @@
 namespace USFarmExchange.areas {
     
     
-    public partial class HempHistoryKY {
+    public partial class USDANewsFeed {
         
         /// <summary>
-        /// TitleTag control.
+        /// RadAjaxPanel1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal TitleTag;
+        protected global::Telerik.Web.UI.RadAjaxPanel RadAjaxPanel1;
         
         /// <summary>
-        /// KYHempHistory control.
+        /// RadListView1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel KYHempHistory;
+        protected global::Telerik.Web.UI.RadListView RadListView1;
+        
+        /// <summary>
+        /// RadAjaxLoadingPanel1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Telerik.Web.UI.RadAjaxLoadingPanel RadAjaxLoadingPanel1;
     }
 }

@@ -10,7 +10,7 @@
 namespace USFarmExchange.areas {
     
     
-    public partial class HempHistoryKY {
+    public partial class HistoryAgriculture {
         
         /// <summary>
         /// TitleTag control.

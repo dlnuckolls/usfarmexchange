@@ -409,6 +409,33 @@ html body form .RadInput .MyFocusedTextBox {
     border-radius: 10px;
   }
 
+.homearticle {
+  width: 95%;
+  margin: 5px;
+  border: solid 1px lightgray;
+  border-radius: 10px;
+  padding: 5px 15px 5px 15px;
+  height: 100%;
+  min-height: 400px;
+  text-align: justify;
+}
+
+  .homearticle h2 {
+    font-size: 1.15em;
+    margin: .5em 0;
+  }
+
+  .homearticle h5 {
+    margin: .5em 0;
+  }
+
+  .homearticle img {
+    width: 400px;
+    float: left;
+    margin-right: 15px;
+    border-radius: 10px;
+  }
+
 .rotator {
   width: 90%;
   margin: 5px auto;
