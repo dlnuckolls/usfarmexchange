@@ -9,7 +9,7 @@
             <Items>
                 <telerik:RadMenuItem Text="News" NavigateUrl="~/areas/News.aspx">
                     <Items>
-                        <telerik:RadMenuItem Text="USDA News" />
+                        <telerik:RadMenuItem Text="USDA News" NavigateUrl="~/areas/USDANewsFeed.aspx" />
                     </Items>
                 </telerik:RadMenuItem>
                 <telerik:RadMenuItem IsSeparator="true" />
