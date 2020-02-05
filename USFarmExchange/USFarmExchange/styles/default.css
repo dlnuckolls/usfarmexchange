@@ -436,6 +436,13 @@ html body form .RadInput .MyFocusedTextBox {
     border-radius: 10px;
   }
 
+   .smallinner img {
+    width: 300px;
+    float: left;
+    margin-right: 15px;
+    border-radius: 10px;
+  }
+
 .rotator {
   width: 90%;
   margin: 5px auto;
