@@ -25,9 +25,7 @@ namespace USFarmExchange {
       IsSuperAdmin = false;
     }
 
-    public void LogoutUser() {
-      _instance = null;
-    }
+    public void LogoutUser() { _instance = null; }
 
     public void LoadUserDetails(string id) {
       try {
@@ -46,7 +44,7 @@ namespace USFarmExchange {
     public void AuthenticateUser(string userName, string password) {
       try {
         var dataRow = SqlHelpers.Select(SqlStatements.SQL_AUTHENTICATE_USER.FormatWith(userName, password)).Rows[0];
-        if (dataRow.IsNullOrEmpty()) return;
+        if(dataRow.IsNullOrEmpty()) return;
         Id = dataRow["Id"].ToString();
         RoleId = dataRow["RoleId"].ToString();
         DisplayName = dataRow["DisplayName"].ToString();
@@ -57,7 +55,7 @@ namespace USFarmExchange {
         Role = SqlHelpers.SelectScalar(SqlStatements.SQL_GET_USER_ROLE.FormatWith(RoleId)).ToString();
         IsAuthenticated = true;
         IsAdmin = Role == "System User";
-      } catch (Exception ex) {
+      } catch(Exception ex) {
         LogError("SystemUser: Authenticate User method", ex);
         throw new ApplicationException("Record not found");
       }
@@ -72,7 +70,7 @@ namespace USFarmExchange {
 
     public void SaveAdminUserDetails() {
       try {
-        if (Id.IsNullOrEmpty()) {
+        if(Id.IsNullOrEmpty()) {
           // Create New User
           Id = SqlHelpers.InsertScalar(SqlStatements.SQL_CREATE_ADMIN_USER_DETAILS.FormatWith(DisplayName.FixSqlString(),
             UserName.FixSqlString(), Notes.FixSqlString(250), (SuperAdmin) ? "1" : "0"));
@@ -81,7 +79,7 @@ namespace USFarmExchange {
           SqlHelpers.Update(SqlStatements.SQL_UPDATE_ADMIN_USER_DETAILS.FormatWith(DisplayName.FixSqlString(),
             UserName.FixSqlString(), Notes.FixSqlString(250), (SuperAdmin) ? "1" : "0", Id));
         }
-      } catch (Exception ex) {
+      } catch(Exception ex) {
         LogError("SystemUser: Save Admin User method", ex);
         throw new ApplicationException("Record not Saved");
       }
@@ -107,7 +105,7 @@ namespace USFarmExchange {
     public string ValidateUser(string userName) {
       var rtn = string.Empty;
       var uid = SqlHelpers.SelectScalar(SqlStatements.SQL_VALIDATE_USER.FormatWith(userName));
-      if (!uid.IsNullOrEmpty()) rtn = uid.ToString();
+      if(!uid.IsNullOrEmpty()) rtn = uid.ToString();
       return rtn;
     }
 
