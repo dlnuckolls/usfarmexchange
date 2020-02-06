@@ -417,6 +417,27 @@ BEGIN
   COMMIT TRANSACTION Version1_12
 END
 
+SELECT @majorVersion = 1, @minorVersion = 13;
+IF NOT EXISTS(SELECT * FROM SchemaVersion WHERE (MajorVersion = @majorVersion) AND (MinorVersion = @minorVersion))
+BEGIN
+  BEGIN TRANSACTION Version1_13
+
+    CREATE TABLE dbo.NewsArticles (
+      [Id]          INT          NOT NULL IDENTITY(1,1),
+      [Title]       VARCHAR(100) NOT NULL, 
+      [Intro]       VARCHAR(500)     NULL,      
+      [Description] VARCHAR(MAX)     NULL,      
+      [ByLine]      VARCHAR(75)      NULL,
+      [UserId]      INT          NOT NULL,
+      [Created]     DATETIME     NOT NULL DEFAULT GETDATE(),
+	    CONSTRAINT [PK_NewsArticles] PRIMARY KEY CLUSTERED (
+	        [Id] ASC
+        ) WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+    ) ON [PRIMARY];
+
+    INSERT INTO SchemaVersion values (newid(), @majorVersion, @minorVersion, getutcdate());
+  COMMIT TRANSACTION Version1_13
+END
 
 /* 
   Use this model to create database changes
