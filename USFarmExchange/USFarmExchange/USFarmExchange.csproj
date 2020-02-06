@@ -3751,6 +3751,10 @@
     <Content Include="images\social\icons8-stumbleupon.png" />
     <Content Include="images\social\icons8-tumblr.png" />
     <Content Include="images\social\icons8-twitter.png" />
+    <Content Include="images\Thumbnails\AmericanCancerSocietyLogo.jpg" />
+    <Content Include="images\Thumbnails\KDALogo.jpg" />
+    <Content Include="images\Thumbnails\Ky_FFA.JPG" />
+    <Content Include="images\Thumbnails\USDALogo.JPG" />
     <Content Include="images\Tractors.jpg" />
     <Content Include="images\tractor_back.png" />
     <Content Include="images\twitter.png" />
@@ -4126,7 +4130,7 @@
           <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
         </WebProjectProperties>
       </FlavorProperties>
-      <UserProperties UseJQuerySupport="True" UseAjaxifiedTemplates="True" />
+      <UserProperties UseAjaxifiedTemplates="True" UseJQuerySupport="True" />
     </VisualStudio>
   </ProjectExtensions>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
