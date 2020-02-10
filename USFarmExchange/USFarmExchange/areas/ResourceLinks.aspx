@@ -9,7 +9,7 @@
   <asp:Literal ID="ResourceLinksDescription" runat="server" />
   <br />
   <br />
-  <telerik:RadListView runat="server" DataSourceID="ObjectDataSource1" AllowNaturalSort="True" Skin="WebBlue" OnSelectedIndexChanged="Unnamed_SelectedIndexChanged">
+  <telerik:RadListView runat="server" DataSourceID="ObjectDataSource1" AllowNaturalSort="True" Skin="WebBlue" >
     <LayoutTemplate>
       <div class="RadListView RadListView_WebBlue">
         <div runat="server" id="itemPlaceholder"></div>
