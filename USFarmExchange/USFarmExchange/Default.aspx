@@ -22,17 +22,15 @@
             <div class="homearticle">
               <div class="smallinner">
                 <img src="/images/rotator/ThreeFarmers.png" alt="ThreeFarmers" class="right" />
-                <h2>
-                  <br />
-                  Our Purpose</h2>
+                <h2>Our Purpose</h2>
                 <p>
                   Providing American farmers with a platform of resources to help them succeed; offering a central exchange for conversation, compliance, education, technology, insurance, banking and financial services.
                 </p>
-                <hr />
+              </div>
+              <hr />
+              <div class="smallinner">
                 <img src="/images/rotator/talking-farmers.jpg" alt="talking-farmers" class="left" />
-                <h2>
-                  <br />
-                  What's on your mind?</h2>
+                <h2>What's on your mind?</h2>
                 <p>
                   Join the U.S. Farm Exchange forum to discuss what is important to you!
                 </p>
@@ -59,11 +57,12 @@
         <Columns>
           <telerik:LayoutColumn Span="6" SpanMd="12">
             <div class="homearticle">
-              <h1>
+              <h1 style="width: 100% !important; text-align: center !important;">
                 <br />
                 <telerik:RadLabel ID="SentimentalTitle" runat="server"></telerik:RadLabel>
               </h1>
-              <p>
+              <p style="width: 100% !important; text-align: center !important;">
+                <br />
                 <telerik:RadLabel ID="SentimentalText" runat="server"></telerik:RadLabel>
               </p>
             </div>
