@@ -32,10 +32,10 @@ namespace USFarmExchange {
     public void SaveResourceLink() {
       if(Id == 0) {
         SqlHelpers.Insert(SqlStatements.SQL_CREATE_RESOURCE_LINK.FormatWith(
-          Title.FixSqlString(), URL.FixSqlString(), (Active) ? "1" : "0", ThumbNail.FixSqlString(), Description.FixSqlString()));
+          Title.FixSqlString(), URL.FixSqlString(), (Active) ? "1" : "0", ThumbNail.FixSqlNull(), Description.FixSqlString()));
       } else {
         SqlHelpers.Update(SqlStatements.SQL_UPDATE_RESOURCE_LINK_BY_ID.FormatWith(
-          Title.FixSqlString(), URL.FixSqlString(), (Active) ? "1" : "0", ThumbNail.FixSqlString(), Description.FixSqlString(), Id));
+          Title.FixSqlString(), URL.FixSqlString(), (Active) ? "1" : "0", ThumbNail.FixSqlNull(), Description.FixSqlString(), Id));
       }
     }
   }
