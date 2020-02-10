@@ -48,7 +48,7 @@ namespace USFarmExchange.admin {
       var fileUpload = (RadAsyncUpload)sender;
       if (fileUpload.UploadedFiles.Count > 0) {
         UploadedFile file = fileUpload.UploadedFiles[0];
-        SessionInfo.CurrentResourceLink.ThumbNail = "~/images/thumbnails/{0}".FormatWith(file.GetName());
+        SessionInfo.CurrentResourceLink.ThumbNail = "/images/thumbnails/{0}".FormatWith(file.GetName());
         file.SaveAs("{0}/{1}".FormatWith(Server.MapPath("~/images/thumbnails"), file.GetName()), true);
       }
     }
