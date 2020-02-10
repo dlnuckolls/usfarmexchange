@@ -91,6 +91,6 @@ VALUES ('{0}','{1}',0,NULL,{2},{3},'{4}');";
     #region NewsLetterAddresses
     public const string SQL_INSERT_NEWSLETTER_ADDRESS = "INSERT INTO dbo.NewsLetterAddresses ([Name], [Email]) VALUES ('{0}', '{1}');";
     #endregion
-
+    public const string SQL_SELECT_RANDOM_SAYING = "SELECT TOP 1 [Title], [Description] FROM dbo.SentimentalSayings ORDER BY NEWID();";
   }
 }
