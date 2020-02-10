@@ -21,7 +21,7 @@
   <telerik:RadGrid RenderMode="Auto" runat="server" ID="gResourceLinks" AllowPaging="true" GridLines="Horizontal"
     CellPadding="0" BorderWidth="0px" BorderStyle="None" MasterTableView-CellPadding="0" MasterTableView-CellSpacing="0" MasterTableView-GridLines="Horizontal"
     Skin="Silk" OnNeedDataSource="gResourceLinks_NeedDataSource" OnUpdateCommand="gResourceLinks_UpdateCommand" OnEditCommand="gResourceLinks_EditCommand"
-    OnInsertCommand="gResourceLinks_InsertCommand" OnCancelCommand="gResourceLinks_CancelCommand" Width="100%">
+    OnInsertCommand="gResourceLinks_InsertCommand" OnCancelCommand="gResourceLinks_CancelCommand" Width="100%" OnDeleteCommand="gResourceLinks_DeleteCommand">
     <MasterTableView AutoGenerateColumns="False" EditMode="InPlace" DataKeyNames="Id" GridLines="None"
       ClientDataKeyNames="Id" CommandItemDisplay="TopAndBottom" InsertItemPageIndexAction="ShowItemOnFirstPage">
       <Columns>
@@ -35,7 +35,8 @@
                 <telerik:LayoutRow>
                   <Columns>
                     <telerik:LayoutColumn Span="4" SpanMd="4" SpanSm="12">
-                      <div style="display: block; width: 100% !important; margin-top: 4px; margin-bottom: 4px; text-align: left; font-weight: bold;">Is Active?:
+                      <div style="display: block; width: 100% !important; margin-top: 4px; margin-bottom: 4px; text-align: left; font-weight: bold;">
+                        Is Active?:
                         <telerik:RadLabel ID="RadLabel4" runat="server" Text='<%# (Convert.ToBoolean(Eval("Active").ToString())) ? "Active" : "Inactive" %>' />
                       </div>
                       <div style="display: block; width: 150px !important; margin-top: 4px; margin-bottom: 4px; text-align: left; font-weight: bold;">Title</div>
@@ -43,7 +44,7 @@
                       <div style="display: block; width: 150px !important; margin-top: 4px; margin-bottom: 4px; text-align: left; font-weight: bold;">URL</div>
                       <telerik:RadLabel ID="RadLabel2" runat="server" Text='<%# Bind("URL") %>' Width="100%" />
                       <div style="display: block; width: 150px !important; margin-top: 4px; margin-bottom: 4px; text-align: left; font-weight: bold;">Thumbnail</div>
-                      <telerik:RadLabel ID="RadLabel3" runat="server" Text='<%# Bind("ThumbNail") %>' Width="100%" />
+                      <asp:Image ID="Image1" runat="server" ImageUrl='<%# Bind("ThumbNail") %>' />
                     </telerik:LayoutColumn>
                     <telerik:LayoutColumn Span="8" SpanMd="8" SpanSm="12">
                       <div class="adminTiles">
@@ -61,7 +62,8 @@
                 <telerik:LayoutRow>
                   <Columns>
                     <telerik:LayoutColumn Span="4" SpanMd="4" SpanSm="12">
-                      <div style="display: block; width: 100% !important; margin-top: 4px; margin-bottom: 4px; text-align: left; font-weight: bold;">Active:
+                      <div style="display: block; width: 100% !important; margin-top: 4px; margin-bottom: 4px; text-align: left; font-weight: bold;">
+                        Active:
                         <telerik:RadCheckBox ID="ResourceActive" runat="server" RenderMode="Auto" Width="100%" Skin="Silk" Checked='<%# Bind("Active") %>' />
                       </div>
                       <div style="display: block; width: 150px !important; margin-top: 4px; margin-bottom: 4px; text-align: left; font-weight: bold;">Display</div>
@@ -69,6 +71,11 @@
                       <div style="display: block; width: 150px !important; margin-top: 4px; margin-bottom: 4px; text-align: left; font-weight: bold;">URL</div>
                       <telerik:RadTextBox ID="ResourceURL" runat="server" RenderMode="Auto" Width="100%" EmptyMessage="Enter a Title" Skin="Silk" Text='<%# Bind("URL") %>' />
                       <div style="display: block; width: 150px !important; margin-top: 4px; margin-bottom: 4px; text-align: left; font-weight: bold;">Thumbnail</div>
+
+                      <asp:Image ID="Image1" runat="server" ImageUrl='<%# Bind("ThumbNail") %>' />
+                      <telerik:RadAsyncUpload RenderMode="Lightweight" runat="server" Skin="Silk" ID="AsyncUpload1" HideFileInput="true" AllowedFileExtensions=".jpeg,.jpg,.png,.gif" 
+                        OnFileUploaded="AsyncUpload1_FileUploaded" />
+
                     </telerik:LayoutColumn>
                     <telerik:LayoutColumn Span="8" SpanMd="8" SpanSm="12">
                       <div class="adminTiles">

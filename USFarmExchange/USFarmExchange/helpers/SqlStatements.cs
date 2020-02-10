@@ -48,7 +48,9 @@ VALUES ('{0}','{1}',0,NULL,{2},{3},'{4}');";
 
     public const string SQL_UPDATE_RESOURCE_LINK = "UPDATE dbo.ResourceLinks SET Count = Count + 1, LastClicked = GETDATE() WHERE Id = {0};";
 
-    public const string SQL_FETCH_RESOURCE_LINK_URL = "SELECT URL FROM dbo.ResourceLinks WHERE Id = {0};"; 
+    public const string SQL_FETCH_RESOURCE_LINK_URL = "SELECT URL FROM dbo.ResourceLinks WHERE Id = {0};";
+
+    public const string SQL_DELETE_RESOURCE_LINK_BY_ID = @"DELETE dbo.ResourceLinks WHERE Id = {0};";
     #endregion
     #region System Settings
     public const string SQL_GET_MAIL_SETTINGS = "SELECT Id, MailServer, ServerPort, SmtpUser, SmtpPassword, FromEmail, FromUsername, RequireAuth, RequireSsl FROM dbo.SystemConfigs;";
