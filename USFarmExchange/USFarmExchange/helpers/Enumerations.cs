@@ -20,13 +20,13 @@ namespace USFarmExchange {
     [TextValue("Login Page")] Login,
     [TextValue("US Farm Exchange")] Home,
     [TextValue("About")] About,
+    [TextValue("Contact Us")] Contact,
     [TextValue("Registration")] Registration,
     [TextValue("Reset Password")] ResetPassword,
     [TextValue("Forgot Password")] ForgotPassword,
     [TextValue("Our Team")] OurTeam,
     [TextValue("Find Events")] Search,
     [TextValue("Questions")] FAQ,
-    [TextValue("Contact")] Contact,
     [TextValue("Blog")] Blog,
     [TextValue("Helpful Links")] Resources,
     [TextValue("Podcasts")] Communications,
@@ -68,5 +68,6 @@ namespace USFarmExchange {
     [TextValue("75A0CE6A-A837-4261-B480-240EEABF4D55")] ForumTop,
     [TextValue("329D0E46-3C1E-4B53-9C6C-4CA7BAAE6536")] ResourceLinksContent,
     [TextValue("BB0F852F-2C0E-4C2E-8CE0-59319318BC38")] ResourceLinksManagement,
+    [TextValue("A1E9F1FF-9D7C-45A2-94A4-E9BDBFC13CF3")] ContactUsHomeContent,
   }
 }
