@@ -86,5 +86,9 @@ VALUES ('{0}','{1}',0,NULL,{2},{3},'{4}');";
     public const string SQL_LOOKUP_USERNAME = "SELECT UserName FROM dbo.SystemUsers WHERE UserName = '{0}';";
     public const string SQL_CREATE_USER_REGISTRATION = "INSERT INTO dbo.SystemUsers (RoleId, DisplayName, UserName, UserPass, Notes) OUTPUT inserted.Id  VALUES ('" + REGISTRATION + "', '{0}', '{1}', '{2}', 'User Registration');";
     #endregion
+    #region NewsLetterAddresses
+    public const string SQL_INSERT_NEWSLETTER_ADDRESS = "INSERT INTO dbo.NewsLetterAddresses ([Name], [Email]) VALUES ('{0}', '{1}');";
+    #endregion
+
   }
 }

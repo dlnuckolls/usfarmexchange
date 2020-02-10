@@ -28,6 +28,7 @@ namespace USFarmExchange.areas {
 
     protected void SendMessage_Click(object sender, EventArgs e) {
       if (!Page.IsValid) return;
+      _ = SqlHelpers.Insert(SqlStatements.SQL_INSERT_NEWSLETTER_ADDRESS.FormatWith(ContactName.Text.Trim().FixSqlString(), ContactEmail.Text.Trim().FixSqlString()));
       var msg = new MailMessage {
         IsBodyHtml = false,
         From = new MailAddress(ContactEmail.Text.Trim(), ContactName.Text.Trim()),

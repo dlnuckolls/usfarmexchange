@@ -453,6 +453,25 @@ BEGIN
   COMMIT TRANSACTION Version1_14
 END
 
+SELECT @majorVersion = 1, @minorVersion = 15;
+IF NOT EXISTS(SELECT * FROM SchemaVersion WHERE (MajorVersion = @majorVersion) AND (MinorVersion = @minorVersion))
+BEGIN
+  BEGIN TRANSACTION Version1_15
+
+    CREATE TABLE dbo.NewsLetterAddresses (
+      [Id]          INT          NOT NULL IDENTITY(1,1),
+      [Name]        VARCHAR(100) NOT NULL, 
+      [Email]       VARCHAR(500)     NULL,      
+      [Created]     DATETIME     NOT NULL DEFAULT GETDATE(),
+	    CONSTRAINT [PK_NewsLetterAddresses] PRIMARY KEY CLUSTERED (
+	        [Id] ASC
+        ) WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+    ) ON [PRIMARY];
+
+    INSERT INTO SchemaVersion values (newid(), @majorVersion, @minorVersion, getutcdate());
+  COMMIT TRANSACTION Version1_15
+END
+
 /* 
   Use this model to create database changes
   Just change NEWVERSION to the next number in the sequence
