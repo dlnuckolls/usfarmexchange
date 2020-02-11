@@ -16,10 +16,15 @@
               <h2><span style="color: #3366ff;">US Farm Exchange Administrative Tools</span></h2>
             </div>
             <div class="adminTiles">
-              <telerik:RadImageAndTextTile ID="ResourceLinks" runat="server" BackColor="Transparent" 
-                ImageUrl="~/images/menutiles/icons8-domain.png" OnClick="ResourceLinks_Click" AutoPostBack="True" />
-              <telerik:RadImageAndTextTile ID="EditPageAdmin" runat="server" BackColor="Transparent"
-                ImageUrl="~/images/menutiles/icons8-edit_image.png" OnClick="EditPageAdmin_Click" AutoPostBack="True" />
+              <telerik:RadIconTile ID="AdminResourceLinks" runat="server" ImageUrl="~/images/menutiles/internet.png" AutoPostBack="true" OnClick="ResourceLinks_Click">
+                <Title Text="Resource Links"></Title>
+              </telerik:RadIconTile>
+              <telerik:RadIconTile ID="EditPageAdmin" runat="server" ImageUrl="~/images/menutiles/pages.png" AutoPostBack="true" OnClick="EditPageAdmin_Click">
+                <Title Text="Page Contents"></Title>
+              </telerik:RadIconTile>
+              <telerik:RadIconTile ID="QuoteAdmin" runat="server" ImageUrl="~/images/menutiles/quotes.png" AutoPostBack="true" OnClick="QuoteAdmin_Click">
+                <Title Text="Sentimental"></Title>
+              </telerik:RadIconTile>
             </div>
           </telerik:LayoutColumn>
           <telerik:LayoutColumn Span="1" HiddenMd="true" />
