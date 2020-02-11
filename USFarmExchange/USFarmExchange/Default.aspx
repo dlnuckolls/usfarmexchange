@@ -56,15 +56,15 @@
       <telerik:LayoutRow>
         <Columns>
           <telerik:LayoutColumn Span="6" SpanMd="12">
-            <div class="homearticle">
-              <h1 style="width: 100% !important; text-align: center !important;">
+            <div class="sentimentalarticle">
+              <h1>
                 <br />
                 <telerik:RadLabel ID="SentimentalTitle" runat="server"></telerik:RadLabel>
               </h1>
-              <p style="width: 100% !important; text-align: center !important;">
+              <h5>
                 <br />
                 <telerik:RadLabel ID="SentimentalText" runat="server"></telerik:RadLabel>
-              </p>
+              </h5>
             </div>
           </telerik:LayoutColumn>
           <telerik:LayoutColumn Span="6" SpanMd="12">

@@ -3702,6 +3702,7 @@
     <Content Include="images\icons8-farm.png" />
     <Content Include="images\icons8-refresh.png" />
     <Content Include="images\icons8-rss.png" />
+    <Content Include="images\quote.jpeg" />
     <Content Include="images\iStock-1029777638.jpg" />
     <Content Include="images\JohnDeereArticle.jpg" />
     <Content Include="images\KY_Hemp_Field.jpg" />
@@ -3721,6 +3722,7 @@
     <Content Include="images\oldtime_baler.png" />
     <Content Include="images\PCIMS-PCI-Continued.png" />
     <Content Include="images\PCIMS-PCI.png" />
+    <Content Include="images\quote.jpg" />
     <Content Include="images\rotator\apply.jpg" />
     <Content Include="images\rotator\bottom.gif" />
     <Content Include="images\rotator\down.gif" />
@@ -4109,7 +4111,7 @@
           <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
         </WebProjectProperties>
       </FlavorProperties>
-      <UserProperties UseJQuerySupport="True" UseAjaxifiedTemplates="True" />
+      <UserProperties UseAjaxifiedTemplates="True" UseJQuerySupport="True" />
     </VisualStudio>
   </ProjectExtensions>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
