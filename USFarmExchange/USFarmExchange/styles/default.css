@@ -538,8 +538,7 @@ html body form .RadInput .MyFocusedTextBox {
     margin-right: 15px;
     border-radius: 10px;
   }
-    z-index: 99999 !important;
-}
+
 .aligncenter {
     text-align: center;
 }
