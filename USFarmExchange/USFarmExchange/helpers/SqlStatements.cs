@@ -91,6 +91,10 @@ VALUES ('{0}','{1}',0,NULL,{2},{3},'{4}');";
     #region NewsLetterAddresses
     public const string SQL_INSERT_NEWSLETTER_ADDRESS = "INSERT INTO dbo.NewsLetterAddresses ([Name], [Email]) VALUES ('{0}', '{1}');";
     #endregion
-
+    public const string SQL_SELECT_RANDOM_SAYING = "SELECT TOP 1 [Title], [Description] FROM dbo.SentimentalSayings ORDER BY NEWID();";
+    public const string SQL_SELECT_ALL_SAYINGS = "SELECT [Id], [Title], [Description] FROM dbo.SentimentalSayings;";
+    public const string SQL_INSERT_RANDOM_SAYING = "INSERT INTO dbo.SentimentalSayings ([Title], [Description]) VALUES ('{0}', '{1}');";
+    public const string SQL_UPDATE_RANDOM_SAYING = "UPDATE dbo.SentimentalSayings SET [Title] = '{0}', [Description] = '{1}' WHERE Id = {2};";
+    public const string SQL_DELETE_RANDOM_SAYING = "DELETE dbo.SentimentalSayings WHERE Id = {0};";
   }
 }

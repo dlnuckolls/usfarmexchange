@@ -6,12 +6,12 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 
 namespace USFarmExchange.admin {
-  public partial class AdminHome :BasePage {
+  public partial class AdminHome : BasePage {
     protected void Page_Load(object sender, EventArgs e) {
       // Set page name in the title section
       SessionInfo.CurrentPage = PageNames.Admin;
       TitleTag.Text = SessionInfo.DisplayCurrentPage;
-      if(!SessionInfo.IsAuthenticated) Response.Redirect("/");
+      if (!SessionInfo.IsAuthenticated) Response.Redirect("/");
       AdminHomeTop.Text = SessionInfo.PageContent(PageContentBlocks.AdminHomeTop);
       AdminHomeToolHeader.Text = SessionInfo.PageContent(PageContentBlocks.AdminHomeToolHeader);
     }
@@ -22,6 +22,10 @@ namespace USFarmExchange.admin {
 
     protected void ResourceLinks_Click(object sender, EventArgs e) {
       Response.Redirect("~/admin/AdminResourceLinks.aspx");
+    }
+
+    protected void QuoteAdmin_Click(object sender, EventArgs e) {
+      Response.Redirect("~/admin/AdminSentimentalQuote.aspx");
     }
   }
 }

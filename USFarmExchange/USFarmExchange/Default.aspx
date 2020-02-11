@@ -20,24 +20,22 @@
         <Columns>
           <telerik:LayoutColumn Span="6" SpanMd="12">
             <div class="homearticle">
-            <div class="smallinner">
-              <img src="/images/rotator/ThreeFarmers.png" alt="ThreeFarmers" class="right" />
-              <h2>
-                <br />
-                Our Purpose</h2>
-              <p>
-                Providing American farmers with a platform of resources to help them succeed; offering a central exchange for conversation, compliance, education, technology, insurance, banking and financial services.
-              </p>
+              <div class="smallinner">
+                <img src="/images/rotator/ThreeFarmers.png" alt="ThreeFarmers" class="right" />
+                <h2>Our Purpose</h2>
+                <p>
+                  Providing American farmers with a platform of resources to help them succeed; offering a central exchange for conversation, compliance, education, technology, insurance, banking and financial services.
+                </p>
+              </div>
               <hr />
-              <img src="/images/rotator/talking-farmers.jpg" alt="talking-farmers" class="left" />
-              <h2>
-                <br />
-                What's on your mind?</h2>
-              <p>
-                Join the U.S. Farm Exchange forum to discuss what is important to you!
-              </p>
-              <telerik:RadLinkButton ID="btnJoin" runat="server" Text="Join!" NavigateUrl="~/forum/login.aspx"></telerik:RadLinkButton>
-            </div>
+              <div class="smallinner">
+                <img src="/images/rotator/talking-farmers.jpg" alt="talking-farmers" class="left" />
+                <h2>What's on your mind?</h2>
+                <p>
+                  Join the U.S. Farm Exchange forum to discuss what is important to you!
+                </p>
+                <telerik:RadLinkButton ID="btnJoin" runat="server" Text="Join!" NavigateUrl="~/forum/login.aspx"></telerik:RadLinkButton>
+              </div>
             </div>
           </telerik:LayoutColumn>
           <telerik:LayoutColumn Span="6" SpanMd="12">
@@ -58,7 +56,15 @@
       <telerik:LayoutRow>
         <Columns>
           <telerik:LayoutColumn Span="6" SpanMd="12">
-            <div class="homearticle">
+            <div class="sentimentalarticle">
+              <h1>
+                <br />
+                <telerik:RadLabel ID="SentimentalTitle" runat="server"></telerik:RadLabel>
+              </h1>
+              <h5>
+                <br />
+                <telerik:RadLabel ID="SentimentalText" runat="server"></telerik:RadLabel>
+              </h5>
             </div>
           </telerik:LayoutColumn>
           <telerik:LayoutColumn Span="6" SpanMd="12">

@@ -168,6 +168,7 @@
     <Content Include="admin\AdminHome.aspx" />
     <Content Include="admin\AdminPages.aspx" />
     <Content Include="admin\AdminResourceLinks.aspx" />
+    <Content Include="admin\AdminSentimentalQuote.aspx" />
     <Content Include="admin\Dashboard.aspx" />
     <Content Include="App_Data\RadCaptcha\0.wav" />
     <Content Include="App_Data\RadCaptcha\1.wav" />
@@ -210,6 +211,7 @@
     <Content Include="areas\ContactUs.aspx" />
     <Content Include="areas\HempTrailKY.aspx" />
     <Content Include="areas\HistoryAgriculture.aspx" />
+    <Content Include="areas\MagnoliaBank.aspx" />
     <Content Include="areas\Podcasts.aspx" />
     <Content Include="areas\compliance.aspx" />
     <Content Include="areas\crop-insurance.aspx" />
@@ -3702,11 +3704,16 @@
     <Content Include="images\icons8-farm.png" />
     <Content Include="images\icons8-refresh.png" />
     <Content Include="images\icons8-rss.png" />
+    <Content Include="images\menutiles\internet.png" />
+    <Content Include="images\menutiles\pages.png" />
+    <Content Include="images\menutiles\quotes.png" />
+    <Content Include="images\quote.jpeg" />
     <Content Include="images\iStock-1029777638.jpg" />
     <Content Include="images\JohnDeereArticle.jpg" />
     <Content Include="images\KY_Hemp_Field.jpg" />
     <Content Include="images\lane_trees.png" />
     <Content Include="images\lane_treesrev.jpg" />
+    <Content Include="images\MagnoliaBank.jpg" />
     <Content Include="images\menutiles\icons8-accept_database.png" />
     <Content Include="images\menutiles\icons8-business_contact.png" />
     <Content Include="images\menutiles\icons8-domain.png" />
@@ -3721,6 +3728,8 @@
     <Content Include="images\oldtime_baler.png" />
     <Content Include="images\PCIMS-PCI-Continued.png" />
     <Content Include="images\PCIMS-PCI.png" />
+    <Content Include="images\quote.jpg" />
+    <Content Include="images\quote.png" />
     <Content Include="images\rotator\apply.jpg" />
     <Content Include="images\rotator\bottom.gif" />
     <Content Include="images\rotator\down.gif" />
@@ -3802,6 +3811,13 @@
     <Compile Include="admin\AdminResourceLinks.aspx.designer.cs">
       <DependentUpon>AdminResourceLinks.aspx</DependentUpon>
     </Compile>
+    <Compile Include="admin\AdminSentimentalQuote.aspx.cs">
+      <DependentUpon>AdminSentimentalQuote.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\AdminSentimentalQuote.aspx.designer.cs">
+      <DependentUpon>AdminSentimentalQuote.aspx</DependentUpon>
+    </Compile>
     <Compile Include="admin\Dashboard.aspx.cs">
       <DependentUpon>Dashboard.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -3843,6 +3859,13 @@
     </Compile>
     <Compile Include="areas\HistoryAgriculture.aspx.designer.cs">
       <DependentUpon>HistoryAgriculture.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="areas\MagnoliaBank.aspx.cs">
+      <DependentUpon>MagnoliaBank.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="areas\MagnoliaBank.aspx.designer.cs">
+      <DependentUpon>MagnoliaBank.aspx</DependentUpon>
     </Compile>
     <Compile Include="areas\Podcasts.aspx.cs">
       <DependentUpon>Podcasts.aspx</DependentUpon>

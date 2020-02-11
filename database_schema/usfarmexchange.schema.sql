@@ -472,6 +472,26 @@ BEGIN
   COMMIT TRANSACTION Version1_15
 END
 
+SELECT @majorVersion = 1, @minorVersion = 16;
+IF NOT EXISTS(SELECT * FROM SchemaVersion WHERE (MajorVersion = @majorVersion) AND (MinorVersion = @minorVersion))
+BEGIN
+  BEGIN TRANSACTION Version1_16
+
+    CREATE TABLE dbo.SentimentalSayings (
+      [Id]          INT          NOT NULL IDENTITY(1,1),
+      [Title]       VARCHAR(50)  NOT NULL, 
+      [Description] VARCHAR(500)     NULL,      
+  	  [Active]      BIT          NOT NULL DEFAULT 1,
+      [Created]     DATETIME     NOT NULL DEFAULT GETDATE(),
+	    CONSTRAINT [PK_SentimentalSayings] PRIMARY KEY CLUSTERED (
+	        [Id] ASC
+        ) WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+    ) ON [PRIMARY];
+
+    INSERT INTO SchemaVersion values (newid(), @majorVersion, @minorVersion, getutcdate());
+  COMMIT TRANSACTION Version1_16
+END
+
 /* 
   Use this model to create database changes
   Just change NEWVERSION to the next number in the sequence
