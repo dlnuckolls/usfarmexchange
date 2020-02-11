@@ -46,8 +46,9 @@ namespace USFarmExchange {
     [TextValue("Agritourism")] Agritourism,
     [TextValue("Link Management")] ResourceLinks,
     [TextValue("Forum")] Forum,
-    [TextValue("History of Agriculture")]HistoryAgriculture
-  }
+    [TextValue("History of Agriculture")]HistoryAgriculture,
+    [TextValue("Magnolia Bank")] MagnoliaBank
+    }
   [CustomEnum(true)]
   public enum PageContentBlocks {
     [TextValue("4667B33D-BE48-4B7D-816E-D705F1F732C5")] AdminHomeTop,

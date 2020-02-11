@@ -502,3 +502,10 @@ html body form .RadInput .MyFocusedTextBox {
 .RadToolTip {
     z-index: 99999 !important;
 }
+.aligncenter {
+    text-align: center;
+}
+.magnoliatext {
+    text-align: justify;
+    font-size: x-large;
+}

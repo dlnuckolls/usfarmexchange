@@ -38,7 +38,7 @@
       <Items>
         <telerik:RadMenuItem Text="Financial Services" NavigateUrl="~/areas/Financial-Services.aspx">
           <Items>
-            <telerik:RadMenuItem Text="Magnolia Bank" />
+            <telerik:RadMenuItem Text="Magnolia Bank" NavigateUrl="~/areas/MagnoliaBank.aspx" />
           </Items>
         </telerik:RadMenuItem>
         <telerik:RadMenuItem IsSeparator="true" />

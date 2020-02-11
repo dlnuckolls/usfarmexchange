@@ -210,6 +210,7 @@
     <Content Include="areas\ContactUs.aspx" />
     <Content Include="areas\HempTrailKY.aspx" />
     <Content Include="areas\HistoryAgriculture.aspx" />
+    <Content Include="areas\MagnoliaBank.aspx" />
     <Content Include="areas\Podcasts.aspx" />
     <Content Include="areas\compliance.aspx" />
     <Content Include="areas\crop-insurance.aspx" />
@@ -3707,6 +3708,7 @@
     <Content Include="images\KY_Hemp_Field.jpg" />
     <Content Include="images\lane_trees.png" />
     <Content Include="images\lane_treesrev.jpg" />
+    <Content Include="images\MagnoliaBank.jpg" />
     <Content Include="images\menutiles\icons8-accept_database.png" />
     <Content Include="images\menutiles\icons8-business_contact.png" />
     <Content Include="images\menutiles\icons8-domain.png" />
@@ -3843,6 +3845,13 @@
     </Compile>
     <Compile Include="areas\HistoryAgriculture.aspx.designer.cs">
       <DependentUpon>HistoryAgriculture.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="areas\MagnoliaBank.aspx.cs">
+      <DependentUpon>MagnoliaBank.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="areas\MagnoliaBank.aspx.designer.cs">
+      <DependentUpon>MagnoliaBank.aspx</DependentUpon>
     </Compile>
     <Compile Include="areas\Podcasts.aspx.cs">
       <DependentUpon>Podcasts.aspx</DependentUpon>
@@ -4109,7 +4118,7 @@
           <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
         </WebProjectProperties>
       </FlavorProperties>
-      <UserProperties UseJQuerySupport="True" UseAjaxifiedTemplates="True" />
+      <UserProperties UseAjaxifiedTemplates="True" UseJQuerySupport="True" />
     </VisualStudio>
   </ProjectExtensions>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
