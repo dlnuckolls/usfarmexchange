@@ -18,7 +18,7 @@
     <Rows>
       <telerik:LayoutRow>
         <Columns>
-          <telerik:LayoutColumn Span="6" SpanMd="12">
+          <telerik:LayoutColumn Span="6" SpanMd="12" SpanSm="12" SpanXs="12">
             <div class="homearticle">
               <div class="smallinner">
                 <img src="/images/rotator/ThreeFarmers.png" alt="ThreeFarmers" class="right" />
@@ -38,7 +38,7 @@
               </div>
             </div>
           </telerik:LayoutColumn>
-          <telerik:LayoutColumn Span="6" SpanMd="12">
+          <telerik:LayoutColumn Span="6" SpanMd="12" SpanSm="12" SpanXs="12">
             <div class="homearticle">
               <img src="/images/rotator/purpose.jpg" alt="Farmers" class="left" />
               <h2>
@@ -55,19 +55,21 @@
       </telerik:LayoutRow>
       <telerik:LayoutRow>
         <Columns>
-          <telerik:LayoutColumn Span="6" SpanMd="12">
+          <telerik:LayoutColumn Span="6" SpanMd="12" SpanSm="12" SpanXs="12">
             <div class="sentimentalarticle">
-              <h1>
-                <br />
-                <telerik:RadLabel ID="SentimentalTitle" runat="server"></telerik:RadLabel>
-              </h1>
-              <h5>
-                <br />
-                <telerik:RadLabel ID="SentimentalText" runat="server"></telerik:RadLabel>
-              </h5>
+              <div class="sentimentalTitle">
+                <h1>
+                  <telerik:RadLabel ID="SentimentalTitle" runat="server"></telerik:RadLabel>
+                </h1>
+              </div>
+              <div class="sentimentalText">
+                <h5>
+                  <telerik:RadLabel ID="SentimentalText" runat="server"></telerik:RadLabel>
+                </h5>
+              </div>
             </div>
           </telerik:LayoutColumn>
-          <telerik:LayoutColumn Span="6" SpanMd="12">
+          <telerik:LayoutColumn Span="6" SpanMd="12" SpanSm="12" SpanXs="12">
             <div class="homearticle">
               <telerik:RadMediaPlayer ID="RadMediaPlayer1" runat="server" Height="400px" Source="https://www.youtube.com/watch?v=7UBj4Rbq3ZI"></telerik:RadMediaPlayer>
             </div>
