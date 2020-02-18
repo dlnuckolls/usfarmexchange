@@ -168,6 +168,7 @@
     <Content Include="admin\AdminHome.aspx" />
     <Content Include="admin\AdminPages.aspx" />
     <Content Include="admin\AdminResourceLinks.aspx" />
+    <Content Include="admin\AdminSentimentalQuote.aspx" />
     <Content Include="admin\Dashboard.aspx" />
     <Content Include="App_Data\RadCaptcha\0.wav" />
     <Content Include="App_Data\RadCaptcha\1.wav" />
@@ -3703,6 +3704,9 @@
     <Content Include="images\icons8-farm.png" />
     <Content Include="images\icons8-refresh.png" />
     <Content Include="images\icons8-rss.png" />
+    <Content Include="images\menutiles\internet.png" />
+    <Content Include="images\menutiles\pages.png" />
+    <Content Include="images\menutiles\quotes.png" />
     <Content Include="images\quote.jpeg" />
     <Content Include="images\iStock-1029777638.jpg" />
     <Content Include="images\JohnDeereArticle.jpg" />
@@ -3725,6 +3729,7 @@
     <Content Include="images\PCIMS-PCI-Continued.png" />
     <Content Include="images\PCIMS-PCI.png" />
     <Content Include="images\quote.jpg" />
+    <Content Include="images\quote.png" />
     <Content Include="images\rotator\apply.jpg" />
     <Content Include="images\rotator\bottom.gif" />
     <Content Include="images\rotator\down.gif" />
@@ -3805,6 +3810,13 @@
     </Compile>
     <Compile Include="admin\AdminResourceLinks.aspx.designer.cs">
       <DependentUpon>AdminResourceLinks.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\AdminSentimentalQuote.aspx.cs">
+      <DependentUpon>AdminSentimentalQuote.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\AdminSentimentalQuote.aspx.designer.cs">
+      <DependentUpon>AdminSentimentalQuote.aspx</DependentUpon>
     </Compile>
     <Compile Include="admin\Dashboard.aspx.cs">
       <DependentUpon>Dashboard.aspx</DependentUpon>
@@ -4120,7 +4132,7 @@
           <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
         </WebProjectProperties>
       </FlavorProperties>
-      <UserProperties UseAjaxifiedTemplates="True" UseJQuerySupport="True" />
+      <UserProperties UseJQuerySupport="True" UseAjaxifiedTemplates="True" />
     </VisualStudio>
   </ProjectExtensions>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

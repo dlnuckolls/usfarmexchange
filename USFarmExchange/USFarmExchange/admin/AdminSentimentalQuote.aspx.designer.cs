@@ -10,7 +10,7 @@
 namespace USFarmExchange.admin {
 
 
-  public partial class AdminHome {
+  public partial class AdminSentimentalQuote {
 
     /// <summary>
     /// TitleTag control.
@@ -22,57 +22,30 @@ namespace USFarmExchange.admin {
     protected global::System.Web.UI.WebControls.Literal TitleTag;
 
     /// <summary>
-    /// AdminHomeTop control.
+    /// PageAdminHeader control.
     /// </summary>
     /// <remarks>
     /// Auto-generated field.
     /// To modify move field declaration from designer file to code-behind file.
     /// </remarks>
-    protected global::System.Web.UI.WebControls.Literal AdminHomeTop;
+    protected global::System.Web.UI.WebControls.Literal PageAdminHeader;
 
     /// <summary>
-    /// RadPageLayout1 control.
+    /// MessageDisplay control.
     /// </summary>
     /// <remarks>
     /// Auto-generated field.
     /// To modify move field declaration from designer file to code-behind file.
     /// </remarks>
-    protected global::Telerik.Web.UI.RadPageLayout RadPageLayout1;
+    protected global::Telerik.Web.UI.RadLabel MessageDisplay;
 
     /// <summary>
-    /// AdminHomeToolHeader control.
+    /// gSenimentalSayings control.
     /// </summary>
     /// <remarks>
     /// Auto-generated field.
     /// To modify move field declaration from designer file to code-behind file.
     /// </remarks>
-    protected global::System.Web.UI.WebControls.Literal AdminHomeToolHeader;
-
-    /// <summary>
-    /// AdminResourceLinks control.
-    /// </summary>
-    /// <remarks>
-    /// Auto-generated field.
-    /// To modify move field declaration from designer file to code-behind file.
-    /// </remarks>
-    protected global::Telerik.Web.UI.RadIconTile AdminResourceLinks;
-
-    /// <summary>
-    /// EditPageAdmin control.
-    /// </summary>
-    /// <remarks>
-    /// Auto-generated field.
-    /// To modify move field declaration from designer file to code-behind file.
-    /// </remarks>
-    protected global::Telerik.Web.UI.RadIconTile EditPageAdmin;
-
-    /// <summary>
-    /// QuoteAdmin control.
-    /// </summary>
-    /// <remarks>
-    /// Auto-generated field.
-    /// To modify move field declaration from designer file to code-behind file.
-    /// </remarks>
-    protected global::Telerik.Web.UI.RadIconTile QuoteAdmin;
+    protected global::Telerik.Web.UI.RadGrid gSenimentalSayings;
   }
 }

@@ -21,7 +21,7 @@ namespace USFarmExchange {
     [TextValue("US Farm Exchange")] Home,
     [TextValue("About")] About,
     [TextValue("Contact Us")] Contact,
-    [TextValue("Registration")] Registration,
+    [TextValue("Sentimental Sayings")] Sentimental,
     [TextValue("Reset Password")] ResetPassword,
     [TextValue("Forgot Password")] ForgotPassword,
     [TextValue("Our Team")] OurTeam,
