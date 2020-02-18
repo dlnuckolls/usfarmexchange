@@ -4,7 +4,7 @@
     <asp:Literal ID="TitleTag" runat="server"></asp:Literal>
     <link href="/styles/default.css" rel="stylesheet" />
    <script type="text/javascript">
-        function reviewReport(sender, args) {
+        function LearnMore(sender, args) {
             window.open('https://magnoliabank.com', '_blank', 'toolbar=yes,status=yes,menubar=yes,scrollbars=yes,resizable=yes,addressbar=yes,height=400,width=800,left=50,top=50');
         }
     </script>
@@ -20,9 +20,9 @@
     <br />
     <br />
      <div class="aligncenter" style="width: 98%;">
-        <telerik:RadButton Skin="Outlook" RenderMode="Auto" ID="btnLearnMore" runat="server" ButtonType="SkinnedButton"
-            Text="Learn More" OnClientClicked="reviewReport" AutoPostBack="false" />
-    </div>
+        <telerik:RadButton Skin="Outlook" RenderMode="Auto" ID="btnLearnMore" runat="server" ButtonType="SkinnedButton" 
+            Text="Learn More" OnClientClicked="LearnMore" AutoPostBack="false" />
+        </div>
     <br />
     </asp:Content>
 <asp:Content ID="Content4" ContentPlaceHolderID="RightColumn1" runat="server">

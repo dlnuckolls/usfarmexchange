@@ -32,7 +32,7 @@
                 <img src="/images/rotator/talking-farmers.jpg" alt="talking-farmers" class="left" />
                 <h2>What's on your mind?</h2>
                 <p>
-                  Join the U.S. Farm Exchange forum to discuss what is important to you!
+                  Join the U. S. Farm Exchange forum to discuss what is important to you!
                 </p>
                 <telerik:RadLinkButton ID="btnJoin" runat="server" Text="Join!" NavigateUrl="~/forum/login.aspx"></telerik:RadLinkButton>
               </div>
