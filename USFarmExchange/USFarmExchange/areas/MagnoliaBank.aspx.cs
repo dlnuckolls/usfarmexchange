@@ -14,5 +14,10 @@ namespace USFarmExchange.areas
             SessionInfo.CurrentPage = PageNames.MagnoliaBank;
             TitleTag.Text = SessionInfo.DisplayCurrentPage;
         }
+
+        protected void btnLearnMore_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
