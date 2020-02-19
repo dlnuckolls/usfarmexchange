@@ -80,7 +80,7 @@
                     <telerik:LayoutColumn Span="8" SpanMd="8" SpanSm="12">
                       <div class="adminTiles">
                         <telerik:RadEditor RenderMode="Lightweight" runat="server" ID="ResourceDescription" SkinID="DefaultSetOfTools"
-                          Height="675px" Skin="Silk" Width="100%" EditModes="Design" Content='<%# Bind("Description") %>'>
+                          Height="675px" Skin="Silk" Width="100%" EditModes="Design,Html" Content='<%# Bind("Description") %>'>
                           <Tools>
                             <telerik:EditorToolGroup Tag="MainToolbar">
                               <telerik:EditorTool Name="FindAndReplace"></telerik:EditorTool>
