@@ -3759,6 +3759,7 @@
     <Content Include="images\Tractors.jpg" />
     <Content Include="images\tractor_back.png" />
     <Content Include="images\twitter.png" />
+    <Content Include="images\USFEBarn.png" />
     <Content Include="images\wheatfield.png" />
     <Content Include="MasterPage.Master" />
   </ItemGroup>
@@ -4132,7 +4133,7 @@
           <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
         </WebProjectProperties>
       </FlavorProperties>
-      <UserProperties UseJQuerySupport="True" UseAjaxifiedTemplates="True" />
+      <UserProperties UseAjaxifiedTemplates="True" UseJQuerySupport="True" />
     </VisualStudio>
   </ProjectExtensions>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

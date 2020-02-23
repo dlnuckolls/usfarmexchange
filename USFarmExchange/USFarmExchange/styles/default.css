@@ -552,3 +552,14 @@ html body form .RadInput .MyFocusedTextBox {
     text-align: justify;
     font-size: x-large;
 }
+.justify{
+    text-align: justify;
+}
+#wrapper .largeheaderaboutus {
+    position: relative;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    background-image: url(/images/USFEBarn.png);
+    min-height: 400px;
+}

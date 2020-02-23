@@ -24,15 +24,18 @@
                 <img src="/images/rotator/ThreeFarmers.png" alt="ThreeFarmers" class="right" />
                 <h2>Our Purpose</h2>
                 <p>
-                  Providing American farmers with a platform of resources to help them succeed; offering a central exchange for conversation, compliance, education, technology, insurance, banking and financial services.
-                </p>
+<%--                  Providing American farmers with a platform of resources to help them succeed; offering a central exchange for conversation, compliance, education, technology, insurance, banking and financial services.--%>
+                    Providing a place for a Farmer-to-Farmer exchange of information, conversation and solutions in real-time.
+                    </p>
+                                  <telerik:RadLinkButton ID="RadLinkButton2" runat="server" Text="Learn More" NavigateUrl="~/areas/contactUs.aspx"></telerik:RadLinkButton>
+
               </div>
               <hr />
               <div class="smallinner">
                 <img src="/images/rotator/talking-farmers.jpg" alt="talking-farmers" class="left" />
                 <h2>What's on your mind?</h2>
                 <p>
-                  Join the U.S. Farm Exchange forum to discuss what is important to you!
+                  Join the U. S. Farm Exchange forum to discuss what is important to you!
                 </p>
                 <telerik:RadLinkButton ID="btnJoin" runat="server" Text="Join!" NavigateUrl="~/forum/login.aspx"></telerik:RadLinkButton>
               </div>
@@ -46,8 +49,7 @@
                 What is a farmer?</h2>
               <p>
                 Daniel Webster defines farmer as “a person who manages or operates a farm.”  He also defines a farm as “a piece of land on which crops or animals are raised.”  
-                    A farmer is so much more than that.  He or she is a hardworking, forward thinking individual with both feet on the ground – literally!  Our intent is to help the farmer navigate 
-                    the 21st century.  Our purpose is to fill the gap with information farmers need and can understand.
+                    A farmer is so much more than that.  He or she is a hardworking, forward thinking individual with both feet on the ground – literally!   Our purpose is to fill the gap with information farmers need and can understand.
               </p>
             </div>
           </telerik:LayoutColumn>
