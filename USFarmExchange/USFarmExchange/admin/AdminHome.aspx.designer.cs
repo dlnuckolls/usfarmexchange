@@ -8,80 +8,71 @@
 //------------------------------------------------------------------------------
 
 namespace USFarmExchange.admin {
-    
-    
-    public partial class AdminHome {
-        
-        /// <summary>
-        /// TitleTag control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal TitleTag;
-        
-        /// <summary>
-        /// AdminHomeTop control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal AdminHomeTop;
-        
-        /// <summary>
-        /// RadPageLayout1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::Telerik.Web.UI.RadPageLayout RadPageLayout1;
-        
-        /// <summary>
-        /// AdminHomeToolHeader control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal AdminHomeToolHeader;
-        
-        /// <summary>
-        /// UserAccounts control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::Telerik.Web.UI.RadImageAndTextTile UserAccounts;
-        
-        /// <summary>
-        /// AdminUsers control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::Telerik.Web.UI.RadImageAndTextTile AdminUsers;
-        
-        /// <summary>
-        /// SystemValues control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::Telerik.Web.UI.RadImageAndTextTile SystemValues;
-        
-        /// <summary>
-        /// EditPageAdmin control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::Telerik.Web.UI.RadImageAndTextTile EditPageAdmin;
-    }
+
+
+  public partial class AdminHome {
+
+    /// <summary>
+    /// TitleTag control.
+    /// </summary>
+    /// <remarks>
+    /// Auto-generated field.
+    /// To modify move field declaration from designer file to code-behind file.
+    /// </remarks>
+    protected global::System.Web.UI.WebControls.Literal TitleTag;
+
+    /// <summary>
+    /// AdminHomeTop control.
+    /// </summary>
+    /// <remarks>
+    /// Auto-generated field.
+    /// To modify move field declaration from designer file to code-behind file.
+    /// </remarks>
+    protected global::System.Web.UI.WebControls.Literal AdminHomeTop;
+
+    /// <summary>
+    /// RadPageLayout1 control.
+    /// </summary>
+    /// <remarks>
+    /// Auto-generated field.
+    /// To modify move field declaration from designer file to code-behind file.
+    /// </remarks>
+    protected global::Telerik.Web.UI.RadPageLayout RadPageLayout1;
+
+    /// <summary>
+    /// AdminHomeToolHeader control.
+    /// </summary>
+    /// <remarks>
+    /// Auto-generated field.
+    /// To modify move field declaration from designer file to code-behind file.
+    /// </remarks>
+    protected global::System.Web.UI.WebControls.Literal AdminHomeToolHeader;
+
+    /// <summary>
+    /// AdminResourceLinks control.
+    /// </summary>
+    /// <remarks>
+    /// Auto-generated field.
+    /// To modify move field declaration from designer file to code-behind file.
+    /// </remarks>
+    protected global::Telerik.Web.UI.RadIconTile AdminResourceLinks;
+
+    /// <summary>
+    /// EditPageAdmin control.
+    /// </summary>
+    /// <remarks>
+    /// Auto-generated field.
+    /// To modify move field declaration from designer file to code-behind file.
+    /// </remarks>
+    protected global::Telerik.Web.UI.RadIconTile EditPageAdmin;
+
+    /// <summary>
+    /// QuoteAdmin control.
+    /// </summary>
+    /// <remarks>
+    /// Auto-generated field.
+    /// To modify move field declaration from designer file to code-behind file.
+    /// </remarks>
+    protected global::Telerik.Web.UI.RadIconTile QuoteAdmin;
+  }
 }

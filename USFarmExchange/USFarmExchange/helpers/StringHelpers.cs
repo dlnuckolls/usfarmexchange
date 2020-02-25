@@ -37,6 +37,11 @@ namespace USFarmExchange {
       if (p.IsNullOrEmpty()) return string.Empty;
       return p.Replace("'", "''");
     }
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="p"></param>
+    /// <returns></returns>
     public static string FixSqlNull(this string p) {
       if (p.IsNullOrEmpty()) return "NULL";
       return "'{0}'".FormatWith(p);
@@ -54,6 +59,12 @@ namespace USFarmExchange {
       if (p.Length > len) p = p.Substring(0, len);
       return p;
     }
+   /// <summary>
+   /// 
+   /// </summary>
+   /// <param name="p"></param>
+   /// <param name="len"></param>
+   /// <returns></returns>
     public static string FixShortSqlString(this string p, int len) {
       if (p.IsNullOrEmpty()) return string.Empty;
       p = p.Replace("'", "''");

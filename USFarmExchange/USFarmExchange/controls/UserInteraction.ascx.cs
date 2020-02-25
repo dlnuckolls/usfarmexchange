@@ -10,20 +10,23 @@ using YAF.Utils;
 using YAF.Utils.Helpers;
 
 namespace USFarmExchange.controls {
-  public partial class UserInteraction :BaseControl {
+  public partial class UserInteraction : BaseControl {
     protected void Page_Load(object sender, EventArgs e) {
       var loginLink = this.HeadLoginView.FindControlAs<LinkButton>("LoginLink");
-      if(loginLink != null) { loginLink.PostBackUrl = "~/forum/forum.aspx?g=login&ReturnUrl={0}".FormatWith(this.GetReturnUrl()); }
-      if(!HttpContext.Current.User.Identity.IsNullOrEmpty() || !HttpContext.Current.User.Identity.Name.IsNullOrEmpty()) {
+      if (loginLink != null) { loginLink.PostBackUrl = "~/forum/forum.aspx?g=login&ReturnUrl={0}".FormatWith(this.GetReturnUrl()); }
+      if (!HttpContext.Current.User.Identity.IsNullOrEmpty() || !HttpContext.Current.User.Identity.Name.IsNullOrEmpty()) {
         SessionInfo.CurrentUser.UserName = HttpContext.Current.User.Identity.Name;
         SessionInfo.CurrentUser.IsAuthenticated = HttpContext.Current.User.Identity.IsAuthenticated;
-        SessionInfo.CurrentUser.IsAdmin = YAF.Core.RoleMembershipHelper.IsUserInRole(SessionInfo.CurrentUser.UserName, "Administrators");
-        SessionInfo.CurrentUser.IsSuperAdmin = YAF.Core.RoleMembershipHelper.IsUserInRole(SessionInfo.CurrentUser.UserName, "Administrators");
+        if (SessionInfo.CurrentUser.IsAuthenticated) {
+          SessionInfo.CurrentUser.LoadUserDetails(SessionInfo.CurrentUser.UserName);
+          SessionInfo.CurrentUser.IsAdmin = YAF.Core.RoleMembershipHelper.IsUserInRole(SessionInfo.CurrentUser.UserName, "Administrators");
+          SessionInfo.CurrentUser.IsSuperAdmin = YAF.Core.RoleMembershipHelper.IsUserInRole(SessionInfo.CurrentUser.UserName, "Administrators");
+        }
         var spacer = HeadLoginView.FindControlAs<HtmlGenericControl>("logoutSpacer");
-        if(!spacer.IsNullOrEmpty()) spacer.Visible = SessionInfo.IsAdmin;
+        if (!spacer.IsNullOrEmpty()) spacer.Visible = SessionInfo.IsAdmin;
         var adminMenu = HeadLoginView.FindControlAs<LinkButton>("lbAdminDashboard");
-        if(!adminMenu.IsNullOrEmpty()) adminMenu.Visible = (SessionInfo.IsAdmin && SessionInfo.IsAuthenticated);
-      } else if(HttpContext.Current.User.Identity.Name.IsNullOrEmpty()) { SessionInfo.CurrentUser.LogoutUser(); }
+        if (!adminMenu.IsNullOrEmpty()) adminMenu.Visible = (SessionInfo.IsAdmin && SessionInfo.IsAuthenticated);
+      } else if (HttpContext.Current.User.Identity.Name.IsNullOrEmpty()) { SessionInfo.CurrentUser.LogoutUser(); }
     }
 
     protected string GetReturnUrl() {

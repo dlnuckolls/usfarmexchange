@@ -11,7 +11,6 @@
     <UseGlobalApplicationHostFile />
     <UpgradeBackupLocation />
   </PropertyGroup>
-  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
@@ -97,14 +96,45 @@
     <Reference Include="System.Configuration" />
     <Reference Include="System.Web.Services" />
     <Reference Include="System.EnterpriseServices" />
-    <Reference Include="Telerik.Web.Design">
-      <HintPath>..\lib\RCAJAX\2019.3.917.45\Telerik.Web.Design.dll</HintPath>
+    <Reference Include="Telerik.Web.Design, Version=2020.1.114.45, Culture=neutral, PublicKeyToken=121fae78165ba3d4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\RCAJAX\2020.1.114.45\Telerik.Web.Design.dll</HintPath>
+      <Private>True</Private>
     </Reference>
-    <Reference Include="Telerik.Web.UI">
-      <HintPath>..\lib\RCAJAX\2019.3.917.45\Telerik.Web.UI.dll</HintPath>
+    <Reference Include="Telerik.Web.Spreadsheet, Version=2020.1.114.40, Culture=neutral, PublicKeyToken=121fae78165ba3d4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\RCAJAX\2020.1.114.45\AdditionalLibraries\Bin45\Telerik.Web.Spreadsheet.dll</HintPath>
+      <Private>True</Private>
     </Reference>
-    <Reference Include="Telerik.Web.UI.Skins">
-      <HintPath>..\lib\RCAJAX\2019.3.917.45\Telerik.Web.UI.Skins.dll</HintPath>
+    <Reference Include="Telerik.Web.UI, Version=2020.1.114.45, Culture=neutral, PublicKeyToken=121fae78165ba3d4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\RCAJAX\2020.1.114.45\Telerik.Web.UI.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.Web.UI.Skins, Version=2020.1.114.45, Culture=neutral, PublicKeyToken=121fae78165ba3d4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\RCAJAX\2020.1.114.45\Telerik.Web.UI.Skins.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.Windows.Documents.Core, Version=2020.1.109.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <HintPath>..\lib\RCAJAX\2020.1.114.45\AdditionalLibraries\Bin45\Telerik.Windows.Documents.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.Windows.Documents.Flow, Version=2020.1.109.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <HintPath>..\lib\RCAJAX\2020.1.114.45\AdditionalLibraries\Bin45\Telerik.Windows.Documents.Flow.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.Windows.Documents.Spreadsheet, Version=2020.1.109.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <HintPath>..\lib\RCAJAX\2020.1.114.45\AdditionalLibraries\Bin45\Telerik.Windows.Documents.Spreadsheet.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml, Version=2020.1.109.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <HintPath>..\lib\RCAJAX\2020.1.114.45\AdditionalLibraries\Bin45\Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.Windows.Zip, Version=2020.1.109.40, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <HintPath>..\lib\RCAJAX\2020.1.114.45\AdditionalLibraries\Bin45\Telerik.Windows.Zip.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="YAF">
       <HintPath>..\lib\YAF\YAF.dll</HintPath>
@@ -137,11 +167,9 @@
   <ItemGroup>
     <Content Include="admin\AdminHome.aspx" />
     <Content Include="admin\AdminPages.aspx" />
+    <Content Include="admin\AdminResourceLinks.aspx" />
+    <Content Include="admin\AdminSentimentalQuote.aspx" />
     <Content Include="admin\Dashboard.aspx" />
-    <Content Include="admin\ForgotPassword.aspx" />
-    <Content Include="admin\Login.aspx" />
-    <Content Include="admin\Register.aspx" />
-    <Content Include="admin\ResetPassword.aspx" />
     <Content Include="App_Data\RadCaptcha\0.wav" />
     <Content Include="App_Data\RadCaptcha\1.wav" />
     <Content Include="App_Data\RadCaptcha\2.wav" />
@@ -180,6 +208,10 @@
     <Content Include="App_Data\RadCaptcha\Z.wav" />
     <Content Include="areas\aboutus.aspx" />
     <Content Include="areas\agritourism.aspx" />
+    <Content Include="areas\ContactUs.aspx" />
+    <Content Include="areas\HempTrailKY.aspx" />
+    <Content Include="areas\HistoryAgriculture.aspx" />
+    <Content Include="areas\MagnoliaBank.aspx" />
     <Content Include="areas\Podcasts.aspx" />
     <Content Include="areas\compliance.aspx" />
     <Content Include="areas\crop-insurance.aspx" />
@@ -190,7 +222,9 @@
     <Content Include="areas\News.aspx" />
     <Content Include="areas\Partners.aspx" />
     <Content Include="areas\products-services.aspx" />
+    <Content Include="areas\ResourceLinks.aspx" />
     <Content Include="areas\Technology.aspx" />
+    <Content Include="areas\USDANewsFeed.aspx" />
     <Content Include="controls\FooterLayout.ascx" />
     <Content Include="controls\mainnavigation.ascx" />
     <Content Include="controls\SocialLinks.ascx" />
@@ -3663,14 +3697,23 @@
     <Content Include="images\hands_dirt.png" />
     <Content Include="images\harvester.png" />
     <Content Include="images\Hemp.jpg" />
+    <Content Include="images\HempTrailPage1.JPG" />
+    <Content Include="images\HempTrailPage2.JPG" />
     <Content Include="images\icons8-circled_chevron_left.png" />
     <Content Include="images\icons8-circled_chevron_right.png" />
     <Content Include="images\icons8-farm.png" />
     <Content Include="images\icons8-refresh.png" />
     <Content Include="images\icons8-rss.png" />
+    <Content Include="images\menutiles\internet.png" />
+    <Content Include="images\menutiles\pages.png" />
+    <Content Include="images\menutiles\quotes.png" />
+    <Content Include="images\quote.jpeg" />
     <Content Include="images\iStock-1029777638.jpg" />
+    <Content Include="images\JohnDeereArticle.jpg" />
     <Content Include="images\KY_Hemp_Field.jpg" />
     <Content Include="images\lane_trees.png" />
+    <Content Include="images\lane_treesrev.jpg" />
+    <Content Include="images\MagnoliaBank.jpg" />
     <Content Include="images\menutiles\icons8-accept_database.png" />
     <Content Include="images\menutiles\icons8-business_contact.png" />
     <Content Include="images\menutiles\icons8-domain.png" />
@@ -3685,11 +3728,16 @@
     <Content Include="images\oldtime_baler.png" />
     <Content Include="images\PCIMS-PCI-Continued.png" />
     <Content Include="images\PCIMS-PCI.png" />
+    <Content Include="images\quote.jpg" />
+    <Content Include="images\quote.png" />
     <Content Include="images\rotator\apply.jpg" />
     <Content Include="images\rotator\bottom.gif" />
     <Content Include="images\rotator\down.gif" />
+    <Content Include="images\rotator\FarmBoys.jpg" />
     <Content Include="images\rotator\hemp.jpg" />
     <Content Include="images\rotator\purpose.jpg" />
+    <Content Include="images\rotator\talking-farmers.jpg" />
+    <Content Include="images\rotator\threefarmers.png" />
     <Content Include="images\rotator\top.gif" />
     <Content Include="images\rotator\up.gif" />
     <Content Include="images\Sample_app.jpg" />
@@ -3704,10 +3752,14 @@
     <Content Include="images\social\icons8-stumbleupon.png" />
     <Content Include="images\social\icons8-tumblr.png" />
     <Content Include="images\social\icons8-twitter.png" />
-    <Content Include="images\threefarmers.png" />
+    <Content Include="images\Thumbnails\AmericanCancerSocietyLogo.jpg" />
+    <Content Include="images\Thumbnails\KDALogo.jpg" />
+    <Content Include="images\Thumbnails\Ky_FFA.JPG" />
+    <Content Include="images\Thumbnails\USDALogo.JPG" />
     <Content Include="images\Tractors.jpg" />
     <Content Include="images\tractor_back.png" />
     <Content Include="images\twitter.png" />
+    <Content Include="images\USFEBarn.png" />
     <Content Include="images\wheatfield.png" />
     <Content Include="MasterPage.Master" />
   </ItemGroup>
@@ -3722,6 +3774,8 @@
     <Content Include="images\Thumbnails\Lighthouse.jpg" />
     <Content Include="images\Thumbnails\Penguins.jpg" />
     <Content Include="images\Thumbnails\Tulips.jpg" />
+    <Content Include="Privacy.aspx" />
+    <Content Include="scripts\mapscripts.js" />
     <Content Include="scripts\scripts.js" />
     <Content Include="styles\base.css" />
     <Content Include="styles\CropInsurance.css" />
@@ -3751,40 +3805,26 @@
     <Compile Include="admin\AdminPages.aspx.designer.cs">
       <DependentUpon>AdminPages.aspx</DependentUpon>
     </Compile>
+    <Compile Include="admin\AdminResourceLinks.aspx.cs">
+      <DependentUpon>AdminResourceLinks.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\AdminResourceLinks.aspx.designer.cs">
+      <DependentUpon>AdminResourceLinks.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\AdminSentimentalQuote.aspx.cs">
+      <DependentUpon>AdminSentimentalQuote.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\AdminSentimentalQuote.aspx.designer.cs">
+      <DependentUpon>AdminSentimentalQuote.aspx</DependentUpon>
+    </Compile>
     <Compile Include="admin\Dashboard.aspx.cs">
       <DependentUpon>Dashboard.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="admin\Dashboard.aspx.designer.cs">
       <DependentUpon>Dashboard.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="admin\ForgotPassword.aspx.cs">
-      <DependentUpon>ForgotPassword.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="admin\ForgotPassword.aspx.designer.cs">
-      <DependentUpon>ForgotPassword.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="admin\Login.aspx.cs">
-      <DependentUpon>Login.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="admin\Login.aspx.designer.cs">
-      <DependentUpon>Login.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="admin\Register.aspx.cs">
-      <DependentUpon>Register.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="admin\Register.aspx.designer.cs">
-      <DependentUpon>Register.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="admin\ResetPassword.aspx.cs">
-      <DependentUpon>ResetPassword.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="admin\ResetPassword.aspx.designer.cs">
-      <DependentUpon>ResetPassword.aspx</DependentUpon>
     </Compile>
     <Compile Include="areas\aboutus.aspx.cs">
       <DependentUpon>aboutus.aspx</DependentUpon>
@@ -3799,6 +3839,34 @@
     </Compile>
     <Compile Include="areas\agritourism.aspx.designer.cs">
       <DependentUpon>agritourism.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="areas\ContactUs.aspx.cs">
+      <DependentUpon>ContactUs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="areas\ContactUs.aspx.designer.cs">
+      <DependentUpon>ContactUs.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="areas\HempTrailKY.aspx.cs">
+      <DependentUpon>HempTrailKY.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="areas\HempTrailKY.aspx.designer.cs">
+      <DependentUpon>HempTrailKY.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="areas\HistoryAgriculture.aspx.cs">
+      <DependentUpon>HistoryAgriculture.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="areas\HistoryAgriculture.aspx.designer.cs">
+      <DependentUpon>HistoryAgriculture.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="areas\MagnoliaBank.aspx.cs">
+      <DependentUpon>MagnoliaBank.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="areas\MagnoliaBank.aspx.designer.cs">
+      <DependentUpon>MagnoliaBank.aspx</DependentUpon>
     </Compile>
     <Compile Include="areas\Podcasts.aspx.cs">
       <DependentUpon>Podcasts.aspx</DependentUpon>
@@ -3870,12 +3938,26 @@
     <Compile Include="areas\products-services.aspx.designer.cs">
       <DependentUpon>products-services.aspx</DependentUpon>
     </Compile>
+    <Compile Include="areas\ResourceLinks.aspx.cs">
+      <DependentUpon>ResourceLinks.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="areas\ResourceLinks.aspx.designer.cs">
+      <DependentUpon>ResourceLinks.aspx</DependentUpon>
+    </Compile>
     <Compile Include="areas\Technology.aspx.cs">
       <DependentUpon>Technology.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="areas\Technology.aspx.designer.cs">
       <DependentUpon>Technology.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="areas\USDANewsFeed.aspx.cs">
+      <DependentUpon>USDANewsFeed.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="areas\USDANewsFeed.aspx.designer.cs">
+      <DependentUpon>USDANewsFeed.aspx</DependentUpon>
     </Compile>
     <Compile Include="controls\FooterLayout.ascx.cs">
       <DependentUpon>FooterLayout.ascx</DependentUpon>
@@ -3929,10 +4011,18 @@
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="helpers\PortalSession.cs" />
+    <Compile Include="helpers\ResourceLink.cs" />
     <Compile Include="helpers\SqlDatasets.cs" />
     <Compile Include="helpers\SqlStatements.cs" />
     <Compile Include="helpers\SystemSettings.cs" />
     <Compile Include="helpers\SystemUser.cs" />
+    <Compile Include="MasterMapPage.Master.cs">
+      <DependentUpon>MasterMapPage.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MasterMapPage.Master.designer.cs">
+      <DependentUpon>MasterMapPage.Master</DependentUpon>
+    </Compile>
     <Compile Include="MasterContentPage.Master.cs">
       <DependentUpon>MasterContentPage.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -3964,6 +4054,13 @@
     </Compile>
     <Compile Include="MasterPage.Master.designer.cs">
       <DependentUpon>MasterPage.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Privacy.aspx.cs">
+      <DependentUpon>Privacy.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Privacy.aspx.designer.cs">
+      <DependentUpon>Privacy.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="MasterForum.Master.cs">
@@ -4005,6 +4102,7 @@
     <Content Include="forum\themes\Fancy\fonts\Lobster-webfont.woff" />
     <Content Include="forum\YafUploader.ashx" />
     <Content Include="MasterForum.Master" />
+    <Content Include="MasterMapPage.Master" />
     <None Include="web.Debug.config">
       <DependentUpon>web.config</DependentUpon>
     </None>
@@ -4035,7 +4133,7 @@
           <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
         </WebProjectProperties>
       </FlavorProperties>
-      <UserProperties UseJQuerySupport="True" UseAjaxifiedTemplates="True" />
+      <UserProperties UseAjaxifiedTemplates="True" UseJQuerySupport="True" />
     </VisualStudio>
   </ProjectExtensions>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

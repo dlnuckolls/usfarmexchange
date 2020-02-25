@@ -332,6 +332,7 @@ BEGIN
 	        ('25CFE0DF-5DDA-48E8-8C1C-091167A99169', 'Compliance Home Content'),
 	        ('96463B34-FE4B-4760-BD11-5463AA30DBF6', 'Partners Home Content'),
             ('D9E75614-BEA8-472D-9A42-E37CAEAA7506', 'About Us Home Content');
+
   
  INSERT INTO SchemaVersion values (newid(), @majorVersion, @minorVersion, getutcdate());
   COMMIT TRANSACTION Version1_8
@@ -344,7 +345,7 @@ BEGIN
   
     INSERT INTO [dbo].[PageLocations] (Id, [Description])
     VALUES ('84CF66D9-A864-4029-8976-71AB25FD430C', 'Agritourism Home Content');
-        
+	        
 					   
      INSERT INTO [dbo].[PageContent] ([PageLocation], [Description])
      VALUES ('84CF66D9-A864-4029-8976-71AB25FD430C', 'Agritourism Home Content');
@@ -354,6 +355,142 @@ BEGIN
   COMMIT TRANSACTION Version1_9
 END
 
+SELECT @majorVersion = 1, @minorVersion = 10;
+IF NOT EXISTS(SELECT * FROM SchemaVersion WHERE (MajorVersion = @majorVersion) AND (MinorVersion = @minorVersion))
+BEGIN
+  BEGIN TRANSACTION Version1_10
+  
+    INSERT INTO [dbo].[PageLocations] (Id, [Description])
+    VALUES 	('D9744A18-D526-45D5-B0F6-B347A4581DBD', 'Forum Left'),
+			('75A0CE6A-A837-4261-B480-240EEABF4D55', 'Forum Top'),
+			('329D0E46-3C1E-4B53-9C6C-4CA7BAAE6536', 'Resource Links');
+        
+					   
+     INSERT INTO [dbo].[PageContent] ([PageLocation], [Description])
+     VALUES ('D9744A18-D526-45D5-B0F6-B347A4581DBD', 'Forum Left'),
+			('75A0CE6A-A837-4261-B480-240EEABF4D55', 'Forum Top'),   
+			('329D0E46-3C1E-4B53-9C6C-4CA7BAAE6536', 'Resource Links');
+  
+	-- ResourceLinks table
+	CREATE TABLE [dbo].[ResourceLinks] (
+      [Id] INT NOT NULL IDENTITY(1,1),
+	  [Title] VARCHAR(150),
+	  [URL] VARCHAR(300),
+	  [Count] INT,
+	  [LastClicked] SMALLDATETIME,
+	  [Active] BIT
+
+	  CONSTRAINT [PK_ResourceLinks] PRIMARY KEY CLUSTERED (
+	      [Id] ASC
+      ) WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+    ) ON [PRIMARY]
+	
+ INSERT INTO SchemaVersion values (newid(), @majorVersion, @minorVersion, getutcdate());
+  COMMIT TRANSACTION Version1_10
+END
+
+SELECT @majorVersion = 1, @minorVersion = 11;
+IF NOT EXISTS(SELECT * FROM SchemaVersion WHERE (MajorVersion = @majorVersion) AND (MinorVersion = @minorVersion))
+BEGIN
+  BEGIN TRANSACTION Version1_11
+    
+    ALTER TABLE [dbo].[ResourceLinks]
+      ADD [ThumbNail]   VARCHAR(255)  NULL,
+          [Description] VARCHAR(2000) NULL;
+    
+    INSERT INTO SchemaVersion values (newid(), @majorVersion, @minorVersion, getutcdate());
+  COMMIT TRANSACTION Version1_11
+END
+
+
+SELECT @majorVersion = 1, @minorVersion = 12;
+IF NOT EXISTS(SELECT * FROM SchemaVersion WHERE (MajorVersion = @majorVersion) AND (MinorVersion = @minorVersion))
+BEGIN
+  BEGIN TRANSACTION Version1_12
+    INSERT INTO [dbo].[PageLocations] (Id, [Description])
+    VALUES 	('BB0F852F-2C0E-4C2E-8CE0-59319318BC38', 'Resource Link Management');
+        
+					   
+     INSERT INTO [dbo].[PageContent] ([PageLocation], [Description])
+     VALUES ('BB0F852F-2C0E-4C2E-8CE0-59319318BC38', 'Resource Link Management');
+    INSERT INTO SchemaVersion values (newid(), @majorVersion, @minorVersion, getutcdate());
+  COMMIT TRANSACTION Version1_12
+END
+
+SELECT @majorVersion = 1, @minorVersion = 13;
+IF NOT EXISTS(SELECT * FROM SchemaVersion WHERE (MajorVersion = @majorVersion) AND (MinorVersion = @minorVersion))
+BEGIN
+  BEGIN TRANSACTION Version1_13
+
+    CREATE TABLE dbo.NewsArticles (
+      [Id]          INT          NOT NULL IDENTITY(1,1),
+      [Title]       VARCHAR(100) NOT NULL, 
+      [Intro]       VARCHAR(500)     NULL,      
+      [Description] VARCHAR(MAX)     NULL,      
+      [ByLine]      VARCHAR(75)      NULL,
+      [UserId]      INT          NOT NULL,
+      [Created]     DATETIME     NOT NULL DEFAULT GETDATE(),
+	    CONSTRAINT [PK_NewsArticles] PRIMARY KEY CLUSTERED (
+	        [Id] ASC
+        ) WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+    ) ON [PRIMARY];
+
+    INSERT INTO SchemaVersion values (newid(), @majorVersion, @minorVersion, getutcdate());
+  COMMIT TRANSACTION Version1_13
+END
+
+SELECT @majorVersion = 1, @minorVersion = 14;
+IF NOT EXISTS(SELECT * FROM SchemaVersion WHERE (MajorVersion = @majorVersion) AND (MinorVersion = @minorVersion))
+BEGIN
+  BEGIN TRANSACTION Version1_14
+    INSERT INTO [dbo].[PageLocations] (Id, [Description])
+    VALUES 	('A1E9F1FF-9D7C-45A2-94A4-E9BDBFC13CF3', 'Contact Us');
+        
+					   
+     INSERT INTO [dbo].[PageContent] ([PageLocation], [Description])
+     VALUES ('A1E9F1FF-9D7C-45A2-94A4-E9BDBFC13CF3', 'Contact Us Content');
+    INSERT INTO SchemaVersion values (newid(), @majorVersion, @minorVersion, getutcdate());
+  COMMIT TRANSACTION Version1_14
+END
+
+SELECT @majorVersion = 1, @minorVersion = 15;
+IF NOT EXISTS(SELECT * FROM SchemaVersion WHERE (MajorVersion = @majorVersion) AND (MinorVersion = @minorVersion))
+BEGIN
+  BEGIN TRANSACTION Version1_15
+
+    CREATE TABLE dbo.NewsLetterAddresses (
+      [Id]          INT          NOT NULL IDENTITY(1,1),
+      [Name]        VARCHAR(100) NOT NULL, 
+      [Email]       VARCHAR(500)     NULL,      
+      [Created]     DATETIME     NOT NULL DEFAULT GETDATE(),
+	    CONSTRAINT [PK_NewsLetterAddresses] PRIMARY KEY CLUSTERED (
+	        [Id] ASC
+        ) WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+    ) ON [PRIMARY];
+
+    INSERT INTO SchemaVersion values (newid(), @majorVersion, @minorVersion, getutcdate());
+  COMMIT TRANSACTION Version1_15
+END
+
+SELECT @majorVersion = 1, @minorVersion = 16;
+IF NOT EXISTS(SELECT * FROM SchemaVersion WHERE (MajorVersion = @majorVersion) AND (MinorVersion = @minorVersion))
+BEGIN
+  BEGIN TRANSACTION Version1_16
+
+    CREATE TABLE dbo.SentimentalSayings (
+      [Id]          INT          NOT NULL IDENTITY(1,1),
+      [Title]       VARCHAR(50)  NOT NULL, 
+      [Description] VARCHAR(500)     NULL,      
+  	  [Active]      BIT          NOT NULL DEFAULT 1,
+      [Created]     DATETIME     NOT NULL DEFAULT GETDATE(),
+	    CONSTRAINT [PK_SentimentalSayings] PRIMARY KEY CLUSTERED (
+	        [Id] ASC
+        ) WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+    ) ON [PRIMARY];
+
+    INSERT INTO SchemaVersion values (newid(), @majorVersion, @minorVersion, getutcdate());
+  COMMIT TRANSACTION Version1_16
+END
 
 /* 
   Use this model to create database changes

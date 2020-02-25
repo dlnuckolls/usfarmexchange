@@ -33,7 +33,7 @@
       </div>
       <div class="adminTiles">
         <telerik:RadEditor RenderMode="Lightweight" runat="server" ID="PageDescription" SkinID="DefaultSetOfTools"
-          Height="675px" Skin="Silk" Width="100%" EditModes="Design">
+          Height="675px" Skin="Silk" Width="100%" EditModes="Html,Design">
           <Tools>
             <telerik:EditorToolGroup Tag="MainToolbar">
               <telerik:EditorTool Name="FindAndReplace"></telerik:EditorTool>
@@ -67,7 +67,7 @@
           <ImageManager ViewPaths="~/images/useruploads/pages"
             UploadPaths="~/images/useruploads/pages"
             DeletePaths="~/images/useruploads/pages"
-            EnableAsyncUpload="true" />
+            EnableAsyncUpload="true" MaxUploadFileSize="2000" />
           <Modules>
             <telerik:EditorModule Name="RadEditorStatistics" Visible="true" Enabled="true" />
             <telerik:EditorModule Name="RadEditorDomInspector" Visible="false" Enabled="true" />

@@ -409,6 +409,47 @@ html body form .RadInput .MyFocusedTextBox {
     border-radius: 10px;
   }
 
+.homearticle {
+  width: 95%;
+  margin: 5px;
+  border: solid 1px lightgray;
+  border-radius: 10px;
+  padding: 5px 15px 5px 15px;
+  height: 100%;
+  min-height: 400px;
+  text-align: justify;
+}
+
+  .homearticle h2 {
+    font-size: 1.15em;
+    margin: .5em 0;
+  }
+
+  .homearticle h5 {
+    margin: .5em 0;
+  }
+
+  .homearticle img {
+    width: 400px;
+    float: left;
+    margin-right: 15px;
+    border-radius: 10px;
+  }
+
+.smallinner {
+  width: 95%;
+  margin: 5px;
+  text-align: justify;
+  min-height: 175px;
+}
+
+  .smallinner img {
+    width: 300px;
+    float: left;
+    margin-right: 15px;
+    border-radius: 10px;
+  }
+
 .rotator {
   width: 90%;
   margin: 5px auto;
@@ -432,14 +473,14 @@ html body form .RadInput .MyFocusedTextBox {
     text-align: justify;
   }
 
-  .rotator  img {
+  .rotator img {
     margin: 15px;
     width: 470px;
     border: 0;
     border-radius: 10px !important;
   }
 
-  .rotator  img {
+  .rotator img {
     margin: 15px;
     width: 470px;
     border: 0;
@@ -447,8 +488,78 @@ html body form .RadInput .MyFocusedTextBox {
   }
 
 .left {
-    float: left;
+  float: left;
 }
+
 .right {
-    float: right;
+  float: right;
+}
+
+#HempTrailKY .container img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  padding-bottom: 1em;
+}
+
+.RadToolTip {
+  z-index: 99999 !important;
+}
+
+.sentimentalarticle {
+  width: 95%;
+  margin: 5px;
+  border-radius: 10px;
+  padding: 5px 15px 5px 15px;
+  height: 100%;
+  min-height: 400px;
+  background: url('/images/quote.png') no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+  .sentimentalarticle h1 {
+    font-size: 2.2em;
+    text-align: center !important;
+  }
+
+  .sentimentalarticle h5 {
+    font-size: 1.125em;
+    font-style: italic;
+    text-align: center;
+  }
+
+  .sentimentalarticle img {
+    width: 400px;
+    float: left;
+    margin-right: 15px;
+    border-radius: 10px;
+  }
+
+.sentimentalTitle {
+  margin: 100px 100px 5px 100px;
+}
+
+.sentimentalText {
+  margin: 5px 20% 20px 20%;
+}
+
+.aligncenter {
+    text-align: center;
+}
+.magnoliatext {
+    text-align: justify;
+    font-size: x-large;
+}
+.justify{
+    text-align: justify;
+}
+#wrapper .largeheaderaboutus {
+    position: relative;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    background-image: url(/images/USFEBarn.png);
+    min-height: 400px;
 }

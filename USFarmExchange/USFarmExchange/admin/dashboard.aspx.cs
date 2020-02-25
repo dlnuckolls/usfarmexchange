@@ -11,7 +11,7 @@ namespace USFarmExchange.admin {
       // Set page name in the title section
       SessionInfo.CurrentPage = PageNames.Dashboard;
       TitleTag.Text = SessionInfo.DisplayCurrentPage;
-      if(!SessionInfo.IsAuthenticated) Response.Redirect("~/admin/Login.aspx");
+      if(!SessionInfo.IsAuthenticated) Response.Redirect("/");
       if(!SessionInfo.IsAdmin) Response.Redirect("~/admin/AdminHome.aspx");
       DashboardHeader.Text = SessionInfo.PageContent(PageContentBlocks.DashboardHeader);
     }
