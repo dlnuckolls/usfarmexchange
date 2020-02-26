@@ -2,7 +2,6 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <asp:Literal ID="TitleTag" runat="server"></asp:Literal>
-    <link href="/styles/default.css" rel="stylesheet" />
    <script type="text/javascript">
         function LearnMore(sender, args) {
             window.open('https://magnoliabank.com', '_blank', 'toolbar=yes,status=yes,menubar=yes,scrollbars=yes,resizable=yes,addressbar=yes,height=400,width=800,left=50,top=50');

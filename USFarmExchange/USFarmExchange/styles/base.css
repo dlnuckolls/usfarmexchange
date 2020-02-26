@@ -125,6 +125,7 @@ div.RadMenuPopup,
   #wrapper .header .RadMenu {
     margin: 10px 0;
     float: right !important;
+    color: black;
   }
 
     #wrapper .header .RadMenu .rmRootGroup {
@@ -158,6 +159,7 @@ div.RadMenuPopup,
   background-color: mediumseagreen !important;
   padding: 5px 0;
   margin-bottom: 40px;
+  color: black;
 }
 
   #wrapper .smallHeader .RadMenu {
@@ -168,7 +170,7 @@ div.RadMenuPopup,
     #wrapper .smallHeader .RadMenu .rmRootGroup {
       border-width: 0 !important;
       border-color: transparent !important;
-      background-color: #ffffff !important;
+      background-color: #f7f7f7 !important;
     }
 
       #wrapper .smallHeader .RadMenu .rmRootGroup :hover {
@@ -178,11 +180,11 @@ div.RadMenuPopup,
       #wrapper .smallheader .RadMenu .rmRootGroup .rmLink {
         border-width: 0 !important;
         border-color: transparent !important;
-        background-color: #ffffff !important;
+        background-color: #f7f7f7 !important;
       }
 
         #wrapper .smallheader .RadMenu .rmRootGroup .rmLink:hover {
-          background-color: darkseagreen !important;
+          background-color: cadetblue !important;
           border-radius: 10px;
         }
 
