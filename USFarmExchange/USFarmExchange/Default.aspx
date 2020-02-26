@@ -4,7 +4,6 @@
 
 <asp:Content ID="Content0" ContentPlaceHolderID="head" runat="Server">
   <asp:Literal ID="TitleTag" runat="server"></asp:Literal>
-  <link href="/styles/default.css" rel="stylesheet" />
   <link href="/styles/scroller.css" rel="stylesheet" />
 </asp:Content>
 
