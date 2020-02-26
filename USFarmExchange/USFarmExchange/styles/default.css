@@ -409,6 +409,30 @@ html body form .RadInput .MyFocusedTextBox {
     border-radius: 10px;
   }
 
+.article2 {
+  width: 95%;
+  margin: 5px;
+  border: solid 1px lightgray;
+  border-radius: 10px;
+  padding: 5px 15px 5px 15px;
+}
+
+  .article2 h2 {
+    font-size: 1.15em;
+    margin: .5em 0;
+  }
+
+  .article2 h5 {
+    margin: .5em 0;
+  }
+
+  .article2 img {
+    width: 400px;
+    float: left;
+    margin-right: 15px;
+    border-radius: 10px;
+  }
+
 .homearticle {
   width: 95%;
   margin: 5px;
@@ -546,20 +570,23 @@ html body form .RadInput .MyFocusedTextBox {
 }
 
 .aligncenter {
-    text-align: center;
+  text-align: center;
 }
+
 .magnoliatext {
-    text-align: justify;
-    font-size: x-large;
+  text-align: justify;
+  font-size: x-large;
 }
-.justify{
-    text-align: justify;
+
+.justify {
+  text-align: justify;
 }
+
 #wrapper .largeheaderaboutus {
-    position: relative;
-    overflow: hidden;
-    background-size: cover;
-    background-position: center;
-    background-image: url(/images/USFEBarn.png);
-    min-height: 400px;
+  position: relative;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  background-image: url(/images/USFEBarn.png);
+  min-height: 400px;
 }
