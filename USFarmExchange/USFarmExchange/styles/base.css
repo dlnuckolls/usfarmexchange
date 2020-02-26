@@ -82,6 +82,7 @@ h6 {
   font-size: .875em;
 }
 
+
 /*template*/
 #wrapper .t-container-fluid {
   max-width: 100%;
@@ -198,20 +199,20 @@ div.RadMenuPopup,
   background-color: transparent;
 }
 
-  .headerContentFade h1 {
-    font-size: 3em;
-    font-weight: bold;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    color: gold;
-  }
+    .headerContentFade h1 {
+        font-size: 3em;
+        font-weight: bold;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        color: #ffffff;
+    }
 
-  .headerContentFade h2 {
-    font-size: 1.8em;
-    font-weight: bold;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    color: gold;
-    padding-bottom: 10px;
-  }
+    .headerContentFade h2 {
+        font-size: 1.8em;
+        font-weight: bold;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        color: #ffffff;
+        padding-bottom: 10px;
+    }
 
 #top-bar-social {
   float: left;
