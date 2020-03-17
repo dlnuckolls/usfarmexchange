@@ -523,7 +523,8 @@ html body form .RadInput .MyFocusedTextBox {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 100%;
+  /*width: 90%;
+  height: 90%;*/
   padding-bottom: 1em;
 }
 

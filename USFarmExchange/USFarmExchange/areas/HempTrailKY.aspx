@@ -8,8 +8,8 @@
          
     <div class="HempTrailKY">   
         <p><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Click each number to view more information</b></p>
-        <asp:ImageMap ID="ImageMap1" HotSpotMode="Navigate" ImageUrl="/images/HempTrailPage1.jpg"
-            AlternateText="KyHempTrail" runat="server">
+        <asp:ImageMap ID="ImageMap1"  HotSpotMode="Navigate" ImageUrl="/images/HempTrailPage1.jpg"
+            AlternateText="KyHempTrail" runat="server" Height="100%" Width="100%" >
               <asp:RectangleHotSpot Left="462" Top="466" Right="506" Bottom="500"   HotSpotMode="PostBack" />       
               <asp:RectangleHotSpot Left="744" Top="469" Right="784" Bottom="510"   HotSpotMode="PostBack" />
               <asp:RectangleHotSpot Left="857" Top="471" Right="888" Bottom="506"   HotSpotMode="PostBack" />
