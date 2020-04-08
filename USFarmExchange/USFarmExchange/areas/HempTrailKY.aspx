@@ -2,6 +2,8 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
   <asp:Literal ID="TitleTag" runat="server"></asp:Literal>
+    <script src="/scripts/image-map.js" type="text/javascript"></script> 
+     
 </asp:Content>
 <asp:Content ID="Column1" ContentPlaceHolderID="MainContent1" runat="server">
 
@@ -14,7 +16,7 @@
   <div class="HempTrailKY">
  
   
-    <img usemap="#image-map" src="/images/HempTrailPage1.jpg" width="100%"/>
+    <img usemap="#image-map" src="/images/HempTrailPage1.jpg"  style="z-index:-1; max-width: 1468px; max-height: 950px; "/>
 
     <map name="image-map">
       <area target="_blank" alt="Location1" title="Farmington Historic Plantation:  3033 Bardstown Rd, Louisville"  href="/forum/topics/3-Farmington" coords="434,430,15" shape="circle" />
@@ -175,9 +177,8 @@
     serverID("imageMapID", "<%= ImageMap1.ClientID %>");
         //]]>
   </script>--%>
-<script src="/scripts/image-map.js" type="text/javascript">
-    <script type="text/javascript">
-    ImageMap('img[usemap]')
- </script>   
+<script type="text/javascript">
+    ImageMap('img[image-map]')
+ </script>  
 </asp:Content>
 
